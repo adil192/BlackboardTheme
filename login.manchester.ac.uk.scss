@@ -1,13 +1,14 @@
+@import "globals";
 
 a, a:link {
-	color: #6b2c90;
+	color: $logo-color;
 }
 
 body, body#cas {
-	background: #333;
+	background: $bg-navbar;
 }
 #container {
-	background: #fafafa;
+	background: $bg-body;
 }
 #content {
 	overflow: visible;
@@ -21,10 +22,11 @@ body, body#cas {
 
 #login {
 	background: transparent;
-	border: 1px solid #f8f8f8;
-	box-shadow: -6px -6px 26px 0 rgba(230,230,230, 1),6px 6px 16px 0 rgba(216, 210, 200, 0.51);
+	border: 1px solid $bg-header;
+	@include box-shadow-light-mode(rgb(230,230,230));
 }
 
+// styles from Bootstrap
 input:not([type="checkbox"]), input.required {
 	box-sizing: border-box;
 	width: 100%;
@@ -32,21 +34,21 @@ input:not([type="checkbox"]), input.required {
 	padding: .375rem .75rem;
 	font-size: 1rem;
 	line-height: 1.5;
-	color: #212529;
-	background-color: #fff;
+	color: $fg-input;
 	border: 1px solid #ced4da;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
 	border-radius: .375rem;
 	transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-input:not([type="checkbox"]):focus, input.required:focus {
-	color: #212529;
-	background-color: #fff;
-	border-color: #86b7fe;
-	outline: 0;
-	box-shadow: 0 0 0 .25rem rgba(13,110,253,.25);
+
+	&:focus {
+		color: $fg-input;
+		background-color: #fff;
+		border-color: #86b7fe;
+		outline: 0;
+		box-shadow: 0 0 0 .25rem rgba(13,110,253,.25);
+	}
 }
 
 
@@ -61,13 +63,13 @@ input:not([type="checkbox"]):focus, input.required:focus {
 	font-size: 1rem;
 }
 #login .btn-submit {
-	background: #6b2c90;
+	background: $logo-color;
 }
 #login .btn-reset {
 	width: auto;
 }
 #login .btn-submit:hover {
-	background: #5e1787;
+	background: $logo-color-darker;
 	border: none;
 }
 
@@ -75,14 +77,14 @@ input:not([type="checkbox"]):focus, input.required:focus {
 	width: 100%;
 	height: auto;
 	margin: 0;
-	font-family: Arial,Helvetica,sans-serif;
+	font-family: $font-family !important;
 	font-size: 0.8em;
 	opacity: 0.5;
 }
 
 .ui-widget-content {
 	border: none;
-	box-shadow: -6px -6px 26px 0 rgba(254, 254, 254, 1),6px 6px 16px 0 rgba(216, 210, 200, 0.51);
+	@include box-shadow-light-mode;
 }
 #support_information .ui-accordion-header-icon.ui-icon {
 	background: #444;
@@ -101,13 +103,13 @@ input:not([type="checkbox"]):focus, input.required:focus {
 	border-bottom: 1px solid #aaaaaa;
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
-	color: #111;
-	background: #f8f8f8;
+	color: $fg-header;
+	background: $bg-header;
 	text-decoration: none;
 }
 #support_information h3 {
-	color: #111;
-	background: #f8f8f8 !important;
+	color: $fg-header;
+	background: $bg-header !important;
 	text-decoration: none;
 }
 #softwareinfo > p::after {
@@ -118,7 +120,7 @@ input:not([type="checkbox"]):focus, input.required:focus {
 
 @media only screen and (max-width: 855px) {
 	body, body#cas {
-		background: #fafafa;
+		background: $bg-body;
 	}
 	#container {
 		background: transparent;

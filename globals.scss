@@ -1,0 +1,30 @@
+
+$logo-color: #6b2c90;
+$logo-color-lighter: #8524bc;
+$logo-color-darker: #5e1787;
+$logo-color-box-shadow: rgba($logo-color-lighter, 0.12);
+
+$logo-color-invert: #ae6fd3;
+$logo-color-invert-lighter: #bf78e8;
+$logo-color-invert-darker: #a343db;
+
+$bg-navbar: #333;
+$bg-body: #fafafa;
+$bg-header: #f8f8f8;
+$bg-body-invert: #191919;
+
+$fg-header: #111;
+$fg-input: #212529;
+
+$hr: #2e2e2e;
+
+$font-family: "Google Sans","Product Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
+@mixin box-shadow-light-mode($top:rgb(254,254,254), $bottom:rgb(216, 210, 200)) {
+	box-shadow: -6px -6px 26px 0 rgba($top, 1),
+				6px 6px 16px 0 rgba($bottom, 0.51);
+}
+@mixin box-shadow-dark-mode($top:rgb(47,47,47), $bottom:rgb(9,3,0)) {
+	box-shadow: -6px -6px 26px 0 rgba($top, 0.6),
+				6px 6px 16px 0 rgba($bottom, 0.51);
+}

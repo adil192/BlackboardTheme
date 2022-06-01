@@ -1,3 +1,4 @@
+@import "globals";
 
 :root {
 	color-scheme: light dark;
@@ -5,7 +6,7 @@
 
 /* set better fonts */
 * {
-	font-family: "Google Sans","Product Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
+	font-family: $font-family !important;
 }
 
 /* disable quick links popup because I don't use it, remove these lines if you do use this */
@@ -48,7 +49,7 @@ img[src="https://online.manchester.ac.uk/branding/_96_1/welcome-image03.png"] {
 
 body,
 .locationPane {
-	background: #fafafa;
+	background: $bg-body;
 }
 
 a,
@@ -58,19 +59,19 @@ a,
 [style*="color:#0000FF"],
 [style*="color: #0000ff"],
 [style*="color: blue"] {
-	color: #6b2c90 !important;
+	color: $logo-color !important;
 }
 .eval-links .genericButton,
 .eval-links .button-4,
 .eval-links input[type="button"].genericButton,
 [style*="color: #174e86"] {
-	color: #5e1787 !important;
+	color: $logo-color-darker !important;
 }
 [style*="color: #24a6bb"] {
-	color: #8524bc !important;
+	color: $logo-color-lighter !important;
 }
 .detail-heading h2 a {
-	border-bottom-color: #5a018e;
+	border-bottom-color: $logo-color-darker;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -84,13 +85,13 @@ p, strong, b,
 	width: auto;
 	height: 44px;
 	margin: 5px 5px -10px 5px;
-	background: #6b2c90 url("/branding/_1_1/uom_logo_learn2016theme.png") no-repeat;
+	background: $logo-color url("/branding/_1_1/uom_logo_learn2016theme.png") no-repeat;
 	.bannerImage {
 		display: none;
 	}
 }
 .badge {
-	background-color: #6b2c90 !important;
+	background-color: $logo-color !important;
 }
 .topTabs .tabWrapper-right {
 	height: 3rem;
@@ -105,8 +106,8 @@ p, strong, b,
 
 .portlet h2,
 div.tab {
-	color: #111;
-	background: #f8f8f8;
+	color: $fg-header;
+	background: $bg-header;
 }
 .collapsible {
 	border-top-color: rgba(0,0,0,0.05);
@@ -118,9 +119,9 @@ div.tab {
 .gradeTableNew .calculatedRow.row {
 	border-left-color: transparent;
 	border-right-color: transparent;
-	-webkit-box-shadow: 0px 0px 21px 4px #f3e1fe inset;
-	-moz-box-shadow: 0px 0px 21px 4px #f3e1fe inset;
-	box-shadow: 0px 0px 21px 4px #f3e1fe inset;
+	-webkit-box-shadow: 0 0 21px 4px $logo-color-box-shadow inset;
+	-moz-box-shadow: 0 0 21px 4px $logo-color-box-shadow inset;
+	box-shadow: 0 0 21px 4px $logo-color-box-shadow inset;
 }
 
 .ally-alternative-formats.ally-prominent-af-download-button {
@@ -159,7 +160,7 @@ img[src="#{$orig_file_icon}"] {
 }
 
 #puller.pullcollapsed a {
-	background-color: #8400d1;
+	background-color: $logo-color-lighter;
 }
 
 #containerdiv {
@@ -168,7 +169,7 @@ img[src="#{$orig_file_icon}"] {
 }
 .liItem, .buildList > li {
 	border: none !important;
-	box-shadow: -6px -6px 26px 0 rgba(255, 255, 255, 1),6px 6px 16px 0 rgba(217, 213, 201, 0.51);
+	@include box-shadow-light-mode;
 	margin-bottom: 3rem !important;
 }
 .portlet {
@@ -179,7 +180,7 @@ img[src="#{$orig_file_icon}"] {
 	html, body,
 	.locationPane,
 	.contentPane {
-		background: #191919;
+		background: $bg-body-invert;
 		color: #fff;
 	}
 	#contentArea, .containerOptions, .containerPortal {
@@ -197,25 +198,25 @@ img[src="#{$orig_file_icon}"] {
 	[style*="color:#0000FF"],
 	[style*="color: #0000ff"],
 	[style*="color: blue"] {
-		color: #ae6fd3 !important;
+		color: $logo-color-invert !important;
 	}
 	.eval-links .genericButton,
 	.eval-links .button-4,
 	.eval-links input[type="button"].genericButton,
 	[style*="color: #174e86"] {
-		color: #bf78e8 !important;
+		color: $logo-color-invert-lighter !important;
 	}
 	[style*="color: #24a6bb"] {
-		color: #a343db !important;
+		color: $logo-color-invert-darker !important;
 	}
 	.detail-heading h2 a {
-		border-bottom-color: #ca71fe;
+		border-bottom-color: $logo-color-invert-lighter;
 	}
 	hr, [style*="border-bottom: 1px dashed #d1d1d1"][style*="border-top: 3px solid #d1d1d1"] {
 		height: 0 !important;
 		background: transparent !important;
 		border-bottom: none !important;
-		border-top-color: #2e2e2e !important;
+		border-top-color: $hr !important;
 	}
 	[style*="color:#000000"] {
 		color: white !important;
@@ -263,7 +264,7 @@ img[src="#{$orig_file_icon}"] {
 	}
 
 	.liItem, .buildList > li {
-		box-shadow: -6px -6px 26px 0 rgba(47, 47, 47, 0.5),6px 6px 16px 0 rgba(9, 3, 0, 0.51);
+		@include box-shadow-dark-mode();
 	}
 	.liItem:hover, .buildList > li:hover {
 		background-color: rgba(255,255,255,0.05);
@@ -283,7 +284,7 @@ img[src="#{$orig_file_icon}"] {
 		box-shadow: none;
 	}
 	.cmdiv {
-		background: #333;
+		background: $bg-navbar;
 		border: none;
 	}
 	.cmdiv > ul {

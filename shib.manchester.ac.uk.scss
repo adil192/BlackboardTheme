@@ -1,5 +1,7 @@
+@import "globals";
+
 body, footer {
-	background: #333;
+	background: $bg-navbar;
 }
 .column.one {
 	width: 75%;

@@ -1,16 +1,17 @@
+@import "globals";
 
 .portlet,
 .container,
 div.container {
 	border: none;
 	background: transparent;
-	box-shadow: -6px -6px 26px 0 rgba(254, 254, 254, 1),6px 6px 16px 0 rgba(216, 210, 200, 0.51);
+	@include box-shadow-light-mode;
 }
 
 @media (prefers-color-scheme: dark) {
 	.portlet,
 	.container,
 	div.container {
-		box-shadow: -6px -6px 26px 0 rgba(47, 47, 47, 0.83),6px 6px 16px 0 rgba(9, 3, 0, 0.51);
+		@include box-shadow-dark-mode;
 	}
 }
