@@ -1,0 +1,28 @@
+/* ==UserStyle==
+@name           UoM Blackboard theme
+@version        20220601.22.31
+@namespace      userstyles.world/user/adil192
+@description    Themes the blackboard UoM website to look slightly more modern, and use a consistent colour scheme
+@author         adil192
+@license        Unlicense
+==/UserStyle== */
+
+// All blackboard pages
+@-moz-document domain("online.manchester.ac.uk") {
+	@import "online.manchester.ac.uk";
+}
+
+// Blackboard homepage
+@-moz-document url-prefix("https://online.manchester.ac.uk/webapps/portal") {
+	@import "online.manchester.ac.uk_webapps_portal";
+}
+
+// Login page
+@-moz-document url-prefix("https://login.manchester.ac.uk/cas/login") {
+	@import "login.manchester.ac.uk";
+}
+
+// The Duo 2FA page
+@-moz-document url-prefix("https://shib.manchester.ac.uk/shibboleth-idp/profile/SAML2/POST/SSO") {
+	@import "shib.manchester.ac.uk";
+}

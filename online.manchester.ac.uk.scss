@@ -1,0 +1,303 @@
+
+:root {
+	color-scheme: light dark;
+}
+
+/* set better fonts */
+* {
+	font-family: "Google Sans","Product Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
+}
+
+/* disable quick links popup because I don't use it, remove these lines if you do use this */
+#quick_links_wrap {
+	display: none !important;
+}
+
+/* Replace welcome image */
+/* https://i.ibb.co/7jnh0wR/20220326-205008.jpg */
+img[src="https://online.manchester.ac.uk/branding/_96_1/welcome-image03.png"] {
+	background: url("https://adil.hanney.org/public-assets/cat.jpg") center center no-repeat;
+	background-size: cover;
+	box-sizing: border-box;
+	padding-left: 100%;
+	padding-top: 70%;
+}
+
+/* collapse Communications tab */
+#div_308_1 .vtbegenerated > h5:nth-of-type(2n),
+#div_308_1 .vtbegenerated > h5:nth-of-type(2n) ~ *,
+#div_308_1 .vtbegenerated > h5:nth-of-type(2n) ~ * > p {
+	display: -webkit-box;
+	transition: opacity 0.5s;
+	transition-property: -webkit-line-clamp, opacity;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	opacity: 0.6;
+}
+#div_308_1 .vtbegenerated > h5:nth-of-type(2n):hover,
+#div_308_1 .vtbegenerated > h5:nth-of-type(2n) ~ *:hover,
+#div_308_1 .vtbegenerated > h5:nth-of-type(2n) ~ *:hover > p {
+	-webkit-line-clamp: 100;
+	opacity: 1;
+}
+
+
+
+body,
+.locationPane {
+	background: #fafafa;
+}
+
+a,
+.portlet .subCategories li a,
+.blockGroups .itemHead,
+.blockGroups .itemHeadOpen,
+[style="color:#0000FF;"],
+[style="color: #0000ff;"],
+[style="color: blue; text-decoration: underline;"] {
+	color: #6b2c90 !important;
+}
+.eval-links .genericButton,
+.eval-links .button-4,
+.eval-links input[type="button"].genericButton,
+[style="color: #174e86;"],
+[style="color: #174e86; background: white;"] {
+	color: #5e1787 !important;
+}
+[style="color: #24a6bb;"],
+[style="font-size: medium; color: #24a6bb;"] {
+	color: #8524bc !important;
+}
+.detail-heading h2 a {
+	border-bottom-color: #5a018e;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, strong, b,
+.collapsible table {
+	color: inherit !important;
+}
+
+.brandingImgWrap {
+	aspect-ratio: 3.25 / 1;
+	width: auto;
+	height: 44px;
+	margin: 5px 5px -10px 5px;
+	background: #6b2c90 url("/branding/_1_1/uom_logo_learn2016theme.png") no-repeat;
+}
+.brandingImgWrap .bannerImage {
+	display: none;
+}
+.badge {
+	background-color: #6b2c90 !important;
+}
+.topTabs .tabWrapper-right {
+	height: 3rem;
+}
+.appTabs td {
+	padding-bottom: 0 !important;
+}
+.appTabs a {
+	padding: 0 1.2em;
+}
+
+
+.portlet h2,
+div.tab {
+	color: #111;
+	background: #f8f8f8;
+}
+.collapsible {
+	border-top-color: rgba(0,0,0,0.05);
+}
+
+.stream_page_left {
+	background: rgba(0,0,0,0.02);
+}
+.gradeTableNew .calculatedRow.row {
+	border-left-color: transparent;
+	border-right-color: transparent;
+	-webkit-box-shadow: 0px 0px 21px 4px #f3e1fe inset;
+	-moz-box-shadow: 0px 0px 21px 4px #f3e1fe inset;
+	box-shadow: 0px 0px 21px 4px #f3e1fe inset;
+}
+
+.ally-alternative-formats.ally-prominent-af-download-button {
+	width: auto;
+	height: 10px;
+	aspect-ratio: 5 / 3;
+	opacity: 0.8;
+}
+
+/* replace document and folder icons */
+img[src="/images/ci/sets/set01/document_on.gif"],
+img[src="/images/ci/sets/set01/file_on.gif"],
+img[src="/images/ci/sets/set01/folder_on.gif"] {
+	width: 50px;
+	height: 50px;
+	background: url("https://adil.hanney.org/public-assets/wow64-icon-theme/folder.svg") center center no-repeat;
+	background-size: contain;
+	box-sizing: border-box;
+	padding-left: 50px;
+	padding-top: 50px;
+}
+img[src="/images/ci/sets/set01/document_on.gif"] {
+	background-image: url("https://adil.hanney.org/public-assets/wow64-icon-theme/x-office-document.svg");
+	filter: hue-rotate(35deg);
+}
+img[src="/images/ci/sets/set01/file_on.gif"] {
+	background-image: url("https://adil.hanney.org/public-assets/wow64-icon-theme/application-x-mswinurl.svg");
+	filter: hue-rotate(55deg);
+}
+
+#puller.pullcollapsed a {
+	background-color: #8400d1;
+}
+
+#containerdiv {
+	border: none;
+	background: none;
+}
+.liItem, .buildList > li {
+	border: none !important;
+	box-shadow: -6px -6px 26px 0 rgba(255, 255, 255, 1),6px 6px 16px 0 rgba(217, 213, 201, 0.51);
+	margin-bottom: 3rem !important;
+}
+.portlet {
+	margin: 0 1rem 3rem 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+	html, body,
+	.locationPane,
+	.contentPane {
+		background: #191919;
+		color: #fff;
+	}
+	#contentArea, .containerOptions, .containerPortal {
+		color: #eee;
+	}
+	.portlet {
+		color: #bbb;
+	}
+
+
+	a,
+	.portlet .subCategories li a,
+	.blockGroups .itemHead,
+	.blockGroups .itemHeadOpen,
+	[style="color:#0000FF;"],
+	[style="color: #0000ff;"],
+	[style="color: blue; text-decoration: underline;"] {
+		color: #ae6fd3 !important;
+	}
+	.eval-links .genericButton,
+	.eval-links .button-4,
+	.eval-links input[type="button"].genericButton,
+	[style="color: #174e86;"],
+	[style="color: #174e86; background: white;"] {
+		color: #bf78e8 !important;
+	}
+	[style="color: #24a6bb;"],
+	[style="font-size: medium; color: #24a6bb;"] {
+		color: #a343db !important;
+	}
+	.detail-heading h2 a {
+		border-bottom-color: #ca71fe;
+	}
+	hr, [style="background: transparent; border-bottom: 1px dashed #d1d1d1; border-top: 3px solid #d1d1d1; color: #fff; background-color: #fff; width: 100%; height: 4px;"] {
+		height: 0 !important;
+		background: transparent !important;
+		border-bottom: none !important;
+		border-top-color: #2e2e2e !important;
+	}
+	[style="color:#000000;"] {
+		color: white !important;
+	}
+	[style="clear: both; color: #666666;"] {
+		color: #aaa !important;
+	}
+
+	.portlet h2, div.tab,
+	.breadcrumbs, .paneTabs {
+		color: #eee;
+		background: #141414;
+	}
+	div.tab button {
+		background-color: black;
+		color: #ddd;
+		border-color: #555;
+	}
+	div.tab button:hover {
+		background-color: #202020;
+	}
+	div.tab button.active {
+		background-color: #202020;
+		color: #ddd;
+	}
+	.path .placeholder, .simplePath .placeholder {
+		color: #bbb;
+	}
+
+	.contextPath a.cmimg, .courseArrow a.cmimg {
+		filter: invert(1);
+		border-radius: 50%;
+		padding: 0;
+		width: 16px;
+		height: 16px;
+		background-color: rgba(0,0,0,0.1);
+		border: rgba(0,0,0,0.4) 2px solid;
+	}
+	.breadcrumbs,
+	table.bouncer {
+		border-color: #555;
+	}
+	.contentPane .shadow {
+		border-color: transparent;
+	}
+
+	.liItem, .buildList > li {
+		box-shadow: -6px -6px 26px 0 rgba(47, 47, 47, 0.5),6px 6px 16px 0 rgba(9, 3, 0, 0.51);
+	}
+	.liItem:hover, .buildList > li:hover {
+		background-color: rgba(255,255,255,0.05);
+	}
+
+	img.eud-avatar {
+		transform: none;
+		background: #999;
+		border-radius: 50%;
+		aspect-ratio: 1 / 1;
+		height: auto;
+		padding: 1.75px;
+	}
+	.actionMenuButton {
+		background: rgba(255,255,255,0.1) !important;
+		border: none;
+		box-shadow: none;
+	}
+	.cmdiv {
+		background: #333;
+		border: none;
+	}
+	.cmdiv > ul {
+		border-top: none !important;
+	}
+
+	#copyright {
+		color: rgba(255,255,255,0.6);
+	}
+	#copyright .logo img {
+		filter: invert(0.6);
+	}
+
+	.uomFooter {
+		overflow: visible;
+		max-width: 100%;
+	}
+	.uomFooter img {
+		filter: invert(0.9);
+	}
+}

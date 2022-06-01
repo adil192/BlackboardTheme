@@ -1,0 +1,129 @@
+
+a, a:link {
+	color: #6b2c90;
+}
+
+body, body#cas {
+	background: #333;
+}
+#container {
+	background: #fafafa;
+}
+#content {
+	overflow: visible;
+	background: transparent;
+}
+#content::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+#login {
+	background: transparent;
+	border: 1px solid #f8f8f8;
+	box-shadow: -6px -6px 26px 0 rgba(230,230,230, 1),6px 6px 16px 0 rgba(216, 210, 200, 0.51);
+}
+
+input:not([type="checkbox"]), input.required {
+	box-sizing: border-box;
+	width: 100%;
+	background: white;
+	padding: .375rem .75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #212529;
+	background-color: #fff;
+	border: 1px solid #ced4da;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border-radius: .375rem;
+	transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+input:not([type="checkbox"]):focus, input.required:focus {
+	color: #212529;
+	background-color: #fff;
+	border-color: #86b7fe;
+	outline: 0;
+	box-shadow: 0 0 0 .25rem rgba(13,110,253,.25);
+}
+
+
+#login .row.btn-row {
+	display: flex;
+	flex-flow: row nowrap;
+}
+#login .btn-submit,
+#login .btn-reset {
+	background: transparent;
+	border: none !important;
+	font-size: 1rem;
+}
+#login .btn-submit {
+	background: #6b2c90;
+}
+#login .btn-reset {
+	width: auto;
+}
+#login .btn-submit:hover {
+	background: #5e1787;
+	border: none;
+}
+
+#aup_block {
+	width: 100%;
+	height: auto;
+	margin: 0;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 0.8em;
+	opacity: 0.5;
+}
+
+.ui-widget-content {
+	border: none;
+	box-shadow: -6px -6px 26px 0 rgba(254, 254, 254, 1),6px 6px 16px 0 rgba(216, 210, 200, 0.51);
+}
+#support_information .ui-accordion-header-icon.ui-icon {
+	background: #444;
+	border-radius: 50%;
+	aspect-ratio: 1 / 1;
+	width: auto;
+	height: 0.5em;
+	margin-top: -0.25em;
+	margin-left: 0.25em;
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+.ui-state-default {
+	border: none;
+	border-bottom: 1px solid #aaaaaa;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	color: #111;
+	background: #f8f8f8;
+	text-decoration: none;
+}
+#support_information h3 {
+	color: #111;
+	background: #f8f8f8 !important;
+	text-decoration: none;
+}
+#softwareinfo > p::after {
+	content: "\ARethemed by adil192";
+	clear: both;
+	white-space: pre;
+}
+
+@media only screen and (max-width: 855px) {
+	body, body#cas {
+		background: #fafafa;
+	}
+	#container {
+		background: transparent;
+	}
+	#fm1 .row .btn-reset {
+		display: initial;
+	}
+}
