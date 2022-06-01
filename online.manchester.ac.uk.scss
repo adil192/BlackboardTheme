@@ -55,20 +55,18 @@ a,
 .portlet .subCategories li a,
 .blockGroups .itemHead,
 .blockGroups .itemHeadOpen,
-[style="color:#0000FF;"],
-[style="color: #0000ff;"],
-[style="color: blue; text-decoration: underline;"] {
+[style*="color:#0000FF"],
+[style*="color: #0000ff"],
+[style*="color: blue"] {
 	color: #6b2c90 !important;
 }
 .eval-links .genericButton,
 .eval-links .button-4,
 .eval-links input[type="button"].genericButton,
-[style="color: #174e86;"],
-[style="color: #174e86; background: white;"] {
+[style*="color: #174e86"] {
 	color: #5e1787 !important;
 }
-[style="color: #24a6bb;"],
-[style="font-size: medium; color: #24a6bb;"] {
+[style*="color: #24a6bb"] {
 	color: #8524bc !important;
 }
 .detail-heading h2 a {
@@ -196,35 +194,33 @@ img[src="#{$orig_file_icon}"] {
 	.portlet .subCategories li a,
 	.blockGroups .itemHead,
 	.blockGroups .itemHeadOpen,
-	[style="color:#0000FF;"],
-	[style="color: #0000ff;"],
-	[style="color: blue; text-decoration: underline;"] {
+	[style*="color:#0000FF"],
+	[style*="color: #0000ff"],
+	[style*="color: blue"] {
 		color: #ae6fd3 !important;
 	}
 	.eval-links .genericButton,
 	.eval-links .button-4,
 	.eval-links input[type="button"].genericButton,
-	[style="color: #174e86;"],
-	[style="color: #174e86; background: white;"] {
+	[style*="color: #174e86"] {
 		color: #bf78e8 !important;
 	}
-	[style="color: #24a6bb;"],
-	[style="font-size: medium; color: #24a6bb;"] {
+	[style*="color: #24a6bb"] {
 		color: #a343db !important;
 	}
 	.detail-heading h2 a {
 		border-bottom-color: #ca71fe;
 	}
-	hr, [style="background: transparent; border-bottom: 1px dashed #d1d1d1; border-top: 3px solid #d1d1d1; color: #fff; background-color: #fff; width: 100%; height: 4px;"] {
+	hr, [style*="border-bottom: 1px dashed #d1d1d1"][style*="border-top: 3px solid #d1d1d1"] {
 		height: 0 !important;
 		background: transparent !important;
 		border-bottom: none !important;
 		border-top-color: #2e2e2e !important;
 	}
-	[style="color:#000000;"] {
+	[style*="color:#000000"] {
 		color: white !important;
 	}
-	[style="clear: both; color: #666666;"] {
+	[style*="color: #666666"] {
 		color: #aaa !important;
 	}
 
@@ -296,9 +292,9 @@ img[src="#{$orig_file_icon}"] {
 
 	#copyright {
 		color: rgba(255,255,255,0.6);
-	}
-	#copyright .logo img {
-		filter: invert(0.6);
+		.logo img {
+			filter: invert(0.6);
+		}
 	}
 
 	.uomFooter {
