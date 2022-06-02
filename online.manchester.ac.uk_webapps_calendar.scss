@@ -1,0 +1,39 @@
+@import "globals";
+
+.fc-state-highlight,
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+	background: rgba($logo-color, 0.3);
+	box-shadow: 2px 2px 17px $logo-color inset, 1px 1px 0 rgba(white, .6),
+				0 0 6px rgba(black, .2) inset;
+}
+
+@media (prefers-color-scheme: dark) {
+	.ui-state-default,
+	.ui-widget-content .ui-state-default,
+	.ui-widget-header .ui-state-default {
+		background: #222;
+		text-shadow: 0 1px 0 rgba(black, .7);
+	}
+	.ui-state-highlight,
+	.ui-widget-content .ui-state-highlight,
+	.ui-widget-header .ui-state-highlight {
+		background: rgba($logo-color, 0.3);
+		box-shadow: 2px 2px 17px $logo-color-invert inset, 1px 1px 0 rgba(black, .6),
+					0 0 6px rgba(white, .2) inset;
+		color: white !important;
+	}
+
+	.fc-grid .fc-day-number {
+		color: #ddd;
+	}
+	.fc-grid .fc-today .fc-day-number {
+		color: #eee;
+	}
+
+	.calendar-list .calendar-name label {
+		color: #eee;
+		text-shadow: 0 1px 0 rgba(0,0,0, 0.7);
+	}
+}

@@ -21,6 +21,11 @@
 	@import "online.manchester.ac.uk_webapps_portal";
 }
 
+// Blackboard homepage
+@-moz-document url-prefix("https://online.manchester.ac.uk/webapps/calendar") {
+	@import "online.manchester.ac.uk_webapps_calendar";
+}
+
 // Login page
 @-moz-document url-prefix("https://login.manchester.ac.uk/cas/login") {
 	@import "login.manchester.ac.uk";
