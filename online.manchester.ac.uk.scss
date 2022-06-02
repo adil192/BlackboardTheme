@@ -305,4 +305,12 @@ img[src="#{$orig_file_icon}"] {
 	.uomFooter img {
 		filter: invert(0.9);
 	}
+
+	.ui-dialog, .ui-dialog.ui-corner-all {
+		background: $bg-body-invert;
+	}
+	.ui-widget-header,
+	.ui-widget-content {
+		color: #eee;
+	}
 }

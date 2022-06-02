@@ -1,0 +1,128 @@
+@import "globals";
+
+body.mybb-shell {
+	background-color: $logo-color;
+}
+
+.title-date, .title-text {
+	color: $logo-color;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, .9);
+}
+
+.stream_left {
+	overflow-x: visible !important;
+}
+.active_stream_item {
+	border: 1px solid rgba(0,0,0,0.03);
+	@include box-shadow-light-mode;
+}
+
+@media (prefers-color-scheme: dark) {
+	.title-date, .title-text,
+	.stream_show_more_data {
+		color: $logo-color-invert;
+		text-shadow: 0 1px 0 rgba(black, .9);
+	}
+	.mybb-overview .stream_show_more_data {
+		color: white;
+	}
+	h1 .current-page .icon {
+		filter: invert(0.35);
+	}
+
+	.streamError {
+		background-color: #222;
+		box-shadow: 0 0 24px #222;
+		color: #eee;
+	}
+	.stream_list_filter a.active,
+	.stream_list_filter a.active:hover,
+	.stream_list_filter button.active,
+	.stream_list_filter button.active:hover,
+	.vertical_filter .stream_list_filter .active,
+	.vertical_filter .stream_dynamic_filters .active,
+	.vertical_filter .stream_list_filter .active:hover,
+	.vertical_filter .stream_dynamic_filters .active:hover,
+	.vertical_filter .stream_list_filter .active:focus,
+	.vertical_filter .stream_dynamic_filters .active:focus {
+		background-color: rgba(white, .05);
+		color: #eee;
+		border: 1px solid rgba(white, .13);
+		box-shadow: 1px 1px 0 rgba(black, .5), 1px 1px 7px rgba(white, .1) inset;
+	}
+	div#dynamic_filters_mygrades.stream_dynamic_filters {
+		background: #222;
+		border-color: #111;
+	}
+	.stream-detail-contents > div,
+	.announcementTitle,
+	.announcementBody {
+		color: #eee;
+	}
+	.filterBarHorizontal,
+	.receiptBarHorizontal,
+	.gradeTableNew .grades_header,
+	.vertical_filter .stream_header,
+	div#dynamic_filters_alerts.stream_dynamic_filters,
+	.vertical_filter .stream_full,
+	.vertical_filter .left_stream_wrapper,
+	.mybb-column-wrapper,
+	.accordion_content,
+	.flyout-menu .accordion-wrapper {
+		background-color: #222;
+		color: #eee;
+	}
+	.author_props .author_highlight {
+		background-color: #222 !important;
+		color: #eee !important;
+	}
+	.flyout-menu .accordion_toggle span,
+	.bottom-buttons {
+		background-color: #333 !important;
+		color: #ddd !important;
+	}
+	.bottom-buttons li {
+		filter: invert(1);
+		border: 0;
+	}
+	.gradeTableNew .row {
+		border: none !important;
+		margin-bottom: 1rem;
+	}
+	.gradeTableNew .row:hover {
+		background-color: rgba(white, 0.05);
+	}
+
+	#left_stream_alerts .stream_item {
+		color: #ccc;
+	}
+	#left_stream_alerts .stream_item:hover {
+		background-color: rgba(white, 0.03);
+	}
+	.active_stream_item {
+		border-color: rgba(white, 0.03);
+		@include box-shadow-dark-mode;
+	}
+	.grade-value {
+		color: #ccc;
+	}
+	#left_stream_mygrades .stream_context,
+	#left_stream_mygrades .active_stream_item .stream_context,
+	#stream_mygrades_d .stream_context,
+	#stream_mygrades_d .active_stream_item .stream_context,
+	.stream_details {
+		color: $logo-color-invert;
+	}
+	.active_stream_item .stream_context, .active_stream_item .stream_context_bottom {
+		color: #afafaf;
+	}
+	.stream_user,
+	.stream_item_highlight,
+	.stream_item .stream_area_name,
+	.active_stream_item .stream_area_name {
+		color: #cfcfcf;
+	}
+	.author_props .highlight-pop {
+		filter: hue-rotate(100deg);
+	}
+}

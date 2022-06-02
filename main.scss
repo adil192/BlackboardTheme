@@ -10,6 +10,10 @@
 // All blackboard pages
 @-moz-document domain("online.manchester.ac.uk") {
 	@import "online.manchester.ac.uk";
+
+	// Blackboard assignments/grades/etc,
+	// split across many iframes so I'll just put these styles here
+	@import "online.manchester.ac.uk_webapps_bb-social-learning";
 }
 
 // Blackboard homepage
