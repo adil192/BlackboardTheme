@@ -2,6 +2,8 @@
 
 Themes UoM's [blackboard website](https://online.manchester.ac.uk/) to look slightly more modern, and use a consistent colour scheme
 
+Install at https://userstyles.world/style/4931/uom-blackboard-theme
+
 
 ![image(3)](https://user-images.githubusercontent.com/21128619/171524628-0c00c509-45da-4b63-a882-9c2b3fb2a3df.png)
 ![image](https://user-images.githubusercontent.com/21128619/171524634-b265710a-27af-4c65-9631-2fb0abdcfb12.png)
