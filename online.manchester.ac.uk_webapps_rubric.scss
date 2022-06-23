@@ -1,0 +1,62 @@
+@import "globals";
+
+#containerdiv {
+	overflow: visible;
+}
+.pageTitle h1 {
+	padding-left: 0;
+}
+.rubricGradingList {
+	input, label, input[type="checkbox"] + label {
+		margin: 0;
+		width: auto;
+	}
+	label, input[type="checkbox"] + label {
+		margin: 0;
+		float: none;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.contentAreaBlock {
+		background: #111111;
+		color: #eeeeee;
+	}
+	#pageHeader, #schemePreviewHead, .pageTitle{
+		color: #eeeeee;
+	}
+	.helphelp, .pageTitle p, .details.label {
+		color: #cccccc;
+	}
+	.gradeInfoHeader h3 span {
+		font-weight: initial;
+		color: #cccccc;
+	}
+
+	.rubricGradingTable th, .rubricTable th {
+		color: #c7d0dc;
+	}
+	.rubricGradingTable tbody td, .rubricTable tbody td {
+		background: #1a1a1a;
+		border-color: #0a0a0a;
+		color: #eeeeee;
+		&:hover {
+			background: #222;
+		}
+		&.selectedCell {
+			background: hsl(190, 35%, 12%);
+			color: white;
+		}
+		&.selectedCell:hover {
+			background: hsl(190, 35%, 17%);
+		}
+		.rangePercent {
+			color: #fafafa;
+		}
+	}
+
+	.submitStepFixed {
+		background-color: #111;
+		border-color: #333;
+	}
+}
