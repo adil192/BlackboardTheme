@@ -313,4 +313,12 @@ img[src="#{$orig_file_icon}"] {
 	.ui-widget-content {
 		color: #eee;
 	}
+
+	div.lb-wrapper,
+	div.lb-wrapper div.lb-content {
+		background: #111;
+	}
+	div.lb-wrapper div.lb-header {
+		background: #171717;
+	}
 }
