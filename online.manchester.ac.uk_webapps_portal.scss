@@ -8,10 +8,3 @@ div.container {
 	@include box-shadow-light-mode;
 }
 
-@media (prefers-color-scheme: dark) {
-	.portlet,
-	.container,
-	div.container {
-		@include box-shadow-dark-mode;
-	}
-}
