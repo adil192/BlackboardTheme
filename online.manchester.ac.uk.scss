@@ -215,3 +215,9 @@ img[src="#{$orig_file_icon}"] {
 .portlet {
 	margin: 0 1rem 2rem 1rem;
 }
+
+// remove dashed line above footer
+[style*="border-bottom: 1px dashed"][style*="border-top: 3px solid"] {
+	border: none !important;
+	background: transparent !important;
+}
