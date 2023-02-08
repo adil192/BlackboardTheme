@@ -207,6 +207,10 @@ img[src="#{$orig_file_icon}"] {
 	color: $on-surface;
 	border-radius: 0.5rem;
 	margin-bottom: 3rem !important;
+
+	&:hover {
+		background: $surface;
+	}
 }
 .portlet {
 	margin: 0 1rem 2rem 1rem;
