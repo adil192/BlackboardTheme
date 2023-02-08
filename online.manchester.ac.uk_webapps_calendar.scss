@@ -4,7 +4,7 @@
 .ui-state-highlight,
 .ui-widget-content .ui-state-highlight,
 .ui-widget-header .ui-state-highlight {
-	background: rgba($logo-color, 0.3);
-	box-shadow: 2px 2px 17px $logo-color inset, 1px 1px 0 rgba(white, .6),
+	background: rgba($primary, 0.3);
+	box-shadow: 2px 2px 17px $primary inset, 1px 1px 0 rgba(white, .6),
 				0 0 6px rgba(black, .2) inset;
 }

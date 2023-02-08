@@ -45,7 +45,7 @@ img[src="https://online.manchester.ac.uk/branding/_96_1/welcome-image03.png"] {
 
 body,
 .locationPane {
-	background: $bg-body;
+	background: $background;
 }
 
 a,
@@ -55,19 +55,19 @@ a,
 [style*="color:#0000FF"],
 [style*="color: #0000ff"],
 [style*="color: blue"] {
-	color: $logo-color !important;
+	color: $primary !important;
 }
 .eval-links .genericButton,
 .eval-links .button-4,
 .eval-links input[type="button"].genericButton,
 [style*="color: #174e86"] {
-	color: $logo-color-darker !important;
+	color: darken($primary, 10%) !important;
 }
 [style*="color: #24a6bb"] {
-	color: $logo-color-lighter !important;
+	color: lighten($primary, 10%) !important;
 }
 .detail-heading h2 a {
-	border-bottom-color: $logo-color-darker;
+	border-bottom-color: darken($primary, 10%);
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -81,13 +81,22 @@ p, strong, b,
 	width: auto;
 	height: 44px;
 	margin: 5px 5px -10px 5px;
-	background: $logo-color url("/branding/_1_1/uom_logo_learn2016theme.png") no-repeat;
+	background: $primary url("/branding/_1_1/uom_logo_learn2016theme.png") no-repeat;
 	.bannerImage {
 		display: none;
 	}
 }
 .badge {
-	background-color: $logo-color !important;
+	background-color: $primary !important;
+}
+.topTabs,
+#courseMenuPalette,
+.menuWrap-inner,
+.menuWrap,
+#courseMenuPalette *,
+#courseMenuPalette_paletteTitleHeading * {
+	background: $header !important;
+	color: $on-header !important;
 }
 .topTabs .tabWrapper-right {
 	height: 3rem;
@@ -102,8 +111,8 @@ p, strong, b,
 
 .portlet h2,
 div.tab {
-	color: $fg-header;
-	background: $bg-header;
+	background: transparent !important;
+	color: inherit !important;
 }
 .collapsible {
 	border-top-color: rgba(0,0,0,0.05);
@@ -156,7 +165,7 @@ img[src="#{$orig_file_icon}"] {
 }
 
 #puller.pullcollapsed a {
-	background-color: $logo-color-lighter;
+	background-color: lighten($primary, 10%);
 }
 
 #containerdiv {
