@@ -4,7 +4,12 @@
 .container,
 div.container {
 	border: none;
-	background: transparent;
-	@include box-shadow-light-mode;
+	background: $surface;
+	color: $on-surface;
+	border-radius: 0.5rem;
 }
 
+#content > .container {
+	background: transparent;
+	box-shadow: none;
+}

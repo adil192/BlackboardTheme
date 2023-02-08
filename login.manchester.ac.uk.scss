@@ -23,7 +23,6 @@ body, body#cas {
 #login {
 	background: transparent;
 	border: 1px solid $header;
-	@include box-shadow-light-mode($header);
 }
 
 // styles from Bootstrap
@@ -85,7 +84,6 @@ input:not([type="checkbox"]), input.required {
 
 .ui-widget-content {
 	border: none;
-	@include box-shadow-light-mode;
 }
 #support_information .ui-accordion-header-icon.ui-icon {
 	background: #444;

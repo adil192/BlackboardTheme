@@ -16,12 +16,7 @@ $outline: #7d747e;
 $background: #fffbff;
 $on-background: #1d1b1e;
 
-$surface: #eadfea;
+$surface: #f9f1fa;
 $on-surface: #4b444d;
 
 $font-family: "Google Sans","Product Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-
-@mixin box-shadow-light-mode($top:rgb(254,254,254), $bottom:rgb(216, 210, 200)) {
-	box-shadow: -6px -6px 26px 0 rgba($top, 1),
-				6px 6px 16px 0 rgba($bottom, 0.51);
-}
