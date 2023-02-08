@@ -221,3 +221,13 @@ img[src="#{$orig_file_icon}"] {
 	border: none !important;
 	background: transparent !important;
 }
+
+// change logout button icon
+.global-nav-bar .logout-link {
+	background-color: transparent !important;
+	background-image: url("https://adil.hanney.org/public-assets/logout.svg") !important;
+	background-size: 70% !important;
+	background-position: center center !important;
+	background-repeat: no-repeat !important;
+	filter: invert(1);
+}
