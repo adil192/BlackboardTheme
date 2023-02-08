@@ -100,6 +100,9 @@ p, strong, b,
 	background: $header !important;
 	color: $on-header !important;
 }
+.appTabs a {
+	color: $on-header !important;
+}
 .topTabs .tabWrapper-right {
 	height: 3rem;
 }
