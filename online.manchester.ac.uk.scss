@@ -80,7 +80,7 @@ p, strong, b,
 .brandingImgWrap {
 	aspect-ratio: 3.25 / 1;
 	width: auto;
-	height: 44px;
+	height: 44px !important;
 	margin: 5px 5px -10px 5px;
 	background: $primary url("/branding/_1_1/uom_logo_learn2016theme.png") no-repeat;
 	.bannerImage {
@@ -95,7 +95,8 @@ p, strong, b,
 .menuWrap-inner,
 .menuWrap,
 #courseMenuPalette *,
-#courseMenuPalette_paletteTitleHeading * {
+#courseMenuPalette_paletteTitleHeading *,
+.global-nav-bar-wrap {
 	background: $header !important;
 	color: $on-header !important;
 }
