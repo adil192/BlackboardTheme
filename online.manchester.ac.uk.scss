@@ -120,7 +120,31 @@ div.tab {
 	padding-top: 5rem;
 }
 .collapsible {
-	border-top-color: rgba(0,0,0,0.05);
+	border-top-color: transparent;
+}
+div.tab {
+	padding: 1rem;
+
+	button {
+		background: $on-primary !important;
+		color: $primary !important;
+		font-weight: normal !important;
+
+		width: auto;
+		height: 2.5rem;
+		border-radius: 1.25rem;
+		margin-inline: 0.1rem;
+		padding-inline: 1rem;
+
+		&.active {
+			background: $primary !important;
+			color: $on-primary !important;
+		}
+		&:hover {
+			background: lighten($primary, 10%) !important;
+			color: $on-primary !important;
+		}
+	}
 }
 
 .stream_page_left {
