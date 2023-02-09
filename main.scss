@@ -40,3 +40,8 @@
 @-moz-document url-prefix("https://shib.manchester.ac.uk/shibboleth-idp/profile/SAML2/POST/SSO") {
 	@import "shib.manchester.ac.uk";
 }
+
+// My Manchester
+@-moz-document domain("my.manchester.ac.uk") {
+	@import "my.manchester.ac.uk";
+}
