@@ -2,10 +2,31 @@
 
 body, footer {
 	background: $background;
+	color: $on-background;
+}
+.container {
+	position: static;
+	width: 100%;
+	margin: auto;
+	padding: 2rem;
+	max-width: 600px;
 }
 .column.one {
-	width: 75%;
+	width: 100%;
 }
-.column.one h3:first-of-type {
-	width: 100vw;
+.column.two {
+	display: none;
+}
+
+h3 {
+	font-size: 1.5rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	color: $primary;
+	text-align: inherit !important;
+}
+
+iframe {
+	display: block;
+	margin: auto;
 }

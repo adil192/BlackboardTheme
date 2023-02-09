@@ -21,8 +21,20 @@ body, body#cas {
 }
 
 #login {
-	background: transparent;
-	border: 1px solid $header;
+	background: $surface;
+	color: $on-surface;
+	border: none;
+	box-shadow: none;
+
+	h2 {
+		font-size: 2rem !important;
+		padding-top: 2rem !important;
+		border-bottom: none !important;
+	}
+
+	.row.btn-row {
+		border-top: none !important;
+	}
 }
 
 // styles from Bootstrap
@@ -107,9 +119,10 @@ input:not([type="checkbox"]), input.required {
 	text-decoration: none;
 }
 #support_information h3 {
-	background: $header !important;
-	color: $on-header;
+	background: $surface !important;
+	color: $on-surface;
 	text-decoration: none;
+	border-bottom-color: $primary;
 }
 #softwareinfo > p::after {
 	content: "\ARethemed by adil192";
