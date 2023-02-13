@@ -55,6 +55,10 @@ body,
 	background: $background;
 }
 
+.contentPane .shadow {
+	border-color: transparent;
+}
+
 a,
 .portlet .subCategories li a,
 .blockGroups .itemHead,
