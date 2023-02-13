@@ -78,7 +78,8 @@ a,
 	color: lighten($primary, 10%) !important;
 }
 .detail-heading h2 a {
-	border-bottom-color: darken($primary, 10%);
+	border: none !important;
+	text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -162,7 +163,9 @@ div.tab {
 }
 
 .stream_page_left {
-	background: rgba(0,0,0,0.02);
+	background: $background;
+	color: $on-background;
+	border: none;
 }
 .gradeTableNew .calculatedRow.row {
 	border-left-color: transparent;

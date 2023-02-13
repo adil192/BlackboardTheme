@@ -12,25 +12,64 @@ body.mybb-shell {
 .side-nav {
 	background-color: $header;
 	color: $on-header;
+
+	ul li.active a {
+		background-color: $primary;
+		color: $on-primary;
+		border: none;
+		box-shadow: none;
+		border-radius: 0.5rem;
+	}
+
+	.menu-icon { // bleach icons
+		filter: brightness(0) invert(1);
+	}
 }
 .iframe-wrap,
 .current_filter,
-.vertical_filter .left_stream_wrapper {
+.vertical_filter .left_stream_wrapper,
+.stream_right {
 	border: none;
 	box-shadow: none;
-}
-
-.stream_left {
-	overflow-x: visible !important;
-}
-.active_stream_item {
-	border: 1px solid rgba(0,0,0,0.03);
 }
 
 .vertical_filter .stream_header,
 div#dynamic_filters_alerts.stream_dynamic_filters {
 	background: $background;
 	color: $on-background;
+}
+.stream_header {
+	border: none;
+	box-shadow: none;
+}
+.stream_list_filter > li a,
+.stream_list_filter > li button {
+	background: transparent !important;
+	color: $primary !important;
+
+	&.active {
+		background: $primary !important;
+		color: $on-primary !important;
+		border: none;
+		box-shadow: none;
+		border-radius: 1000px !important;
+	}
+}
+.stream_left {
+	overflow-x: visible !important;
+}
+.stream_item,
+.active_stream_item,
+.stream_dynamic_filters {
+	background: $surface !important;
+	color: $on-surface !important;
+	border: none;
+	box-shadow: none;
+	margin-block: 1rem;
+	cursor: pointer !important;
+}
+.stream_dynamic_filters {
+	box-shadow: 0 0 0.5rem 0.5rem rgba($on-surface, 0.1);
 }
 
 .stream_new_entry,
