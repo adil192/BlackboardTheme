@@ -77,3 +77,9 @@ a {
 		color: $on-surface;
 	}
 }
+
+.highcharts-background {
+	fill: $surface-elevation-1;
+	rx: 0.5rem;
+	ry: 0.5rem;
+}
