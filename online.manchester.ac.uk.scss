@@ -224,6 +224,7 @@ img[src="#{$orig_file_icon}"] {
 	color: $on-surface;
 	border-radius: 0.5rem;
 	margin-bottom: 3rem !important;
+	box-shadow: 0 0 0.3rem 0 rgba($on-surface, 0.1);
 
 	&:hover {
 		background: $surface;
