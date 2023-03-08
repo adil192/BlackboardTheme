@@ -26,7 +26,12 @@ h3 {
 	text-align: inherit !important;
 }
 
-iframe {
+#duo_iframe {
 	display: block;
 	margin: auto;
+	border-radius: 1rem;
+
+	// hide the Duo iframe's border
+	outline: 1rem solid $background;
+	outline-offset: -2px; // -2 * border-width
 }
