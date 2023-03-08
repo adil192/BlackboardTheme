@@ -40,6 +40,10 @@
 @-moz-document url-prefix("https://shib.manchester.ac.uk/shibboleth-idp/profile/SAML2/POST/SSO") {
 	@import "shib.manchester.ac.uk";
 }
+// The actual Duo 2FA iframe
+@-moz-document url-prefix("https://api-4c039978.duosecurity.com/frame") {
+	@import "shib.manchester.ac.uk_duo";
+}
 
 // My Manchester
 @-moz-document domain("my.manchester.ac.uk") {

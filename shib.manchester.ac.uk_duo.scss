@@ -1,0 +1,42 @@
+@import "globals";
+
+body,
+.base-wrapper,
+.base-body {
+	background: $background;
+	color: $on-background;
+	border-color: transparent;
+}
+
+select,
+.row-label, .device-bar {
+	background: $surface;
+	color: $on-surface;
+}
+
+a, a:hover,
+.row-label .recommended,
+.device-bar .recommended {
+	color: $primary;
+}
+
+button,
+.button,
+input[type="submit"]:not(.link),
+input[type="reset"],
+input[type="button"] {
+	&.positive {
+		background: $primary;
+		color: $on-primary;
+
+		&:hover {
+			background: darken($primary, 10%);
+			color: $on-primary;
+		}
+
+		&:disabled {
+			background: rgba($primary, 0.5) !important;
+			color: $on-primary !important;
+		}
+	}
+}
