@@ -250,3 +250,9 @@ img[src="#{$orig_file_icon}"] {
 	background-repeat: no-repeat !important;
 	filter: invert(1);
 }
+
+iframe[src*="https://video.manchester.ac.uk"] {
+	border-radius: 0.5rem;
+	height: auto;
+	aspect-ratio: 660 / 362;
+}

@@ -2,6 +2,10 @@
 
 $progress-bar-height: 1.5em; // up from 0.3em
 
+body {
+  margin: 0;
+}
+
 .video-js .vjs-progress-control .vjs-progress-holder,
 .video-js .vjs-progress-control:hover .vjs-progress-holder {
   // don't resize the progress bar when hovering over it
