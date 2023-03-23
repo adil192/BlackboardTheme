@@ -39,6 +39,7 @@ body {
     background: rgba($primary, 0.2);
     border-bottom-right-radius: $progress-bar-height / 2;
     border-top-right-radius: $progress-bar-height / 2;
+    transition: width 1s ease-in;
     * {
       opacity: 0;
     }
