@@ -32,7 +32,7 @@ body {
   .vjs-play-progress {
     background: $primary;
 
-    &::before {
+    &::before { // handle of the progress bar
       content: "";
       display: block;
       width: $progress-bar-height;
@@ -43,5 +43,24 @@ body {
       right: -$progress-bar-height / 2;
       font-size: inherit;
     }
+  }
+}
+
+.video-js .vjs-title-bar-link { // title of the video
+  width: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  background: $surface;
+  color: $on-surface;
+  border-radius: 0.5em;
+
+  top: 1em;
+  right: 50%;
+  left: auto;
+  transform: translateX(50%);
+
+  > a {
+    color: $on-surface !important;
+    text-decoration: none;
   }
 }
