@@ -15,6 +15,10 @@ body {
 }
 .video-js .vjs-downloads-button {
   filter: invert(1);
+
+  .vjs-menu-content { // un-invert the menu
+    filter: invert(1);
+  }
 }
 
 .video-js .vjs-progress-control .vjs-progress-holder,
@@ -73,5 +77,28 @@ body {
   > a {
     color: $on-surface !important;
     text-decoration: none;
+  }
+}
+
+.vjs-menu-button-popup .vjs-menu {
+  &, .vjs-menu-content {
+    background: $surface;
+    color: $on-surface;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+  .vjs-menu-item {
+    background: transparent;
+    color: $on-surface;
+    box-shadow: none !important;
+
+    &.vjs-selected {
+      background: rgba($primary, 0.1);
+    }
+
+    &:hover,
+    &:focus {
+      background: rgba($primary, 0.2);
+    }
   }
 }
