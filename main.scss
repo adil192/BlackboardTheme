@@ -49,3 +49,8 @@
 @-moz-document domain("my.manchester.ac.uk") {
 	@import "my.manchester.ac.uk";
 }
+
+// Embedded videos
+@-moz-document domain("video.manchester.ac.uk") {
+	@import "video.manchester.ac.uk";
+}

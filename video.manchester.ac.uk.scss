@@ -1,0 +1,43 @@
+@import "globals";
+
+$progress-bar-height: 1.5em; // up from 0.3em
+
+.video-js .vjs-progress-control .vjs-progress-holder,
+.video-js .vjs-progress-control:hover .vjs-progress-holder {
+  // don't resize the progress bar when hovering over it
+  font-size: inherit !important;
+}
+.video-js .vjs-progress-holder {
+  // Make the hitbox for the progress bar bigger
+  height: $progress-bar-height;
+
+  border-radius: $progress-bar-height / 2;
+  background: $surface;
+  overflow: hidden;
+  cursor: ew-resize;
+
+  .vjs-load-progress {
+    background: rgba($primary, 0.2);
+    border-bottom-right-radius: $progress-bar-height / 2;
+    border-top-right-radius: $progress-bar-height / 2;
+    * {
+      opacity: 0;
+    }
+  }
+
+  .vjs-play-progress {
+    background: $primary;
+
+    &::before {
+      content: "";
+      display: block;
+      width: $progress-bar-height;
+      height: $progress-bar-height;
+      background: $primary;
+      border-radius: $progress-bar-height / 2;
+      top: 0;
+      right: -$progress-bar-height / 2;
+      font-size: inherit;
+    }
+  }
+}
