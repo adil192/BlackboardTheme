@@ -6,6 +6,17 @@ body {
   margin: 0;
 }
 
+.video-js .vjs-control-bar {
+  background: $surface;
+  color: $on-surface;
+  border-radius: 0.5rem;
+  margin: 0 0.5rem 0.5rem;
+  width: auto;
+}
+.video-js .vjs-downloads-button {
+  filter: invert(1);
+}
+
 .video-js .vjs-progress-control .vjs-progress-holder,
 .video-js .vjs-progress-control:hover .vjs-progress-holder {
   // don't resize the progress bar when hovering over it
@@ -16,7 +27,7 @@ body {
   height: $progress-bar-height;
 
   border-radius: $progress-bar-height / 2;
-  background: $surface;
+  background: rgba($primary, 0.1);
   overflow: hidden;
   cursor: ew-resize;
 
