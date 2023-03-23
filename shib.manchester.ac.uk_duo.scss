@@ -40,3 +40,16 @@ input[type="button"] {
 		}
 	}
 }
+
+// hide white background of UoM logo
+// by setting blend mode to darken
+.base-navigation div[role="banner"] {
+	background-image: url('/frame/logo?sid=MjExOTc4YTMxNDUwNDFlYzk3ZmYzYmQ1Y2FmNTBmMWQ=|130.88.226.13|1679584952|a44532c2bb57df09ebef998571491c436b713615');
+	background-color: $background;
+	background-size: contain;
+	background-blend-mode: darken;
+
+	img {
+		opacity: 0;
+	}
+}
