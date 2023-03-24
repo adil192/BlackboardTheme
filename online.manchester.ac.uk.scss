@@ -217,14 +217,17 @@ img[src="#{$orig_file_icon}"] {
 }
 .liItem, .buildList > li {
 	border: none !important;
-	background: $surface;
-	color: $on-surface;
-	border-radius: 0.5rem;
+	background: transparent !important;
+	color: $on-background;
 	margin-bottom: 3rem !important;
-	box-shadow: 0 0 0.3rem 0 rgba($on-surface, 0.1);
+	box-shadow: none;
 
-	&:hover {
+	.details {
 		background: $surface;
+		color: $on-surface;
+		border-radius: 0.5rem;
+		margin-left: 60px;
+		padding: 1rem;
 	}
 }
 .portlet {
