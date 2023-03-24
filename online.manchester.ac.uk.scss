@@ -135,25 +135,38 @@ div.tab {
 	border-top-color: transparent;
 }
 div.tab {
-	padding: 1rem;
+	display: inline-block;
+	background: rgba($primary, 0.1) !important;
+	color: $primary !important;
+	margin: 1rem;
+	padding: 0;
+	height: 4rem;
+	border-radius: 2rem;
+	overflow: hidden;
+	font-size: 0; // remove whitespace
 
 	button {
-		background: $on-primary !important;
-		color: $primary !important;
-		font-weight: normal !important;
+		background: transparent !important;
+		color: $on-surface !important;
+		font-size: 1.1rem;
+		font-weight: bold !important;
+		border: none;
+		border-radius: 2rem;
 
 		width: auto;
-		height: 2.5rem;
-		border-radius: 1.25rem;
-		margin-inline: 0.1rem;
-		padding-inline: 1rem;
+		height: 100%;
+		padding-inline: 3rem;
 
+		&:hover {
+			background: rgba(black, 0.05) !important;
+			color: $on-surface !important;
+		}
 		&.active {
 			background: $primary !important;
 			color: $on-primary !important;
 		}
-		&:hover {
-			background: lighten($primary, 10%) !important;
+		&.active:hover {
+			background: darken($primary, 5%) !important;
 			color: $on-primary !important;
 		}
 	}
