@@ -241,6 +241,13 @@ img[src="#{$orig_file_icon}"] {
 		border-radius: 0.5rem;
 		margin-left: 60px;
 		padding: 1rem;
+
+		&:empty {
+			display: none;
+		}
+		&:-moz-only-whitespace {
+			display: none;
+		}
 	}
 }
 .portlet {
