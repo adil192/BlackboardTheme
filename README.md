@@ -4,7 +4,6 @@ Themes UoM's [blackboard website](https://online.manchester.ac.uk/) to look slig
 
 Install at https://userstyles.world/style/4931/uom-blackboard-theme
 
-
-![Themed Blackboard homepage](https://user-images.githubusercontent.com/21128619/217416409-42d99beb-c347-4dfc-8b0e-d223369072fa.png)
-![Themed Blackboard course page](https://user-images.githubusercontent.com/21128619/217416644-e3270619-e76e-489e-9084-f465dff6b214.png)
+![Themed Blackboard homepage](https://user-images.githubusercontent.com/21128619/227395519-39bc7af5-0834-4a1a-9482-06c3920992a2.png)
+![Themed Blackboard course page](https://user-images.githubusercontent.com/21128619/227395623-d55703d5-033a-40bc-b84d-0ef31f2bcbf8.png)
 
