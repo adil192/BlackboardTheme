@@ -13,11 +13,16 @@ select,
 	background: $surface;
 	color: $on-surface;
 }
+select:focus {
+	box-shadow: none;
+	border-color: $primary;
+}
 
-a, a:hover,
+a, a:hover, a:focus,
 .row-label .recommended,
 .device-bar .recommended {
 	color: $primary;
+	outline: none;
 }
 
 button,
@@ -29,9 +34,11 @@ input[type="button"] {
 		background: $primary;
 		color: $on-primary;
 
-		&:hover {
+		&:hover,
+		&:focus {
 			background: darken($primary, 10%);
 			color: $on-primary;
+			outline: none;
 		}
 
 		&:disabled {
@@ -44,12 +51,16 @@ input[type="button"] {
 // hide white background of UoM logo
 // by setting blend mode to darken
 .base-navigation div[role="banner"] {
-	background-image: url('/frame/logo?sid=MjExOTc4YTMxNDUwNDFlYzk3ZmYzYmQ1Y2FmNTBmMWQ=|130.88.226.13|1679584952|a44532c2bb57df09ebef998571491c436b713615');
-	background-color: $background;
+	background: $background
+		url('https://shib.manchester.ac.uk/shibboleth-idp/images/logo.png')
+		no-repeat;
 	background-size: contain;
 	background-blend-mode: darken;
+	aspect-ratio: 206 / 86;
+	height: auto;
+	margin-bottom: 1rem;
 
 	img {
-		opacity: 0;
+		display: none;
 	}
 }

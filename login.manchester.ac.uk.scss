@@ -2,13 +2,15 @@
 
 a, a:link {
 	color: $primary;
+	text-decoration: none;
 }
 
-body, body#cas {
+html, body, body#cas {
 	background: $background;
 }
-#container {
-	background: $background;
+body > #container {
+	background: transparent;
+	width: auto;
 }
 #content {
 	overflow: visible;
@@ -20,20 +22,62 @@ body, body#cas {
 	display: table;
 }
 
+header,
+footer {
+	display: none;
+}
+
+#logincol {
+	display: block;
+	width: auto;
+	float: none;
+	margin: 0;
+	text-align: center;
+}
+#logincol::before {
+	display: inline-block;
+	content: "Welcome to the University of Manchester!";
+	font-size: 2rem !important;
+	line-height: 1;
+	margin-bottom: 1rem;
+	color: $on-background;
+	text-align: start;
+	padding: 1rem;
+}
+
 #login {
 	background: $surface;
 	color: $on-surface;
 	border: none;
 	box-shadow: none;
+	float: none;
+	margin: auto;
+	width: auto;
+	max-width: 500px;
+	text-align: start;
+	padding: 0;
+	border-radius: 0.5rem;
 
 	h2 {
-		font-size: 2rem !important;
-		padding-top: 2rem !important;
-		border-bottom: none !important;
+		display: none;
 	}
 
 	.row.btn-row {
 		border-top: none !important;
+	}
+
+	&::before {
+		display: block;
+		content: "";
+		width: 100%;
+		aspect-ratio: 20 / 9;
+		background: url("https://www.manchester.ac.uk/connect/contact-us/Contact-us.jpg") no-repeat center center;
+		background-size: cover;
+		border-radius: 0.5rem 0.5rem 0 0;
+	}
+
+	form#fm1 {
+		padding: 1rem;
 	}
 }
 
@@ -56,12 +100,24 @@ input:not([type="checkbox"]), input.required {
 	&:focus {
 		color: $on-background;
 		background-color: #fff;
-		border-color: #86b7fe;
+		border-color: $primary;
 		outline: 0;
-		box-shadow: 0 0 0 .25rem rgba(13,110,253,.25);
+		box-shadow: 0 0 0 .25rem rgba($primary,.25);
 	}
 }
 
+#cas #login label {
+	font-size: 1rem;
+	color: $on-surface;
+	margin-bottom: 0.5rem;
+}
+span.accesskey { // Underlines the first letter of the label
+	text-decoration: none;
+}
+
+#option_ticks {
+	display: none;
+}
 
 #login .row.btn-row {
 	display: flex;
@@ -85,49 +141,15 @@ input:not([type="checkbox"]), input.required {
 	border: none;
 }
 
-#aup_block {
-	width: 100%;
-	height: auto;
-	margin: 0;
-	font-family: $font-family !important;
-	font-size: 0.8em;
-	opacity: 0.5;
+#aup_block { // Acceptable Use Policy
+	display: none !important;
 }
 
 .ui-widget-content {
 	border: none;
 }
-#support_information .ui-accordion-header-icon.ui-icon {
-	background: #444;
-	border-radius: 50%;
-	aspect-ratio: 1 / 1;
-	width: auto;
-	height: 0.5em;
-	margin-top: -0.25em;
-	margin-left: 0.25em;
-}
-.ui-state-active,
-.ui-widget-content .ui-state-active,
-.ui-widget-header .ui-state-active,
-.ui-state-default {
-	border: none;
-	border-bottom: 1px solid #aaaaaa;
-	border-bottom-right-radius: 0;
-	border-bottom-left-radius: 0;
-	background: $header;
-	color: $on-header;
-	text-decoration: none;
-}
-#support_information h3 {
-	background: $surface !important;
-	color: $on-surface;
-	text-decoration: none;
-	border-bottom-color: $primary;
-}
-#softwareinfo > p::after {
-	content: "\ARethemed by adil192";
-	clear: both;
-	white-space: pre;
+#sidebar {
+	display: none;
 }
 
 @media only screen and (max-width: 855px) {
