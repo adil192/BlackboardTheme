@@ -18,3 +18,55 @@ div.container {
 	background: transparent;
 	box-shadow: none;
 }
+
+.listElement,
+.courseListing {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 1rem;
+
+	li {
+		border: none;
+		background: rgba($primary, 0.1);
+		color: $on-surface;
+		border-radius: 0.5rem;
+		padding: 0 !important;
+		margin: 0 !important;
+
+		&:hover {
+			background: rgba($primary, 0.2);
+		}
+
+		a {
+			display: block;
+			padding: 1rem 1rem 2rem 1rem;
+			min-height: 4em;
+			color: $on-surface !important;
+		}
+	}
+}
+
+@media (max-width: 1400px) {
+	.listElement,
+	.courseListing {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+@media (max-width: 1000px) {
+	.listElement,
+	.courseListing {
+		grid-template-columns: 1fr 1fr 1fr 1fr
+	}
+}
+@media (max-width: 800px) {
+	.listElement,
+	.courseListing {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+@media (max-width: 500px) {
+	.listElement,
+	.courseListing {
+		grid-template-columns: 1fr 1fr;
+	}
+}
