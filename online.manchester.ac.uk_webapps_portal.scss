@@ -4,9 +4,14 @@
 .container,
 div.container {
 	border: none;
-	background: $surface;
-	color: $on-surface;
-	border-radius: 0.5rem;
+	h2 {
+		font-size: 2rem;
+	}
+	h2 ~ div {
+		background: $surface;
+		color: $on-surface;
+		border-radius: 0.5rem;
+	}
 }
 
 #content > .container {
