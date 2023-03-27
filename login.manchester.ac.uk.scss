@@ -46,7 +46,7 @@ footer {
 	padding: 1rem;
 }
 
-#login {
+#login, #logout {
 	background: $surface;
 	color: $on-surface;
 	border: none;
@@ -62,11 +62,45 @@ footer {
 	h2 {
 		display: none;
 	}
+	p {
+		background: none;
+	}
 
 	.row.btn-row {
 		border-top: none !important;
 	}
 
+	form#fm1 {
+		padding: 1rem;
+	}
+
+	.row.btn-row {
+		display: flex;
+		flex-flow: row nowrap;
+	}
+	#logoutbutton,
+	.btn-submit,
+	.btn-reset {
+		background: transparent;
+		border: none !important;
+		font-size: 1rem;
+	}
+	#logoutbutton,
+	.btn-submit {
+		background: $primary;
+		color: $on-primary;
+	}
+	.btn-reset {
+		width: auto;
+	}
+	#logoutbutton:hover,
+	.btn-submit:hover {
+		background: darken($primary, 10%);
+		border: none;
+	}
+}
+
+#login {
 	&::before {
 		display: block;
 		content: "";
@@ -75,10 +109,6 @@ footer {
 		background: url("https://www.manchester.ac.uk/connect/contact-us/Contact-us.jpg") no-repeat center center;
 		background-size: cover;
 		border-radius: 0.5rem 0.5rem 0 0;
-	}
-
-	form#fm1 {
-		padding: 1rem;
 	}
 }
 
@@ -120,28 +150,6 @@ span.accesskey { // Underlines the first letter of the label
 	display: none;
 }
 
-#login .row.btn-row {
-	display: flex;
-	flex-flow: row nowrap;
-}
-#login .btn-submit,
-#login .btn-reset {
-	background: transparent;
-	border: none !important;
-	font-size: 1rem;
-}
-#login .btn-submit {
-	background: $primary;
-	color: $on-primary;
-}
-#login .btn-reset {
-	width: auto;
-}
-#login .btn-submit:hover {
-	background: darken($primary, 10%);
-	border: none;
-}
-
 #aup_block { // Acceptable Use Policy
 	display: none !important;
 }
@@ -162,5 +170,45 @@ span.accesskey { // Underlines the first letter of the label
 	}
 	#fm1 .row .btn-reset {
 		display: initial;
+	}
+}
+
+#msg {
+	border: none !important;
+	background: $surface !important;
+	color: $on-surface;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 2rem 4rem !important;
+	border-radius: 0.5rem;
+
+	&.success {
+		background-color: $primary !important;
+		color: $on-primary;
+	}
+}
+
+#placestogo, #logout {
+	float: none !important;
+	width: auto !important;
+	max-width: 500px;
+	box-sizing: border-box;
+	background: $surface;
+	color: $on-surface;
+	margin: auto auto 2rem;
+	padding: 2rem 4rem;
+	border: none;
+	border-radius: 0.5rem;
+
+	h3 {
+		background: transparent;
+		color: $on-surface;
+	}
+
+	p a {
+		&, &:link, &:visited {
+			color: $primary;
+			text-decoration: none;
+		}
 	}
 }
