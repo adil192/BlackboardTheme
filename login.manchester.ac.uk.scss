@@ -8,9 +8,10 @@ a, a:link {
 html, body, body#cas {
 	background: $background;
 }
-body > #container {
+#container {
 	background: transparent;
 	width: auto;
+	padding: 2rem;
 }
 #content {
 	overflow: visible;
