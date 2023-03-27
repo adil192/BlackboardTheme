@@ -90,11 +90,12 @@ p, strong, b,
 }
 
 .brandingImgWrap {
-	aspect-ratio: 3.25 / 1;
+	aspect-ratio: 160 / 69;
 	width: auto;
-	height: 44px !important;
-	margin: 5px 5px -10px 5px;
-	background: $primary url("/branding/_1_1/uom_logo_learn2016theme.png") no-repeat;
+	height: 76px !important;
+	margin: 12px 12px -30px 12px;
+	background: url("https://my.manchester.ac.uk/-/media/Images/Feature/Navigation/logo_UoM_white.svg") no-repeat;
+	background-size: contain;
 	.bannerImage {
 		display: none;
 	}
