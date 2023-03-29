@@ -70,3 +70,6 @@ div.container {
 		grid-template-columns: 1fr 1fr;
 	}
 }
+
+// Add two slashes in front of optional styles you don't want
+@import "optional/hide_blackboard_footer";
