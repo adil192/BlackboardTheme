@@ -6,6 +6,11 @@ body {
   margin: 0;
 }
 
+video,
+.vjs-poster {
+  background-color: $on-background;
+}
+
 .video-js .vjs-control-bar {
   background: $surface;
   color: $on-surface;
