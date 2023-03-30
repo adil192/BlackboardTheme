@@ -96,6 +96,9 @@ p, strong, b,
 	margin: 12px 12px -30px 12px;
 	background: url("https://my.manchester.ac.uk/-/media/Images/Feature/Navigation/logo_UoM_white.svg") no-repeat;
 	background-size: contain;
+	@media (max-width: 1037px) {
+		display: none;
+	}
 	.bannerImage {
 		display: none;
 	}
