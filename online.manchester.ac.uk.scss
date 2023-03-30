@@ -21,11 +21,11 @@ img[src="https://online.manchester.ac.uk/branding/_96_1/welcome-image03.png"] {
 }
 
 #div_308_1 .vtbegenerated {
-	/* hide hr */
+	// hide hr
 	hr {
 		color: transparent;
 	}
-	/* collapse Communication tab */
+	// collapse Communication tab
 	> h5:nth-of-type(2n) {
 		&,
 		& ~ *,
