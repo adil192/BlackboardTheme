@@ -136,15 +136,15 @@ div.tab {
 	border-top-color: transparent;
 }
 div.tab {
-	display: inline-block;
+	display: flex;
+	flex-wrap: wrap;
 	background: rgba($primary, 0.1) !important;
 	color: $primary !important;
 	margin: 1rem;
 	padding: 0;
-	height: 4rem;
+	height: auto;
 	border-radius: 2rem;
-	overflow: hidden;
-	font-size: 0; // remove whitespace
+	max-width: 35rem;
 
 	button {
 		background: transparent !important;
@@ -155,8 +155,9 @@ div.tab {
 		border-radius: 2rem;
 
 		width: auto;
-		height: 100%;
+		height: 4rem;
 		padding-inline: 3rem;
+		flex: 1 0 12rem;
 
 		&:hover {
 			background: rgba(black, 0.05) !important;
