@@ -38,6 +38,15 @@ div.container {
 			background: rgba($primary, 0.2);
 		}
 
+		&.secondary {
+			background: rgba($secondary, 0.05);
+			color: $on-surface;
+
+			&:hover {
+				background: rgba($secondary, 0.1);
+			}
+		}
+
 		a {
 			display: block;
 			padding: 1rem 1rem 2rem 1rem;
