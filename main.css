@@ -1,0 +1,921 @@
+/* ==UserStyle==
+@name           UoM Blackboard theme
+@version        20230415.00.00
+@namespace      userstyles.world/user/adil192
+@description    Themes the blackboard UoM website to look slightly more modern, and use a consistent colour scheme
+@author         adil192
+@license        Unlicense
+==/UserStyle== */
+@-moz-document domain("online.manchester.ac.uk") {
+  /* set better fonts */
+  * {
+    font-family: "Google Sans", "Product Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+  }
+  /* disable quick links popup because I don't use it, remove these lines if you do use this */
+  #quick_links_wrap {
+    display: none !important;
+  }
+  /* Replace welcome image */
+  img[src="https://online.manchester.ac.uk/branding/_96_1/welcome-image03.png"] {
+    background: url("https://adil.hanney.org/public-assets/undraw_exams.svg") center center no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    padding-left: 100%;
+    padding-top: 70%;
+    border-radius: 0.5rem;
+  }
+  #div_308_1 .vtbegenerated hr {
+    color: transparent;
+  }
+  #div_308_1 .vtbegenerated > h5:nth-of-type(2n), #div_308_1 .vtbegenerated > h5:nth-of-type(2n) ~ *, #div_308_1 .vtbegenerated > h5:nth-of-type(2n) ~ * > p {
+    display: -webkit-box;
+    transition: opacity 0.5s;
+    transition-property: -webkit-line-clamp, opacity;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    opacity: 0.6;
+  }
+  #div_308_1 .vtbegenerated > h5:nth-of-type(2n):hover, #div_308_1 .vtbegenerated > h5:nth-of-type(2n) ~ *:hover, #div_308_1 .vtbegenerated > h5:nth-of-type(2n) ~ *:hover > p {
+    -webkit-line-clamp: 100;
+    opacity: 1;
+  }
+  body,
+  .locationPane,
+  .contentPane {
+    background: #fffbff;
+  }
+  .contentPane .shadow {
+    border-color: transparent;
+  }
+  a,
+  .portlet .subCategories li a,
+  .blockGroups .itemHead,
+  .blockGroups .itemHeadOpen,
+  [style*="color:#0000FF"],
+  [style*="color: #0000ff"],
+  [style*="color: blue"] {
+    color: #8142a6 !important;
+  }
+  .eval-links .genericButton,
+  .eval-links .button-4,
+  .eval-links input[type=button].genericButton,
+  [style*="color: #174e86"] {
+    color: #653382 !important;
+  }
+  [style*="color: #24a6bb"] {
+    color: #9a5dbe !important;
+  }
+  .detail-heading h2 a {
+    border: none !important;
+    text-decoration: none;
+  }
+  h1, h2, h3, h4, h5, h6,
+  p, strong, b,
+  .collapsible table {
+    color: inherit !important;
+  }
+  .brandingImgWrap {
+    aspect-ratio: 160/69;
+    width: auto;
+    height: 76px !important;
+    margin: 12px 12px -30px 12px;
+    background: url("https://my.manchester.ac.uk/-/media/Images/Feature/Navigation/logo_UoM_white.svg") no-repeat;
+    background-size: contain;
+  }
+  @media (max-width: 1037px) {
+    .brandingImgWrap {
+      display: none;
+    }
+  }
+  .brandingImgWrap .bannerImage {
+    display: none;
+  }
+  .badge {
+    background-color: #8142a6 !important;
+  }
+  .topTabs,
+  #courseMenuPalette,
+  .menuWrap-inner,
+  .menuWrap,
+  #courseMenuPalette *,
+  #courseMenuPalette_paletteTitleHeading *,
+  .global-nav-bar-wrap {
+    background: #221728 !important;
+    color: #f0dcf5 !important;
+  }
+  .appTabs a {
+    color: #f0dcf5 !important;
+  }
+  .topTabs .tabWrapper-right {
+    height: 3rem;
+  }
+  .appTabs td {
+    padding-bottom: 0 !important;
+  }
+  .appTabs a {
+    padding: 0 1.2em;
+  }
+  .portlet h2,
+  div.tab {
+    background: transparent !important;
+    color: inherit !important;
+  }
+  .collapsible {
+    border-top-color: transparent;
+  }
+  div.tab {
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(129, 66, 166, 0.1) !important;
+    color: #8142a6 !important;
+    margin: 1rem;
+    padding: 0;
+    height: auto;
+    border-radius: 2rem;
+    max-width: 35rem;
+  }
+  div.tab button {
+    background: transparent !important;
+    color: #4b444d !important;
+    font-size: 1.1rem;
+    font-weight: bold !important;
+    border: none;
+    border-radius: 2rem;
+    width: auto;
+    height: 4rem;
+    padding-inline: 3rem;
+    flex: 1 0 12rem;
+  }
+  div.tab button:hover {
+    background: rgba(0, 0, 0, 0.05) !important;
+    color: #4b444d !important;
+  }
+  div.tab button.active {
+    background: #8142a6 !important;
+    color: #ffffff !important;
+  }
+  div.tab button.active:hover {
+    background: #733b94 !important;
+    color: #ffffff !important;
+  }
+  .stream_page_left {
+    background: #fffbff;
+    color: #1d1b1e;
+    border: none;
+  }
+  .gradeTableNew .calculatedRow.row {
+    border-left-color: transparent;
+    border-right-color: transparent;
+    box-shadow: 0 0 21px 4px rgba(129, 66, 166, 0.1) inset;
+  }
+  .ally-alternative-formats.ally-prominent-af-download-button {
+    width: auto;
+    height: 10px;
+    aspect-ratio: 5/3;
+    opacity: 0.8;
+  }
+  /* replace document and folder icons */
+  img[src="/images/ci/sets/set01/document_on.gif"],
+  img[src="/images/ci/sets/set01/file_on.gif"],
+  img[src="/images/ci/sets/set01/folder_on.gif"] {
+    width: 50px;
+    height: 50px;
+    background: url("https://adil.hanney.org/public-assets/wow64-icon-theme/folder.svg") center center no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+    padding-left: 50px;
+    padding-top: 50px;
+  }
+  img[src="/images/ci/sets/set01/document_on.gif"] {
+    background-image: url("https://adil.hanney.org/public-assets/wow64-icon-theme/x-office-document.svg");
+    filter: hue-rotate(35deg);
+  }
+  img[src="/images/ci/sets/set01/file_on.gif"] {
+    background-image: url("https://adil.hanney.org/public-assets/wow64-icon-theme/application-x-mswinurl.svg");
+    filter: hue-rotate(55deg);
+  }
+  #puller.pullcollapsed a {
+    background-color: #9a5dbe;
+  }
+  #containerdiv {
+    border: none;
+    background: none;
+  }
+  .liItem, .buildList > li {
+    border: none !important;
+    background: transparent !important;
+    color: #1d1b1e;
+    margin-bottom: 3rem !important;
+    box-shadow: none;
+  }
+  .liItem .details, .buildList > li .details {
+    background: #f9f1fa;
+    color: #4b444d;
+    border-radius: 0.5rem;
+    margin-left: 60px;
+    padding: 1rem;
+  }
+  .liItem .details:empty, .buildList > li .details:empty {
+    display: none;
+  }
+  .liItem .details:-moz-only-whitespace, .buildList > li .details:-moz-only-whitespace {
+    display: none;
+  }
+  .portlet {
+    margin: 0 1rem 2rem 1rem;
+  }
+  [style*="border-bottom: 1px dashed"][style*="border-top: 3px solid"] {
+    border: none !important;
+    background: transparent !important;
+  }
+  .global-nav-bar .logout-link {
+    background-color: transparent !important;
+    background-image: url("https://adil.hanney.org/public-assets/logout.svg") !important;
+    background-size: 70% !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    filter: invert(1);
+  }
+  iframe[src*="https://video.manchester.ac.uk"] {
+    border-radius: 0.5rem;
+    height: auto;
+    aspect-ratio: 660/362;
+  }
+  body.mybb-shell {
+    background-color: #221728;
+  }
+  .title-date, .title-text {
+    color: #8142a6;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
+  }
+  .side-nav {
+    background-color: #221728;
+    color: #f0dcf5;
+  }
+  .side-nav ul li.active a {
+    background-color: #8142a6;
+    color: #ffffff;
+    border: none;
+    box-shadow: none;
+    border-radius: 0.5rem;
+  }
+  .side-nav .menu-icon {
+    filter: brightness(0) invert(1);
+  }
+  .iframe-wrap,
+  .current_filter,
+  .vertical_filter .left_stream_wrapper,
+  .stream_right {
+    border: none;
+    box-shadow: none;
+  }
+  .vertical_filter .stream_header,
+  div#dynamic_filters_alerts.stream_dynamic_filters {
+    background: #fffbff;
+    color: #1d1b1e;
+  }
+  .stream_header {
+    border: none;
+    box-shadow: none;
+  }
+  .stream_list_filter > li a,
+  .stream_list_filter > li button {
+    background: transparent !important;
+    color: #8142a6 !important;
+  }
+  .stream_list_filter > li a.active,
+  .stream_list_filter > li button.active {
+    background: #8142a6 !important;
+    color: #ffffff !important;
+    border: none;
+    box-shadow: none;
+    border-radius: 1000px !important;
+  }
+  .stream_left {
+    overflow-x: visible !important;
+  }
+  .stream_item,
+  .active_stream_item,
+  .stream_dynamic_filters {
+    background: #f9f1fa !important;
+    color: #4b444d !important;
+    border: none;
+    box-shadow: none;
+    margin-block: 1rem;
+    cursor: pointer !important;
+  }
+  .stream_dynamic_filters {
+    box-shadow: 0 0 0.5rem 0.5rem rgba(75, 68, 77, 0.1);
+  }
+  .stream_new_entry,
+  #left_stream_alerts .stream_item,
+  #left_stream_alerts .stream_item.stream_new_entry:hover {
+    background: #f9f1fa;
+    color: #4b444d;
+    border: none;
+    box-shadow: none;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .stream_new_entry:hover,
+  #left_stream_alerts .stream_item:hover,
+  #left_stream_alerts .stream_item.stream_new_entry:hover:hover {
+    background: #f9f1fa;
+    color: #4b444d;
+  }
+}
+@-moz-document url-prefix("https://online.manchester.ac.uk/webapps/portal") {
+  .portlet,
+  .container,
+  div.container {
+    background: transparent;
+    border: none;
+  }
+  .portlet h2,
+  .container h2,
+  div.container h2 {
+    font-size: 2rem;
+  }
+  .portlet h2 ~ div,
+  .container h2 ~ div,
+  div.container h2 ~ div {
+    background: #f9f1fa;
+    color: #4b444d;
+    border-radius: 0.5rem;
+  }
+  #content > .container {
+    background: transparent;
+    box-shadow: none;
+  }
+  .listElement,
+  .courseListing {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+  }
+  .listElement li,
+  .courseListing li {
+    border: none;
+    background: rgba(129, 66, 166, 0.1);
+    color: #4b444d;
+    border-radius: 0.5rem;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .listElement li:hover,
+  .courseListing li:hover {
+    background: rgba(129, 66, 166, 0.2);
+  }
+  .listElement li.secondary,
+  .courseListing li.secondary {
+    background: rgba(104, 89, 110, 0.05);
+    color: #4b444d;
+  }
+  .listElement li.secondary:hover,
+  .courseListing li.secondary:hover {
+    background: rgba(104, 89, 110, 0.1);
+  }
+  .listElement li a,
+  .courseListing li a {
+    display: block;
+    padding: 1rem 1rem 2rem 1rem;
+    min-height: 4em;
+    color: #4b444d !important;
+  }
+  @media (max-width: 1400px) {
+    .listElement,
+    .courseListing {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  @media (max-width: 1000px) {
+    .listElement,
+    .courseListing {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+  @media (max-width: 800px) {
+    .listElement,
+    .courseListing {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  @media (max-width: 500px) {
+    .listElement,
+    .courseListing {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  div.container {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .uomFooter {
+    display: none;
+  }
+}
+@-moz-document url-prefix("https://online.manchester.ac.uk/webapps/calendar") {
+  .fc-state-highlight,
+  .ui-state-highlight,
+  .ui-widget-content .ui-state-highlight,
+  .ui-widget-header .ui-state-highlight {
+    background: rgba(129, 66, 166, 0.3);
+    box-shadow: 2px 2px 17px #8142a6 inset, 1px 1px 0 rgba(255, 255, 255, 0.6), 0 0 6px rgba(0, 0, 0, 0.2) inset;
+  }
+}
+@-moz-document url-prefix("https://online.manchester.ac.uk/webapps/rubric") {
+  #containerdiv {
+    overflow: visible;
+  }
+  .pageTitle h1 {
+    padding-left: 0;
+  }
+  .rubricGradingList input, .rubricGradingList label, .rubricGradingList input[type=checkbox] + label {
+    margin: 0;
+    width: auto;
+  }
+  .rubricGradingList label, .rubricGradingList input[type=checkbox] + label {
+    margin: 0;
+    float: none;
+  }
+}
+@-moz-document url-prefix("https://login.manchester.ac.uk/cas/login") {
+  a, a:link {
+    color: #8142a6;
+    text-decoration: none;
+  }
+  html, body, body#cas {
+    background: #fffbff;
+  }
+  #container {
+    background: transparent;
+    width: auto;
+    padding: 2rem;
+  }
+  #content {
+    overflow: visible;
+    background: transparent;
+  }
+  #content::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  header,
+  footer {
+    display: none;
+  }
+  #logincol {
+    display: block;
+    width: auto;
+    float: none;
+    margin: 0;
+    text-align: center;
+  }
+  #logincol::before {
+    display: inline-block;
+    content: "Welcome to the University of Manchester!";
+    font-size: 2rem !important;
+    line-height: 1;
+    margin-bottom: 1rem;
+    color: #1d1b1e;
+    text-align: start;
+    padding: 1rem;
+  }
+  #login, #logout {
+    background: #f9f1fa;
+    color: #4b444d;
+    border: none;
+    box-shadow: none;
+    float: none;
+    margin: auto;
+    width: auto;
+    max-width: 500px;
+    text-align: start;
+    padding: 0;
+    border-radius: 0.5rem;
+  }
+  #login h2, #logout h2 {
+    display: none;
+  }
+  #login p, #logout p {
+    background: none;
+  }
+  #login .row.btn-row, #logout .row.btn-row {
+    border-top: none !important;
+  }
+  #login form#fm1, #logout form#fm1 {
+    padding: 1rem;
+  }
+  #login .row.btn-row, #logout .row.btn-row {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  #login #logoutbutton,
+  #login .btn-submit,
+  #login .btn-reset, #logout #logoutbutton,
+  #logout .btn-submit,
+  #logout .btn-reset {
+    background: transparent;
+    border: none !important;
+    font-size: 1rem;
+  }
+  #login #logoutbutton,
+  #login .btn-submit, #logout #logoutbutton,
+  #logout .btn-submit {
+    background: #8142a6;
+    color: #ffffff;
+  }
+  #login .btn-reset, #logout .btn-reset {
+    width: auto;
+  }
+  #login #logoutbutton:hover,
+  #login .btn-submit:hover, #logout #logoutbutton:hover,
+  #logout .btn-submit:hover {
+    background: #653382;
+    border: none;
+  }
+  #login::before {
+    display: block;
+    content: "";
+    width: 100%;
+    aspect-ratio: 20/9;
+    background: url("https://www.manchester.ac.uk/connect/contact-us/Contact-us.jpg") no-repeat center center;
+    background-size: cover;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+  input:not([type=checkbox]), input.required {
+    box-sizing: border-box;
+    width: 100%;
+    background: white;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #1d1b1e;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.375rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  input:not([type=checkbox]):focus, input.required:focus {
+    color: #1d1b1e;
+    background-color: #fff;
+    border-color: #8142a6;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(129, 66, 166, 0.25);
+  }
+  #cas #login label {
+    font-size: 1rem;
+    color: #4b444d;
+    margin-bottom: 0.5rem;
+  }
+  span.accesskey {
+    text-decoration: none;
+  }
+  #option_ticks {
+    display: none;
+  }
+  #aup_block {
+    display: none !important;
+  }
+  .ui-widget-content {
+    border: none;
+  }
+  #sidebar {
+    display: none;
+  }
+  @media only screen and (max-width: 855px) {
+    body, body#cas {
+      background: #fffbff;
+    }
+    #container {
+      background: transparent;
+    }
+    #fm1 .row .btn-reset {
+      display: initial;
+    }
+  }
+  #msg {
+    border: none !important;
+    background: #f9f1fa !important;
+    color: #4b444d;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2rem 4rem !important;
+    border-radius: 0.5rem;
+  }
+  #msg.success {
+    background-color: #8142a6 !important;
+    color: #ffffff;
+  }
+  #placestogo, #logout {
+    float: none !important;
+    width: auto !important;
+    max-width: 500px;
+    box-sizing: border-box;
+    background: #f9f1fa;
+    color: #4b444d;
+    margin: auto auto 2rem;
+    padding: 2rem 4rem;
+    border: none;
+    border-radius: 0.5rem;
+  }
+  #placestogo h3, #logout h3 {
+    background: transparent;
+    color: #4b444d;
+  }
+  #placestogo p a, #placestogo p a:link, #placestogo p a:visited, #logout p a, #logout p a:link, #logout p a:visited {
+    color: #8142a6;
+    text-decoration: none;
+  }
+}
+@-moz-document url-prefix("https://shib.manchester.ac.uk/shibboleth-idp/profile/SAML2/POST/SSO") {
+  body,
+  .wrapper,
+  footer {
+    background: #fffbff;
+    color: #1d1b1e;
+  }
+  .container {
+    position: static;
+    width: 100%;
+    margin: auto;
+    padding: 2rem;
+    max-width: 600px;
+    box-sizing: border-box;
+  }
+  .column.one {
+    width: 100%;
+  }
+  .column.two {
+    display: none;
+  }
+  header img {
+    background-color: #fffbff;
+    background-blend-mode: darken;
+  }
+  h3 {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: #8142a6;
+    text-align: inherit !important;
+  }
+  #duo_iframe {
+    display: block;
+    margin: auto;
+  }
+}
+@-moz-document url-prefix("https://api-4c039978.duosecurity.com/frame") {
+  body,
+  .base-wrapper,
+  .base-body {
+    background: #fffbff;
+    color: #1d1b1e;
+    border-color: transparent;
+  }
+  select,
+  .row-label, .device-bar {
+    background: #f9f1fa;
+    color: #4b444d;
+  }
+  select:focus {
+    box-shadow: none;
+    border-color: #8142a6;
+  }
+  a, a:hover, a:focus,
+  .row-label .recommended,
+  .device-bar .recommended {
+    color: #8142a6;
+    outline: none;
+  }
+  button.positive,
+  .button.positive,
+  input[type=submit]:not(.link).positive,
+  input[type=reset].positive,
+  input[type=button].positive {
+    background: #8142a6;
+    color: #ffffff;
+  }
+  button.positive:hover, button.positive:focus,
+  .button.positive:hover,
+  .button.positive:focus,
+  input[type=submit]:not(.link).positive:hover,
+  input[type=submit]:not(.link).positive:focus,
+  input[type=reset].positive:hover,
+  input[type=reset].positive:focus,
+  input[type=button].positive:hover,
+  input[type=button].positive:focus {
+    background: #653382;
+    color: #ffffff;
+    outline: none;
+  }
+  button.positive:disabled,
+  .button.positive:disabled,
+  input[type=submit]:not(.link).positive:disabled,
+  input[type=reset].positive:disabled,
+  input[type=button].positive:disabled {
+    background: rgba(129, 66, 166, 0.5) !important;
+    color: #ffffff !important;
+  }
+  .base-navigation div[role=banner] {
+    background: #fffbff url("https://shib.manchester.ac.uk/shibboleth-idp/images/logo.png") no-repeat;
+    background-size: contain;
+    background-blend-mode: darken;
+    aspect-ratio: 206/86;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  @media (max-width: 480px) {
+    .base-navigation div[role=banner] {
+      width: auto;
+      max-height: 3rem;
+    }
+  }
+  .base-navigation div[role=banner] img {
+    display: none;
+  }
+}
+@-moz-document domain("my.manchester.ac.uk") {
+  body,
+  .t-main-background {
+    background-color: #fffbff;
+    color: #1d1b1e;
+  }
+  .c-nav-menu,
+  .s-logo-container,
+  .main-header,
+  .o-footer {
+    background-color: #221728;
+    color: #f0dcf5;
+  }
+  .c-nav-menu .c-title-link,
+  .s-logo-container .c-title-link,
+  .main-header .c-title-link,
+  .o-footer .c-title-link {
+    color: #f0dcf5;
+  }
+  .main-header {
+    max-width: unset;
+    padding-inline: 1rem;
+  }
+  .c-button {
+    background-color: #ffffff;
+    color: #8142a6;
+    border: none;
+  }
+  .c-button--secondary,
+  .c-button--secondary--outline {
+    background-color: #ffffff;
+    color: #68596e;
+    border: none;
+  }
+  .c-button--secondary:hover, .c-button--secondary:focus,
+  .c-button--secondary--outline:hover,
+  .c-button--secondary--outline:focus {
+    background-color: #68596e;
+    color: #ffffff;
+  }
+  a {
+    color: #8142a6;
+  }
+  .c-promotion,
+  .c-teaser-text-box,
+  .t-bg-white,
+  .o-panel,
+  .o-panel-body {
+    border: none !important;
+    background: #f9f1fa;
+    color: #4b444d;
+    box-shadow: none;
+    border-radius: 0.5rem;
+  }
+  .c-promotion .u-font-bold:not(h2),
+  .c-teaser-text-box .u-font-bold:not(h2),
+  .t-bg-white .u-font-bold:not(h2),
+  .o-panel .u-font-bold:not(h2),
+  .o-panel-body .u-font-bold:not(h2) {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+  }
+  .c-promotion h2,
+  .c-teaser-text-box h2,
+  .t-bg-white h2,
+  .o-panel h2,
+  .o-panel-body h2 {
+    font-size: 2rem;
+    padding-top: 5rem;
+  }
+  .c-promotion h2 + hr,
+  .c-teaser-text-box h2 + hr,
+  .t-bg-white h2 + hr,
+  .o-panel h2 + hr,
+  .o-panel-body h2 + hr {
+    opacity: 0;
+  }
+  .c-em-heading {
+    background: #f9f1fa;
+    color: #4b444d;
+  }
+  .c-em-heading:hover, .c-em-heading:focus {
+    background: #f9f1fa;
+    color: #4b444d;
+  }
+  .highcharts-background {
+    fill: #f3e7f5;
+    rx: 0.5rem;
+    ry: 0.5rem;
+  }
+}
+@-moz-document domain("video.manchester.ac.uk") {
+  body {
+    margin: 0;
+  }
+  video,
+  .vjs-poster {
+    background-color: #1d1b1e;
+  }
+  .video-js .vjs-control-bar {
+    background: #f9f1fa;
+    color: #4b444d;
+    border-radius: 0.5rem;
+    margin: 0 0.5rem 0.5rem;
+    width: auto;
+  }
+  .video-js .vjs-downloads-button {
+    filter: invert(1);
+  }
+  .video-js .vjs-downloads-button .vjs-menu-content {
+    filter: invert(1);
+  }
+  .video-js .vjs-progress-control .vjs-progress-holder,
+  .video-js .vjs-progress-control:hover .vjs-progress-holder {
+    font-size: inherit !important;
+  }
+  .video-js .vjs-progress-holder {
+    height: 1.5em;
+    border-radius: 0.75em;
+    background: rgba(129, 66, 166, 0.1);
+    overflow: hidden;
+    cursor: ew-resize;
+  }
+  .video-js .vjs-progress-holder .vjs-load-progress {
+    background: rgba(129, 66, 166, 0.2);
+    border-bottom-right-radius: 0.75em;
+    border-top-right-radius: 0.75em;
+    transition: width 1s ease-in;
+  }
+  .video-js .vjs-progress-holder .vjs-load-progress * {
+    opacity: 0;
+  }
+  .video-js .vjs-progress-holder .vjs-play-progress {
+    background: #8142a6;
+  }
+  .video-js .vjs-progress-holder .vjs-play-progress::before {
+    content: "";
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    background: #8142a6;
+    border-radius: 0.75em;
+    top: 0;
+    right: -0.75em;
+    font-size: inherit;
+  }
+  .video-js .vjs-title-bar-link {
+    width: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+    background: #f9f1fa;
+    color: #4b444d;
+    border-radius: 0.5em;
+    top: 1em;
+    right: 50%;
+    left: auto;
+    transform: translateX(50%);
+  }
+  .video-js .vjs-title-bar-link > a {
+    color: #4b444d !important;
+    text-decoration: none;
+  }
+  .vjs-menu-button-popup .vjs-menu, .vjs-menu-button-popup .vjs-menu .vjs-menu-content {
+    background: #f9f1fa;
+    color: #4b444d;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+  .vjs-menu-button-popup .vjs-menu .vjs-menu-item {
+    background: transparent;
+    color: #4b444d;
+    box-shadow: none !important;
+  }
+  .vjs-menu-button-popup .vjs-menu .vjs-menu-item.vjs-selected {
+    background: rgba(129, 66, 166, 0.1);
+  }
+  .vjs-menu-button-popup .vjs-menu .vjs-menu-item:hover, .vjs-menu-button-popup .vjs-menu .vjs-menu-item:focus {
+    background: rgba(129, 66, 166, 0.2);
+  }
+}/*# sourceMappingURL=main.css.map */
