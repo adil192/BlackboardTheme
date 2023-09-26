@@ -108,3 +108,16 @@ video,
     }
   }
 }
+
+/* captions */
+.vjs-text-track-display > div > div > div {
+    background: rgba($header, 0.7) !important;
+    color: mix($on-header, white, 90%) !important;
+    color: color-mix(in oklab, $on-header, white 90%) !important;
+    border-radius: 0.2em !important;
+    font-size: 75% !important;
+    display: inline-block !important;
+    max-width: 20em !important;
+    padding: 0 1em !important;
+    font-family: $font-family !important;
+}

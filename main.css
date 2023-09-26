@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           UoM Blackboard theme
-@version        20230415.00.00
+@version        20230926.00.00
 @namespace      userstyles.world/user/adil192
 @description    Themes the blackboard UoM website to look more modern and use a consistent colour scheme.
 @author         adil192
@@ -917,5 +917,17 @@
   }
   .vjs-menu-button-popup .vjs-menu .vjs-menu-item:hover, .vjs-menu-button-popup .vjs-menu .vjs-menu-item:focus {
     background: rgba(129, 66, 166, 0.2);
+  }
+  /* captions */
+  .vjs-text-track-display > div > div > div {
+    background: rgba(34, 23, 40, 0.7) !important;
+    color: #f2e0f6 !important;
+    color: color-mix(in oklab, #f0dcf5, white 90%) !important;
+    border-radius: 0.2em !important;
+    font-size: 75% !important;
+    display: inline-block !important;
+    max-width: 20em !important;
+    padding: 0 1em !important;
+    font-family: "Google Sans", "Product Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
   }
 }/*# sourceMappingURL=main.css.map */
