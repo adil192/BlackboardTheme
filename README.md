@@ -34,3 +34,6 @@ Features starting with "script* require you to install the optional script (see 
 ![Themed login page](https://user-images.githubusercontent.com/21128619/227400807-22f27f45-a7b7-479e-a5d6-2bbf80a5435b.png)
 ![Themed Duo page](https://user-images.githubusercontent.com/21128619/227402147-2c82fce1-3af0-46be-ad62-411f22e5d56a.png)
 
+![Themed video player](https://github.com/adil192/BlackboardTheme/assets/21128619/e591a19d-6838-4706-a4b8-3496a4ad916d)
+
+
