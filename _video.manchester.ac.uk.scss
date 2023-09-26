@@ -1,6 +1,11 @@
 @import "globals";
 
 $progress-bar-height: 1.5em; // up from 0.3em
+$control-bar-border-radius: 0.5rem;
+$progress-bar-border-radius: $control-bar-border-radius / 2;
+
+$video-elem-background: rgba($header, 0.7);
+$video-elem-color: color-mix(in oklab, $on-header, white 90%);
 
 body {
   margin: 0;
@@ -12,18 +17,12 @@ video,
 }
 
 .video-js .vjs-control-bar {
-  background: $surface;
-  color: $on-surface;
-  border-radius: 0.5rem;
-  margin: 0 0.5rem 0.5rem;
+  background: $video-elem-background !important;
+  color: white !important;
+  color: $video-elem-color !important;
+  border-radius: $control-bar-border-radius;
+  margin: 0 $control-bar-border-radius $control-bar-border-radius;
   width: auto;
-}
-.video-js .vjs-downloads-button {
-  filter: invert(1);
-
-  .vjs-menu-content { // un-invert the menu
-    filter: invert(1);
-  }
 }
 
 .video-js .vjs-progress-control .vjs-progress-holder,
@@ -35,15 +34,15 @@ video,
   // Make the hitbox for the progress bar bigger
   height: $progress-bar-height;
 
-  border-radius: $progress-bar-height / 2;
-  background: rgba($primary, 0.1);
+  border-radius: $progress-bar-border-radius;
+  background: rgba($on-header, 0.1);
   overflow: hidden;
   cursor: ew-resize;
 
   .vjs-load-progress {
-    background: rgba($primary, 0.2);
-    border-bottom-right-radius: $progress-bar-height / 2;
-    border-top-right-radius: $progress-bar-height / 2;
+    background: rgba($on-header, 0.2);
+    border-bottom-right-radius: $progress-bar-border-radius;
+    border-top-right-radius: $progress-bar-border-radius;
     transition: width 1s ease-in;
     * {
       opacity: 0;
@@ -51,17 +50,17 @@ video,
   }
 
   .vjs-play-progress {
-    background: $primary;
+    background: $on-header;
 
     &::before { // handle of the progress bar
       content: "";
       display: block;
       width: $progress-bar-height;
       height: $progress-bar-height;
-      background: $primary;
-      border-radius: $progress-bar-height / 2;
+      background: $on-header;
+      border-radius: $progress-bar-border-radius;
       top: 0;
-      right: -$progress-bar-height / 2;
+      right: -$progress-bar-border-radius;
       font-size: inherit;
     }
   }
@@ -88,9 +87,16 @@ video,
 
 .vjs-menu-button-popup .vjs-menu {
   &, .vjs-menu-content {
-    background: $surface;
-    color: $on-surface;
-    border-radius: 0.5rem 0.5rem 0 0;
+    background: $video-elem-background !important;
+    color: white !important;
+    color: $video-elem-color !important;
+    border-radius: $control-bar-border-radius $control-bar-border-radius 0 0;
+
+    * {
+      background: transparent !important;
+      color: white !important;
+      color: $video-elem-color !important;
+    }
   }
 
   .vjs-menu-item {
@@ -111,9 +117,9 @@ video,
 
 /* captions */
 .vjs-text-track-display > div > div > div {
-    background: rgba($header, 0.7) !important;
-    color: mix($on-header, white, 90%) !important;
-    color: color-mix(in oklab, $on-header, white 90%) !important;
+    background: $video-elem-background !important;
+    color: white !important;
+    color: $video-elem-color !important;
     border-radius: 0.2em !important;
     font-size: 75% !important;
     display: inline-block !important;
