@@ -919,6 +919,16 @@
   .vjs-menu-button-popup .vjs-menu .vjs-menu-item:hover, .vjs-menu-button-popup .vjs-menu .vjs-menu-item:focus {
     background: rgba(129, 66, 166, 0.2);
   }
+  /* animate menu opening */
+  .vjs-menu-button-popup .vjs-menu {
+    display: block !important;
+    opacity: 0;
+    transition: opacity 0.075s;
+  }
+  .vjs-menu-button-popup .vjs-menu.vjs-lock-showing,
+  .vjs-workinghover .vjs-menu-button-popup:hover .vjs-menu {
+    opacity: 1;
+  }
   /* captions */
   .vjs-text-track-display > div > div > div {
     background: rgba(34, 23, 40, 0.7) !important;
