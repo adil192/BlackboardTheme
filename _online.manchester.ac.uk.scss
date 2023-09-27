@@ -277,6 +277,7 @@ img[src="#{$orig_file_icon}"] {
 
 iframe[src*="https://video.manchester.ac.uk"] {
 	border-radius: 0.5rem;
+	width: 100%;
 	height: auto;
 	aspect-ratio: 660 / 362;
 }
