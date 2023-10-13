@@ -1,12 +1,15 @@
 /* ==UserStyle==
 @name           UoM Blackboard theme
-@version        20230927.00.00
+@version        20231013.00.00
 @namespace      userstyles.world/user/adil192
 @description    Themes the blackboard UoM website to look more modern and use a consistent colour scheme.
 @author         adil192
 @license        Unlicense
 ==/UserStyle== */
 @-moz-document domain("online.manchester.ac.uk") {
+  :root {
+    accent-color: #8142a6;
+  }
   /* set better fonts */
   * {
     font-family: "Google Sans", "Product Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
@@ -244,6 +247,9 @@
     height: auto;
     aspect-ratio: 660/362;
   }
+  :root {
+    accent-color: #8142a6;
+  }
   body.mybb-shell {
     background-color: #221728;
   }
@@ -328,6 +334,9 @@
   }
 }
 @-moz-document url-prefix("https://online.manchester.ac.uk/webapps/portal") {
+  :root {
+    accent-color: #8142a6;
+  }
   .portlet,
   .container,
   div.container {
@@ -417,7 +426,80 @@
     display: none;
   }
 }
+@-moz-document url-prefix("https://online.manchester.ac.uk/webapps/assessment") {
+  :root {
+    accent-color: #8142a6;
+  }
+  .infoListWrapper {
+    background: #f9f1fa;
+    color: #4b444d;
+    border: none;
+    padding: 1rem;
+  }
+  .steptitle, div[id*=step], div[id*=Step], #dataCollectionContainer, .container {
+    background-color: #fffbff;
+    color: #1d1b1e;
+  }
+  .takeQuestionDiv {
+    background: #fffbff;
+    color: #1d1b1e;
+    border: none;
+    padding: 1rem;
+    margin-bottom: 6rem;
+  }
+  .takeQuestionDiv .steptitle {
+    background: transparent;
+    color: rgba(29, 27, 30, 0.9) !important;
+    font-size: 2rem;
+    margin-bottom: -3rem;
+  }
+  .takeQuestionDiv div[id*=stepcontent] {
+    background-color: #f9f1fa !important;
+    color: #4b444d;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  .takeQuestionDiv .legend-visible {
+    margin-bottom: 1rem;
+  }
+  .takeQuestionDiv .stepTitleRight.liveArea,
+  #assessmentGradeForm .stepTitleRight.liveArea {
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    top: unset;
+    bottom: 1rem;
+  }
+  .takeQuestionDiv .stepTitleRight.liveArea .taskbuttondiv,
+  #assessmentGradeForm .stepTitleRight.liveArea .taskbuttondiv {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  .submitStepBottom {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+  .submitStepBottom .taskbuttonhelp {
+    display: none;
+  }
+  .submitStepBottom #bottom_submitButtonRow {
+    background: #f9f1fa !important;
+    color: #4b444d !important;
+    padding: 1rem 2rem !important;
+    border-radius: 0.5rem;
+    transition: background 0.2s ease-in-out;
+  }
+  .submitStepBottom.submitStepFixed #bottom_submitButtonRow {
+    background: #f3e7f5 !important;
+  }
+}
 @-moz-document url-prefix("https://online.manchester.ac.uk/webapps/calendar") {
+  :root {
+    accent-color: #8142a6;
+  }
   .fc-state-highlight,
   .ui-state-highlight,
   .ui-widget-content .ui-state-highlight,
@@ -427,6 +509,9 @@
   }
 }
 @-moz-document url-prefix("https://online.manchester.ac.uk/webapps/rubric") {
+  :root {
+    accent-color: #8142a6;
+  }
   #containerdiv {
     overflow: visible;
   }
@@ -443,6 +528,9 @@
   }
 }
 @-moz-document url-prefix("https://login.manchester.ac.uk/cas/login") {
+  :root {
+    accent-color: #8142a6;
+  }
   a, a:link {
     color: #8142a6;
     text-decoration: none;
@@ -635,6 +723,9 @@
   }
 }
 @-moz-document url-prefix("https://shib.manchester.ac.uk/shibboleth-idp/profile/SAML2/POST/SSO") {
+  :root {
+    accent-color: #8142a6;
+  }
   body,
   .wrapper,
   footer {
@@ -672,6 +763,9 @@
   }
 }
 @-moz-document url-prefix("https://api-4c039978.duosecurity.com/frame") {
+  :root {
+    accent-color: #8142a6;
+  }
   body,
   .base-wrapper,
   .base-body {
@@ -742,6 +836,9 @@
   }
 }
 @-moz-document domain("my.manchester.ac.uk") {
+  :root {
+    accent-color: #8142a6;
+  }
   body,
   .t-main-background {
     background-color: #fffbff;
@@ -833,6 +930,9 @@
   }
 }
 @-moz-document domain("video.manchester.ac.uk") {
+  :root {
+    accent-color: #8142a6;
+  }
   body {
     margin: 0;
   }

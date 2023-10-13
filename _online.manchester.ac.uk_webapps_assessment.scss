@@ -1,0 +1,87 @@
+@import "globals";
+
+// "Test information" box
+.infoListWrapper {
+	background: $surface;
+	color: $on-surface;
+	border: none;
+	padding: 1rem;
+}
+
+.steptitle, div[id*="step"], div[id*="Step"], #dataCollectionContainer, .container {
+	background-color: $background;
+	color: $on-background;
+}
+
+// question container
+.takeQuestionDiv {
+	background: $background;
+	color: $on-background;
+	border: none;
+	padding: 1rem;
+	margin-bottom: 6rem;
+
+	// question number
+	.steptitle {
+		background: transparent;
+		color: rgba($on-background, 0.9) !important;
+		font-size: 2rem;
+		margin-bottom: -3rem;
+	}
+
+	// question answer container
+	div[id*="stepcontent"] {
+		background-color: $surface !important;
+		color: $on-surface;
+		border: none;
+		padding: 1rem;
+		border-radius: 0.5rem;
+	}
+
+	// question title
+	.legend-visible {
+		margin-bottom: 1rem;
+	}
+}
+
+// container for the "save answer" button and "1 points" text
+.takeQuestionDiv .stepTitleRight.liveArea,
+#assessmentGradeForm .stepTitleRight.liveArea {
+	box-shadow: none;
+	border: none;
+	background: transparent;
+	top: unset;
+	bottom: 1rem;
+
+	.taskbuttondiv {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column-reverse;
+	}
+}
+
+// container for the "save answer" button and help message
+.submitStepBottom {
+	background: transparent;
+	border: none;
+	box-shadow: none;
+
+	// redundant help message
+	// "Click Save and Submit to save and submit. Click Save All Answers to save all answers."
+	.taskbuttonhelp {
+		display: none;
+	}
+
+	// button container
+	#bottom_submitButtonRow {
+		background: $surface !important;
+		color: $on-surface !important;
+		padding: 1rem 2rem !important;
+		border-radius: 0.5rem;
+		transition: background 0.2s ease-in-out;
+	}
+	// button container when submitStepBottom is sticky
+	&.submitStepFixed #bottom_submitButtonRow {
+		background: $surface-elevation-1 !important;
+	}
+}

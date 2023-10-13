@@ -14,7 +14,12 @@
 	@import "online.manchester.ac.uk_webapps_portal";
 }
 
-// Blackboard homepage
+// Assessment/quizzes
+@-moz-document url-prefix("https://online.manchester.ac.uk/webapps/assessment") {
+	@import "online.manchester.ac.uk_webapps_assessment";
+}
+
+// Calendar
 @-moz-document url-prefix("https://online.manchester.ac.uk/webapps/calendar") {
 	@import "online.manchester.ac.uk_webapps_calendar";
 }
