@@ -245,6 +245,12 @@
     border-radius: 0.5rem;
     width: 100%;
     height: auto;
+    aspect-ratio: 2;
+  }
+  iframe[src*="https://video.manchester.ac.uk"][width="960"][height="540"] {
+    aspect-ratio: 960/540;
+  }
+  iframe[src*="https://video.manchester.ac.uk"][width="660"][height="362"] {
     aspect-ratio: 660/362;
   }
   :root {
