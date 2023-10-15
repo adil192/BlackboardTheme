@@ -306,3 +306,8 @@ strong {
 		background-color: $surface-elevation-2;
 	}
 }
+
+img {
+	// hide white background behind images
+	mix-blend-mode: multiply;
+}
