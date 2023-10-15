@@ -257,6 +257,7 @@
   .genericButton,
   .button-1,
   .button-2,
+  .button-3,
   .button-4 {
     font-size: inherit;
     border: none;
@@ -284,8 +285,15 @@
   .button-2:hover, .button-2:focus {
     background-color: #8142a6;
   }
-  .button-4 {
+  .button-3 {
     background-color: #b188c8;
+    color: #ffffff !important;
+  }
+  .button-3:hover, .button-3:focus {
+    background-color: #8142a6;
+  }
+  .button-4 {
+    background-color: #c9abd8;
     color: #ffffff !important;
   }
   .button-4:hover, .button-4:focus {

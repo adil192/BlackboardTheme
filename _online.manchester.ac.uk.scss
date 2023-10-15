@@ -297,6 +297,7 @@ strong {
 .genericButton,
 .button-1,
 .button-2,
+.button-3,
 .button-4 {
 	font-size: inherit;
 	border: none;
@@ -324,8 +325,15 @@ strong {
 		background-color: $primary;
 	}
 }
-.button-4 {
+.button-3 {
 	background-color: $primary-elevation-2;
+	color: $on-primary !important;
+	&:hover, &:focus {
+		background-color: $primary;
+	}
+}
+.button-4 {
+	background-color: $primary-elevation-3;
 	color: $on-primary !important;
 	&:hover, &:focus {
 		background-color: $primary;
