@@ -294,16 +294,41 @@ strong {
 	font-weight: 600;
 }
 
-.genericButton {
+.genericButton,
+.button-1,
+.button-2,
+.button-4 {
 	font-size: inherit;
-	background-color: $surface-elevation-1;
-	color: $on-surface !important;
 	border: none;
 	box-shadow: none;
 	border-radius: 0.5rem;
-
+}
+.genericButton {
+	background-color: $surface-elevation-1;
+	color: $on-surface !important;
 	&:hover, &:focus {
 		background-color: $surface-elevation-2;
+	}
+}
+.button-1 {
+	background-color: $primary;
+	color: $on-primary !important;
+	&:hover, &:focus {
+		background-color: $primary-elevation-2;
+	}
+}
+.button-2 {
+	background-color: $primary-elevation-1;
+	color: $on-primary !important;
+	&:hover, &:focus {
+		background-color: $primary;
+	}
+}
+.button-4 {
+	background-color: $primary-elevation-2;
+	color: $on-primary !important;
+	&:hover, &:focus {
+		background-color: $primary;
 	}
 }
 

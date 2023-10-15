@@ -19,11 +19,10 @@ $on-background: #1d1b1e;
 $surface: #f9f1fa;
 $on-surface: #4b444d;
 
-$surface-elevation-1: #f3e7f5;
-$surface-elevation-2: #e8d0eb;
+$surface-elevation-1: mix($primary, $surface, 5%);
+$surface-elevation-2: mix($primary, $surface, 10%);
+
+$primary-elevation-1: mix($primary, $surface, 80%);
+$primary-elevation-2: mix($primary, $surface, 60%);
 
 $font-family: "Google Sans","Product Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-
-:root {
-	accent-color: $primary;
-}

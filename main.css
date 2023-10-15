@@ -1,15 +1,12 @@
 /* ==UserStyle==
 @name           UoM Blackboard theme
-@version        20231015.00.00
+@version        20231015.20.00
 @namespace      userstyles.world/user/adil192
 @description    Themes the blackboard UoM website to look more modern and use a consistent colour scheme.
 @author         adil192
 @license        Unlicense
 ==/UserStyle== */
 @-moz-document domain("online.manchester.ac.uk") {
-  :root {
-    accent-color: #8142a6;
-  }
   /* set better fonts */
   * {
     font-family: "Google Sans", "Product Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
@@ -257,22 +254,45 @@
   strong {
     font-weight: 600;
   }
-  .genericButton {
+  .genericButton,
+  .button-1,
+  .button-2,
+  .button-4 {
     font-size: inherit;
-    background-color: #f3e7f5;
-    color: #4b444d !important;
     border: none;
     box-shadow: none;
     border-radius: 0.5rem;
   }
+  .genericButton {
+    background-color: #f3e8f6;
+    color: #4b444d !important;
+  }
   .genericButton:hover, .genericButton:focus {
-    background-color: #e8d0eb;
+    background-color: #ede0f2;
+  }
+  .button-1 {
+    background-color: #8142a6;
+    color: #ffffff !important;
+  }
+  .button-1:hover, .button-1:focus {
+    background-color: #b188c8;
+  }
+  .button-2 {
+    background-color: #9965b7;
+    color: #ffffff !important;
+  }
+  .button-2:hover, .button-2:focus {
+    background-color: #8142a6;
+  }
+  .button-4 {
+    background-color: #b188c8;
+    color: #ffffff !important;
+  }
+  .button-4:hover, .button-4:focus {
+    background-color: #8142a6;
   }
   img {
     mix-blend-mode: multiply;
-  }
-  :root {
-    accent-color: #8142a6;
   }
   body.mybb-shell {
     background-color: #221728;
@@ -358,9 +378,6 @@
   }
 }
 @-moz-document url-prefix("https://online.manchester.ac.uk/webapps/portal") {
-  :root {
-    accent-color: #8142a6;
-  }
   .portlet,
   .container,
   div.container {
@@ -451,9 +468,6 @@
   }
 }
 @-moz-document url-prefix("https://online.manchester.ac.uk/webapps/assessment") {
-  :root {
-    accent-color: #8142a6;
-  }
   .infoListWrapper {
     background: #f9f1fa;
     color: #4b444d;
@@ -535,13 +549,10 @@
     transition: background 0.2s ease-in-out;
   }
   .submitStepBottom.submitStepFixed #bottom_submitButtonRow {
-    background: #f3e7f5 !important;
+    background: #f3e8f6 !important;
   }
 }
 @-moz-document url-prefix("https://online.manchester.ac.uk/webapps/calendar") {
-  :root {
-    accent-color: #8142a6;
-  }
   .fc-state-highlight,
   .ui-state-highlight,
   .ui-widget-content .ui-state-highlight,
@@ -551,9 +562,6 @@
   }
 }
 @-moz-document url-prefix("https://online.manchester.ac.uk/webapps/rubric") {
-  :root {
-    accent-color: #8142a6;
-  }
   #containerdiv {
     overflow: visible;
   }
@@ -570,9 +578,6 @@
   }
 }
 @-moz-document url-prefix("https://login.manchester.ac.uk/cas/login") {
-  :root {
-    accent-color: #8142a6;
-  }
   a, a:link {
     color: #8142a6;
     text-decoration: none;
@@ -765,9 +770,6 @@
   }
 }
 @-moz-document url-prefix("https://shib.manchester.ac.uk/shibboleth-idp/profile/SAML2/POST/SSO") {
-  :root {
-    accent-color: #8142a6;
-  }
   body,
   .wrapper,
   footer {
@@ -805,9 +807,6 @@
   }
 }
 @-moz-document url-prefix("https://api-4c039978.duosecurity.com/frame") {
-  :root {
-    accent-color: #8142a6;
-  }
   body,
   .base-wrapper,
   .base-body {
@@ -878,9 +877,6 @@
   }
 }
 @-moz-document domain("my.manchester.ac.uk") {
-  :root {
-    accent-color: #8142a6;
-  }
   body,
   .t-main-background {
     background-color: #fffbff;
@@ -966,15 +962,12 @@
     color: #4b444d;
   }
   .highcharts-background {
-    fill: #f3e7f5;
+    fill: #f3e8f6;
     rx: 0.5rem;
     ry: 0.5rem;
   }
 }
 @-moz-document domain("video.manchester.ac.uk") {
-  :root {
-    accent-color: #8142a6;
-  }
   body {
     margin: 0;
   }
