@@ -11,10 +11,12 @@
 .steptitle, div[id*="step"], div[id*="Step"], #dataCollectionContainer, .container {
 	background-color: $background;
 	color: $on-background;
+	border: none;
 }
 
 // question container
-.takeQuestionDiv {
+.takeQuestionDiv,
+#dataCollectionContainer {
 	background: $background;
 	color: $on-background;
 	border: none;
@@ -37,6 +39,18 @@
 		border: none;
 		padding: 1rem;
 		border-radius: 0.5rem;
+
+		ol li {
+			div.label {
+				font-weight: 600;
+			}
+			div.label,
+			div.label ~ div.field {
+				float: none;
+				margin: 0;
+				width: auto;
+			}
+		}
 	}
 
 	// question title

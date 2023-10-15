@@ -254,6 +254,9 @@
   iframe[src*="https://video.manchester.ac.uk"][width="660"][height="362"] {
     aspect-ratio: 660/362;
   }
+  strong {
+    font-weight: 600;
+  }
   :root {
     accent-color: #8142a6;
   }
@@ -446,29 +449,46 @@
   .steptitle, div[id*=step], div[id*=Step], #dataCollectionContainer, .container {
     background-color: #fffbff;
     color: #1d1b1e;
+    border: none;
   }
-  .takeQuestionDiv {
+  .takeQuestionDiv,
+  #dataCollectionContainer {
     background: #fffbff;
     color: #1d1b1e;
     border: none;
     padding: 1rem;
     margin-bottom: 6rem;
   }
-  .takeQuestionDiv .steptitle {
+  .takeQuestionDiv .steptitle,
+  #dataCollectionContainer .steptitle {
     background: transparent;
     color: rgba(29, 27, 30, 0.9) !important;
     font-size: 2rem;
     margin-bottom: -3rem;
     text-transform: none;
   }
-  .takeQuestionDiv div[id*=stepcontent] {
+  .takeQuestionDiv div[id*=stepcontent],
+  #dataCollectionContainer div[id*=stepcontent] {
     background-color: #f9f1fa !important;
     color: #4b444d;
     border: none;
     padding: 1rem;
     border-radius: 0.5rem;
   }
-  .takeQuestionDiv .legend-visible {
+  .takeQuestionDiv div[id*=stepcontent] ol li div.label,
+  #dataCollectionContainer div[id*=stepcontent] ol li div.label {
+    font-weight: 600;
+  }
+  .takeQuestionDiv div[id*=stepcontent] ol li div.label,
+  .takeQuestionDiv div[id*=stepcontent] ol li div.label ~ div.field,
+  #dataCollectionContainer div[id*=stepcontent] ol li div.label,
+  #dataCollectionContainer div[id*=stepcontent] ol li div.label ~ div.field {
+    float: none;
+    margin: 0;
+    width: auto;
+  }
+  .takeQuestionDiv .legend-visible,
+  #dataCollectionContainer .legend-visible {
     margin-bottom: 1rem;
   }
   .takeQuestionDiv .stepTitleRight.liveArea,
