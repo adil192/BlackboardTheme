@@ -293,3 +293,16 @@ iframe[src*="https://video.manchester.ac.uk"] {
 strong {
 	font-weight: 600;
 }
+
+.genericButton {
+	font-size: inherit;
+	background-color: $surface-elevation-1;
+	color: $on-surface !important;
+	border: none;
+	box-shadow: none;
+	border-radius: 0.5rem;
+
+	&:hover, &:focus {
+		background-color: $surface-elevation-2;
+	}
+}

@@ -257,6 +257,17 @@
   strong {
     font-weight: 600;
   }
+  .genericButton {
+    font-size: inherit;
+    background-color: #f3e7f5;
+    color: #4b444d !important;
+    border: none;
+    box-shadow: none;
+    border-radius: 0.5rem;
+  }
+  .genericButton:hover, .genericButton:focus {
+    background-color: #e8d0eb;
+  }
   :root {
     accent-color: #8142a6;
   }
