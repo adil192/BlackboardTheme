@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           UoM Blackboard theme
-@version        20231013.00.00
+@version        20231015.00.00
 @namespace      userstyles.world/user/adil192
 @description    Themes the blackboard UoM website to look more modern and use a consistent colour scheme.
 @author         adil192
@@ -452,6 +452,7 @@
     color: rgba(29, 27, 30, 0.9) !important;
     font-size: 2rem;
     margin-bottom: -3rem;
+    text-transform: none;
   }
   .takeQuestionDiv div[id*=stepcontent] {
     background-color: #f9f1fa !important;
