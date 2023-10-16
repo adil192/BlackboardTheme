@@ -1,6 +1,13 @@
 # UoM Blackboard theme
 
-This project rethemes UoM's [blackboard website](https://online.manchester.ac.uk/) to look more modern and user friendly, and use a consistent colour scheme
+This project applies [Google's Material Design](https://m3.material.io/) to
+the University of Manchester's websites.
+
+This is more than just a theme; it also vastly improves the usability
+and readability of the websites.
+
+I was originally only restyling Blackboard, but I've since expanded it to
+other UoM websites.
 
 ## Install
 
