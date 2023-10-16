@@ -1,6 +1,6 @@
 @import "globals";
 
-$page-size: 75rem;
+$page-size: 60rem;
 $navbar-height: 4rem;
 $footer-height: $navbar-height;
 $navbar-logo-size-percent: 0.75;
@@ -153,4 +153,105 @@ body,
 	.icon-2x {
 		font-size: 1.5em;
 	}
+}
+
+.nav-tabs {
+	border: none;
+
+	> li {
+		&,
+		> a {
+			border: none;
+			border-radius: 0.5rem;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+
+		&:first-of-type,
+		&:first-of-type > a {
+			border-bottom-left-radius: 0.5rem;
+		}
+		&:last-of-type,
+		&:last-of-type > a {
+			border-bottom-right-radius: 0.5rem;
+		}
+	}
+	> .active > a {
+		&,
+		&:hover,
+		&:focus {
+			border: none;
+			background: $surface;
+			color: $on-surface;
+		}
+	}
+}
+.tabarea {
+	background: $surface;
+	color: $on-surface;
+	border: none;
+	border-radius: 0.5rem;
+
+	hr {
+		border: none;
+		border-bottom: 1px solid rgba($on-surface, 0.1);
+		border-radius: 1px;
+		width: 80%;
+		margin: 2rem auto;
+	}
+
+	h4.center {
+		margin: 0;
+		margin-top: 0.2rem;
+		margin-bottom: 1rem;
+		width: unset;
+		text-align: initial;
+	}
+}
+
+.table-striped tbody > tr:nth-child(2n-1) {
+	> td,
+	> th {
+		background: $surface;
+	}
+}
+.table-striped tbody > tr:nth-child(2n) {
+	> td,
+	> th {
+		background: $surface-elevation-1;
+	}
+}
+
+.accordion-group {
+	border: none;
+	border-radius: 0.5rem;
+
+	.accordion-heading {
+		border-radius: 0.5rem;
+		background-color: $secondary;
+		color: $on-secondary;
+		.accordion-toggle {
+			color: $on-secondary;
+		}
+	}
+	.accordion-inner {
+		border: none;
+		border-radius: 0.5rem;
+		background-color: $surface-elevation-1;
+		color: $on-surface;
+	}
+	&:has(.accordion-body.in.collapse) {
+		.accordion-heading {
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+		.accordion-inner {
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+		}
+	}
+}
+
+#duo_iframe {
+	border-radius: 0.5rem;
 }

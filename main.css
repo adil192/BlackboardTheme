@@ -812,6 +812,7 @@
   #duo_iframe {
     display: block;
     margin: auto;
+    border-radius: 0.5rem;
   }
 }
 @-moz-document url-prefix("https://api-4c039978.duosecurity.com/frame") {
@@ -1103,7 +1104,7 @@
   }
   .page-content {
     box-sizing: border-box;
-    width: 75rem;
+    width: 60rem;
     max-width: 100%;
     min-height: 100vh;
     padding: 2rem;
@@ -1127,7 +1128,7 @@
     box-sizing: border-box;
     background: transparent !important;
     color: inherit;
-    max-width: 75rem;
+    max-width: 60rem;
     margin: auto;
     min-height: unset;
   }
@@ -1216,5 +1217,83 @@
   }
   #footer .icon-2x {
     font-size: 1.5em;
+  }
+  .nav-tabs {
+    border: none;
+  }
+  .nav-tabs > li,
+  .nav-tabs > li > a {
+    border: none;
+    border-radius: 0.5rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .nav-tabs > li:first-of-type, .nav-tabs > li:first-of-type > a {
+    border-bottom-left-radius: 0.5rem;
+  }
+  .nav-tabs > li:last-of-type, .nav-tabs > li:last-of-type > a {
+    border-bottom-right-radius: 0.5rem;
+  }
+  .nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
+    border: none;
+    background: #f9f1fa;
+    color: #4b444d;
+  }
+  .tabarea {
+    background: #f9f1fa;
+    color: #4b444d;
+    border: none;
+    border-radius: 0.5rem;
+  }
+  .tabarea hr {
+    border: none;
+    border-bottom: 1px solid rgba(75, 68, 77, 0.1);
+    border-radius: 1px;
+    width: 80%;
+    margin: 2rem auto;
+  }
+  .tabarea h4.center {
+    margin: 0;
+    margin-top: 0.2rem;
+    margin-bottom: 1rem;
+    width: unset;
+    text-align: initial;
+  }
+  .table-striped tbody > tr:nth-child(2n-1) > td,
+  .table-striped tbody > tr:nth-child(2n-1) > th {
+    background: #f9f1fa;
+  }
+  .table-striped tbody > tr:nth-child(2n) > td,
+  .table-striped tbody > tr:nth-child(2n) > th {
+    background: #f3e8f6;
+  }
+  .accordion-group {
+    border: none;
+    border-radius: 0.5rem;
+  }
+  .accordion-group .accordion-heading {
+    border-radius: 0.5rem;
+    background-color: #68596e;
+    color: #ffffff;
+  }
+  .accordion-group .accordion-heading .accordion-toggle {
+    color: #ffffff;
+  }
+  .accordion-group .accordion-inner {
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #f3e8f6;
+    color: #4b444d;
+  }
+  .accordion-group:has(.accordion-body.in.collapse) .accordion-heading {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .accordion-group:has(.accordion-body.in.collapse) .accordion-inner {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  #duo_iframe {
+    border-radius: 0.5rem;
   }
 }/*# sourceMappingURL=main.css.map */
