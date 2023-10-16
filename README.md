@@ -48,6 +48,7 @@ These screenshots are taken at 1.33x zoom:
 | --- | --- | --- |
 | Blackboard | ![Before](screenshots/blackboard_before.png) | ![After](screenshots/blackboard_after.png) |
 | Course page | ![Before](screenshots/course_before.png) | ![After](screenshots/course_after.png) |
+| Assessments | ![Before](screenshots/quiz_before.png) | ![After](screenshots/quiz_after.png) |
 | Attendance | (Currently offline) | ![After](screenshots/attendance_after.png) |
 | Login | ![Before](screenshots/login_before.png) | ![After](screenshots/login_after.png) |
 | Duo 2FA | ![Before](screenshots/duo_before.png) | ![After](screenshots/duo_after.png) |
