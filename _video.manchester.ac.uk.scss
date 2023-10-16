@@ -2,7 +2,7 @@
 
 $progress-bar-height: 1.5em; // up from 0.3em
 $control-bar-border-radius: 0.5rem;
-$progress-bar-border-radius: $control-bar-border-radius / 2;
+$progress-bar-border-radius: calc($control-bar-border-radius / 2);
 
 $video-elem-background: rgba($header, 0.7);
 $video-elem-color: color-mix(in oklab, $on-header, white 90%);
