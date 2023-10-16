@@ -26,14 +26,14 @@ Features starting with "script* require you to install the optional script (see 
 
 ## Screenshots
 
-![Themed Blackboard homepage](https://user-images.githubusercontent.com/21128619/227408160-7735dcaa-0d38-48f5-8119-c6bd173dea01.png)
-![Themed Blackboard course page](https://user-images.githubusercontent.com/21128619/227395623-d55703d5-033a-40bc-b84d-0ef31f2bcbf8.png)
+These screenshots are taken at 1.33x zoom.
 
-![Themed attendance check-in page](https://user-images.githubusercontent.com/21128619/227402767-dc16842c-a4db-408c-96cc-0b0604e3b4a4.png)
-
-![Themed login page](https://user-images.githubusercontent.com/21128619/227400807-22f27f45-a7b7-479e-a5d6-2bbf80a5435b.png)
-![Themed Duo page](https://user-images.githubusercontent.com/21128619/227402147-2c82fce1-3af0-46be-ad62-411f22e5d56a.png)
-
-![Themed video player](https://github.com/adil192/BlackboardTheme/assets/21128619/e591a19d-6838-4706-a4b8-3496a4ad916d)
-
-
+| Page | Before | After |
+| --- | --- | --- |
+| Blackboard | ![Before](screenshots/blackboard_before.png) | ![After](screenshots/blackboard_after.png) |
+| Course page | ![Before](screenshots/course_before.png) | ![After](screenshots/course_after.png) |
+| Attendance | - | ![After](screenshots/attendance_after.png) |
+| Login | ![Before](screenshots/login_before.png) | ![After](screenshots/login_after.png) |
+| Duo 2FA | ![Before](screenshots/duo_before.png) | ![After](screenshots/duo_after.png) |
+| Video player | ![Before](screenshots/video_before.jpg) | ![After](screenshots/video_after.jpg) |
+| IT Account Manager | ![Before](screenshots/iam_before.png) | ![After](screenshots/iam_after.png) |
