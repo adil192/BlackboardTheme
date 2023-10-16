@@ -1111,6 +1111,7 @@
     padding-bottom: 6rem;
   }
   .navbar {
+    box-sizing: border-box;
     position: fixed;
     top: 0;
     left: 0;
@@ -1123,29 +1124,46 @@
     min-height: unset;
   }
   .navbar .navbar-inner {
+    box-sizing: border-box;
     background: transparent !important;
     color: inherit;
     max-width: 75rem;
     margin: auto;
     min-height: unset;
   }
-  .navbar .brand {
+  .navbar .navbar-inner > .container-fluid {
+    display: flex;
+  }
+  .navbar .navbar-inner > .container-fluid > * {
+    flex: 1;
+  }
+  .navbar .navbar-inner > .container-fluid .brand {
+    flex: 0;
     background: url("https://assets.manchester.ac.uk/logos/hi-res/TAB_UNI_MAIN_logo/White_for_coloured_background/TAB_allwhite.png") no-repeat;
     background-size: contain;
     aspect-ratio: 543/230;
     height: 3rem;
     width: auto;
     padding: 0;
+    margin: 0;
     margin-top: 0.5rem;
     margin-right: 2rem;
+    margin-left: 2rem;
+    float: none;
+    color: transparent;
+    font-size: 0;
   }
-  .navbar .nav {
+  .navbar ul.nav {
+    float: none;
+    display: flex;
+  }
+  .navbar ul.nav > li {
     float: none;
   }
-  .navbar .nav > li {
-    float: none;
+  .navbar ul.nav > li:first-child {
+    flex: 1;
   }
-  .navbar .nav > li > a {
+  .navbar ul.nav > li > a {
     float: none;
     color: #f0dcf5 !important;
   }

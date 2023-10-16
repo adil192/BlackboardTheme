@@ -32,6 +32,7 @@ body,
 }
 
 .navbar {
+	box-sizing: border-box;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -44,30 +45,49 @@ body,
 	min-height: unset;
 
 	.navbar-inner {
+		box-sizing: border-box;
 		background: transparent !important;
 		color: inherit;
 		max-width: $page-size;
 		margin: auto;
 		min-height: unset;
+
+		> .container-fluid {
+			display: flex;
+			> * {
+				flex: 1;
+			}
+
+			// UoM logo
+			.brand {
+				flex: 0;
+				background: url("https://assets.manchester.ac.uk/logos/hi-res/TAB_UNI_MAIN_logo/White_for_coloured_background/TAB_allwhite.png") no-repeat;
+				background-size: contain;
+				aspect-ratio: 543 / 230;
+				height: $navbar-height * $navbar-logo-size-percent;
+				width: auto;
+				padding: 0;
+				margin: 0;
+				margin-top: $navbar-height * (1 - $navbar-logo-size-percent) / 2;
+				margin-right: 2rem;
+				margin-left: 2rem;
+				float: none;
+				color: transparent;
+				font-size: 0;
+			}
+		}
 	}
 
-	// UoM logo
-	.brand {
-		background: url("https://assets.manchester.ac.uk/logos/hi-res/TAB_UNI_MAIN_logo/White_for_coloured_background/TAB_allwhite.png") no-repeat;
-		background-size: contain;
-		aspect-ratio: 543 / 230;
-		height: $navbar-height * $navbar-logo-size-percent;
-		width: auto;
-		padding: 0;
-		margin-top: $navbar-height * (1 - $navbar-logo-size-percent) / 2;
-		margin-right: 2rem;
-	}
-
-	.nav {
+	ul.nav {
 		float: none;
+		display: flex;
 
 		> li {
 			float: none;
+
+			&:first-child {
+				flex: 1;
+			}
 
 			> a {
 				float: none;
