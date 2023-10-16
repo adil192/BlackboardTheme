@@ -1,0 +1,136 @@
+@import "globals";
+
+$page-size: 75rem;
+$navbar-height: 4rem;
+$footer-height: $navbar-height;
+$navbar-logo-size-percent: 0.75;
+
+* {
+	font-family: $font-family !important;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+	font-family: FontAwesome !important;
+}
+
+html,
+body,
+.page-content {
+	background: $background;
+	color: $on-background;
+	scroll-padding-top: $navbar-height;
+}
+
+.page-content {
+	box-sizing: border-box;
+	width: $page-size;
+	max-width: 100%;
+	min-height: 100vh;
+	padding: 2rem;
+	padding-top: $navbar-height + 1rem;
+	padding-bottom: $footer-height + 2rem;
+}
+
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	background: $header;
+	color: $on-header;
+	padding: 0 1rem;
+	height: $navbar-height !important;
+	min-height: unset;
+
+	.navbar-inner {
+		background: transparent !important;
+		color: inherit;
+		max-width: $page-size;
+		margin: auto;
+		min-height: unset;
+	}
+
+	// UoM logo
+	.brand {
+		background: url("https://assets.manchester.ac.uk/logos/hi-res/TAB_UNI_MAIN_logo/White_for_coloured_background/TAB_allwhite.png") no-repeat;
+		background-size: contain;
+		aspect-ratio: 543 / 230;
+		height: $navbar-height * $navbar-logo-size-percent;
+		width: auto;
+		padding: 0;
+		margin-top: $navbar-height * (1 - $navbar-logo-size-percent) / 2;
+		margin-right: 2rem;
+	}
+
+	.nav {
+		float: none;
+
+		> li {
+			float: none;
+
+			> a {
+				float: none;
+				color: $on-header !important;
+			}
+		}
+	}
+}
+
+.thumbnail {
+	background: $surface;
+	color: $on-surface;
+	border: none;
+	border-radius: 0.5rem;
+	box-shadow: none;
+}
+
+.btn {
+	text-shadow: none !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+.btn-primary {
+	background: $primary;
+	color: $on-primary;
+}
+.btn-danger {
+	background: $error;
+	color: $on-error;
+}
+
+#footer {
+	position: absolute;
+	height: $footer-height;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+
+	color: $on-header;
+	border: none;
+	font-size: inherit;
+
+	&::before {
+		display: block;
+		content: "";
+		position: absolute;
+		width: 100vw;
+		top: 0;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: -1;
+
+		background: $header;
+		color: $on-header;
+	}
+
+	a {
+		color: white !important;
+	}
+
+	.icon-2x {
+		font-size: 1.5em;
+	}
+}

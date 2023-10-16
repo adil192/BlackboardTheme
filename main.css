@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           UoM Blackboard theme
-@version        20231015.20.00
+@version        20231016.00.00
 @namespace      userstyles.world/user/adil192
 @description    Themes the blackboard UoM website to look more modern and use a consistent colour scheme.
 @author         adil192
@@ -1084,5 +1084,119 @@
     max-width: 20em !important;
     padding: 0 1em !important;
     font-family: "Google Sans", "Product Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+  }
+}
+@-moz-document domain("iam.manchester.ac.uk") {
+  * {
+    font-family: "Google Sans", "Product Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+  }
+  [class^=icon-],
+  [class*=" icon-"] {
+    font-family: FontAwesome !important;
+  }
+  html,
+  body,
+  .page-content {
+    background: #fffbff;
+    color: #1d1b1e;
+    scroll-padding-top: 4rem;
+  }
+  .page-content {
+    box-sizing: border-box;
+    width: 75rem;
+    max-width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+  }
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #221728;
+    color: #f0dcf5;
+    padding: 0 1rem;
+    height: 4rem !important;
+    min-height: unset;
+  }
+  .navbar .navbar-inner {
+    background: transparent !important;
+    color: inherit;
+    max-width: 75rem;
+    margin: auto;
+    min-height: unset;
+  }
+  .navbar .brand {
+    background: url("https://assets.manchester.ac.uk/logos/hi-res/TAB_UNI_MAIN_logo/White_for_coloured_background/TAB_allwhite.png") no-repeat;
+    background-size: contain;
+    aspect-ratio: 543/230;
+    height: 3rem;
+    width: auto;
+    padding: 0;
+    margin-top: 0.5rem;
+    margin-right: 2rem;
+  }
+  .navbar .nav {
+    float: none;
+  }
+  .navbar .nav > li {
+    float: none;
+  }
+  .navbar .nav > li > a {
+    float: none;
+    color: #f0dcf5 !important;
+  }
+  .thumbnail {
+    background: #f9f1fa;
+    color: #4b444d;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: none;
+  }
+  .btn {
+    text-shadow: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .btn-primary {
+    background: #8142a6;
+    color: #ffffff;
+  }
+  .btn-danger {
+    background: #d32f2f;
+    color: #ffffff;
+  }
+  #footer {
+    position: absolute;
+    height: 4rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    color: #f0dcf5;
+    border: none;
+    font-size: inherit;
+  }
+  #footer::before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    background: #221728;
+    color: #f0dcf5;
+  }
+  #footer a {
+    color: white !important;
+  }
+  #footer .icon-2x {
+    font-size: 1.5em;
   }
 }/*# sourceMappingURL=main.css.map */
