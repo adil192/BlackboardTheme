@@ -799,20 +799,35 @@
     display: none;
   }
   header img {
+    display: none;
     background-color: #fffbff;
     background-blend-mode: darken;
   }
   h3 {
-    font-size: 1.5rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    font-size: 1.2rem;
     color: #8142a6;
     text-align: inherit !important;
+  }
+  h3:last-of-type {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    margin-top: 0.6rem;
+    font-weight: normal;
+  }
+  h3:last-of-type, h3:last-of-type a {
+    color: #4b2022 !important;
   }
   #duo_iframe {
     display: block;
     margin: auto;
     border-radius: 0.5rem;
+    position: absolute;
+    top: 12rem;
+  }
+  #duo_form {
+    height: 0;
+    padding: 0;
   }
 }
 @-moz-document url-prefix("https://api-4c039978.duosecurity.com/frame") {
