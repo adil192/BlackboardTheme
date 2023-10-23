@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           UoM Blackboard theme
-@version        20231016.00.00
+@version        20231023.00.00
 @namespace      userstyles.world/user/adil192
 @description    Themes the blackboard UoM website to look more modern and use a consistent colour scheme.
 @author         adil192
@@ -224,7 +224,7 @@
     display: none;
   }
   .portlet {
-    margin: 0 1rem 2rem 1rem;
+    margin: 0 2rem 2rem 2rem;
   }
   [style*="border-bottom: 1px dashed"][style*="border-top: 3px solid"] {
     border: none !important;
@@ -411,7 +411,7 @@
   .listElement,
   .courseListing {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1rem;
   }
   .listElement li,
@@ -446,10 +446,10 @@
   @media (max-width: 1400px) {
     .listElement,
     .courseListing {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
     }
   }
-  @media (max-width: 1000px) {
+  @media (max-width: 1037px) {
     .listElement,
     .courseListing {
       grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -461,7 +461,7 @@
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
-  @media (max-width: 500px) {
+  @media (max-width: 555px) {
     .listElement,
     .courseListing {
       grid-template-columns: 1fr 1fr;

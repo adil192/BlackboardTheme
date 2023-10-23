@@ -23,7 +23,7 @@ div.container {
 .listElement,
 .courseListing {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 1rem;
 
 	li {
@@ -59,13 +59,13 @@ div.container {
 @media (max-width: 1400px) {
 	.listElement,
 	.courseListing {
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
 	}
 }
-@media (max-width: 1000px) {
+@media (max-width: 1037px) {
 	.listElement,
 	.courseListing {
-		grid-template-columns: 1fr 1fr 1fr 1fr
+		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
 }
 @media (max-width: 800px) {
@@ -74,7 +74,7 @@ div.container {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
 }
-@media (max-width: 500px) {
+@media (max-width: 555px) {
 	.listElement,
 	.courseListing {
 		grid-template-columns: 1fr 1fr;
