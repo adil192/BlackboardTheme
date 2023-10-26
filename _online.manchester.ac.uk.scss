@@ -296,7 +296,12 @@ strong {
 }
 
 .genericButton,
+
+#primaryButton,
+input[type="submit"].submit,
 .button-1,
+.button-1-img,
+
 .button-2,
 .button-3,
 .button-4 {
@@ -312,11 +317,15 @@ strong {
 		background-color: $surface-elevation-2;
 	}
 }
-.button-1 {
-	background-color: $primary;
-	color: $on-primary !important;
+#primaryButton,
+input[type="submit"].submit,
+.button-1,
+.button-1-img {
+	background-color: $header;
+	color: mix(white, $on-header) !important;
 	&:hover, &:focus {
-		background-color: $primary-elevation-2;
+		background-color: $primary;
+		color: $on-primary !important;
 	}
 }
 .button-2 {
