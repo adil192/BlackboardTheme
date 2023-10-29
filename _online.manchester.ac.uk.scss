@@ -290,6 +290,9 @@ iframe[src*="https://video.manchester.ac.uk"] {
 	&[width="660"][height="362"] {
 		aspect-ratio: 660 / 362 + 0.1;
 	}
+	&[width="660"][height="380"] {
+		aspect-ratio: 660 / 380 + 0.1;
+	}
 }
 
 strong {
