@@ -281,13 +281,14 @@ iframe[src*="https://video.manchester.ac.uk"] {
 	width: 100%;
 	max-width: 100vh;
 	height: auto;
-	aspect-ratio: 2;
-
+	// tall aspect ratio by default to avoid clipping
+	aspect-ratio: 1.5;
+	// more specific aspect ratios...
 	&[width="960"][height="540"] {
-		aspect-ratio: 960 / 540;
+		aspect-ratio: 960 / 540 + 0.1;
 	}
 	&[width="660"][height="362"] {
-		aspect-ratio: 660 / 362;
+		aspect-ratio: 660 / 362 + 0.1;
 	}
 }
 
