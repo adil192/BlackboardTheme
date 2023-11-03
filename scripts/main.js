@@ -7,6 +7,7 @@
 // @match        https://online.manchester.ac.uk/webapps/portal/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=manchester.ac.uk
 // @grant        none
+// @license      Unlicense
 // ==/UserScript==
 
 /** @type {HTMLDivElement | null} */
