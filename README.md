@@ -17,9 +17,7 @@ other UoM websites.
 ### Install optional script
 
 - Install Tampermonkey [for Firefox](https://addons.mozilla.org/en-GB/firefox/addon/tampermonkey/) or [for Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
-- Open Tampermonkey and click "Create a new script". Then delete the starter code.
-- Go to [main.js](https://github.com/adil192/BlackboardTheme/blob/main/scripts/main.js), click the copy icon, and paste into the Tampermonkey page.
-- Click `File` then `Save` (or press Ctrl S).
+- Go to https://greasyfork.org/en/scripts/478967-uom-blackboard-userscript and click on the Install button.
 
 ## Why use this theme?
 
