@@ -9,6 +9,8 @@ and readability of the websites.
 I was originally only restyling Blackboard, but I've since expanded it to
 other UoM websites.
 
+[![CodeFactor](https://www.codefactor.io/repository/github/adil192/blackboardtheme/badge)](https://www.codefactor.io/repository/github/adil192/blackboardtheme)
+
 ## Install
 
 - Install Stylus [for Firefox](https://addons.mozilla.org/en-GB/firefox/addon/styl-us/) or [for Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) depending on your browser.
