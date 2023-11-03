@@ -17,12 +17,13 @@
   }
   /* Replace welcome image */
   img[src="https://online.manchester.ac.uk/branding/_96_1/welcome-image03.png"] {
-    background: url("https://adil.hanney.org/public-assets/undraw_exams.svg") center center no-repeat;
+    background: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/queens_arch.jpg") center center no-repeat;
     background-size: cover;
     box-sizing: border-box;
     padding-left: 100%;
     padding-top: 70%;
     border-radius: 0.5rem;
+    mix-blend-mode: darken;
   }
   #div_308_1 .vtbegenerated hr {
     color: transparent;
@@ -107,15 +108,13 @@
   }
   .appTabs a {
     color: #f0dcf5 !important;
+    padding: 0 1.2em;
   }
   .topTabs .tabWrapper-right {
     height: 3rem;
   }
   .appTabs td {
     padding-bottom: 0 !important;
-  }
-  .appTabs a {
-    padding: 0 1.2em;
   }
   .portlet h2,
   div.tab {
@@ -825,7 +824,6 @@
     text-align: inherit !important;
   }
   h3:last-of-type {
-    font-size: 1rem;
     text-transform: uppercase;
     font-size: 0.85rem;
     margin-top: 0.6rem;

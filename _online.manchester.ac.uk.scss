@@ -12,12 +12,13 @@
 
 /* Replace welcome image */
 img[src="https://online.manchester.ac.uk/branding/_96_1/welcome-image03.png"] {
-	background: url("https://adil.hanney.org/public-assets/undraw_exams.svg") center center no-repeat;
+	background: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/queens_arch.jpg") center center no-repeat;
 	background-size: cover;
 	box-sizing: border-box;
 	padding-left: 100%;
 	padding-top: 70%;
 	border-radius: 0.5rem;
+	mix-blend-mode: darken;
 }
 
 #div_308_1 .vtbegenerated {
