@@ -25,6 +25,13 @@
     border-radius: 0.5rem;
     mix-blend-mode: darken;
   }
+  /* Remove padding around welcome image */
+  #module\:_278_1 .collapsible {
+    padding: 0 !important;
+  }
+  #module\:_278_1 .collapsible .vtbegenerated p {
+    margin: 0;
+  }
   #div_308_1 .vtbegenerated hr {
     color: transparent;
   }

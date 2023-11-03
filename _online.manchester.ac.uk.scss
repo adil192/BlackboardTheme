@@ -20,6 +20,14 @@ img[src="https://online.manchester.ac.uk/branding/_96_1/welcome-image03.png"] {
 	border-radius: 0.5rem;
 	mix-blend-mode: darken;
 }
+/* Remove padding around welcome image */
+#module\:_278_1 .collapsible {
+	padding: 0 !important;
+
+	.vtbegenerated p {
+		margin: 0;
+	}
+}
 
 #div_308_1 .vtbegenerated {
 	// hide hr
