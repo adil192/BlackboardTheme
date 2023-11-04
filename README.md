@@ -22,7 +22,6 @@ other UoM websites.
 - Go to each of these links and click on the Install button:
     - [Highlight current modules](https://greasyfork.org/en/scripts/478967-uom-blackboard-highlight-current-modules)
     - [Video keyboard shortcuts](https://greasyfork.org/en/scripts/479044-uom-blackboard-video-keyboard-shortcuts)
-- Go to https://greasyfork.org/en/scripts/478967-uom-blackboard-userscript and click on the Install button.
 
 ## Why use this theme?
 
