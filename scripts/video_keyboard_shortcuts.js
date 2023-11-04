@@ -30,10 +30,10 @@ function handleKeydown(e) {
 
     switch (e.key) {
         case "ArrowLeft":
-            videoElem.currentTime -= 5;
+            videoElem.currentTime -= 10;
             break;
         case "ArrowRight":
-            videoElem.currentTime += 5;
+            videoElem.currentTime += 10;
             break;
         case "ArrowUp":
             videoElem.volume = Math.min(1, videoElem.volume + 0.1);
