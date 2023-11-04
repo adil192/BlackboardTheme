@@ -38,6 +38,11 @@ other UoM websites.
 - Rethemes Blackboard videos
    - Captions are more readable with better fonts and a smaller width
    - More readable progress bar
+   - Standard keyboard shortcuts are added (script*)
+      - Left and right arrow keys to skip 10 seconds
+      - Up and down arrow keys to increase/decrease volume
+      - Spacebar to play/pause
+      - F key to toggle fullscreen
 - Styling and colouring inspired by [Google's Material Design](https://m3.material.io/)
 - Uses better, more readable fonts everywhere
 
