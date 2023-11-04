@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         UoM Blackboard: Video keyboard shortcuts
 // @namespace    http://tampermonkey.net/
-// @version      20231103.00.00
+// @version      20231104.00.00
 // @description  An optional accompanying script for https://github.com/adil192/BlackboardTheme, which adds keyboard shortcuts for video playback on Blackboard.
 // @author       adil192
 // @match        https://video.manchester.ac.uk/embedded/*
@@ -12,6 +12,11 @@
 
 /** @type {HTMLVideoElement | null} */
 let videoElem;
+/***
+ * The div#video element, which contains `videoElem`.
+ * @type {HTMLDivElement | null}
+ */
+let videoDiv;
 
 /**
  * @param {KeyboardEvent} e 
@@ -19,13 +24,14 @@ let videoElem;
 function handleKeydown(e) {
     console.log("handleKeydown", { e });
 
-    if (!videoElem) {
+    if (!videoElem || !videoDiv) {
         videoElem = document.querySelector("video");
-        if (!videoElem) {
-            console.log("handleKeydown: No video element found.");
+        videoDiv = document.querySelector("div#video");
+        if (!videoElem || !videoDiv) {
+            console.log("handleKeydown: No video element found:", { videoElem, videoDiv });
             return;
         }
-        console.log("handleKeydown: Found video element:", videoElem);
+        console.log("handleKeydown: Found video element:", { videoElem, videoDiv });
     }
 
     switch (e.key) {
@@ -46,6 +52,13 @@ function handleKeydown(e) {
                 videoElem.play();
             } else {
                 videoElem.pause();
+            }
+            break;
+        case "f":
+            if (document.fullscreenElement) {
+                document.exitFullscreen();
+            } else {
+                videoDiv.requestFullscreen();
             }
             break;
     }
