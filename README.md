@@ -43,6 +43,7 @@ other UoM websites.
       - Up and down arrow keys to increase/decrease volume
       - Spacebar to play/pause
       - F key to toggle fullscreen
+      - C key to toggle captions
 - Styling and colouring inspired by [Google's Material Design](https://m3.material.io/)
 - Uses better, more readable fonts everywhere
 
