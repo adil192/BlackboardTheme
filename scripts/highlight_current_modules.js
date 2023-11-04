@@ -70,6 +70,7 @@ function greyOutOldCourses(coursesDiv) {
 (function () {
     'use strict';
 
+    console.log("UoM Blackboard: Highlight current modules");
     window.addEventListener("load", () => {
         findCoursesDivs().then(() => {
             greyOutOldCourses(currentCoursesDiv);

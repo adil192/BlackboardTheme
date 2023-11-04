@@ -19,6 +19,9 @@ other UoM websites.
 ### Install optional script
 
 - Install Tampermonkey [for Firefox](https://addons.mozilla.org/en-GB/firefox/addon/tampermonkey/) or [for Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+- Go to each of these links and click on the Install button:
+    - [Highlight current modules](https://greasyfork.org/en/scripts/478967-uom-blackboard-highlight-current-modules)
+    - [Video keyboard shortcuts](https://greasyfork.org/en/scripts/479044-uom-blackboard-video-keyboard-shortcuts)
 - Go to https://greasyfork.org/en/scripts/478967-uom-blackboard-userscript and click on the Install button.
 
 ## Why use this theme?
@@ -38,7 +41,7 @@ other UoM websites.
 - Styling and colouring inspired by [Google's Material Design](https://m3.material.io/)
 - Uses better, more readable fonts everywhere
 
-Features marked with "script* require you to install the optional script (see the [Install](https://github.com/adil192/BlackboardTheme#install) instructions).
+Features marked with "script* require you to install the optional scripts (see the [Install](https://github.com/adil192/BlackboardTheme#install) instructions).
 
 ## Screenshots
 
