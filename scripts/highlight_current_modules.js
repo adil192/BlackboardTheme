@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         UoM Blackboard Userscript
+// @name         UoM Blackboard: Highlight current modules
 // @namespace    http://tampermonkey.net/
 // @version      20231103.00.00
-// @description  An optional accompanying script for https://github.com/adil192/BlackboardTheme
+// @description  An optional accompanying script for https://github.com/adil192/BlackboardTheme, which highlights current modules on the Blackboard homepage by greying out old modules.
 // @author       adil192
 // @match        https://online.manchester.ac.uk/webapps/portal/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=manchester.ac.uk
