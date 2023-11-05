@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           UoM Blackboard theme
-@version        20231029.00.00
+@version        20231105.00.00
 @namespace      userstyles.world/user/adil192
 @description    Themes the blackboard UoM website to look more modern and use a consistent colour scheme.
 @author         adil192
@@ -188,18 +188,18 @@
   img[src="/images/ci/sets/set01/folder_on.gif"] {
     width: 50px;
     height: 50px;
-    background: url("https://adil.hanney.org/public-assets/wow64-icon-theme/folder.svg") center center no-repeat;
+    background: url("https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/places/folder-black.svg") center center no-repeat;
     background-size: contain;
     box-sizing: border-box;
     padding-left: 50px;
     padding-top: 50px;
   }
   img[src="/images/ci/sets/set01/document_on.gif"] {
-    background-image: url("https://adil.hanney.org/public-assets/wow64-icon-theme/x-office-document.svg");
+    background-image: url("https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/mimetypes/x-office-document.svg");
     filter: hue-rotate(35deg);
   }
   img[src="/images/ci/sets/set01/file_on.gif"] {
-    background-image: url("https://adil.hanney.org/public-assets/wow64-icon-theme/application-x-mswinurl.svg");
+    background-image: url("https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/mimetypes/application-x-mswinurl.svg");
     filter: hue-rotate(55deg);
   }
   #puller.pullcollapsed a {
@@ -238,7 +238,7 @@
   }
   .global-nav-bar .logout-link {
     background-color: transparent !important;
-    background-image: url("https://adil.hanney.org/public-assets/logout.svg") !important;
+    background-image: url("https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/apps/system-log-out.svg") !important;
     background-size: 70% !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;

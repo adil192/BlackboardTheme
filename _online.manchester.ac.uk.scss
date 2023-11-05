@@ -208,9 +208,10 @@ div.tab {
 $orig_document_icon: "/images/ci/sets/set01/document_on.gif";
 $orig_file_icon: "/images/ci/sets/set01/file_on.gif";
 $orig_folder_icon: "/images/ci/sets/set01/folder_on.gif";
-$custom_document_icon: "https://adil.hanney.org/public-assets/wow64-icon-theme/x-office-document.svg";
-$custom_file_icon: "https://adil.hanney.org/public-assets/wow64-icon-theme/application-x-mswinurl.svg";
-$custom_folder_icon: "https://adil.hanney.org/public-assets/wow64-icon-theme/folder.svg";
+$custom_document_icon: "https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/mimetypes/x-office-document.svg";
+$custom_file_icon: "https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/mimetypes/application-x-mswinurl.svg";
+$custom_folder_icon: "https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/places/folder-black.svg";
+$custom_logout_icon: "https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/apps/system-log-out.svg";
 
 /* replace document and folder icons */
 img[src="#{$orig_document_icon}"],
@@ -276,7 +277,7 @@ img[src="#{$orig_file_icon}"] {
 // change logout button icon
 .global-nav-bar .logout-link {
 	background-color: transparent !important;
-	background-image: url("https://adil.hanney.org/public-assets/logout.svg") !important;
+	background-image: url($custom_logout_icon) !important;
 	background-size: 70% !important;
 	background-position: center center !important;
 	background-repeat: no-repeat !important;
