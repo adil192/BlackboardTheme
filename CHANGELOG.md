@@ -6,6 +6,8 @@ Here I will outline the changes I've made over time...
 
 - Fixed video popup menus always being hoverable
 - Hidden the "Download Subtitles and Transcription" button from videos
+- Used less-rounded corners on the Blackboard course tabs
+- Fixed inconsistent spacing on the Blackboard homepage
 
 ### 20231105
 
