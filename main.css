@@ -117,6 +117,9 @@
     color: #f0dcf5 !important;
     padding: 0 1.2em;
   }
+  #globalNavPageNavArea table.bouncer {
+    border-bottom: 1px solid #302d31;
+  }
   .topTabs .tabWrapper-right {
     height: 3rem;
   }

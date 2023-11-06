@@ -130,6 +130,9 @@ p, strong, b,
 	color: $on-header !important;
 	padding: 0 1.2em;
 }
+#globalNavPageNavArea table.bouncer {
+	border-bottom: 1px solid mix($header, #333, 20%);
+}
 .topTabs .tabWrapper-right {
 	height: 3rem;
 }
