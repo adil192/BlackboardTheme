@@ -84,18 +84,20 @@ div.container {
 // add course images
 .listElement,
 .courseListing {
-	li[data-subject] {
-		padding-top: 7rem !important;
+	li[data-module-code] {
 		position: relative;
 		--bg-url: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/queens_arch.jpg");
 
-		&::before {
+		> a {
+			padding-top: 7rem !important;
+		}
+		> a::before {
 			content: "";
 			position: absolute;
 			top: 0;
 			left: 0;
 			right: 0;
-			height: 7rem;
+			height: 5rem;
 			background-image: var(--bg-url);
 			background-size: cover;
 			background-position: center;
@@ -104,10 +106,10 @@ div.container {
 		}
 	}
 
-	li[data-subject="COMP"] {
+	li[data-module-code^="COMP"] {
 		--bg-url: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/COMP/code-1076536_640.jpg");
 	}
-	li[data-subject="MATH"] {
+	li[data-module-code^="MATH"] {
 		--bg-url: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/MATH/geometry-1044090_640.jpg");
 	}
 }

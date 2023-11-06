@@ -494,32 +494,35 @@
       grid-template-columns: 1fr 1fr;
     }
   }
-  .listElement li[data-subject],
-  .courseListing li[data-subject] {
-    padding-top: 7rem !important;
+  .listElement li[data-module-code],
+  .courseListing li[data-module-code] {
     position: relative;
     --bg-url: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/queens_arch.jpg");
   }
-  .listElement li[data-subject]::before,
-  .courseListing li[data-subject]::before {
+  .listElement li[data-module-code] > a,
+  .courseListing li[data-module-code] > a {
+    padding-top: 7rem !important;
+  }
+  .listElement li[data-module-code] > a::before,
+  .courseListing li[data-module-code] > a::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 7rem;
+    height: 5rem;
     background-image: var(--bg-url);
     background-size: cover;
     background-position: center;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
   }
-  .listElement li[data-subject=COMP],
-  .courseListing li[data-subject=COMP] {
+  .listElement li[data-module-code^=COMP],
+  .courseListing li[data-module-code^=COMP] {
     --bg-url: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/COMP/code-1076536_640.jpg");
   }
-  .listElement li[data-subject=MATH],
-  .courseListing li[data-subject=MATH] {
+  .listElement li[data-module-code^=MATH],
+  .courseListing li[data-module-code^=MATH] {
     --bg-url: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/MATH/geometry-1044090_640.jpg");
   }
   div.container {
