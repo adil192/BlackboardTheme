@@ -120,10 +120,12 @@ video,
   display: block !important;
   opacity: 0;
   transition: opacity 0.075s;
+  pointer-events: none;
 }
 .vjs-menu-button-popup .vjs-menu.vjs-lock-showing,
 .vjs-workinghover .vjs-menu-button-popup:hover .vjs-menu {
   opacity: 1;
+  pointer-events: auto;
 }
 
 .vjs-downloads-button {

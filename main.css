@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           UoM Blackboard theme
-@version        20231105.00.00
+@version        20231106.00.00
 @namespace      userstyles.world/user/adil192
 @description    Themes the blackboard UoM website to look more modern and use a consistent colour scheme.
 @author         adil192
@@ -1105,10 +1105,12 @@
     display: block !important;
     opacity: 0;
     transition: opacity 0.075s;
+    pointer-events: none;
   }
   .vjs-menu-button-popup .vjs-menu.vjs-lock-showing,
   .vjs-workinghover .vjs-menu-button-popup:hover .vjs-menu {
     opacity: 1;
+    pointer-events: auto;
   }
   .vjs-downloads-button {
     /* hide the "Download Subtitles and Transcription" button */
