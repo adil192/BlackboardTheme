@@ -126,6 +126,11 @@ video,
   opacity: 1;
 }
 
+.vjs-downloads-button {
+  /* hide the "Download Subtitles and Transcription" button */
+  display: none;
+}
+
 /* captions */
 .vjs-text-track-display > div > div > div {
     background: $video-elem-background !important;
