@@ -138,8 +138,7 @@ p, strong, b,
 }
 
 
-.portlet h2,
-div.tab {
+.portlet h2 {
 	background: transparent !important;
 	color: inherit !important;
 }
@@ -154,19 +153,18 @@ div.tab {
 	margin: 1rem;
 	padding: 0;
 	height: auto;
-	border-radius: 2rem;
-	max-width: 35rem;
+	border-radius: 0.5rem;
 
 	button {
 		background: transparent !important;
 		color: $on-surface !important;
-		font-size: 1.1rem;
+		font-size: 1rem;
 		font-weight: bold !important;
 		border: none;
-		border-radius: 2rem;
+		border-radius: 0.5rem;
 
 		width: auto;
-		height: 4rem;
+		height: 3rem;
 		padding-inline: 3rem;
 		flex: 1 0 12rem;
 
