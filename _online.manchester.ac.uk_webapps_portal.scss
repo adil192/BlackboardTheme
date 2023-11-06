@@ -81,5 +81,11 @@ div.container {
 	}
 }
 
-// Add two slashes in front of optional styles you don't want
-@import "optional/hide_blackboard_footer";
+// hide blackboard footer
+div.container {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+.uomFooter {
+	display: none;
+}
