@@ -78,10 +78,10 @@ function greyOutOldCourses(coursesDiv) {
 
             currentCoursesDiv.addEventListener("DOMSubtreeModified", () => {
                 greyOutOldCourses(currentCoursesDiv);
-            });
+            }, { once: true, passive: true });
             formerCoursesDiv.addEventListener("DOMSubtreeModified", () => {
                 greyOutOldCourses(formerCoursesDiv);
-            });
+            }, { once: true, passive: true });
         });
-    });
+    }, { once: true, passive: true });
 })();

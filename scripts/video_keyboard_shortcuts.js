@@ -102,5 +102,5 @@ function handleKeydown(e) {
     'use strict';
 
     console.log("UoM Blackboard: Video keyboard shortcuts");
-    document.addEventListener("keydown", handleKeydown);
+    document.addEventListener("keydown", handleKeydown, { once: true, passive: true });
 })();
