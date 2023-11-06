@@ -8,6 +8,7 @@ Here I will outline the changes I've made over time...
 - Hidden the "Download Subtitles and Transcription" button from videos
 - Used less-rounded corners on the Blackboard course tabs
 - Fixed inconsistent spacing on the Blackboard homepage
+- Added a third script to add images to the module list on the Blackboard homepage (see the [README][README] for instructions). Currently, only COMP and MATH modules are supported, but please let me know your module codes and I'll add them.
 
 ### 20231105
 
