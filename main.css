@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           UoM Blackboard theme
-@version        20231106.15.11
+@version        20231106.23.00
 @namespace      userstyles.world/user/adil192
 @description    Themes the blackboard UoM website to look more modern and use a consistent colour scheme.
 @author         adil192
@@ -257,6 +257,14 @@
     background-position: center center !important;
     background-repeat: no-repeat !important;
     mix-blend-mode: lighten;
+  }
+  #global-nav-link {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+  .global-top-avatar {
+    mix-blend-mode: unset;
+    border-radius: 0.5rem;
   }
   iframe[src*="https://video.manchester.ac.uk"] {
     border-radius: 0.5rem;
