@@ -256,7 +256,7 @@
     background-size: 70% !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
-    filter: invert(1);
+    mix-blend-mode: lighten;
   }
   iframe[src*="https://video.manchester.ac.uk"] {
     border-radius: 0.5rem;
