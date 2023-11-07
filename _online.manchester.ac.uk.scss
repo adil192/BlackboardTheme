@@ -306,7 +306,8 @@ img[src="#{$orig_piazza_icon}"] {
 	border-bottom-left-radius: 0.5rem;
 	border-bottom-right-radius: 0.5rem;
 }
-.global-top-avatar {
+.global-top-avatar,
+.eud-avatar {
 	mix-blend-mode: unset;
 	border-radius: 0.5rem;
 }
