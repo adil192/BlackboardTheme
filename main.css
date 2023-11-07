@@ -190,7 +190,9 @@
   /* replace document and folder icons */
   img[src="/images/ci/sets/set01/document_on.gif"],
   img[src="/images/ci/sets/set01/file_on.gif"],
-  img[src="/images/ci/sets/set01/folder_on.gif"] {
+  img[src="/images/ci/sets/set01/folder_on.gif"],
+  img[src="/images/ci/sets/set01/assignment_on.gif"],
+  img[src="/images/ci/sets/set01/link_on.gif"] {
     width: 50px;
     height: 50px;
     background: url("https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/places/folder-black.svg") center center no-repeat;
@@ -205,7 +207,14 @@
   }
   img[src="/images/ci/sets/set01/file_on.gif"] {
     background-image: url("https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/mimetypes/application-x-mswinurl.svg");
-    filter: hue-rotate(55deg);
+  }
+  img[src="/images/ci/sets/set01/assignment_on.gif"] {
+    background-image: url("https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/apps/openboard.svg");
+    filter: hue-rotate(245deg);
+  }
+  img[src="/images/ci/sets/set01/link_on.gif"] {
+    background-image: url("https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/apps/org.kde.neochat.svg");
+    filter: hue-rotate(10deg);
   }
   #puller.pullcollapsed a {
     background-color: #9a5dbe;

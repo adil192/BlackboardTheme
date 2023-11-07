@@ -213,15 +213,21 @@ div.tab {
 $orig_document_icon: "/images/ci/sets/set01/document_on.gif";
 $orig_file_icon: "/images/ci/sets/set01/file_on.gif";
 $orig_folder_icon: "/images/ci/sets/set01/folder_on.gif";
+$orig_coursework_icon: "/images/ci/sets/set01/assignment_on.gif";
+$orig_piazza_icon: "/images/ci/sets/set01/link_on.gif";
 $custom_document_icon: "https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/mimetypes/x-office-document.svg";
 $custom_file_icon: "https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/mimetypes/application-x-mswinurl.svg";
 $custom_folder_icon: "https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/places/folder-black.svg";
+$custom_coursework_icon: "https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/apps/openboard.svg";
+$custom_piazza_icon: "https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/apps/org.kde.neochat.svg";
 $custom_logout_icon: "https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/apps/system-log-out.svg";
 
 /* replace document and folder icons */
 img[src="#{$orig_document_icon}"],
 img[src="#{$orig_file_icon}"],
-img[src="#{$orig_folder_icon}"] {
+img[src="#{$orig_folder_icon}"],
+img[src="#{$orig_coursework_icon}"],
+img[src="#{$orig_piazza_icon}"] {
 	width: 50px;
 	height: 50px;
 	background: url("#{$custom_folder_icon}") center center no-repeat;
@@ -236,7 +242,14 @@ img[src="#{$orig_document_icon}"] {
 }
 img[src="#{$orig_file_icon}"] {
 	background-image: url("#{$custom_file_icon}");
-	filter: hue-rotate(55deg);
+}
+img[src="#{$orig_coursework_icon}"] {
+	background-image: url("#{$custom_coursework_icon}");
+	filter: hue-rotate(245deg);
+}
+img[src="#{$orig_piazza_icon}"] {
+	background-image: url("#{$custom_piazza_icon}");
+	filter: hue-rotate(10deg);
 }
 
 #puller.pullcollapsed a {
