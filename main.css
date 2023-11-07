@@ -5,6 +5,7 @@
 @description    Themes the blackboard UoM website to look more modern and use a consistent colour scheme.
 @author         adil192
 @license        Unlicense
+@downloadURL    https://raw.githubusercontent.com/adil192/BlackboardTheme/main/main.css
 ==/UserStyle== */
 @-moz-document domain("online.manchester.ac.uk") {
   /* set better fonts */

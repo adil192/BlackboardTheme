@@ -8,6 +8,7 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=manchester.ac.uk
 // @grant        none
 // @license      Unlicense
+// @downloadURL  https://github.com/adil192/BlackboardTheme/raw/main/scripts/highlight_current_modules.js
 // ==/UserScript==
 
 /** @type {HTMLDivElement | null} */
