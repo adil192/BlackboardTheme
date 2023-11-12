@@ -11,6 +11,8 @@
 // @downloadURL  https://github.com/adil192/BlackboardTheme/raw/main/scripts/video_keyboard_shortcuts.js
 // ==/UserScript==
 
+// @ts-check
+
 /**
  * The video element.
  * @type {HTMLVideoElement | null}
@@ -38,13 +40,15 @@ function findElements() {
     if (!captionsOptions.length) {
         let captionsButton = document.querySelector(".vjs-captions-button");
         if (captionsButton) {
-            captionsOptions = Array.from(captionsButton.querySelectorAll(".vjs-menu-item"))
+            captionsOptions = Array.from(captionsButton.querySelectorAll("li.vjs-menu-item"))
                 // Filter out the "captions settings" option
-                .filter(e => !e.classList.contains("vjs-texttrack-settings"));
+                .filter(e => !e.classList.contains("vjs-texttrack-settings"))
+                // Convert to an array of HTMLLIElement
+                .map(e => /** @type {HTMLLIElement} */ (e));
         }
     }
 
-    return videoElem && videoDiv && captionsOptions.length;
+    return !!videoElem && !!videoDiv && !!captionsOptions.length;
 }
 
 /**
@@ -55,6 +59,10 @@ function handleKeydown(e) {
 
     if (!findElements()) {
         console.log("handleKeydown: Some elements not found:", { videoElem, videoDiv, captionsOptions });
+        return;
+    }
+    if (!videoElem || !videoDiv) { // This should never happen
+        console.log("Unexpected error: videoElem or videoDiv is null.")
         return;
     }
 

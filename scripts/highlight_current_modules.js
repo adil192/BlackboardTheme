@@ -11,6 +11,8 @@
 // @downloadURL  https://github.com/adil192/BlackboardTheme/raw/main/scripts/highlight_current_modules.js
 // ==/UserScript==
 
+// @ts-check
+
 /** @type {HTMLDivElement | null} */
 let currentCoursesDiv;
 /** @type {HTMLDivElement | null} */
@@ -39,8 +41,8 @@ function findCoursesDivs() {
  */
 function greyOutOldCourses(coursesDiv) {
     console.log("greyOutOldCourses", { coursesDiv });
-    const courses = coursesDiv.querySelectorAll("ul.listElement > li");
-    if (!courses.length) {
+    const courses = coursesDiv?.querySelectorAll("ul.listElement > li");
+    if (!courses || !courses.length) {
         console.log("greyOutOldCourses: No courses found.");
         return;
     }
@@ -49,6 +51,7 @@ function greyOutOldCourses(coursesDiv) {
     let secondSemesterCourses = [];
     courses.forEach((course) => {
         const anchor = course.querySelector("a");
+        if (!anchor) return;
         const courseName = anchor.innerText;
         if (courseName.includes("1st Semester")) {
             firstSemesterCourses.push(course);
@@ -77,10 +80,10 @@ function greyOutOldCourses(coursesDiv) {
             greyOutOldCourses(currentCoursesDiv);
             greyOutOldCourses(formerCoursesDiv);
 
-            currentCoursesDiv.addEventListener("DOMSubtreeModified", () => {
+            currentCoursesDiv?.addEventListener("DOMSubtreeModified", () => {
                 greyOutOldCourses(currentCoursesDiv);
             }, { once: true, passive: true });
-            formerCoursesDiv.addEventListener("DOMSubtreeModified", () => {
+            formerCoursesDiv?.addEventListener("DOMSubtreeModified", () => {
                 greyOutOldCourses(formerCoursesDiv);
             }, { once: true, passive: true });
         });

@@ -11,6 +11,8 @@
 // @downloadURL  https://github.com/adil192/BlackboardTheme/raw/main/scripts/add_course_images.js
 // ==/UserScript==
 
+// @ts-check
+
 /** @type {HTMLDivElement[]} */
 let coursesDivs = [];
 
@@ -31,9 +33,9 @@ function timeoutPromise(ms) {
  */
 async function findCoursesDivs() {
     /** @type {HTMLDivElement | null} */
-    let currentCoursesDiv;
+    let currentCoursesDiv = null;
     /** @type {HTMLDivElement | null} */
-    let formerCoursesDiv;
+    let formerCoursesDiv = null;
     while (!currentCoursesDiv || !formerCoursesDiv) {
         currentCoursesDiv = document.querySelector("#CurrentCourses");
         formerCoursesDiv = document.querySelector("#FormerCourses");
@@ -47,7 +49,6 @@ async function findCoursesDivs() {
 
 /**
  * Sets the `data-module-code` attribute of each course to the course code.
- * @param {HTMLDivElement | null} coursesDiv
  */
 function labelCourses() {
     coursesDivs.forEach((coursesDiv) => {
@@ -55,6 +56,7 @@ function labelCourses() {
         const courses = coursesDiv.querySelectorAll("ul.listElement > li");
         courses.forEach((course) => {
             const anchor = course.querySelector("a");
+            if (!anchor) return;
             const moduleName = anchor.innerText;
             /** The module code, e.g. "COMP10120" (3 to 5 letters, then 3 to 7 numbers) */
             const moduleCode = moduleName.match(/[A-Z]{3,5}[0-9]{3,7}/)?.[0];
