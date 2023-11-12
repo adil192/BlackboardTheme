@@ -1,0 +1,31 @@
+{
+  "name": "blackboard_theme",
+  "version": "0.0.0",
+  "description": "UoM Blackboard Theme",
+  "main": " ",
+  "scripts": {
+    "test": "npx eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adil192/BlackboardTheme.git"
+  },
+  "keywords": [
+    "blackboard",
+    "uom",
+    "theme",
+    "userscript",
+    "userstyle"
+  ],
+  "author": "adil192",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/adil192/BlackboardTheme/issues"
+  },
+  "homepage": "https://github.com/adil192/BlackboardTheme#readme",
+  "devDependencies": {
+    "eslint": "^8.53.0",
+    "eslint-config-google": "^0.14.0",
+    "@microsoft/eslint-formatter-sarif": "^2.1.7"
+  }
+}
