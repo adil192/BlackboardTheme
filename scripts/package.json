@@ -25,7 +25,6 @@
   "homepage": "https://github.com/adil192/BlackboardTheme#readme",
   "devDependencies": {
     "eslint": "^8.53.0",
-    "eslint-config-google": "^0.14.0",
     "@microsoft/eslint-formatter-sarif": "^2.1.7"
   }
 }

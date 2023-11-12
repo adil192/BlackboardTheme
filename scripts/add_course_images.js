@@ -69,7 +69,7 @@ function labelCourses() {
     'use strict';
 
     console.log("UoM Blackboard: Add course images");
-    window.addEventListener("load", (event) => {
+    window.addEventListener("load", () => {
         findCoursesDivs().then(() => {
             labelCourses();
 
