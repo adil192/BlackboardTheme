@@ -4,7 +4,7 @@
   "description": "UoM Blackboard Theme",
   "main": " ",
   "scripts": {
-    "test": "npx eslint ."
+    "test": "npx eslint scripts"
   },
   "repository": {
     "type": "git",
