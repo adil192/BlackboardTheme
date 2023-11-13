@@ -66,3 +66,48 @@ These screenshots are taken at 1.33x zoom:
 | Duo 2FA | ![Before](screenshots/duo_before.png) | ![After](screenshots/duo_after.png) |
 | Video player | ![Before](screenshots/video_before.jpg) | ![After](screenshots/video_after.jpg) |
 | IT Account Manager | ![Before](screenshots/iam_before.png) | ![After](screenshots/iam_after.png) |
+
+## Development notes
+
+#### Folder structure
+
+```
+BlackboardTheme
+├── assets (images and other assets used in the css)
+│   └── subjects (for the "Module list images" script)
+├── screenshots (used in this README)
+├── scripts (for the optional scripts)
+│   ├── add_course_images.js
+│   ├── highlight_current_modules.js
+│   └── video_keyboard_shortcuts.js
+├── styles (each domain has its own scss file, except for...)
+│   ├── _globals.scss (defines colours, fonts, etc.)
+│   ├── _version.scss (the userstyle metadata, including the version number)
+├── CHANGELOG.md
+├── main.css (the compiled main.scss)
+├── main.scss (imports all the other scss files)
+├── package.json (defines dependencies for the lint workflow in `.github/workflows/lint.yml`)
+└── README.md
+```
+
+#### Adding a new subject to the [Module list images](https://greasyfork.org/en/scripts/479199-uom-blackboard-add-course-images) script
+
+Unsupported subjects will have this default image:
+
+<img src="assets/queens_arch.jpg" alt="Queen's arch" width=100>
+
+If you want to add your subject(s) to the
+[Module list images](https://greasyfork.org/en/scripts/479199-uom-blackboard-add-course-images) script, you can either
+[submit an issue](https://github.com/adil192/BlackboardTheme/issues/new) and I'll add it for you;
+or you can do it yourself and submit a pull request:
+
+1. Identify the subject code. An example module code is `ABCD10000`, where `ABCD` is the subject code.
+2. Add an image to the `assets/subjects/ABCD/` folder where `ABCD` is the subject code (you'll need to make this folder). The image can be named anything. Also add a `LICENSE.md` file with the image attribution/license.
+3. Go to `styles/_online.manchester.ac.uk_webapps_portal.scss` and add your rule above the line that says `// add your subject code above this line`:
+    ```scss
+    li[data-module-code^="ABCD"] {
+        --bg-url: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/ABCD/your-image.png");
+    }
+    // add your subject code above this line
+    ```
+4. (No changes are needed to be made to the script itself.)
