@@ -24,7 +24,11 @@
   },
   "homepage": "https://github.com/adil192/BlackboardTheme#readme",
   "devDependencies": {
+    "@microsoft/eslint-formatter-sarif": "^3.0.0",
     "eslint": "^8.53.0",
-    "@microsoft/eslint-formatter-sarif": "^3.0.0"
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-config-standard-scss": "^11.1.0",
+    "stylelint-sarif-formatter": "^1.0.7"
   }
 }

@@ -1,20 +1,10 @@
-name: ESLint
+name: Linting
 
 on:
   push:
     branches: [ "main" ]
-    paths:
-      - ".github/workflows/eslint.yml"
-      - "scripts/**"
-      - "package.json"
-      - ".eslintrc.js"
   pull_request:
     branches: [ "main" ]
-    paths:
-      - ".github/workflows/eslint.yml"
-      - "scripts/**"
-      - "package.json"
-      - ".eslintrc.js"
   schedule:
     # Run at 1:45am every Wednesday
     - cron: '45 1 * * 3'
@@ -44,4 +34,29 @@ jobs:
         uses: github/codeql-action/upload-sarif@v2
         with:
           sarif_file: eslint-results.sarif
+          wait-for-processing: true
+    
+  stylelint:
+    name: Run stylelint scanning
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install stylelint
+        run: npm install
+
+      - name: Run stylelint
+        run: npx stylelint **/*.scss
+          --custom-formatter=node_modules/stylelint-sarif-formatter
+          -o stylelint-results.sarif
+        continue-on-error: true
+
+      - name: Upload analysis results to GitHub
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: stylelint-results.sarif
           wait-for-processing: true
