@@ -1,59 +1,59 @@
-@import "version";
+@import "styles/version";
 
 // All blackboard pages
 @-moz-document domain("online.manchester.ac.uk") {
-	@import "online.manchester.ac.uk";
+	@import "styles/online.manchester.ac.uk";
 
 	// Blackboard assignments/grades/etc,
 	// split across many iframes so I'll just put these styles here
-	@import "online.manchester.ac.uk_webapps_bb-social-learning";
+	@import "styles/online.manchester.ac.uk_webapps_bb-social-learning";
 }
 
 // Blackboard homepage
 @-moz-document url-prefix("https://online.manchester.ac.uk/webapps/portal") {
-	@import "online.manchester.ac.uk_webapps_portal";
+	@import "styles/online.manchester.ac.uk_webapps_portal";
 }
 
 // Assessment/quizzes
 @-moz-document url-prefix("https://online.manchester.ac.uk/webapps/assessment") {
-	@import "online.manchester.ac.uk_webapps_assessment";
+	@import "styles/online.manchester.ac.uk_webapps_assessment";
 }
 
 // Calendar
 @-moz-document url-prefix("https://online.manchester.ac.uk/webapps/calendar") {
-	@import "online.manchester.ac.uk_webapps_calendar";
+	@import "styles/online.manchester.ac.uk_webapps_calendar";
 }
 
 // Rubric viewer
 @-moz-document url-prefix("https://online.manchester.ac.uk/webapps/rubric") {
-	@import "online.manchester.ac.uk_webapps_rubric";
+	@import "styles/online.manchester.ac.uk_webapps_rubric";
 }
 
 // Login page
 @-moz-document url-prefix("https://login.manchester.ac.uk/cas/login") {
-	@import "login.manchester.ac.uk";
+	@import "styles/login.manchester.ac.uk";
 }
 
 // The Duo 2FA page
 @-moz-document url-prefix("https://shib.manchester.ac.uk/shibboleth-idp/profile/SAML2/POST/SSO") {
-	@import "shib.manchester.ac.uk";
+	@import "styles/shib.manchester.ac.uk";
 }
 // The actual Duo 2FA iframe
 @-moz-document url-prefix("https://api-4c039978.duosecurity.com/frame") {
-	@import "shib.manchester.ac.uk_duo";
+	@import "styles/shib.manchester.ac.uk_duo";
 }
 
 // My Manchester
 @-moz-document domain("my.manchester.ac.uk") {
-	@import "my.manchester.ac.uk";
+	@import "styles/my.manchester.ac.uk";
 }
 
 // Embedded videos
 @-moz-document domain("video.manchester.ac.uk") {
-	@import "video.manchester.ac.uk";
+	@import "styles/video.manchester.ac.uk";
 }
 
 // IT account manager
 @-moz-document domain("iam.manchester.ac.uk") {
-	@import "iam.manchester.ac.uk";
+	@import "styles/iam.manchester.ac.uk";
 }
