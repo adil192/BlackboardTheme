@@ -609,6 +609,47 @@
   #dataCollectionContainer .legend-visible {
     margin-bottom: 1rem;
   }
+  .takeQuestionDiv select,
+  #dataCollectionContainer select {
+    background: #ede0f2;
+    color: #4b444d;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin-inline-end: 1rem;
+  }
+  .takeQuestionDiv .matching-table,
+  #dataCollectionContainer .matching-table {
+    border-collapse: initial;
+  }
+  .takeQuestionDiv .matching-table td[width="50%"]:first-child tr,
+  #dataCollectionContainer .matching-table td[width="50%"]:first-child tr {
+    border-inline-end: 2rem solid transparent;
+  }
+  .takeQuestionDiv .matching-table td[width="50%"]:first-child td,
+  #dataCollectionContainer .matching-table td[width="50%"]:first-child td {
+    border-bottom: 0.5rem solid transparent;
+  }
+  .takeQuestionDiv .matching-table table[id^=readAnswers],
+  #dataCollectionContainer .matching-table table[id^=readAnswers] {
+    background: #f3e8f6;
+    color: #4b444d;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border-collapse: separate;
+    border-spacing: 0.5rem;
+  }
+  .takeQuestionDiv .matching-table table[id^=readAnswers] td.matching-numbering,
+  #dataCollectionContainer .matching-table table[id^=readAnswers] td.matching-numbering {
+    background: #ede0f2;
+    color: #4b444d;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+  .takeQuestionDiv .matching-table table[id^=readAnswers] td.matching-numbering ~ td,
+  #dataCollectionContainer .matching-table table[id^=readAnswers] td.matching-numbering ~ td {
+    vertical-align: bottom;
+  }
   .takeQuestionDiv .stepTitleRight.liveArea,
   #assessmentGradeForm .stepTitleRight.liveArea {
     box-shadow: none;

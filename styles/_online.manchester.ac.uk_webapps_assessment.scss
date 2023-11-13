@@ -58,6 +58,48 @@
 	.legend-visible {
 		margin-bottom: 1rem;
 	}
+
+	select {
+		background: $surface-elevation-2;
+		color: $on-surface;
+		border: none;
+		border-radius: 0.5rem;
+		padding: 0.5rem;
+		margin-inline-end: 1rem;
+	}
+
+	.matching-table {
+		border-collapse: initial;
+
+		td[width="50%"]:first-child {
+			tr {
+				border-inline-end: 2rem solid transparent;
+			}
+			td {
+				border-bottom: 0.5rem solid transparent;
+			}
+		}
+
+		table[id^="readAnswers"] {
+			background: $surface-elevation-1;
+			color: $on-surface;
+			padding: 0.5rem;
+			border-radius: 0.5rem;
+			border-collapse: separate;
+			border-spacing: 0.5rem;
+
+			td.matching-numbering {
+				background: $surface-elevation-2;
+				color: $on-surface;
+				padding: 0.5rem;
+				border-radius: 0.5rem;
+
+				~ td {
+					vertical-align: bottom;
+				}
+			}
+		}
+	}
 }
 
 // container for the "save answer" button and "1 points" text
