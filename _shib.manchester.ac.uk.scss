@@ -1,3 +1,4 @@
+@use "sass:color";
 @import "globals";
 
 body,
@@ -39,7 +40,7 @@ h3:last-of-type {
 	font-weight: normal;
 
 	&, & a {
-		color: mix($error, $on-background, 25%) !important;
+		color: color.mix($error, $on-background, 25%) !important;
 	}
 }
 

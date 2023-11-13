@@ -89,11 +89,11 @@
     aspect-ratio: 160/69;
     width: auto;
     height: 76px !important;
-    margin: 12px 12px -30px 12px;
+    margin: 12px 12px -30px;
     background: url("https://assets.manchester.ac.uk/logos/hi-res/TAB_UNI_MAIN_logo/White_for_coloured_background/TAB_allwhite.png") no-repeat;
     background-size: contain;
   }
-  @media (max-width: 1037px) {
+  @media (width <= 1037px) {
     .brandingImgWrap {
       display: none;
     }
@@ -166,11 +166,11 @@
   }
   div.tab button.active {
     background: #8142a6 !important;
-    color: #ffffff !important;
+    color: #fff !important;
   }
   div.tab button.active:hover {
     background: #733b94 !important;
-    color: #ffffff !important;
+    color: #fff !important;
   }
   .stream_page_left {
     background: #fffbff;
@@ -238,14 +238,14 @@
     margin-left: 60px;
     padding: 1rem;
   }
-  .liItem .details:empty, .buildList > li .details:empty {
-    display: none;
-  }
   .liItem .details:-moz-only-whitespace, .buildList > li .details:-moz-only-whitespace {
     display: none;
   }
+  .liItem .details:empty, .buildList > li .details:empty {
+    display: none;
+  }
   .portlet {
-    margin: 0 2rem 2rem 2rem;
+    margin: 0 2rem 2rem;
   }
   [style*="border-bottom: 1px dashed"][style*="border-top: 3px solid"] {
     border: none !important;
@@ -322,25 +322,25 @@
   .button-1-img:hover,
   .button-1-img:focus {
     background-color: #8142a6;
-    color: #ffffff !important;
+    color: #fff !important;
   }
   .button-2 {
     background-color: #9965b7;
-    color: #ffffff !important;
+    color: #fff !important;
   }
   .button-2:hover, .button-2:focus {
     background-color: #8142a6;
   }
   .button-3 {
     background-color: #b188c8;
-    color: #ffffff !important;
+    color: #fff !important;
   }
   .button-3:hover, .button-3:focus {
     background-color: #8142a6;
   }
   .button-4 {
     background-color: #c9abd8;
-    color: #ffffff !important;
+    color: #fff !important;
   }
   .button-4:hover, .button-4:focus {
     background-color: #8142a6;
@@ -361,7 +361,7 @@
   }
   .side-nav ul li.active a {
     background-color: #8142a6;
-    color: #ffffff;
+    color: #fff;
     border: none;
     box-shadow: none;
     border-radius: 0.5rem;
@@ -393,7 +393,7 @@
   .stream_list_filter > li a.active,
   .stream_list_filter > li button.active {
     background: #8142a6 !important;
-    color: #ffffff !important;
+    color: #fff !important;
     border: none;
     box-shadow: none;
     border-radius: 1000px !important;
@@ -485,29 +485,29 @@
   .listElement li a,
   .courseListing li a {
     display: block;
-    padding: 1rem 1rem 2rem 1rem;
+    padding: 1rem 1rem 2rem;
     min-height: 4em;
     color: #4b444d !important;
   }
-  @media (max-width: 1400px) {
+  @media (width <= 1400px) {
     .listElement,
     .courseListing {
       grid-template-columns: 1fr 1fr;
     }
   }
-  @media (max-width: 1037px) {
+  @media (width <= 1037px) {
     .listElement,
     .courseListing {
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
   }
-  @media (max-width: 800px) {
+  @media (width <= 800px) {
     .listElement,
     .courseListing {
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
-  @media (max-width: 555px) {
+  @media (width <= 555px) {
     .listElement,
     .courseListing {
       grid-template-columns: 1fr 1fr;
@@ -615,8 +615,7 @@
   .takeQuestionDiv .stepTitleRight.liveArea .taskbuttondiv,
   #assessmentGradeForm .stepTitleRight.liveArea .taskbuttondiv {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column-reverse;
+    flex-flow: column-reverse wrap;
   }
   .submitStepBottom {
     background: transparent;
@@ -747,7 +746,7 @@
   #login .btn-submit, #logout #logoutbutton,
   #logout .btn-submit {
     background: #8142a6;
-    color: #ffffff;
+    color: #fff;
   }
   #login .btn-reset, #logout .btn-reset {
     width: auto;
@@ -809,7 +808,7 @@
   #sidebar {
     display: none;
   }
-  @media only screen and (max-width: 855px) {
+  @media only screen and (width <= 855px) {
     body, body#cas {
       background: #fffbff;
     }
@@ -831,7 +830,7 @@
   }
   #msg.success {
     background-color: #8142a6 !important;
-    color: #ffffff;
+    color: #fff;
   }
   #placestogo, #logout {
     float: none !important;
@@ -935,7 +934,7 @@
   input[type=reset].positive,
   input[type=button].positive {
     background: #8142a6;
-    color: #ffffff;
+    color: #fff;
   }
   button.positive:hover, button.positive:focus,
   .button.positive:hover,
@@ -947,7 +946,7 @@
   input[type=button].positive:hover,
   input[type=button].positive:focus {
     background: #653382;
-    color: #ffffff;
+    color: #fff;
     outline: none;
   }
   button.positive:disabled,
@@ -956,7 +955,7 @@
   input[type=reset].positive:disabled,
   input[type=button].positive:disabled {
     background: rgba(129, 66, 166, 0.5) !important;
-    color: #ffffff !important;
+    color: #fff !important;
   }
   .base-navigation div[role=banner] {
     background: #fffbff url("https://shib.manchester.ac.uk/shibboleth-idp/images/logo.png") no-repeat;
@@ -966,7 +965,7 @@
     height: auto;
     margin-bottom: 1rem;
   }
-  @media (max-width: 480px) {
+  @media (width <= 480px) {
     .base-navigation div[role=banner] {
       width: auto;
       max-height: 3rem;
@@ -1000,13 +999,13 @@
     padding-inline: 1rem;
   }
   .c-button {
-    background-color: #ffffff;
+    background-color: #fff;
     color: #8142a6;
     border: none;
   }
   .c-button--secondary,
   .c-button--secondary--outline {
-    background-color: #ffffff;
+    background-color: #fff;
     color: #68596e;
     border: none;
   }
@@ -1014,7 +1013,7 @@
   .c-button--secondary--outline:hover,
   .c-button--secondary--outline:focus {
     background-color: #68596e;
-    color: #ffffff;
+    color: #fff;
   }
   a {
     color: #8142a6;
@@ -1083,10 +1082,6 @@
     margin: 0 0.5rem 0.5rem;
     width: auto;
   }
-  .video-js .vjs-progress-control .vjs-progress-holder,
-  .video-js .vjs-progress-control:hover .vjs-progress-holder {
-    font-size: inherit !important;
-  }
   .video-js .vjs-progress-holder {
     height: 1.5em;
     border-radius: 0.25rem;
@@ -1116,6 +1111,10 @@
     top: 0;
     right: -0.25rem;
     font-size: inherit;
+  }
+  .video-js .vjs-progress-control .vjs-progress-holder,
+  .video-js .vjs-progress-control:hover .vjs-progress-holder {
+    font-size: inherit !important;
   }
   .video-js .vjs-title-bar-link {
     width: auto;
@@ -1190,7 +1189,7 @@
   }
   [class^=icon-],
   [class*=" icon-"] {
-    font-family: FontAwesome !important;
+    font-family: FontAwesome, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
   }
   html,
   body,
@@ -1279,11 +1278,11 @@
   }
   .btn-primary {
     background: #8142a6;
-    color: #ffffff;
+    color: #fff;
   }
   .btn-danger {
     background: #d32f2f;
-    color: #ffffff;
+    color: #fff;
   }
   #footer {
     position: absolute;
@@ -1371,10 +1370,10 @@
   .accordion-group .accordion-heading {
     border-radius: 0.5rem;
     background-color: #68596e;
-    color: #ffffff;
+    color: #fff;
   }
   .accordion-group .accordion-heading .accordion-toggle {
-    color: #ffffff;
+    color: #fff;
   }
   .accordion-group .accordion-inner {
     border: none;

@@ -49,32 +49,35 @@ div.container {
 
 		a {
 			display: block;
-			padding: 1rem 1rem 2rem 1rem;
+			padding: 1rem 1rem 2rem;
 			min-height: 4em;
 			color: $on-surface !important;
 		}
 	}
 }
 
-@media (max-width: 1400px) {
+@media (width <= 1400px) {
 	.listElement,
 	.courseListing {
 		grid-template-columns: 1fr 1fr;
 	}
 }
-@media (max-width: 1037px) {
+
+@media (width <= 1037px) {
 	.listElement,
 	.courseListing {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
 }
-@media (max-width: 800px) {
+
+@media (width <= 800px) {
 	.listElement,
 	.courseListing {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
 }
-@media (max-width: 555px) {
+
+@media (width <= 555px) {
 	.listElement,
 	.courseListing {
 		grid-template-columns: 1fr 1fr;
@@ -86,6 +89,7 @@ div.container {
 .courseListing {
 	li[data-module-code] {
 		position: relative;
+
 		--bg-url: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/queens_arch.jpg");
 
 		> a {

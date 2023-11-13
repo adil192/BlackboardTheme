@@ -3,7 +3,6 @@
 $progress-bar-height: 1.5em; // up from 0.3em
 $control-bar-border-radius: 0.5rem;
 $progress-bar-border-radius: calc($control-bar-border-radius / 2);
-
 $video-elem-background: rgba($header, 0.7);
 $video-elem-color: color-mix(in oklab, $on-header, white 90%);
 
@@ -25,11 +24,6 @@ video,
   width: auto;
 }
 
-.video-js .vjs-progress-control .vjs-progress-holder,
-.video-js .vjs-progress-control:hover .vjs-progress-holder {
-  // don't resize the progress bar when hovering over it
-  font-size: inherit !important;
-}
 .video-js .vjs-progress-holder {
   // Make the hitbox for the progress bar bigger
   height: $progress-bar-height;
@@ -64,6 +58,11 @@ video,
       font-size: inherit;
     }
   }
+}
+.video-js .vjs-progress-control .vjs-progress-holder,
+.video-js .vjs-progress-control:hover .vjs-progress-holder {
+  // don't resize the progress bar when hovering over it
+  font-size: inherit !important;
 }
 
 .video-js .vjs-title-bar-link { // title of the video

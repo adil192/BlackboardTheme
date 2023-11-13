@@ -10,7 +10,7 @@ $navbar-logo-size-percent: 0.75;
 }
 [class^="icon-"],
 [class*=" icon-"] {
-	font-family: FontAwesome !important;
+	font-family: FontAwesome, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
 }
 
 html,

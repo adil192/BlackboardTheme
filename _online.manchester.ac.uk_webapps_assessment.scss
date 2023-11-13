@@ -70,8 +70,7 @@
 
 	.taskbuttondiv {
 		display: flex;
-		flex-wrap: wrap;
-		flex-direction: column-reverse;
+		flex-flow: column-reverse wrap;
 	}
 }
 

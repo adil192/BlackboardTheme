@@ -1,3 +1,4 @@
+@use "sass:color";
 @import "globals";
 
 /* set better fonts */
@@ -20,6 +21,7 @@ img[src="https://online.manchester.ac.uk/branding/_96_1/welcome-image03.png"] {
 	border-radius: 0.5rem;
 	mix-blend-mode: darken;
 }
+
 /* Remove padding around welcome image */
 #module\:_278_1 .collapsible {
 	padding: 0 !important;
@@ -82,10 +84,10 @@ a,
 .eval-links .button-4,
 .eval-links input[type="button"].genericButton,
 [style*="color: #174e86"] {
-	color: darken($primary, 10%) !important;
+	color: color.adjust($primary, $lightness: -10%) !important;
 }
 [style*="color: #24a6bb"] {
-	color: lighten($primary, 10%) !important;
+	color: color.adjust($primary, $lightness: 10%) !important;
 }
 .detail-heading h2 a {
 	border: none !important;
@@ -102,11 +104,12 @@ p, strong, b,
 	aspect-ratio: 160 / 69;
 	width: auto;
 	height: 76px !important;
-	margin: 12px 12px -30px 12px;
+	margin: 12px 12px -30px;
 	// dead link to svg: https://my.manchester.ac.uk/-/media/Images/Feature/Navigation/logo_UoM_white.svg
 	background: url("https://assets.manchester.ac.uk/logos/hi-res/TAB_UNI_MAIN_logo/White_for_coloured_background/TAB_allwhite.png") no-repeat;
 	background-size: contain;
-	@media (max-width: 1037px) {
+
+	@media (width <= 1037px) {
 		display: none;
 	}
 	.bannerImage {
@@ -131,7 +134,7 @@ p, strong, b,
 	padding: 0 1.2em;
 }
 #globalNavPageNavArea table.bouncer {
-	border-bottom: 1px solid mix($header, #333, 20%);
+	border-bottom: 1px solid color.mix($header, #333, 20%);
 }
 .topTabs .tabWrapper-right {
 	height: 3rem;
@@ -184,7 +187,7 @@ div.tab {
 			color: $on-primary !important;
 		}
 		&.active:hover {
-			background: darken($primary, 5%) !important;
+			background: color.adjust($primary, $lightness: -5%) !important;
 			color: $on-primary !important;
 		}
 	}
@@ -210,50 +213,50 @@ div.tab {
 	opacity: 0.8;
 }
 
-$orig_document_icon: "/images/ci/sets/set01/document_on.gif";
-$orig_file_icon: "/images/ci/sets/set01/file_on.gif";
-$orig_folder_icon: "/images/ci/sets/set01/folder_on.gif";
-$orig_coursework_icon: "/images/ci/sets/set01/assignment_on.gif";
-$orig_piazza_icon: "/images/ci/sets/set01/link_on.gif";
-$custom_document_icon: "https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/mimetypes/x-office-document.svg";
-$custom_file_icon: "https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/mimetypes/application-x-mswinurl.svg";
-$custom_folder_icon: "https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/places/folder-black.svg";
-$custom_coursework_icon: "https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/apps/openboard.svg";
-$custom_piazza_icon: "https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/apps/org.kde.neochat.svg";
-$custom_logout_icon: "https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/apps/system-log-out.svg";
+$orig-document-icon: "/images/ci/sets/set01/document_on.gif";
+$orig-file-icon: "/images/ci/sets/set01/file_on.gif";
+$orig-folder-icon: "/images/ci/sets/set01/folder_on.gif";
+$orig-coursework-icon: "/images/ci/sets/set01/assignment_on.gif";
+$orig-piazza-icon: "/images/ci/sets/set01/link_on.gif";
+$custom-document-icon: "https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/mimetypes/x-office-document.svg";
+$custom-file-icon: "https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/mimetypes/application-x-mswinurl.svg";
+$custom-folder-icon: "https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/places/folder-black.svg";
+$custom-coursework-icon: "https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/apps/openboard.svg";
+$custom-piazza-icon: "https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/apps/org.kde.neochat.svg";
+$custom-logout-icon: "https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/apps/system-log-out.svg";
 
 /* replace document and folder icons */
-img[src="#{$orig_document_icon}"],
-img[src="#{$orig_file_icon}"],
-img[src="#{$orig_folder_icon}"],
-img[src="#{$orig_coursework_icon}"],
-img[src="#{$orig_piazza_icon}"] {
+img[src="#{$orig-document-icon}"],
+img[src="#{$orig-file-icon}"],
+img[src="#{$orig-folder-icon}"],
+img[src="#{$orig-coursework-icon}"],
+img[src="#{$orig-piazza-icon}"] {
 	width: 50px;
 	height: 50px;
-	background: url("#{$custom_folder_icon}") center center no-repeat;
+	background: url("#{$custom-folder-icon}") center center no-repeat;
 	background-size: contain;
 	box-sizing: border-box;
 	padding-left: 50px;
 	padding-top: 50px;
 }
-img[src="#{$orig_document_icon}"] {
-	background-image: url("#{$custom_document_icon}");
+img[src="#{$orig-document-icon}"] {
+	background-image: url("#{$custom-document-icon}");
 	filter: hue-rotate(35deg);
 }
-img[src="#{$orig_file_icon}"] {
-	background-image: url("#{$custom_file_icon}");
+img[src="#{$orig-file-icon}"] {
+	background-image: url("#{$custom-file-icon}");
 }
-img[src="#{$orig_coursework_icon}"] {
-	background-image: url("#{$custom_coursework_icon}");
+img[src="#{$orig-coursework-icon}"] {
+	background-image: url("#{$custom-coursework-icon}");
 	filter: hue-rotate(245deg);
 }
-img[src="#{$orig_piazza_icon}"] {
-	background-image: url("#{$custom_piazza_icon}");
+img[src="#{$orig-piazza-icon}"] {
+	background-image: url("#{$custom-piazza-icon}");
 	filter: hue-rotate(10deg);
 }
 
 #puller.pullcollapsed a {
-	background-color: lighten($primary, 10%);
+	background-color: color.adjust($primary, $lightness: 10%);
 }
 
 #containerdiv {
@@ -274,16 +277,16 @@ img[src="#{$orig_piazza_icon}"] {
 		margin-left: 60px;
 		padding: 1rem;
 
-		&:empty {
+		&:-moz-only-whitespace {
 			display: none;
 		}
-		&:-moz-only-whitespace {
+		&:empty {
 			display: none;
 		}
 	}
 }
 .portlet {
-	margin: 0 2rem 2rem 2rem;
+	margin: 0 2rem 2rem;
 }
 
 // remove dashed line above footer
@@ -295,7 +298,7 @@ img[src="#{$orig_piazza_icon}"] {
 // change logout button icon
 .global-nav-bar .logout-link {
 	background-color: transparent !important;
-	background-image: url($custom_logout_icon) !important;
+	background-image: url($custom-logout-icon) !important;
 	background-size: 70% !important;
 	background-position: center center !important;
 	background-repeat: no-repeat !important;
@@ -362,7 +365,7 @@ input[type="submit"].submit,
 .button-1,
 .button-1-img {
 	background-color: $header;
-	color: mix(white, $on-header) !important;
+	color: color.mix(white, $on-header) !important;
 	&:hover, &:focus {
 		background-color: $primary;
 		color: $on-primary !important;

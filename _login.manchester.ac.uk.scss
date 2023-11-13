@@ -1,3 +1,4 @@
+@use "sass:color";
 @import "globals";
 
 a, a:link {
@@ -95,7 +96,7 @@ footer {
 	}
 	#logoutbutton:hover,
 	.btn-submit:hover {
-		background: darken($primary, 10%);
+		background: color.adjust($primary, $lightness: -10%);
 		border: none;
 	}
 }
@@ -161,7 +162,7 @@ span.accesskey { // Underlines the first letter of the label
 	display: none;
 }
 
-@media only screen and (max-width: 855px) {
+@media only screen and (width <= 855px) {
 	body, body#cas {
 		background: $background;
 	}
