@@ -84,6 +84,15 @@ div.container {
 	}
 }
 
+// hide blackboard footer
+div.container {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+.uomFooter {
+	display: none;
+}
+
 // add course images
 .listElement,
 .courseListing {
@@ -116,13 +125,5 @@ div.container {
 	li[data-module-code^="MATH"] {
 		--bg-url: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/MATH/geometry-1044090_640.jpg");
 	}
-}
-
-// hide blackboard footer
-div.container {
-	padding-bottom: 0;
-	margin-bottom: 0;
-}
-.uomFooter {
-	display: none;
+	// add your subject code above this line
 }

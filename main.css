@@ -513,6 +513,13 @@
       grid-template-columns: 1fr 1fr;
     }
   }
+  div.container {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .uomFooter {
+    display: none;
+  }
   .listElement li[data-module-code],
   .courseListing li[data-module-code] {
     position: relative;
@@ -543,13 +550,6 @@
   .listElement li[data-module-code^=MATH],
   .courseListing li[data-module-code^=MATH] {
     --bg-url: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/MATH/geometry-1044090_640.jpg");
-  }
-  div.container {
-    padding-bottom: 0;
-    margin-bottom: 0;
-  }
-  .uomFooter {
-    display: none;
   }
 }
 @-moz-document url-prefix("https://online.manchester.ac.uk/webapps/assessment") {
