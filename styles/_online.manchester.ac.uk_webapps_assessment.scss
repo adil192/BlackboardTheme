@@ -6,6 +6,7 @@
 	color: $on-surface;
 	border: none;
 	padding: 1rem;
+	border-radius: 0.5rem;
 }
 
 .steptitle, div[id*="step"], div[id*="Step"], #dataCollectionContainer, .container {
@@ -97,5 +98,55 @@
 	// button container when submitStepBottom is sticky
 	&.submitStepFixed #bottom_submitButtonRow {
 		background: $surface-elevation-1 !important;
+	}
+}
+
+// selector taken from original css;
+// selects the "Question Completion Status" box at the top
+.nav .sub ul, .nav.gb_currView .sub > ul, .menumini ul, .quickAddPal, .keyboardAccess, span.currentTags, .liveArea, .liveArea-slim, .previewArea, .jumptopage, .panelTabs li.active a.edit, .panelTabs li.active a.edit:hover, .panelTabs li.active a.edit:focus, .flyout, .bcContent .flyout, ul.tree li a + img + a:focus, ul.tree li img + img + a:focus, div.treeContainer ul.tree li a.itemActive, #learningUnitToc ul.tree li a.itemActive, ul.tree li a.itemActive, #loginLang ul {
+	background: $surface;
+	color: $on-surface;
+	border: none;
+	border-radius: 0.5rem;
+}
+
+// #topbar contains the "Question Completion Status" box
+#topbar {
+	margin-top: 1rem;
+	transition: top 50ms ease-out;
+
+	.timer.liveArea {
+		padding: 1rem;
+	}
+	&[style*="top: 0px;"] .timer.liveArea {
+		// darker when sticky
+		background: $surface-elevation-1;
+	}
+
+	.completionContainer {
+		.qIncomplete,
+		.qComplete {
+			border: 0.1rem solid rgba(black, 0.1);
+			padding: 0.5rem;
+			border-radius: 0.5rem;
+			background: $surface-elevation-2;
+			color: $on-surface;
+
+			img[src="/images/ci/icons/file_li.gif"] {
+				width: 1rem;
+				height: 1rem;
+				padding-left: 1rem;
+				padding-top: 1rem;
+				margin-left: 0.1rem;
+				background: url("/images/ci/icons/current_li.png") center center no-repeat;
+				background-size: contain;
+				box-sizing: border-box;
+				mix-blend-mode: normal;
+			}
+		}
+		.qComplete {
+			background: $primary;
+			color: $on-primary;
+		}
 	}
 }

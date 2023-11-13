@@ -6,6 +6,10 @@
 	font-family: $font-family !important;
 }
 
+.abutton {
+	color: $primary;
+}
+
 /* disable quick links popup because I don't use it, remove these lines if you do use this */
 #quick_links_wrap {
 	display: none !important;
