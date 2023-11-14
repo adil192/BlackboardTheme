@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           UoM Blackboard theme
-@version        20231113.00.01
+@version        20231114.00.00
 @namespace      userstyles.world/user/adil192
 @description    Themes the blackboard UoM website to look more modern and use a consistent colour scheme.
 @author         adil192
@@ -649,6 +649,48 @@
   .takeQuestionDiv .matching-table table[id^=readAnswers] td.matching-numbering ~ td,
   #dataCollectionContainer .matching-table table[id^=readAnswers] td.matching-numbering ~ td {
     vertical-align: bottom;
+  }
+  .takeQuestionDiv .multiple-answer-table tr,
+  .takeQuestionDiv .multiple-choice-table tr,
+  #dataCollectionContainer .multiple-answer-table tr,
+  #dataCollectionContainer .multiple-choice-table tr {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .takeQuestionDiv .multiple-answer-table td.multiple-option-row:first-child,
+  .takeQuestionDiv .multiple-choice-table td.multiple-option-row:first-child,
+  #dataCollectionContainer .multiple-answer-table td.multiple-option-row:first-child,
+  #dataCollectionContainer .multiple-choice-table td.multiple-option-row:first-child {
+    background: #ede0f2;
+    color: #4b444d;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    align-self: flex-start;
+  }
+  .takeQuestionDiv .multiple-answer-table td.multiple-option-row:first-child input,
+  .takeQuestionDiv .multiple-choice-table td.multiple-option-row:first-child input,
+  #dataCollectionContainer .multiple-answer-table td.multiple-option-row:first-child input,
+  #dataCollectionContainer .multiple-choice-table td.multiple-option-row:first-child input {
+    margin: 0;
+  }
+  .takeQuestionDiv .multiple-answer-table td.multiple-option-row:first-child ~ td:empty,
+  .takeQuestionDiv .multiple-choice-table td.multiple-option-row:first-child ~ td:empty,
+  #dataCollectionContainer .multiple-answer-table td.multiple-option-row:first-child ~ td:empty,
+  #dataCollectionContainer .multiple-choice-table td.multiple-option-row:first-child ~ td:empty {
+    display: none;
+  }
+  .takeQuestionDiv .multiple-answer-table td.multiple-option-row:first-child ~ td:-moz-only-whitespace,
+  .takeQuestionDiv .multiple-choice-table td.multiple-option-row:first-child ~ td:-moz-only-whitespace,
+  #dataCollectionContainer .multiple-answer-table td.multiple-option-row:first-child ~ td:-moz-only-whitespace,
+  #dataCollectionContainer .multiple-choice-table td.multiple-option-row:first-child ~ td:-moz-only-whitespace {
+    display: none;
+  }
+  .takeQuestionDiv .multiple-answer-table td.multiple-option-row:first-child ~ td,
+  .takeQuestionDiv .multiple-choice-table td.multiple-option-row:first-child ~ td,
+  #dataCollectionContainer .multiple-answer-table td.multiple-option-row:first-child ~ td,
+  #dataCollectionContainer .multiple-choice-table td.multiple-option-row:first-child ~ td {
+    align-self: end;
   }
   .takeQuestionDiv .stepTitleRight.liveArea,
   #assessmentGradeForm .stepTitleRight.liveArea {

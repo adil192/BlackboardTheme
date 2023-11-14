@@ -100,6 +100,38 @@
 			}
 		}
 	}
+
+	.multiple-answer-table,
+	.multiple-choice-table {
+		tr {
+			display: flex;
+			gap: 0.5rem;
+			margin-bottom: 0.5rem;
+		}
+		td.multiple-option-row:first-child {
+			background: $surface-elevation-2;
+			color: $on-surface;
+			padding: 0.5rem;
+			border-radius: 0.5rem;
+			align-self: flex-start;
+
+			input {
+				margin: 0;
+			}
+
+			// there is an empty <td> which messes up spacing
+			~ td:empty {
+				display: none;
+			}
+			~ td:-moz-only-whitespace {
+				display: none;
+			}
+
+			~ td {
+				align-self: end;
+			}
+		}
+	}
 }
 
 // container for the "save answer" button and "1 points" text
