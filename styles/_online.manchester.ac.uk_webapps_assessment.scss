@@ -80,7 +80,7 @@
 			}
 		}
 
-		@media only screen and (min-width: 0px) and (max-width: 736px) {
+		@media only screen and (width >= 0) and (width <= 736px) {
 			> tbody > tr {
 				display: block;
 				> td {
@@ -129,7 +129,7 @@
 				margin: 0;
 			}
 
-			@media only screen and (min-width: 0px) and (max-width: 736px) {
+			@media only screen and (width >= 0) and (width <= 736px) {
 				padding: 0.5rem !important;
 				position: initial;
 
