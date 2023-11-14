@@ -119,6 +119,16 @@
 				margin: 0;
 			}
 
+			@media only screen and (min-width: 0px) and (max-width: 736px) {
+				padding: 0.5rem !important;
+				position: initial;
+
+				input {
+					position: initial !important;
+					margin: 0 !important;
+				}
+			}
+
 			// there is an empty <td> which messes up spacing
 			~ td:empty {
 				display: none;

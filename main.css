@@ -674,6 +674,22 @@
   #dataCollectionContainer .multiple-choice-table td.multiple-option-row:first-child input {
     margin: 0;
   }
+  @media only screen and (min-width: 0px) and (max-width: 736px) {
+    .takeQuestionDiv .multiple-answer-table td.multiple-option-row:first-child,
+    .takeQuestionDiv .multiple-choice-table td.multiple-option-row:first-child,
+    #dataCollectionContainer .multiple-answer-table td.multiple-option-row:first-child,
+    #dataCollectionContainer .multiple-choice-table td.multiple-option-row:first-child {
+      padding: 0.5rem !important;
+      position: initial;
+    }
+    .takeQuestionDiv .multiple-answer-table td.multiple-option-row:first-child input,
+    .takeQuestionDiv .multiple-choice-table td.multiple-option-row:first-child input,
+    #dataCollectionContainer .multiple-answer-table td.multiple-option-row:first-child input,
+    #dataCollectionContainer .multiple-choice-table td.multiple-option-row:first-child input {
+      position: initial !important;
+      margin: 0 !important;
+    }
+  }
   .takeQuestionDiv .multiple-answer-table td.multiple-option-row:first-child ~ td:empty,
   .takeQuestionDiv .multiple-choice-table td.multiple-option-row:first-child ~ td:empty,
   #dataCollectionContainer .multiple-answer-table td.multiple-option-row:first-child ~ td:empty,
