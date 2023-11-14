@@ -80,6 +80,16 @@
 			}
 		}
 
+		@media only screen and (min-width: 0px) and (max-width: 736px) {
+			> tbody > tr {
+				display: block;
+				> td {
+					display: block;
+					width: 100%;
+				}
+			}
+		}
+
 		table[id^="readAnswers"] {
 			background: $surface-elevation-1;
 			color: $on-surface;
