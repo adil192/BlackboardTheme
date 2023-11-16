@@ -2,6 +2,14 @@
 
 Here I will outline the changes I've made over time...
 
+### 20231116
+
+- Fixed icons not displaying in Blackboard videos (such as the fullscreen icon)
+
+### 20231113
+
+- Updated the styling for the assessment page
+
 ### 20231106
 
 - Fixed video popup menus always being hoverable
