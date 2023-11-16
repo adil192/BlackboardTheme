@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           UoM Blackboard theme
-@version        20231116.00.00
+@version        20231116.01.00
 @namespace      userstyles.world/user/adil192
 @description    Themes the blackboard UoM website to look more modern and use a consistent colour scheme.
 @author         adil192
@@ -1343,6 +1343,16 @@
     max-width: 20em !important;
     padding: 0 1em !important;
     font-family: "Google Sans", "Product Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", FontAwesome, VideoJS !important;
+  }
+  /* in fullscreen, use a better scaling algorithm */
+  :fullscreen video,
+  video:fullscreen {
+    image-rendering: -webkit-optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+    --foo: "bar";
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
   }
 }
 @-moz-document domain("iam.manchester.ac.uk") {

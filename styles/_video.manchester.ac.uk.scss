@@ -149,3 +149,17 @@ video,
     padding: 0 1em !important;
     font-family: $font-family !important;
 }
+
+/* in fullscreen, use a better scaling algorithm */
+:fullscreen video,
+video:fullscreen {
+  image-rendering: -webkit-optimize-contrast;
+  -ms-interpolation-mode: nearest-neighbor;
+
+  // this is a hack to force SCSS to allow the above vendor prefixes
+  --foo: "bar";
+
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}

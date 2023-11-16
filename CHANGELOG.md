@@ -5,6 +5,7 @@ Here I will outline the changes I've made over time...
 ### 20231116
 
 - Fixed icons not displaying in Blackboard videos (such as the fullscreen icon)
+- Videos are no longer anti-aliased so they look sharper. On lower resolution displays, this could cause the video to look pixelated.
 
 ### 20231113
 
