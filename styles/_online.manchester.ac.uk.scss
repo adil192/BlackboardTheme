@@ -301,13 +301,17 @@ img[src="#{$orig-piazza-icon}"] {
 }
 
 // change logout button icon
-.global-nav-bar .logout-link {
-	background-color: transparent !important;
-	background-image: url($custom-logout-icon) !important;
-	background-size: 70% !important;
-	background-position: center center !important;
-	background-repeat: no-repeat !important;
-	mix-blend-mode: lighten;
+.global-nav-bar.logout {
+	height: auto !important;
+
+	.logout-link {
+		background-color: transparent !important;
+		background-image: url($custom-logout-icon) !important;
+		background-size: 70% !important;
+		background-position: center center !important;
+		background-repeat: no-repeat !important;
+		mix-blend-mode: lighten;
+	}
 }
 
 #global-nav-link {

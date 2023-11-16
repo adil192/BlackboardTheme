@@ -255,7 +255,10 @@
     border: none !important;
     background: transparent !important;
   }
-  .global-nav-bar .logout-link {
+  .global-nav-bar.logout {
+    height: auto !important;
+  }
+  .global-nav-bar.logout .logout-link {
     background-color: transparent !important;
     background-image: url("https://raw.githubusercontent.com/luisrguerra/fluent11-icon-theme/main/fluent11/64x64/apps/system-log-out.svg") !important;
     background-size: 70% !important;
