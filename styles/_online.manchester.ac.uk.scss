@@ -329,7 +329,7 @@ iframe[src*="https://video.manchester.ac.uk"] {
 	aspect-ratio: 1.5;
 	// more specific aspect ratios...
 	&[width="960"][height="540"] {
-		aspect-ratio: calc(960 / 540 + 0.1);
+		aspect-ratio: calc(960 / 540 + 0.04);
 	}
 	&[width="660"][height="362"] {
 		aspect-ratio: calc(660 / 362 + 0.1);
