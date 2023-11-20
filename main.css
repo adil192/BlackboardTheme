@@ -90,11 +90,13 @@
     color: inherit !important;
   }
   .brandingImgWrap {
-    aspect-ratio: 160/69;
+    aspect-ratio: 173.88/73.519997;
     width: auto;
     height: 76px !important;
     margin: 12px 12px -30px;
-    background: url("https://assets.manchester.ac.uk/logos/hi-res/TAB_UNI_MAIN_logo/White_for_coloured_background/TAB_allwhite.png") no-repeat;
+    background: transparent;
+    background-image: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/TAB_allwhite.svg");
+    background-repeat: no-repeat;
     background-size: contain;
   }
   @media (width <= 1037px) {
