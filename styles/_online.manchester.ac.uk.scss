@@ -36,31 +36,13 @@ img[src="https://online.manchester.ac.uk/branding/_96_1/welcome-image03.png"] {
 	}
 }
 
-#div_308_1 .vtbegenerated {
+#div_308_1 > .vtbegenerated {
+	// make scrollable
+	max-height: 24rem;
+
 	// hide hr
 	hr {
 		color: transparent;
-	}
-	// collapse Communication tab
-	> h5:nth-of-type(2n) {
-		&,
-		& ~ *,
-		& ~ * > p {
-			display: -webkit-box;
-			transition: opacity 0.5s;
-			transition-property: -webkit-line-clamp, opacity;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			-webkit-line-clamp: 2;
-			-webkit-box-orient: vertical;
-			opacity: 0.6;
-		}
-		&:hover,
-		& ~ *:hover,
-		& ~ *:hover > p {
-			-webkit-line-clamp: 100;
-			opacity: 1;
-		}
 	}
 }
 
