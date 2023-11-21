@@ -128,6 +128,7 @@ p, strong, b,
 	background-color: $primary !important;
 }
 .topTabs,
+#globalNavPageNavArea,
 #courseMenuPalette,
 .menuWrap-inner,
 .menuWrap,
@@ -149,6 +150,20 @@ p, strong, b,
 }
 .appTabs td {
 	padding-bottom: 0 !important;
+}
+.topTabs {
+	// add curved corners
+	padding-bottom: 0.5rem;
+	overflow-y: visible;
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: -0.15rem;
+		width: 100%;
+		height: 0.5rem;
+		background: $background;
+		border-radius: 0.5rem 0.5rem 0 0;
+	}
 }
 
 
