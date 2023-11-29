@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         UoM Blackboard: Video keyboard shortcuts
 // @namespace    http://tampermonkey.net/
-// @version      20231104.21.00
+// @version      20231129.00.00
 // @description  An optional accompanying script for https://github.com/adil192/BlackboardTheme, which adds keyboard shortcuts for video playback on Blackboard.
 // @author       adil192
 // @match        https://video.manchester.ac.uk/embedded/*
@@ -111,5 +111,5 @@ function handleKeydown(e) {
     'use strict';
 
     console.log("UoM Blackboard: Video keyboard shortcuts");
-    document.addEventListener("keydown", handleKeydown, { once: true, passive: true });
+    document.addEventListener("keydown", handleKeydown, { passive: true });
 })();

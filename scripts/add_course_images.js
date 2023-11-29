@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         UoM Blackboard: Add course images
 // @namespace    http://tampermonkey.net/
-// @version      20231103.00.00
+// @version      20231129.00.00
 // @description  An optional accompanying script for https://github.com/adil192/BlackboardTheme, which adds course images to the Blackboard homepage.
 // @author       adil192
 // @match        https://online.manchester.ac.uk/webapps/portal/*
@@ -76,7 +76,7 @@ function labelCourses() {
             coursesDivs.forEach((coursesDiv) => {
                 coursesDiv.addEventListener("DOMSubtreeModified", () => {
                     labelCourses();
-                }, { once: true, passive: true });
+                }, { passive: true });
             });
         });
     }, { once: true, passive: true });
