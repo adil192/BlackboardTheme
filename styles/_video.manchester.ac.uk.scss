@@ -163,3 +163,44 @@ video:fullscreen {
   image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges;
 }
+
+/* play and pause animations */
+#video.video-js {
+  $on-surface-without-hash: str-slice(ie-hex-str($on-surface), 4);
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4rem;
+    height: 4rem;
+    margin: -2rem 0 0 -2rem;
+    pointer-events: none;
+    opacity: 0;
+    animation: animation-that-doesnt-exist 0.5s ease-out;
+    z-index: 1000;
+  }
+  &.vjs-playing::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$on-surface-without-hash}' d='M6 19h4V5H6v14zm8-14v14h4V5h-4z'/%3E%3C/svg%3E");
+    animation-name: bounce-out-0;
+  }
+  &.vjs-paused::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$on-surface-without-hash}' d='M8 5v14l11-7z'/%3E%3C/svg%3E");
+    animation-name: bounce-out-1;
+  }
+
+  @for $i from 0 through 1 {
+    // We need multiple animations so we can restart the animation when the state changes
+    @keyframes bounce-out-#{$i} {
+      from {
+        transform: scale(1);
+        opacity: 1;
+      }
+      to {
+        transform: scale(1.5);
+        opacity: 0;
+      }
+    }
+  }
+}

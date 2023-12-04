@@ -2,6 +2,10 @@
 
 Here I will outline the changes I've made over time...
 
+### 20231204
+
+- Added popup icons when you play/pause a video (just like on YouTube)
+
 ### 20231116
 
 - Fixed icons not displaying in Blackboard videos (such as the fullscreen icon)
