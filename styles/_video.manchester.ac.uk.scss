@@ -83,6 +83,8 @@ video,
   left: auto;
   transform: translateX(50%);
 
+  font-size: min(2em, 4vw, 6vh);
+
   > a {
     color: $on-surface !important;
     text-decoration: none;

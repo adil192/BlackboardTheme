@@ -1294,6 +1294,7 @@
     right: 50%;
     left: auto;
     transform: translateX(50%);
+    font-size: min(2em, 4vw, 6vh);
   }
   .video-js .vjs-title-bar-link > a {
     color: #4b444d !important;
