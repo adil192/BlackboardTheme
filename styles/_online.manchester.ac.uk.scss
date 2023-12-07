@@ -328,6 +328,7 @@ iframe[src*="https://video.manchester.ac.uk"] {
 	border-radius: 0.5rem;
 	width: 100%;
 	max-width: 100vh;
+	max-width: max(100vh, 40rem);
 	height: auto;
 	// tall aspect ratio by default to avoid clipping
 	aspect-ratio: 1.5;
