@@ -1,3 +1,5 @@
+@use "sass:color";
+@use "sass:string";
 @import "globals";
 
 $progress-bar-height: 1.5em; // up from 0.3em
@@ -168,7 +170,7 @@ video:fullscreen {
 
 /* play and pause animations */
 #video.video-js {
-  $on-surface-without-hash: str-slice(ie-hex-str($on-surface), 4);
+  $on-surface-without-hash: string.slice(color.ie-hex-str($on-surface), 4);
   &::before {
     content: "";
     display: block;
