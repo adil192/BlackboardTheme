@@ -5,6 +5,7 @@ Here I will outline the changes I've made over time...
 ### 20231211
 
 - Fixed the add_course_images script sometimes not working
+- Added images for individual modules (with the add_course_images script)
 
 ### 20231204
 
