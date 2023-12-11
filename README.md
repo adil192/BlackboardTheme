@@ -101,13 +101,12 @@ If you want to add your subject(s) to the
 [submit an issue](https://github.com/adil192/BlackboardTheme/issues/new) and I'll add it for you;
 or you can do it yourself and submit a pull request:
 
-1. Identify the subject code. An example module code is `ABCD10000`, where `ABCD` is the subject code.
-2. Add an image to the `assets/subjects/ABCD/` folder where `ABCD` is the subject code (you'll need to make this folder). The image can be named anything. Also add a `LICENSE.md` file with the image attribution/license.
-3. Go to `styles/_online.manchester.ac.uk_webapps_portal.scss` and add your rule above the line that says `// add your subject code above this line`:
+1. Identify the subject/module code. An example module code is `ABCD10000`, where `ABCD` is the subject code. You can choose to add a subject code or a module code.
+2. Add an image to the `assets/subjects/ABCD/` folder where `ABCD` is the subject/module code (you'll need to make this folder). The image must be named `ABCD.jpg` or `ABCD.png` etc. Also add a `LICENSE.md` file with the image attribution/license.
+3. Go to `styles/_online.manchester.ac.uk_webapps_portal.scss` and add your rule above the line that says `// add your subject code above this line`. Specify the image extension (e.g. `png`) if it's not a `jpg` file. For example:
     ```scss
-    li[data-module-code^="ABCD"] {
-        --bg-url: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/ABCD/your-image.png");
-    }
+	@include module-image(MATH32031);
+	@include module-image(MATH32091, png);
     // add your subject code above this line
     ```
 4. (No changes are needed to be made to the script itself.)

@@ -556,13 +556,41 @@
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
   }
+  .listElement li[data-module-code^=ARDSE001],
+  .courseListing li[data-module-code^=ARDSE001] {
+    --bg-url: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/ARDSE001/ARDSE001.jpg");
+  }
   .listElement li[data-module-code^=COMP],
   .courseListing li[data-module-code^=COMP] {
-    --bg-url: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/COMP/code-1076536_640.jpg");
+    --bg-url: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/COMP/COMP.jpg");
+  }
+  .listElement li[data-module-code^=COMP30040],
+  .courseListing li[data-module-code^=COMP30040] {
+    --bg-url: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/COMP30040/COMP30040.jpg");
+  }
+  .listElement li[data-module-code^=COMP33511],
+  .courseListing li[data-module-code^=COMP33511] {
+    --bg-url: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/COMP33511/COMP33511.jpg");
+  }
+  .listElement li[data-module-code^=COMP38311],
+  .courseListing li[data-module-code^=COMP38311] {
+    --bg-url: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/COMP38311/COMP38311.jpg");
   }
   .listElement li[data-module-code^=MATH],
   .courseListing li[data-module-code^=MATH] {
-    --bg-url: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/MATH/geometry-1044090_640.jpg");
+    --bg-url: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/MATH/MATH.jpg");
+  }
+  .listElement li[data-module-code^=MATH31051],
+  .courseListing li[data-module-code^=MATH31051] {
+    --bg-url: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/MATH31051/MATH31051.png");
+  }
+  .listElement li[data-module-code^=MATH32031],
+  .courseListing li[data-module-code^=MATH32031] {
+    --bg-url: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/MATH32031/MATH32031.jpg");
+  }
+  .listElement li[data-module-code^=MATH32091],
+  .courseListing li[data-module-code^=MATH32091] {
+    --bg-url: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/MATH32091/MATH32091.png");
   }
 }
 @-moz-document url-prefix("https://online.manchester.ac.uk/webapps/assessment") {
