@@ -40,7 +40,7 @@ h3:last-of-type {
 	font-weight: normal;
 
 	&, & a {
-		color: color.mix($error, $on-background, 25%) !important;
+		color: $on-background-error !important;
 	}
 }
 

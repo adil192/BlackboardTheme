@@ -12,17 +12,20 @@ $on-tertiary: #fff;
 
 $header: #221728;
 $on-header: #f0dcf5;
+$header-border: color.mix($header, #333, 20%);
+$on-header-lighter: color.mix($on-header, white);
 
 $outline: #7d747e;
 
+$error: #d32f2f;
+$on-error: #fff;
+
 $background: #fffbff;
 $on-background: #1d1b1e;
+$on-background-error: color.mix($on-background, $error, 75%);
 
 $surface: #f9f1fa;
 $on-surface: #4b444d;
-
-$error: #d32f2f;
-$on-error: #fff;
 
 $surface-elevation-1: color.mix($primary, $surface, 5%);
 $surface-elevation-2: color.mix($primary, $surface, 10%);

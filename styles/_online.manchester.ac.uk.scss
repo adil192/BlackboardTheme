@@ -125,7 +125,7 @@ p, strong, b,
 	padding: 0 1.2em;
 }
 #globalNavPageNavArea table.bouncer {
-	border-bottom: 1px solid color.mix($header, #333, 20%);
+	border-bottom: 1px solid $header-border;
 }
 .topTabs .tabWrapper-right {
 	height: 3rem;
@@ -375,7 +375,7 @@ input[type="submit"].submit,
 .button-1,
 .button-1-img {
 	background-color: $header;
-	color: color.mix(white, $on-header) !important;
+	color: $on-header-lighter !important;
 	&:hover, &:focus {
 		background-color: $primary;
 		color: $on-primary !important;
