@@ -61,7 +61,7 @@ div#dynamic_filters_alerts.stream_dynamic_filters {
 .stream_item,
 .active_stream_item,
 .stream_dynamic_filters {
-	background: $surface !important;
+	background: $surface-1 !important;
 	color: $on-surface !important;
 	border: none;
 	box-shadow: none;
@@ -75,7 +75,7 @@ div#dynamic_filters_alerts.stream_dynamic_filters {
 .stream_new_entry,
 #left_stream_alerts .stream_item,
 #left_stream_alerts .stream_item.stream_new_entry:hover {
-	background: $surface;
+	background: $surface-1;
 	color: $on-surface;
 	border: none;
 	box-shadow: none;
@@ -83,7 +83,7 @@ div#dynamic_filters_alerts.stream_dynamic_filters {
 	margin-bottom: 1rem;
 
 	&:hover {
-		background: $surface;
+		background: $surface-1;
 		color: $on-surface;
 	}
 }

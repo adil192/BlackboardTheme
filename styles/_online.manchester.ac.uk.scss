@@ -163,8 +163,8 @@ p, strong, b,
 div.tab {
 	display: flex;
 	flex-wrap: wrap;
-	background: rgba($primary, 0.1) !important;
-	color: $primary !important;
+	background: $surface-2 !important;
+	color: $on-surface !important;
 	margin: 0;
 	padding: 0;
 	height: auto;
@@ -206,9 +206,9 @@ div.tab {
 .gradeTableNew .calculatedRow.row {
 	border-left-color: transparent;
 	border-right-color: transparent;
-	-webkit-box-shadow: 0 0 21px 4px $logo-color-box-shadow inset;
-	-moz-box-shadow: 0 0 21px 4px $logo-color-box-shadow inset;
-	box-shadow: 0 0 21px 4px $logo-color-box-shadow inset;
+	-webkit-box-shadow: 0 0 21px 4px $shadow inset;
+	-moz-box-shadow: 0 0 21px 4px $shadow inset;
+	box-shadow: 0 0 21px 4px $shadow inset;
 }
 
 .ally-alternative-formats.ally-prominent-af-download-button {
@@ -276,7 +276,7 @@ img[src="#{$orig-piazza-icon}"] {
 	box-shadow: none;
 
 	.details {
-		background: $surface;
+		background: $surface-1;
 		color: $on-surface;
 		border-radius: 0.5rem;
 		margin-left: 60px;
@@ -364,10 +364,10 @@ input[type="submit"].submit,
 	border-radius: 0.5rem;
 }
 .genericButton {
-	background-color: $surface-elevation-1;
+	background-color: $surface-2;
 	color: $on-surface !important;
 	&:hover, &:focus {
-		background-color: $surface-elevation-2;
+		background-color: $surface-3;
 	}
 }
 #primaryButton,
@@ -382,21 +382,21 @@ input[type="submit"].submit,
 	}
 }
 .button-2 {
-	background-color: $primary-elevation-1;
+	background-color: $primary-2;
 	color: $on-primary !important;
 	&:hover, &:focus {
 		background-color: $primary;
 	}
 }
 .button-3 {
-	background-color: $primary-elevation-2;
+	background-color: $primary-3;
 	color: $on-primary !important;
 	&:hover, &:focus {
 		background-color: $primary;
 	}
 }
 .button-4 {
-	background-color: $primary-elevation-3;
+	background-color: $primary-4;
 	color: $on-primary !important;
 	&:hover, &:focus {
 		background-color: $primary;

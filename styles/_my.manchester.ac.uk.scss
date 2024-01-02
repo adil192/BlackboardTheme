@@ -48,7 +48,7 @@ a {
 .o-panel,
 .o-panel-body {
 	border: none !important;
-	background: $surface;
+	background: $surface-1;
 	color: $on-surface;
 	box-shadow: none;
 	border-radius: 0.5rem;
@@ -69,17 +69,17 @@ a {
 }
 
 .c-em-heading {
-	background: $surface;
+	background: $surface-1;
 	color: $on-surface;
 
 	&:hover, &:focus {
-		background: $surface;
+		background: $surface-1;
 		color: $on-surface;
 	}
 }
 
 .highcharts-background {
-	fill: $surface-elevation-1;
+	fill: $surface-2;
 	rx: 0.5rem;
 	ry: 0.5rem;
 }

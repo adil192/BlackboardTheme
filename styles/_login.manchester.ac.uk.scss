@@ -48,7 +48,7 @@ footer {
 }
 
 #login, #logout {
-	background: $surface;
+	background: $surface-1;
 	color: $on-surface;
 	border: none;
 	box-shadow: none;
@@ -176,7 +176,7 @@ span.accesskey { // Underlines the first letter of the label
 
 #msg {
 	border: none !important;
-	background: $surface !important;
+	background: $surface-1 !important;
 	color: $on-surface;
 	width: 100%;
 	box-sizing: border-box;
@@ -194,7 +194,7 @@ span.accesskey { // Underlines the first letter of the label
 	width: auto !important;
 	max-width: 500px;
 	box-sizing: border-box;
-	background: $surface;
+	background: $surface-1;
 	color: $on-surface;
 	margin: auto auto 2rem;
 	padding: 2rem 4rem;

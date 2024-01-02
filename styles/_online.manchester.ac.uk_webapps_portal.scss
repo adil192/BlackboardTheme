@@ -9,7 +9,7 @@ div.container {
 		font-size: 2rem;
 	}
 	h2 ~ div {
-		background: $surface;
+		background: $surface-1;
 		color: $on-surface;
 		border-radius: 0.5rem;
 	}
@@ -28,14 +28,14 @@ div.container {
 
 	li {
 		border: none;
-		background: rgba($primary, 0.1);
+		background: $surface-2;
 		color: $on-surface;
 		border-radius: 0.5rem;
 		padding: 0 !important;
 		margin: 0 !important;
 
 		&:hover {
-			background: rgba($primary, 0.2);
+			background: $surface-3;
 		}
 
 		&.secondary {

@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           UoM Blackboard theme
-@version        20231211.00.00
+@version        20240102.00.00
 @namespace      userstyles.world/user/adil192
 @description    Themes the blackboard UoM website to look more modern and use a consistent colour scheme.
 @author         adil192
@@ -107,15 +107,15 @@
   #courseMenuPalette *,
   #courseMenuPalette_paletteTitleHeading *,
   .global-nav-bar-wrap {
-    background: #221728 !important;
-    color: #f0dcf5 !important;
+    background: #1d1b1e !important;
+    color: #e8e0e5 !important;
   }
   .appTabs a {
-    color: #f0dcf5 !important;
+    color: #e8e0e5 !important;
     padding: 0 1.2em;
   }
   #globalNavPageNavArea table.bouncer {
-    border-bottom: 1px solid #302d31;
+    border-bottom: 1px solid #2f2e2f;
   }
   .topTabs .tabWrapper-right {
     height: 3rem;
@@ -150,8 +150,8 @@
   div.tab {
     display: flex;
     flex-wrap: wrap;
-    background: rgba(129, 66, 166, 0.1) !important;
-    color: #8142a6 !important;
+    background: #ecdff2 !important;
+    color: #1d1b1e !important;
     margin: 0;
     padding: 0;
     height: auto;
@@ -159,7 +159,7 @@
   }
   div.tab button {
     background: transparent !important;
-    color: #4b444d !important;
+    color: #1d1b1e !important;
     font-size: 1rem;
     font-weight: bold !important;
     border: none;
@@ -171,15 +171,15 @@
   }
   div.tab button:hover {
     background: rgba(0, 0, 0, 0.05) !important;
-    color: #4b444d !important;
+    color: #1d1b1e !important;
   }
   div.tab button.active {
     background: #8142a6 !important;
-    color: #fff !important;
+    color: #ffffff !important;
   }
   div.tab button.active:hover {
     background: #733b94 !important;
-    color: #fff !important;
+    color: #ffffff !important;
   }
   .stream_page_left {
     background: #fffbff;
@@ -241,8 +241,8 @@
     box-shadow: none;
   }
   .liItem .details, .buildList > li .details {
-    background: #f9f1fa;
-    color: #4b444d;
+    background: #f9f2fb;
+    color: #1d1b1e;
     border-radius: 0.5rem;
     margin-left: 60px;
     padding: 1rem;
@@ -314,18 +314,18 @@
     border-radius: 0.5rem;
   }
   .genericButton {
-    background-color: #f3e8f6;
-    color: #4b444d !important;
+    background-color: #ecdff2;
+    color: #1d1b1e !important;
   }
   .genericButton:hover, .genericButton:focus {
-    background-color: #ede0f2;
+    background-color: #e0cde9;
   }
   #primaryButton,
   input[type=submit].submit,
   .button-1,
   .button-1-img {
-    background-color: #221728;
-    color: #f8eefa !important;
+    background-color: #1d1b1e;
+    color: #f4f0f2 !important;
   }
   #primaryButton:hover, #primaryButton:focus,
   input[type=submit].submit:hover,
@@ -335,25 +335,25 @@
   .button-1-img:hover,
   .button-1-img:focus {
     background-color: #8142a6;
-    color: #fff !important;
+    color: #ffffff !important;
   }
   .button-2 {
-    background-color: #9965b7;
-    color: #fff !important;
+    background-color: #efd1fb;
+    color: #ffffff !important;
   }
   .button-2:hover, .button-2:focus {
     background-color: #8142a6;
   }
   .button-3 {
-    background-color: #b188c8;
-    color: #fff !important;
+    background-color: #e9caf6;
+    color: #ffffff !important;
   }
   .button-3:hover, .button-3:focus {
     background-color: #8142a6;
   }
   .button-4 {
-    background-color: #c9abd8;
-    color: #fff !important;
+    background-color: #e4c2f2;
+    color: #ffffff !important;
   }
   .button-4:hover, .button-4:focus {
     background-color: #8142a6;
@@ -362,19 +362,19 @@
     mix-blend-mode: multiply;
   }
   body.mybb-shell {
-    background-color: #221728;
+    background-color: #1d1b1e;
   }
   .title-date, .title-text {
     color: #8142a6;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
   }
   .side-nav {
-    background-color: #221728;
-    color: #f0dcf5;
+    background-color: #1d1b1e;
+    color: #e8e0e5;
   }
   .side-nav ul li.active a {
     background-color: #8142a6;
-    color: #fff;
+    color: #ffffff;
     border: none;
     box-shadow: none;
     border-radius: 0.5rem;
@@ -406,7 +406,7 @@
   .stream_list_filter > li a.active,
   .stream_list_filter > li button.active {
     background: #8142a6 !important;
-    color: #fff !important;
+    color: #ffffff !important;
     border: none;
     box-shadow: none;
     border-radius: 1000px !important;
@@ -417,21 +417,21 @@
   .stream_item,
   .active_stream_item,
   .stream_dynamic_filters {
-    background: #f9f1fa !important;
-    color: #4b444d !important;
+    background: #f9f2fb !important;
+    color: #1d1b1e !important;
     border: none;
     box-shadow: none;
     margin-block: 1rem;
     cursor: pointer !important;
   }
   .stream_dynamic_filters {
-    box-shadow: 0 0 0.5rem 0.5rem rgba(75, 68, 77, 0.1);
+    box-shadow: 0 0 0.5rem 0.5rem rgba(29, 27, 30, 0.1);
   }
   .stream_new_entry,
   #left_stream_alerts .stream_item,
   #left_stream_alerts .stream_item.stream_new_entry:hover {
-    background: #f9f1fa;
-    color: #4b444d;
+    background: #f9f2fb;
+    color: #1d1b1e;
     border: none;
     box-shadow: none;
     border-radius: 0.5rem;
@@ -440,8 +440,8 @@
   .stream_new_entry:hover,
   #left_stream_alerts .stream_item:hover,
   #left_stream_alerts .stream_item.stream_new_entry:hover:hover {
-    background: #f9f1fa;
-    color: #4b444d;
+    background: #f9f2fb;
+    color: #1d1b1e;
   }
 }
 @-moz-document url-prefix("https://online.manchester.ac.uk/webapps/portal") {
@@ -459,8 +459,8 @@
   .portlet h2 ~ div,
   .container h2 ~ div,
   div.container h2 ~ div {
-    background: #f9f1fa;
-    color: #4b444d;
+    background: #f9f2fb;
+    color: #1d1b1e;
     border-radius: 0.5rem;
   }
   #content > .container {
@@ -476,31 +476,31 @@
   .listElement li,
   .courseListing li {
     border: none;
-    background: rgba(129, 66, 166, 0.1);
-    color: #4b444d;
+    background: #ecdff2;
+    color: #1d1b1e;
     border-radius: 0.5rem;
     padding: 0 !important;
     margin: 0 !important;
   }
   .listElement li:hover,
   .courseListing li:hover {
-    background: rgba(129, 66, 166, 0.2);
+    background: #e0cde9;
   }
   .listElement li.secondary,
   .courseListing li.secondary {
-    background: rgba(104, 89, 110, 0.05);
-    color: #4b444d;
+    background: rgba(152, 64, 97, 0.05);
+    color: #1d1b1e;
   }
   .listElement li.secondary:hover,
   .courseListing li.secondary:hover {
-    background: rgba(104, 89, 110, 0.1);
+    background: rgba(152, 64, 97, 0.1);
   }
   .listElement li a,
   .courseListing li a {
     display: block;
     padding: 1rem 1rem 2rem;
     min-height: 4em;
-    color: #4b444d !important;
+    color: #1d1b1e !important;
   }
   @media (width <= 1400px) {
     .listElement,
@@ -595,8 +595,8 @@
 }
 @-moz-document url-prefix("https://online.manchester.ac.uk/webapps/assessment") {
   .infoListWrapper {
-    background: #f9f1fa;
-    color: #4b444d;
+    background: #f9f2fb;
+    color: #1d1b1e;
     border: none;
     padding: 1rem;
     border-radius: 0.5rem;
@@ -624,8 +624,8 @@
   }
   .takeQuestionDiv div[id*=stepcontent],
   #dataCollectionContainer div[id*=stepcontent] {
-    background-color: #f9f1fa !important;
-    color: #4b444d;
+    background-color: #f9f2fb !important;
+    color: #1d1b1e;
     border: none;
     padding: 1rem;
     border-radius: 0.5rem;
@@ -648,8 +648,8 @@
   }
   .takeQuestionDiv select,
   #dataCollectionContainer select {
-    background: #ede0f2;
-    color: #4b444d;
+    background: #e0cde9;
+    color: #1d1b1e;
     border: none;
     border-radius: 0.5rem;
     padding: 0.5rem;
@@ -680,8 +680,8 @@
   }
   .takeQuestionDiv .matching-table table[id^=readAnswers],
   #dataCollectionContainer .matching-table table[id^=readAnswers] {
-    background: #f3e8f6;
-    color: #4b444d;
+    background: #ecdff2;
+    color: #1d1b1e;
     padding: 0.5rem;
     border-radius: 0.5rem;
     border-collapse: separate;
@@ -689,8 +689,8 @@
   }
   .takeQuestionDiv .matching-table table[id^=readAnswers] td.matching-numbering,
   #dataCollectionContainer .matching-table table[id^=readAnswers] td.matching-numbering {
-    background: #ede0f2;
-    color: #4b444d;
+    background: #e0cde9;
+    color: #1d1b1e;
     padding: 0.5rem;
     border-radius: 0.5rem;
   }
@@ -710,8 +710,8 @@
   .takeQuestionDiv .multiple-choice-table td.multiple-option-row:first-child,
   #dataCollectionContainer .multiple-answer-table td.multiple-option-row:first-child,
   #dataCollectionContainer .multiple-choice-table td.multiple-option-row:first-child {
-    background: #ede0f2;
-    color: #4b444d;
+    background: #e0cde9;
+    color: #1d1b1e;
     padding: 0.5rem;
     border-radius: 0.5rem;
     align-self: flex-start;
@@ -778,18 +778,18 @@
     display: none;
   }
   .submitStepBottom #bottom_submitButtonRow {
-    background: #f9f1fa !important;
-    color: #4b444d !important;
+    background: #f9f2fb !important;
+    color: #1d1b1e !important;
     padding: 1rem 2rem !important;
     border-radius: 0.5rem;
     transition: background 0.2s ease-in-out;
   }
   .submitStepBottom.submitStepFixed #bottom_submitButtonRow {
-    background: #f3e8f6 !important;
+    background: #ecdff2 !important;
   }
   .nav .sub ul, .nav.gb_currView .sub > ul, .menumini ul, .quickAddPal, .keyboardAccess, span.currentTags, .liveArea, .liveArea-slim, .previewArea, .jumptopage, .panelTabs li.active a.edit, .panelTabs li.active a.edit:hover, .panelTabs li.active a.edit:focus, .flyout, .bcContent .flyout, ul.tree li a + img + a:focus, ul.tree li img + img + a:focus, div.treeContainer ul.tree li a.itemActive, #learningUnitToc ul.tree li a.itemActive, ul.tree li a.itemActive, #loginLang ul {
-    background: #f9f1fa;
-    color: #4b444d;
+    background: #f9f2fb;
+    color: #1d1b1e;
     border: none;
     border-radius: 0.5rem;
   }
@@ -801,15 +801,15 @@
     padding: 1rem;
   }
   #topbar[style*="top: 0px;"] .timer.liveArea {
-    background: #f3e8f6;
+    background: #ecdff2;
   }
   #topbar .completionContainer .qIncomplete,
   #topbar .completionContainer .qComplete {
     border: 0.1rem solid rgba(0, 0, 0, 0.1);
     padding: 0.5rem;
     border-radius: 0.5rem;
-    background: #ede0f2;
-    color: #4b444d;
+    background: #e0cde9;
+    color: #1d1b1e;
   }
   #topbar .completionContainer .qIncomplete img[src="/images/ci/icons/file_li.gif"],
   #topbar .completionContainer .qComplete img[src="/images/ci/icons/file_li.gif"] {
@@ -825,7 +825,7 @@
   }
   #topbar .completionContainer .qComplete {
     background: #8142a6;
-    color: #fff;
+    color: #ffffff;
   }
 }
 @-moz-document url-prefix("https://online.manchester.ac.uk/webapps/calendar") {
@@ -897,8 +897,8 @@
     padding: 1rem;
   }
   #login, #logout {
-    background: #f9f1fa;
-    color: #4b444d;
+    background: #f9f2fb;
+    color: #1d1b1e;
     border: none;
     box-shadow: none;
     float: none;
@@ -938,7 +938,7 @@
   #login .btn-submit, #logout #logoutbutton,
   #logout .btn-submit {
     background: #8142a6;
-    color: #fff;
+    color: #ffffff;
   }
   #login .btn-reset, #logout .btn-reset {
     width: auto;
@@ -982,7 +982,7 @@
   }
   #cas #login label {
     font-size: 1rem;
-    color: #4b444d;
+    color: #1d1b1e;
     margin-bottom: 0.5rem;
   }
   span.accesskey {
@@ -1013,8 +1013,8 @@
   }
   #msg {
     border: none !important;
-    background: #f9f1fa !important;
-    color: #4b444d;
+    background: #f9f2fb !important;
+    color: #1d1b1e;
     width: 100%;
     box-sizing: border-box;
     padding: 2rem 4rem !important;
@@ -1022,15 +1022,15 @@
   }
   #msg.success {
     background-color: #8142a6 !important;
-    color: #fff;
+    color: #ffffff;
   }
   #placestogo, #logout {
     float: none !important;
     width: auto !important;
     max-width: 500px;
     box-sizing: border-box;
-    background: #f9f1fa;
-    color: #4b444d;
+    background: #f9f2fb;
+    color: #1d1b1e;
     margin: auto auto 2rem;
     padding: 2rem 4rem;
     border: none;
@@ -1038,7 +1038,7 @@
   }
   #placestogo h3, #logout h3 {
     background: transparent;
-    color: #4b444d;
+    color: #1d1b1e;
   }
   #placestogo p a, #placestogo p a:link, #placestogo p a:visited, #logout p a, #logout p a:link, #logout p a:visited {
     color: #8142a6;
@@ -1083,7 +1083,7 @@
     font-weight: normal;
   }
   h3:last-of-type, h3:last-of-type a {
-    color: #4b2022 !important;
+    color: #441b1d !important;
   }
   #duo_iframe {
     display: block;
@@ -1107,8 +1107,8 @@
   }
   select,
   .row-label, .device-bar {
-    background: #f9f1fa;
-    color: #4b444d;
+    background: #f9f2fb;
+    color: #1d1b1e;
   }
   select:focus {
     box-shadow: none;
@@ -1126,7 +1126,7 @@
   input[type=reset].positive,
   input[type=button].positive {
     background: #8142a6;
-    color: #fff;
+    color: #ffffff;
   }
   button.positive:hover, button.positive:focus,
   .button.positive:hover,
@@ -1138,7 +1138,7 @@
   input[type=button].positive:hover,
   input[type=button].positive:focus {
     background: #653382;
-    color: #fff;
+    color: #ffffff;
     outline: none;
   }
   button.positive:disabled,
@@ -1147,7 +1147,7 @@
   input[type=reset].positive:disabled,
   input[type=button].positive:disabled {
     background: rgba(129, 66, 166, 0.5) !important;
-    color: #fff !important;
+    color: #ffffff !important;
   }
   .base-navigation div[role=banner] {
     background: #fffbff url("https://shib.manchester.ac.uk/shibboleth-idp/images/logo.png") no-repeat;
@@ -1177,35 +1177,35 @@
   .s-logo-container,
   .main-header,
   .o-footer {
-    background-color: #221728;
-    color: #f0dcf5;
+    background-color: #1d1b1e;
+    color: #e8e0e5;
   }
   .c-nav-menu .c-title-link,
   .s-logo-container .c-title-link,
   .main-header .c-title-link,
   .o-footer .c-title-link {
-    color: #f0dcf5;
+    color: #e8e0e5;
   }
   .main-header {
     max-width: unset;
     padding-inline: 1rem;
   }
   .c-button {
-    background-color: #fff;
+    background-color: #ffffff;
     color: #8142a6;
     border: none;
   }
   .c-button--secondary,
   .c-button--secondary--outline {
-    background-color: #fff;
-    color: #68596e;
+    background-color: #ffffff;
+    color: #984061;
     border: none;
   }
   .c-button--secondary:hover, .c-button--secondary:focus,
   .c-button--secondary--outline:hover,
   .c-button--secondary--outline:focus {
-    background-color: #68596e;
-    color: #fff;
+    background-color: #984061;
+    color: #ffffff;
   }
   a {
     color: #8142a6;
@@ -1216,8 +1216,8 @@
   .o-panel,
   .o-panel-body {
     border: none !important;
-    background: #f9f1fa;
-    color: #4b444d;
+    background: #f9f2fb;
+    color: #1d1b1e;
     box-shadow: none;
     border-radius: 0.5rem;
   }
@@ -1245,15 +1245,15 @@
     opacity: 0;
   }
   .c-em-heading {
-    background: #f9f1fa;
-    color: #4b444d;
+    background: #f9f2fb;
+    color: #1d1b1e;
   }
   .c-em-heading:hover, .c-em-heading:focus {
-    background: #f9f1fa;
-    color: #4b444d;
+    background: #f9f2fb;
+    color: #1d1b1e;
   }
   .highcharts-background {
-    fill: #f3e8f6;
+    fill: #ecdff2;
     rx: 0.5rem;
     ry: 0.5rem;
   }
@@ -1271,9 +1271,9 @@
     background-color: #1d1b1e;
   }
   .video-js .vjs-control-bar {
-    background: rgba(34, 23, 40, 0.7) !important;
+    background: rgba(29, 27, 30, 0.7) !important;
     color: white !important;
-    color: color-mix(in oklab, #f0dcf5, white 90%) !important;
+    color: color-mix(in oklab, #e8e0e5, white 90%) !important;
     border-radius: 0.5rem;
     margin: 0 0.5rem 0.5rem;
     width: auto;
@@ -1281,12 +1281,12 @@
   .video-js .vjs-progress-holder {
     height: 1.5em;
     border-radius: 0.25rem;
-    background: rgba(240, 220, 245, 0.1);
+    background: rgba(232, 224, 229, 0.1);
     overflow: hidden;
     cursor: ew-resize;
   }
   .video-js .vjs-progress-holder .vjs-load-progress {
-    background: rgba(240, 220, 245, 0.2);
+    background: rgba(232, 224, 229, 0.2);
     border-bottom-right-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
     transition: width 1s ease-in;
@@ -1295,14 +1295,14 @@
     opacity: 0;
   }
   .video-js .vjs-progress-holder .vjs-play-progress {
-    background: #f0dcf5;
+    background: #e8e0e5;
   }
   .video-js .vjs-progress-holder .vjs-play-progress::before {
     content: "";
     display: block;
     width: 1.5em;
     height: 1.5em;
-    background: #f0dcf5;
+    background: #e8e0e5;
     border-radius: 0.25rem;
     top: 0;
     right: -0.25rem;
@@ -1316,8 +1316,8 @@
     width: auto;
     padding-left: 1em;
     padding-right: 1em;
-    background: #f9f1fa;
-    color: #4b444d;
+    background: #f9f2fb;
+    color: #1d1b1e;
     border-radius: 0.5em;
     top: 1em;
     right: 50%;
@@ -1326,23 +1326,23 @@
     font-size: min(2em, 4vw, 6vh);
   }
   .video-js .vjs-title-bar-link > a {
-    color: #4b444d !important;
+    color: #1d1b1e !important;
     text-decoration: none;
   }
   .vjs-menu-button-popup .vjs-menu, .vjs-menu-button-popup .vjs-menu .vjs-menu-content {
-    background: rgba(34, 23, 40, 0.7) !important;
+    background: rgba(29, 27, 30, 0.7) !important;
     color: white !important;
-    color: color-mix(in oklab, #f0dcf5, white 90%) !important;
+    color: color-mix(in oklab, #e8e0e5, white 90%) !important;
     border-radius: 0.5rem 0.5rem 0 0;
   }
   .vjs-menu-button-popup .vjs-menu *, .vjs-menu-button-popup .vjs-menu .vjs-menu-content * {
     background: transparent !important;
     color: white !important;
-    color: color-mix(in oklab, #f0dcf5, white 90%) !important;
+    color: color-mix(in oklab, #e8e0e5, white 90%) !important;
   }
   .vjs-menu-button-popup .vjs-menu .vjs-menu-item {
     background: transparent;
-    color: #4b444d;
+    color: #1d1b1e;
     box-shadow: none !important;
   }
   .vjs-menu-button-popup .vjs-menu .vjs-menu-item.vjs-selected {
@@ -1369,9 +1369,9 @@
   }
   /* captions */
   .vjs-text-track-display > div > div > div {
-    background: rgba(34, 23, 40, 0.7) !important;
+    background: rgba(29, 27, 30, 0.7) !important;
     color: white !important;
-    color: color-mix(in oklab, #f0dcf5, white 90%) !important;
+    color: color-mix(in oklab, #e8e0e5, white 90%) !important;
     border-radius: 0.2em !important;
     font-size: 75% !important;
     display: inline-block !important;
@@ -1405,11 +1405,11 @@
     z-index: 1000;
   }
   #video.video-js.vjs-playing::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%234B444D' d='M6 19h4V5H6v14zm8-14v14h4V5h-4z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%231D1B1E' d='M6 19h4V5H6v14zm8-14v14h4V5h-4z'/%3E%3C/svg%3E");
     animation-name: bounce-out-0;
   }
   #video.video-js.vjs-paused::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%234B444D' d='M8 5v14l11-7z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%231D1B1E' d='M8 5v14l11-7z'/%3E%3C/svg%3E");
     animation-name: bounce-out-1;
   }
   @keyframes bounce-out-0 {
@@ -1465,8 +1465,8 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    background: #221728;
-    color: #f0dcf5;
+    background: #1d1b1e;
+    color: #e8e0e5;
     padding: 0 1rem;
     height: 4rem !important;
     min-height: unset;
@@ -1513,11 +1513,11 @@
   }
   .navbar ul.nav > li > a {
     float: none;
-    color: #f0dcf5 !important;
+    color: #e8e0e5 !important;
   }
   .thumbnail {
-    background: #f9f1fa;
-    color: #4b444d;
+    background: #f9f2fb;
+    color: #1d1b1e;
     border: none;
     border-radius: 0.5rem;
     box-shadow: none;
@@ -1529,11 +1529,11 @@
   }
   .btn-primary {
     background: #8142a6;
-    color: #fff;
+    color: #ffffff;
   }
   .btn-danger {
-    background: #d32f2f;
-    color: #fff;
+    background: #ba1a1a;
+    color: #ffffff;
   }
   #footer {
     position: absolute;
@@ -1542,7 +1542,7 @@
     left: 0;
     right: 0;
     z-index: 1;
-    color: #f0dcf5;
+    color: #e8e0e5;
     border: none;
     font-size: inherit;
   }
@@ -1556,8 +1556,8 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: -1;
-    background: #221728;
-    color: #f0dcf5;
+    background: #1d1b1e;
+    color: #e8e0e5;
   }
   #footer a {
     color: white !important;
@@ -1583,18 +1583,18 @@
   }
   .nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
     border: none;
-    background: #f9f1fa;
-    color: #4b444d;
+    background: #f9f2fb;
+    color: #1d1b1e;
   }
   .tabarea {
-    background: #f9f1fa;
-    color: #4b444d;
+    background: #f9f2fb;
+    color: #1d1b1e;
     border: none;
     border-radius: 0.5rem;
   }
   .tabarea hr {
     border: none;
-    border-bottom: 1px solid rgba(75, 68, 77, 0.1);
+    border-bottom: 1px solid rgba(29, 27, 30, 0.1);
     border-radius: 1px;
     width: 80%;
     margin: 2rem auto;
@@ -1608,11 +1608,11 @@
   }
   .table-striped tbody > tr:nth-child(2n-1) > td,
   .table-striped tbody > tr:nth-child(2n-1) > th {
-    background: #f9f1fa;
+    background: #f9f2fb;
   }
   .table-striped tbody > tr:nth-child(2n) > td,
   .table-striped tbody > tr:nth-child(2n) > th {
-    background: #f3e8f6;
+    background: #ecdff2;
   }
   .accordion-group {
     border: none;
@@ -1620,17 +1620,17 @@
   }
   .accordion-group .accordion-heading {
     border-radius: 0.5rem;
-    background-color: #68596e;
-    color: #fff;
+    background-color: #984061;
+    color: #ffffff;
   }
   .accordion-group .accordion-heading .accordion-toggle {
-    color: #fff;
+    color: #ffffff;
   }
   .accordion-group .accordion-inner {
     border: none;
     border-radius: 0.5rem;
-    background-color: #f3e8f6;
-    color: #4b444d;
+    background-color: #ecdff2;
+    color: #1d1b1e;
   }
   .accordion-group:has(.accordion-body.in.collapse) .accordion-heading {
     border-bottom-left-radius: 0;

@@ -2,6 +2,10 @@
 
 Here I will outline the changes I've made over time...
 
+### 20240102
+
+- Updated the colors to better match a Material You palette
+
 ### 20231211
 
 - Fixed the add_course_images script sometimes not working

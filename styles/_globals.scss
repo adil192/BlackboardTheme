@@ -1,37 +1,67 @@
 @use "sass:color";
 
+/// How these colours were obtained:
+///
+/// 1. Generate with https://m3.material.io/theme-builder#/custom
+/// with the following settings:
+/// - Primary: #8142a6
+/// - Secondary: #000000
+/// - Tertiary: #000000
+///
+/// 2. Find and replace all `--md-sys-color-` with `$`.
+///    Find and replace all `-light:` with `:`.
+///
+/// 3. Copy relevant parts into this file.
+
 $primary: #8142a6;
-$on-primary: #fff;
-$logo-color-box-shadow: rgba($primary, 0.10);
+$on-primary: #ffffff;
+$primary-container: #f5d9ff;
+$on-primary-container: #30004a;
+$primary-1: $primary;
+$primary-2: color.mix($primary-1, $primary-container, 5%);
+$primary-3: color.mix($primary-1, $primary-container, 10%);
+$primary-4: color.mix($primary-1, $primary-container, 15%);
 
-$secondary: #68596e;
-$on-secondary: #fff;
+$secondary: #984061;
+$on-secondary: #ffffff;
+$secondary-container: #ffd9e2;
+$on-secondary-container: #3e001d;
 
-$tertiary: #815253;
-$on-tertiary: #fff;
-
-$header: #221728;
-$on-header: #f0dcf5;
-$header-border: color.mix($header, #333, 20%);
-$on-header-lighter: color.mix($on-header, white);
-
-$outline: #7d747e;
-
-$error: #d32f2f;
-$on-error: #fff;
+$tertiary: #984061;
+$on-tertiary: #ffffff;
+$tertiary-container: #ffd9e2;
+$on-tertiary-container: #3e001d;
 
 $background: #fffbff;
 $on-background: #1d1b1e;
-$on-background-error: color.mix($on-background, $error, 75%);
 
-$surface: #f9f1fa;
-$on-surface: #4b444d;
+$error: #ba1a1a;
+$error-container: #ffdad6;
+$on-error: #ffffff;
+$on-error-container: #410002;
+$error-on-background: color.mix($on-background, $error, 75%);
 
-$surface-elevation-1: color.mix($primary, $surface, 5%);
-$surface-elevation-2: color.mix($primary, $surface, 10%);
+$on-surface: #1d1b1e;
+$surface-variant: #eadfea;
+$on-surface-variant: #4b444d;
+$surface-tint: $primary;
+$surface-0: $background;
+$surface-1: color.mix($surface-0, $surface-tint, 95%);
+$surface-2: color.mix($surface-0, $surface-tint, 85%);
+$surface-3: color.mix($surface-0, $surface-tint, 75%);
 
-$primary-elevation-1: color.mix($primary, $surface, 80%);
-$primary-elevation-2: color.mix($primary, $surface, 60%);
-$primary-elevation-3: color.mix($primary, $surface, 40%);
+$outline: #7d747e;
+$outline-variant: #cec3ce;
+
+$inverse-on-surface: #f6eff3;
+$inverse-surface: #332f33;
+$inverse-primary: #e6b4ff;
+
+$header: #1d1b1e; // $surface-dark
+$on-header: #e8e0e5; // $on-surface-dark
+$header-border: color.mix($header, #333, 20%);
+$on-header-lighter: color.mix($on-header, white);
+
+$shadow: rgba($primary, 0.10);
 
 $font-family: "Google Sans", "Product Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", FontAwesome, VideoJS;
