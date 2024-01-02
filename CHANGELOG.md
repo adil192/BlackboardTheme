@@ -5,6 +5,7 @@ Here I will outline the changes I've made over time...
 ### 20240102
 
 - Updated the colors to better match a Material You palette
+- Added a subtle transition to the module selection grid
 
 ### 20231211
 

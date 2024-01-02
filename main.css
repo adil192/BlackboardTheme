@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           UoM Blackboard theme
-@version        20240102.00.00
+@version        20240102.01.00
 @namespace      userstyles.world/user/adil192
 @description    Themes the blackboard UoM website to look more modern and use a consistent colour scheme.
 @author         adil192
@@ -150,7 +150,7 @@
   div.tab {
     display: flex;
     flex-wrap: wrap;
-    background: #ecdff2 !important;
+    background: #e0cde9 !important;
     color: #1d1b1e !important;
     margin: 0;
     padding: 0;
@@ -160,6 +160,7 @@
   div.tab button {
     background: transparent !important;
     color: #1d1b1e !important;
+    transition: background 0.1s ease-out, color 0.1s ease-out;
     font-size: 1rem;
     font-weight: bold !important;
     border: none;
@@ -481,6 +482,7 @@
     border-radius: 0.5rem;
     padding: 0 !important;
     margin: 0 !important;
+    transition: background 0.1s ease-out;
   }
   .listElement li:hover,
   .courseListing li:hover {

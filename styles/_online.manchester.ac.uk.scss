@@ -163,7 +163,7 @@ p, strong, b,
 div.tab {
 	display: flex;
 	flex-wrap: wrap;
-	background: $surface-2 !important;
+	background: $surface-3 !important;
 	color: $on-surface !important;
 	margin: 0;
 	padding: 0;
@@ -173,6 +173,7 @@ div.tab {
 	button {
 		background: transparent !important;
 		color: $on-surface !important;
+		transition: background 0.1s ease-out, color 0.1s ease-out;
 		font-size: 1rem;
 		font-weight: bold !important;
 		border: none;
