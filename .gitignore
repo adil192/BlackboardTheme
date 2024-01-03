@@ -1,4 +1,4 @@
 node_modules
 package-lock.json
 eslint-results.sarif
-main.css.map
+*.css.map

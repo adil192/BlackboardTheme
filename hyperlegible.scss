@@ -1,0 +1,75 @@
+/* ==UserStyle==
+@name           UoM Blackboard theme, hyperlegible addon
+@version        20240103.00.00
+@namespace      userstyles.world/user/adil192
+@description    An addon to the "UoM Blackboard theme" userstyle to use the Atkinson Hyperlegible font.
+@author         adil192
+@license        Unlicense
+@downloadURL    https://raw.githubusercontent.com/adil192/BlackboardTheme/main/hyperlegible.css
+==/UserStyle== */
+
+@import "styles/globals";
+@import "styles/fonts/hyperlegible";
+
+@mixin atkinson {
+    @include hyperlegible;
+
+    ::root {
+        --fonts-body: 'Atkinson Hyperlegible', #{$font-fallbacks} !important;
+        --fonts-heading: 'Atkinson Hyperlegible', #{$font-fallbacks} !important;
+    }
+}
+
+@-moz-document domain("online.manchester.ac.uk") {
+	/* All blackboard pages */
+    @include atkinson;
+}
+
+@-moz-document url-prefix("https://online.manchester.ac.uk/webapps/portal") {
+	/* Blackboard homepage */
+    @include atkinson;
+}
+
+@-moz-document url-prefix("https://online.manchester.ac.uk/webapps/assessment") {
+	/* Assessment/quizzes */
+    @include atkinson;
+}
+
+@-moz-document url-prefix("https://online.manchester.ac.uk/webapps/calendar") {
+	/* Calendar */
+    @include atkinson;
+}
+
+@-moz-document url-prefix("https://online.manchester.ac.uk/webapps/rubric") {
+	/* Rubric viewer */
+    @include atkinson;
+}
+
+@-moz-document url-prefix("https://login.manchester.ac.uk/cas/login") {
+	/* Login page */
+    @include atkinson;
+}
+
+@-moz-document url-prefix("https://shib.manchester.ac.uk/shibboleth-idp/profile/SAML2/POST/SSO") {
+	/* Duo 2FA page */
+    @include atkinson;
+}
+@-moz-document url-prefix("https://api-4c039978.duosecurity.com/frame") {
+	/* The actual Duo 2FA iframe */
+    @include atkinson;
+}
+
+@-moz-document domain("my.manchester.ac.uk") {
+	/* My Manchester */
+    @include atkinson;
+}
+
+@-moz-document domain("video.manchester.ac.uk") {
+	/* Embedded videos */
+    @include atkinson;
+}
+
+@-moz-document domain("iam.manchester.ac.uk") {
+	/* IT account manager */
+    @include atkinson;
+}
