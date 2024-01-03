@@ -50,7 +50,7 @@ div.container {
 
 		a {
 			display: block;
-			padding: 1rem 1rem 2rem;
+			padding: 1rem;
 			min-height: 4em;
 			color: $on-surface !important;
 		}
@@ -103,15 +103,20 @@ div.container {
 		--bg-url: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/queens_arch.jpg");
 
 		> a {
-			padding-top: 7rem !important;
+			margin-top: 5rem !important;
+			background: inherit;
+			border-radius: 0.5rem;
+			position: relative;
+			z-index: 1;
 		}
-		> a::before {
+		&::before {
 			content: "";
 			position: absolute;
 			top: 0;
 			left: 0;
 			right: 0;
-			height: 5rem;
+			height: 6rem;
+			background-color: $shadow; // fallback for bgs with transparency
 			background-image: var(--bg-url);
 			background-size: cover;
 			background-position: center;
