@@ -78,7 +78,7 @@ $font-fallbacks:
     @include inter;
     @include urbanist;
 
-    ::root {
+    :root {
         --fonts-body: #{$font-fallbacks};
         --fonts-heading: "Urbanist", "Product Sans", #{$font-fallbacks};
     }

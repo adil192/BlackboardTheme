@@ -14,7 +14,7 @@
 @mixin atkinson {
     @include hyperlegible;
 
-    ::root {
+    :root {
         --fonts-body: 'Atkinson Hyperlegible', #{$font-fallbacks} !important;
         --fonts-heading: 'Atkinson Hyperlegible', #{$font-fallbacks} !important;
     }
