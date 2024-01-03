@@ -26,6 +26,11 @@ other UoM websites.
     - [Video keyboard shortcuts](https://greasyfork.org/en/scripts/479044-uom-blackboard-video-keyboard-shortcuts)
     - [Module list images](https://greasyfork.org/en/scripts/479199-uom-blackboard-add-course-images)
 
+### Atkinson Hyperlegible
+
+- If you have low vision or would otherwise benefit from the [Atkinson Hyperlegible](https://fonts.google.com/specimen/Atkinson+Hyperlegible/about) font,
+you can install the [Hyperlegible addon](https://userstyles.world/style/14032/uom-blackboard-theme-hyperlegible-addon) as well.
+
 ## Why use this theme?
 
 - Rethemes the Blackboard website
