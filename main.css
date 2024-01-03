@@ -8,6 +8,7 @@
 @downloadURL    https://raw.githubusercontent.com/adil192/BlackboardTheme/main/main.css
 ==/UserStyle== */
 @-moz-document domain("online.manchester.ac.uk") {
+  /* All blackboard pages */
   /* cyrillic-ext */
   @font-face {
     font-family: "Inter";
@@ -448,6 +449,7 @@
   img {
     mix-blend-mode: multiply;
   }
+  /* Blackboard assignments/grades/etc, split across many iframes so I'll just put these styles here */
   /* cyrillic-ext */
   @font-face {
     font-family: "Inter";
@@ -604,6 +606,7 @@
   }
 }
 @-moz-document url-prefix("https://online.manchester.ac.uk/webapps/portal") {
+  /* Blackboard homepage */
   /* cyrillic-ext */
   @font-face {
     font-family: "Inter";
@@ -831,6 +834,7 @@
   }
 }
 @-moz-document url-prefix("https://online.manchester.ac.uk/webapps/assessment") {
+  /* Assessment/quizzes */
   /* cyrillic-ext */
   @font-face {
     font-family: "Inter";
@@ -1138,6 +1142,7 @@
   }
 }
 @-moz-document url-prefix("https://online.manchester.ac.uk/webapps/calendar") {
+  /* Calendar */
   /* cyrillic-ext */
   @font-face {
     font-family: "Inter";
@@ -1219,6 +1224,7 @@
   }
 }
 @-moz-document url-prefix("https://online.manchester.ac.uk/webapps/rubric") {
+  /* Rubric viewer */
   /* cyrillic-ext */
   @font-face {
     font-family: "Inter";
@@ -1307,6 +1313,7 @@
   }
 }
 @-moz-document url-prefix("https://login.manchester.ac.uk/cas/login") {
+  /* Login page */
   /* cyrillic-ext */
   @font-face {
     font-family: "Inter";
@@ -1571,6 +1578,7 @@
   }
 }
 @-moz-document url-prefix("https://shib.manchester.ac.uk/shibboleth-idp/profile/SAML2/POST/SSO") {
+  /* Duo 2FA page */
   /* cyrillic-ext */
   @font-face {
     font-family: "Inter";
@@ -1695,6 +1703,7 @@
   }
 }
 @-moz-document url-prefix("https://api-4c039978.duosecurity.com/frame") {
+  /* The actual Duo 2FA iframe */
   /* cyrillic-ext */
   @font-face {
     font-family: "Inter";
@@ -1837,6 +1846,7 @@
   }
 }
 @-moz-document domain("my.manchester.ac.uk") {
+  /* My Manchester */
   /* cyrillic-ext */
   @font-face {
     font-family: "Inter";
@@ -2000,6 +2010,7 @@
   }
 }
 @-moz-document domain("video.manchester.ac.uk") {
+  /* Embedded videos */
   /* cyrillic-ext */
   @font-face {
     font-family: "Inter";
@@ -2262,6 +2273,7 @@
   }
 }
 @-moz-document domain("iam.manchester.ac.uk") {
+  /* IT account manager */
   /* cyrillic-ext */
   @font-face {
     font-family: "Inter";
