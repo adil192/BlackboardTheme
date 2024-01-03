@@ -271,6 +271,11 @@ img[src="#{$orig-piazza-icon}"] {
 	}
 }
 
+#homeicon::before {
+	// original is `margin: 3px 0 0 6px` but gets cut off at top
+	margin: 6px 0 0 6px;
+}
+
 #containerdiv {
 	border: none;
 	background: none;

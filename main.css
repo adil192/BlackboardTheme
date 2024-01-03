@@ -331,6 +331,9 @@
       background-color: transparent;
     }
   }
+  #homeicon::before {
+    margin: 6px 0 0 6px;
+  }
   #containerdiv {
     border: none;
     background: none;
