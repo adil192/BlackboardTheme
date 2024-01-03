@@ -64,17 +64,20 @@ $on-header-lighter: color.mix($on-header, white);
 
 $shadow: rgba($primary, 0.10);
 
-@import "fonts/_inter";
-@import "fonts/_urbanist";
+@import "fonts/inter";
+@import "fonts/urbanist";
 
+$font-fallbacks:
+    "Inter", "Google Sans",
+    -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    FontAwesome, VideoJS;
 @mixin fonts {
-    $font-fallbacks:
-        "Inter", "Google Sans",
-        -apple-system, BlinkMacSystemFont,
-        "Segoe UI", Roboto, "Helvetica Neue",
-        Arial, sans-serif,
-        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-        FontAwesome, VideoJS;
+    @include inter;
+    @include urbanist;
+
     ::root {
         --fonts-body: #{$font-fallbacks};
         --fonts-heading: "Urbanist", "Product Sans", #{$font-fallbacks};
