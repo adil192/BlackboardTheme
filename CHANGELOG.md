@@ -2,6 +2,10 @@
 
 Here I will outline the changes I've made over time...
 
+### 20240103
+
+- Headings will use the "Urbanist" font, and the body text will use the "Inter" font
+
 ### 20240102
 
 - Updated the colors to better match a Material You palette
