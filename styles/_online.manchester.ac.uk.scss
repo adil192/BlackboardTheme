@@ -263,6 +263,12 @@ img[src="#{$orig-piazza-icon}"] {
 
 #puller.pullcollapsed a {
 	background-color: color.adjust($primary, $lightness: 10%);
+	@media only screen and (min-width: 0px) and (max-width: 736px) {
+		background-color: transparent;
+	}
+	@media only screen and (min-width: 737px) and (max-width: 1037px) {
+		background-color: transparent;
+	}
 }
 
 #containerdiv {

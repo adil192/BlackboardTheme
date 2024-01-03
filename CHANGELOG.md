@@ -7,6 +7,7 @@ Here I will outline the changes I've made over time...
 - Headings will use the "Urbanist" font, and the body text will use the "Inter" font
 - Improved the look of the module cards
 - Added an Atkinson Hyperlegible addon (see the [README][README] for instructions)
+- Fixed the look of the mobile menu dropdown button (#menuPuller)
 
 ### 20240102
 
