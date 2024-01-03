@@ -5,8 +5,8 @@ $navbar-height: 4rem;
 $footer-height: $navbar-height;
 $navbar-logo-size-percent: 0.75;
 
+@include fonts;
 * {
-	font-family: $font-family !important;
 	accent-color: $primary !important;
 }
 [class^="icon-"],

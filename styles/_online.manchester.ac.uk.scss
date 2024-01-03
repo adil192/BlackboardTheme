@@ -2,8 +2,8 @@
 @import "globals";
 
 /* set better fonts */
+@include fonts;
 * {
-	font-family: $font-family !important;
 	accent-color: $primary !important;
 }
 
