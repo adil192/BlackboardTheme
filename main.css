@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           UoM Blackboard theme
-@version        20240103.01.01
+@version        20240104.00.00
 @namespace      userstyles.world/user/adil192
 @description    Themes the blackboard UoM website to look more modern and use a consistent colour scheme.
 @author         adil192
@@ -357,6 +357,48 @@
   }
   .liItem .details:empty, .buildList > li .details:empty {
     display: none;
+  }
+  .liItem .vtbegenerated table, .buildList > li .vtbegenerated table {
+    background: #ecdff2;
+    color: #1d1b1e;
+    width: auto !important;
+    height: auto !important;
+    border: 1px solid rgb(236, 223, 242);
+    border-radius: 0.5rem;
+  }
+  .liItem .vtbegenerated table tr, .liItem .vtbegenerated table td, .buildList > li .vtbegenerated table tr, .buildList > li .vtbegenerated table td {
+    width: auto !important;
+    height: auto !important;
+  }
+  .liItem .vtbegenerated table td, .buildList > li .vtbegenerated table td {
+    padding: 0.5rem;
+    border: 1px solid rgb(236, 223, 242);
+    transition: background 0.1s ease-out;
+  }
+  .liItem .vtbegenerated table tr, .buildList > li .vtbegenerated table tr {
+    background: #f9f2fb;
+  }
+  .liItem .vtbegenerated table tr:nth-child(odd) > td, .buildList > li .vtbegenerated table tr:nth-child(odd) > td {
+    background: rgba(236, 223, 242, 0.15);
+  }
+  .liItem .vtbegenerated table tr:first-child > td, .buildList > li .vtbegenerated table tr:first-child > td {
+    background: #ecdff2;
+    font-weight: bold;
+  }
+  .liItem .vtbegenerated table tr:hover > td, .buildList > li .vtbegenerated table tr:hover > td {
+    background: rgba(236, 223, 242, 0.5);
+  }
+  .liItem .vtbegenerated table tr:first-child > td:first-child, .buildList > li .vtbegenerated table tr:first-child > td:first-child {
+    border-top-left-radius: 0.5rem;
+  }
+  .liItem .vtbegenerated table tr:first-child > td:last-child, .buildList > li .vtbegenerated table tr:first-child > td:last-child {
+    border-top-right-radius: 0.5rem;
+  }
+  .liItem .vtbegenerated table tr:last-child > td:first-child, .buildList > li .vtbegenerated table tr:last-child > td:first-child {
+    border-bottom-left-radius: 0.5rem;
+  }
+  .liItem .vtbegenerated table tr:last-child > td:last-child, .buildList > li .vtbegenerated table tr:last-child > td:last-child {
+    border-bottom-right-radius: 0.5rem;
   }
   .portlet {
     margin: 0 2rem 2rem;

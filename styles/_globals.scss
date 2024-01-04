@@ -64,6 +64,18 @@ $on-header-lighter: color.mix($on-header, white);
 
 $shadow: rgba($primary, 0.10);
 
+@function flattenColor($color, $background) {
+    @return rgba(
+        red($color) * alpha($color)
+            + red($background) * (1 - alpha($color)),
+        green($color) * alpha($color)
+            + green($background) * (1 - alpha($color)),
+        blue($color) * alpha($color)
+            + blue($background) * (1 - alpha($color)),
+        1
+    );
+}
+
 @import "fonts/inter";
 @import "fonts/urbanist";
 
