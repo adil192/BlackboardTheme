@@ -2,6 +2,10 @@
 
 Here I will outline the changes I've made over time...
 
+### 20240105
+
+- Made module images clickable again
+
 ### 20240104
 
 - Styled tables in course pages

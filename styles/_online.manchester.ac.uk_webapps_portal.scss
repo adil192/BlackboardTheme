@@ -108,20 +108,28 @@ div.container {
 			border-radius: 0.5rem;
 			position: relative;
 			z-index: 1;
-		}
-		&::before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			height: 6rem;
-			background-color: $shadow; // fallback for bgs with transparency
-			background-image: var(--bg-url);
-			background-size: cover;
-			background-position: center;
-			border-top-left-radius: 0.5rem;
-			border-top-right-radius: 0.5rem;
+
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				border-radius: inherit;
+				z-index: -1;
+			}
+			&::before {
+				top: -5rem;
+				left: 0;
+				right: 0;
+				height: 6rem;
+				background-color: $shadow; // fallback for bgs with transparency
+				background-image: var(--bg-url);
+				background-size: cover;
+				background-position: center;
+			}
+			&::after {
+				inset: 0;
+				background: inherit;
+			}
 		}
 	}
 
