@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           UoM Blackboard theme
-@version        20240107.02.00
+@version        20240107.02.01
 @namespace      userstyles.world/user/adil192
 @description    Themes the blackboard UoM website to look more modern and use a consistent colour scheme.
 @author         adil192
@@ -769,6 +769,20 @@
     background-color: #fffbff;
     color: #1d1b1e;
     border: none;
+    box-shadow: none;
+  }
+  .steptitle::-moz-selection, .steptitle *::-moz-selection, div[id*=step]::-moz-selection, div[id*=step] *::-moz-selection, div[id*=Step]::-moz-selection, div[id*=Step] *::-moz-selection, #dataCollectionContainer::-moz-selection, #dataCollectionContainer *::-moz-selection, .container::-moz-selection, .container *::-moz-selection {
+    background: #562c6f;
+    color: #fff;
+  }
+  .steptitle::selection,
+  .steptitle *::selection, div[id*=step]::selection,
+  div[id*=step] *::selection, div[id*=Step]::selection,
+  div[id*=Step] *::selection, #dataCollectionContainer::selection,
+  #dataCollectionContainer *::selection, .container::selection,
+  .container *::selection {
+    background: #562c6f;
+    color: #fff;
   }
   .takeQuestionDiv,
   #dataCollectionContainer {
@@ -777,6 +791,7 @@
     border: none;
     padding: 1rem;
     margin-bottom: 6rem;
+    box-shadow: none;
   }
   .takeQuestionDiv .steptitle,
   #dataCollectionContainer .steptitle {

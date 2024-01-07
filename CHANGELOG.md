@@ -9,6 +9,7 @@ Here I will outline the changes I've made over time...
     - The header was incorrectly given rounded corners
 - Ensured that the course pages' sidebar takes up the full height of the viewport
 - Added a subtle border between a module image and its title
+- Set the color of selected text on the quiz page
 
 ### 20240105
 

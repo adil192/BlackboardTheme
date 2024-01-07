@@ -1,3 +1,4 @@
+@use "sass:color";
 @import "globals";
 
 // "Test information" box
@@ -13,6 +14,13 @@
 	background-color: $background;
 	color: $on-background;
 	border: none;
+	box-shadow: none;
+
+	&::selection,
+	*::selection {
+		background: color.adjust($primary, $lightness: -15%);
+		color: $on-primary;
+	}
 }
 
 // question container
@@ -23,6 +31,7 @@
 	border: none;
 	padding: 1rem;
 	margin-bottom: 6rem;
+	box-shadow: none;
 
 	// question number
 	.steptitle {
