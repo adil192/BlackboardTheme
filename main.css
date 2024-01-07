@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           UoM Blackboard theme
-@version        20240107.01.01
+@version        20240107.02.00
 @namespace      userstyles.world/user/adil192
 @description    Themes the blackboard UoM website to look more modern and use a consistent colour scheme.
 @author         adil192
@@ -717,6 +717,7 @@
   .courseListing li[data-module-code] > a::after {
     inset: 0;
     background: inherit;
+    border-top: 0.1rem solid rgba(129, 66, 166, 0.1);
   }
   .listElement li[data-module-code^=ARDSE001],
   .courseListing li[data-module-code^=ARDSE001] {

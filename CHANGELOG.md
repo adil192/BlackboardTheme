@@ -8,6 +8,7 @@ Here I will outline the changes I've made over time...
     - The first non-header row was being styled as a header
     - The header was incorrectly given rounded corners
 - Ensured that the course pages' sidebar takes up the full height of the viewport
+- Added a subtle border between a module image and its title
 
 ### 20240105
 
