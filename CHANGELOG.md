@@ -7,6 +7,7 @@ Here I will outline the changes I've made over time...
 - Fixed issues with tables that have a `<thead>` element
     - The first non-header row was being styled as a header
     - The header was incorrectly given rounded corners
+- Ensured that the course pages' sidebar takes up the full height of the viewport
 
 ### 20240105
 

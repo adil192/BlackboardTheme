@@ -53,6 +53,9 @@ body,
 .contentPane {
 	background: $background;
 }
+.locationPane {
+	min-height: calc(100lvh - 142px);
+}
 
 .contentPane .shadow {
 	border-color: transparent;
