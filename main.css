@@ -270,11 +270,11 @@
   }
   div.tab button.active {
     background: #8142a6 !important;
-    color: #ffffff !important;
+    color: #fff !important;
   }
   div.tab button.active:hover {
     background: #733b94 !important;
-    color: #ffffff !important;
+    color: #fff !important;
   }
   .stream_page_left {
     background: #fffbff;
@@ -324,12 +324,7 @@
   #puller.pullcollapsed a {
     background-color: #9a5dbe;
   }
-  @media only screen and (min-width: 0px) and (max-width: 736px) {
-    #puller.pullcollapsed a {
-      background-color: transparent;
-    }
-  }
-  @media only screen and (min-width: 737px) and (max-width: 1037px) {
+  @media only screen and (width <= 1037px) {
     #puller.pullcollapsed a {
       background-color: transparent;
     }
@@ -485,25 +480,25 @@
   .button-1-img:hover,
   .button-1-img:focus {
     background-color: #8142a6;
-    color: #ffffff !important;
+    color: #fff !important;
   }
   .button-2 {
     background-color: #efd1fb;
-    color: #ffffff !important;
+    color: #fff !important;
   }
   .button-2:hover, .button-2:focus {
     background-color: #8142a6;
   }
   .button-3 {
     background-color: #e9caf6;
-    color: #ffffff !important;
+    color: #fff !important;
   }
   .button-3:hover, .button-3:focus {
     background-color: #8142a6;
   }
   .button-4 {
     background-color: #e4c2f2;
-    color: #ffffff !important;
+    color: #fff !important;
   }
   .button-4:hover, .button-4:focus {
     background-color: #8142a6;
@@ -525,7 +520,7 @@
   }
   .side-nav ul li.active a {
     background-color: #8142a6;
-    color: #ffffff;
+    color: #fff;
     border: none;
     box-shadow: none;
     border-radius: 0.5rem;
@@ -557,7 +552,7 @@
   .stream_list_filter > li a.active,
   .stream_list_filter > li button.active {
     background: #8142a6 !important;
-    color: #ffffff !important;
+    color: #fff !important;
     border: none;
     box-shadow: none;
     border-radius: 1000px !important;
@@ -993,7 +988,7 @@
   }
   #topbar .completionContainer .qComplete {
     background: #8142a6;
-    color: #ffffff;
+    color: #fff;
   }
 }
 @-moz-document url-prefix("https://online.manchester.ac.uk/webapps/calendar") {
@@ -1109,7 +1104,7 @@
   #login .btn-submit, #logout #logoutbutton,
   #logout .btn-submit {
     background: #8142a6;
-    color: #ffffff;
+    color: #fff;
   }
   #login .btn-reset, #logout .btn-reset {
     width: auto;
@@ -1193,7 +1188,7 @@
   }
   #msg.success {
     background-color: #8142a6 !important;
-    color: #ffffff;
+    color: #fff;
   }
   #placestogo, #logout {
     float: none !important;
@@ -1299,7 +1294,7 @@
   input[type=reset].positive,
   input[type=button].positive {
     background: #8142a6;
-    color: #ffffff;
+    color: #fff;
   }
   button.positive:hover, button.positive:focus,
   .button.positive:hover,
@@ -1311,7 +1306,7 @@
   input[type=button].positive:hover,
   input[type=button].positive:focus {
     background: #653382;
-    color: #ffffff;
+    color: #fff;
     outline: none;
   }
   button.positive:disabled,
@@ -1320,7 +1315,7 @@
   input[type=reset].positive:disabled,
   input[type=button].positive:disabled {
     background: rgba(129, 66, 166, 0.5) !important;
-    color: #ffffff !important;
+    color: #fff !important;
   }
   .base-navigation div[role=banner] {
     background: #fffbff url("https://shib.manchester.ac.uk/shibboleth-idp/images/logo.png") no-repeat;
@@ -1365,13 +1360,13 @@
     padding-inline: 1rem;
   }
   .c-button {
-    background-color: #ffffff;
+    background-color: #fff;
     color: #8142a6;
     border: none;
   }
   .c-button--secondary,
   .c-button--secondary--outline {
-    background-color: #ffffff;
+    background-color: #fff;
     color: #984061;
     border: none;
   }
@@ -1379,7 +1374,7 @@
   .c-button--secondary--outline:hover,
   .c-button--secondary--outline:focus {
     background-color: #984061;
-    color: #ffffff;
+    color: #fff;
   }
   a {
     color: #8142a6;
@@ -1885,11 +1880,11 @@
   }
   .btn-primary {
     background: #8142a6;
-    color: #ffffff;
+    color: #fff;
   }
   .btn-danger {
     background: #ba1a1a;
-    color: #ffffff;
+    color: #fff;
   }
   #footer {
     position: absolute;
@@ -1977,10 +1972,10 @@
   .accordion-group .accordion-heading {
     border-radius: 0.5rem;
     background-color: #984061;
-    color: #ffffff;
+    color: #fff;
   }
   .accordion-group .accordion-heading .accordion-toggle {
-    color: #ffffff;
+    color: #fff;
   }
   .accordion-group .accordion-inner {
     border: none;

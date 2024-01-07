@@ -266,10 +266,8 @@ img[src="#{$orig-piazza-icon}"] {
 
 #puller.pullcollapsed a {
 	background-color: color.adjust($primary, $lightness: 10%);
-	@media only screen and (min-width: 0px) and (max-width: 736px) {
-		background-color: transparent;
-	}
-	@media only screen and (min-width: 737px) and (max-width: 1037px) {
+
+	@media only screen and (width <= 1037px) {
 		background-color: transparent;
 	}
 }
@@ -306,7 +304,7 @@ img[src="#{$orig-piazza-icon}"] {
 	}
 
 	.vtbegenerated table {
-		$border-color: flattenColor(rgba($primary, 0.15), $background);
+		$border-color: flatten-color(rgba($primary, 0.15), $background);
 		$border-radius: 0.5rem;
 		$border: 1px solid $border-color;
 
