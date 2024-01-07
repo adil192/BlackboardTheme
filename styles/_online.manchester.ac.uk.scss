@@ -331,33 +331,29 @@ img[src="#{$orig-piazza-icon}"] {
 		tr:nth-child(odd) > td {
 			background: rgba($border-color, 0.15);
 		}
-		&:has(thead > tr) {
-			thead > tr:first-child > td {
-				background: $surface-2;
-				font-weight: bold;
-			}
-		}
-		&:not(:has(thead > tr)) {
-			tr:first-child > td {
-				background: $surface-2;
-				font-weight: bold;
-			}
-		}
 		tr:hover > td {
 			background: rgba($border-color, 0.5);
 		}
-
-		tr:first-child > td:first-child {
-			border-top-left-radius: $border-radius;
+		&:has(thead > tr) thead,
+		&:not(:has(thead > tr)) tbody {
+			tr:first-child > td {
+				background: $surface-2;
+				font-weight: bold;
+				&:first-child {
+					border-top-left-radius: $border-radius;
+				}
+				&:last-child {
+					border-top-right-radius: $border-radius;
+				}
+			}
 		}
-		tr:first-child > td:last-child {
-			border-top-right-radius: $border-radius;
-		}
-		tr:last-child > td:first-child {
-			border-bottom-left-radius: $border-radius;
-		}
-		tr:last-child > td:last-child {
-			border-bottom-right-radius: $border-radius;
+		tbody tr:last-child > td {
+			&:first-child {
+				border-bottom-left-radius: $border-radius;
+			}
+			&:last-child {
+				border-bottom-right-radius: $border-radius;
+			}
 		}
 	}
 }

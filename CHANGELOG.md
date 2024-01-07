@@ -4,7 +4,9 @@ Here I will outline the changes I've made over time...
 
 ### 20240107
 
-- Fixed an issue where the first 2 rows of tables would be styled as headers
+- Fixed issues with tables that have a `<thead>` element
+    - The first non-header row was being styled as a header
+    - The header was incorrectly given rounded corners
 
 ### 20240105
 
