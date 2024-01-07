@@ -2,6 +2,10 @@
 
 Here I will outline the changes I've made over time...
 
+### 20240107
+
+- Fixed an issue where the first 2 rows of tables would be styled as headers
+
 ### 20240105
 
 - Made module images clickable again

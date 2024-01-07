@@ -331,9 +331,17 @@ img[src="#{$orig-piazza-icon}"] {
 		tr:nth-child(odd) > td {
 			background: rgba($border-color, 0.15);
 		}
-		tr:first-child > td {
-			background: $surface-2;
-			font-weight: bold;
+		&:has(thead > tr) {
+			thead > tr:first-child > td {
+				background: $surface-2;
+				font-weight: bold;
+			}
+		}
+		&:not(:has(thead > tr)) {
+			tr:first-child > td {
+				background: $surface-2;
+				font-weight: bold;
+			}
 		}
 		tr:hover > td {
 			background: rgba($border-color, 0.5);

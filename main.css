@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           UoM Blackboard theme
-@version        20240105.00.00
+@version        20240107.00.00
 @namespace      userstyles.world/user/adil192
 @description    Themes the blackboard UoM website to look more modern and use a consistent colour scheme.
 @author         adil192
@@ -381,7 +381,11 @@
   .liItem .vtbegenerated table tr:nth-child(odd) > td, .buildList > li .vtbegenerated table tr:nth-child(odd) > td {
     background: rgba(236, 223, 242, 0.15);
   }
-  .liItem .vtbegenerated table tr:first-child > td, .buildList > li .vtbegenerated table tr:first-child > td {
+  .liItem .vtbegenerated table:has(thead > tr) thead > tr:first-child > td, .buildList > li .vtbegenerated table:has(thead > tr) thead > tr:first-child > td {
+    background: #ecdff2;
+    font-weight: bold;
+  }
+  .liItem .vtbegenerated table:not(:has(thead > tr)) tr:first-child > td, .buildList > li .vtbegenerated table:not(:has(thead > tr)) tr:first-child > td {
     background: #ecdff2;
     font-weight: bold;
   }
