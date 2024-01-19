@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         UoM Blackboard: Add course images
 // @namespace    http://tampermonkey.net/
-// @version      20231211.00.00
+// @version      20231211.00.01
 // @description  An optional accompanying script for https://github.com/adil192/BlackboardTheme, which adds course images to the Blackboard homepage.
 // @author       adil192
 // @match        https://online.manchester.ac.uk/webapps/portal/*
@@ -58,9 +58,9 @@ function labelCourses() {
             const anchor = course.querySelector("a");
             if (!anchor) return;
             const moduleName = anchor.innerText;
-            /** The module code, e.g. "COMP10120" (3 to 5 letters, then 3 to 7 numbers) */
-            const moduleCode = moduleName.match(/[A-Z]{3,5}[0-9]{3,7}/)?.[0];
-            course.dataset.moduleCode = moduleCode;
+            // We used to get the module code from the module name, but this is
+            // unnecessary since the module name begins with the module code.
+            course.dataset.moduleCode = moduleName;
         });
     });
 }
