@@ -97,21 +97,28 @@ BlackboardTheme
 
 #### Adding a new subject to the [Module list images](https://greasyfork.org/en/scripts/479199-uom-blackboard-add-course-images) script
 
-Unsupported subjects will have this default image:
+Unknown subjects are given an image from the [Pixabay API](https://pixabay.com/api/docs/).
 
-<img src="assets/queens_arch.jpg" alt="Queen's arch" width=100>
-
-If you want to add your subject(s) to the
-[Module list images](https://greasyfork.org/en/scripts/479199-uom-blackboard-add-course-images) script, you can either
-[submit an issue](https://github.com/adil192/BlackboardTheme/issues/new) and I'll add it for you;
+If you want to add a custom image for your subject(s) to the
+[Module list images](https://greasyfork.org/en/scripts/479199-uom-blackboard-add-course-images)
+script, you can either
+[submit an issue](https://github.com/adil192/BlackboardTheme/issues/new)
+and I'll add it for you;
 or you can do it yourself and submit a pull request:
 
-1. Identify the subject/module code. An example module code is `ABCD10000`, where `ABCD` is the subject code. You can choose to add a subject code or a module code.
-2. Add an image to the `assets/subjects/ABCD/` folder where `ABCD` is the subject/module code (you'll need to make this folder). The image must be named `ABCD.jpg` or `ABCD.png` etc. Also add a `LICENSE.md` file with the image attribution/license.
-3. Go to `styles/_online.manchester.ac.uk_webapps_portal.scss` and add your rule above the line that says `// add your subject code above this line`. Specify the image extension (e.g. `png`) if it's not a `jpg` file. For example:
-    ```scss
-	@include module-image(MATH32031);
-	@include module-image(MATH32091, png);
-    // add your subject code above this line
+1. Identify the module code. An example module code is `ABCD10000`.
+2. Add an image to the `assets/subjects/ABCD10000/` folder where `ABCD10000` is the subject/module code (you'll need to make this folder). The image must be named `ABCD10000.jpg` or `ABCD10000.png` etc. Also add a `LICENSE.md` file with the image attribution/license.
+3. Go to `scripts/add_course_images.js` and add a line to the `knownModuleImages` object. For example:
+    ```js
+    const knownModuleImages = {
+        // ...
+        "ABCD10000" : "https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/ABCD10000/ABCD10000.jpg",
+    };
     ```
-4. (No changes are needed to be made to the script itself.)
+4. Optionally also add an image to the `fallbackModuleImages` object for the subject (e.g. `ABCD`):
+    ```js
+    const fallbackModuleImages = {
+        // ...
+        "ABCD" : "https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/ABCD/ABCD.jpg",
+    };
+    ```

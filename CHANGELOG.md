@@ -2,6 +2,11 @@
 
 Here I will outline the changes I've made over time...
 
+### 20240119
+
+- The Pixabay API is now used to get images for unknown modules.
+- Fixed non-current modules being incorrectly clipped.
+
 ### 20240107
 
 - Fixed issues with tables that have a `<thead>` element
