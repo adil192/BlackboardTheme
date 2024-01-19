@@ -40,11 +40,17 @@ div.container {
 		}
 
 		&.secondary {
-			background: rgba($secondary, 0.05);
+			background: flatten-color(
+				rgba($secondary, 0.05),
+				rgba($surface-2, 1)
+			);
 			color: $on-surface;
 
 			&:hover {
-				background: rgba($secondary, 0.1);
+				background: flatten-color(
+					rgba($secondary, 0.1),
+					rgba($surface-2, 1)
+				);
 			}
 		}
 

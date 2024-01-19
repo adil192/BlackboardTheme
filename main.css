@@ -636,12 +636,12 @@
   }
   .listElement li.secondary,
   .courseListing li.secondary {
-    background: rgba(152, 64, 97, 0.05);
+    background: rgb(232, 215, 235);
     color: #1d1b1e;
   }
   .listElement li.secondary:hover,
   .courseListing li.secondary:hover {
-    background: rgba(152, 64, 97, 0.1);
+    background: rgb(228, 207, 228);
   }
   .listElement li a,
   .courseListing li a {
