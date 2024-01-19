@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         UoM Blackboard: Add course images
 // @namespace    http://tampermonkey.net/
-// @version      20231211.00.01
+// @version      20240119.00.00
 // @description  An optional accompanying script for https://github.com/adil192/BlackboardTheme, which adds course images to the Blackboard homepage.
 // @author       adil192
 // @match        https://online.manchester.ac.uk/webapps/portal/*
@@ -12,6 +12,48 @@
 // ==/UserScript==
 
 // @ts-check
+
+/**
+ * Returns a module image URL, assuming it's in standard format.
+ * @param {string} moduleCode
+ * @param {string} extension The file extension of the image, defaults to "jpg".
+ * @returns {string}
+ */
+function imageFromModuleCode(moduleCode, extension="jpg") {
+    return `https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/${moduleCode}/${moduleCode}.${extension}`;
+}
+
+/**
+ * The known modules and their images.
+ * In the future, I want to replace this with the Pixabay API
+ * so that we can get images for any module.
+ * @type {[string, string][]}
+ */
+const moduleImages = [
+    ["ARDSE001",  imageFromModuleCode("ARDSE001")],
+    ["COMP",      imageFromModuleCode("COMP")],
+    ["COMP30040", imageFromModuleCode("COMP30040")],
+    ["COMP33511", imageFromModuleCode("COMP33511")],
+    ["COMP38311", imageFromModuleCode("COMP38311")],
+    ["MATH",      imageFromModuleCode("MATH")],
+    ["MATH31051", imageFromModuleCode("MATH31051", "png")],
+    ["MATH32031", imageFromModuleCode("MATH32031")],
+    ["MATH32091", imageFromModuleCode("MATH32091", "png")],
+];
+
+/**
+ * Returns the module image for the given module name, or null if it doesn't exist.
+ * @param {string} moduleName
+ * @returns {string | null}
+ */
+function findModuleImage(moduleName) {
+    let bestImage = null;
+    for (const [moduleCode, moduleImage] of moduleImages) {
+        if (!moduleName.startsWith(moduleCode)) continue;
+        bestImage = moduleImage;
+    }
+    return bestImage;
+}
 
 /** @type {HTMLDivElement[]} */
 let coursesDivs = [];
@@ -58,9 +100,16 @@ function labelCourses() {
             const anchor = course.querySelector("a");
             if (!anchor) return;
             const moduleName = anchor.innerText;
+
             // We used to get the module code from the module name, but this is
             // unnecessary since the module name begins with the module code.
             course.dataset.moduleCode = moduleName;
+
+            // Set `--bg-url` to the module image if it exists.
+            let moduleImage = findModuleImage(moduleName);
+            if (moduleImage) {
+                course.style.setProperty("--bg-url", `url("${moduleImage}")`);
+            }
         });
     });
 }

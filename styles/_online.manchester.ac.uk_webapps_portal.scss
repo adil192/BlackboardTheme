@@ -100,6 +100,7 @@ div.container {
 	li[data-module-code] {
 		position: relative;
 
+		// default bg, override in add_course_images.js
 		--bg-url: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/queens_arch.jpg");
 
 		> a {
@@ -133,21 +134,4 @@ div.container {
 			}
 		}
 	}
-
-	@mixin module-image($module-code, $extension: jpg) {
-		li[data-module-code^="#{$module-code}"] {
-			--bg-url: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/#{$module-code}/#{$module-code}.#{$extension}");
-		}
-	}
-
-	@include module-image(ARDSE001);
-	@include module-image(COMP);
-	@include module-image(COMP30040);
-	@include module-image(COMP33511);
-	@include module-image(COMP38311);
-	@include module-image(MATH);
-	@include module-image(MATH31051, png);
-	@include module-image(MATH32031);
-	@include module-image(MATH32091, png);
-	// add your subject code above this line
 }
