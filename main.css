@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           UoM Blackboard theme
-@version        20240122.01.00
+@version        20240122.02.00
 @namespace      userstyles.world/user/adil192
 @description    Themes the blackboard UoM website to look more modern and use a consistent colour scheme.
 @author         adil192
@@ -688,6 +688,8 @@
     border-radius: 0.5rem;
     position: relative;
     z-index: 1;
+    height: calc(100% - 5rem);
+    box-sizing: border-box;
   }
   .listElement li[data-module-code] > a::before, .listElement li[data-module-code] > a::after,
   .courseListing li[data-module-code] > a::before,

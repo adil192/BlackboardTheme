@@ -99,13 +99,17 @@ div.container {
 		--bg-url: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/queens_arch.jpg");
 
 		$image-height: 6rem;
+		$image-without-overlap: $image-height - 1rem;
 
 		> a {
-			margin-top: 5rem !important;
+			margin-top: $image-without-overlap !important;
 			background: inherit;
 			border-radius: 0.5rem;
 			position: relative;
 			z-index: 1;
+
+			height: calc(100% - $image-without-overlap);
+			box-sizing: border-box;
 
 			&::before,
 			&::after {
@@ -115,7 +119,7 @@ div.container {
 				z-index: -1;
 			}
 			&::before {
-				top: 1rem - $image-height;
+				top: -$image-without-overlap;
 				left: 0;
 				right: 0;
 				height: $image-height;
