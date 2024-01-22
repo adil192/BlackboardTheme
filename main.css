@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           UoM Blackboard theme
-@version        20240107.02.01
+@version        20240122.00.00
 @namespace      userstyles.world/user/adil192
 @description    Themes the blackboard UoM website to look more modern and use a consistent colour scheme.
 @author         adil192
@@ -636,12 +636,7 @@
   }
   .listElement li.secondary,
   .courseListing li.secondary {
-    background: rgb(232, 215, 235);
-    color: #1d1b1e;
-  }
-  .listElement li.secondary:hover,
-  .courseListing li.secondary:hover {
-    background: rgb(228, 207, 228);
+    filter: saturate(0.3);
   }
   .listElement li a,
   .courseListing li a {
@@ -718,6 +713,11 @@
     inset: 0;
     background: inherit;
     border-top: 0.1rem solid rgba(129, 66, 166, 0.1);
+  }
+  .listElement li[data-module-code].secondary > a::before,
+  .courseListing li[data-module-code].secondary > a::before {
+    filter: blur(0.18rem);
+    transform: scale(0.97);
   }
 }
 @-moz-document url-prefix("https://online.manchester.ac.uk/webapps/assessment") {

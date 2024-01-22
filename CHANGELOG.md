@@ -2,6 +2,11 @@
 
 Here I will outline the changes I've made over time...
 
+### 20240122
+
+- Differentiated 1st and 2nd semester courses more. Specifically, 1st semester courses have a desaturated color, and their images are slightly blurred.
+- Fixed the highlight_current_modules.js script not doing anything sometimes (the window load event was not being fired).
+
 ### 20240119
 
 - The Pixabay API is now used to get images for unknown modules.

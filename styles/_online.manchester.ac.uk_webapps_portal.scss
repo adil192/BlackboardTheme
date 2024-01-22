@@ -40,18 +40,7 @@ div.container {
 		}
 
 		&.secondary {
-			background: flatten-color(
-				rgba($secondary, 0.05),
-				rgba($surface-2, 1)
-			);
-			color: $on-surface;
-
-			&:hover {
-				background: flatten-color(
-					rgba($secondary, 0.1),
-					rgba($surface-2, 1)
-				);
-			}
+			filter: saturate(0.3);
 		}
 
 		a {
@@ -109,6 +98,8 @@ div.container {
 		// default bg, override in add_course_images.js
 		--bg-url: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/queens_arch.jpg");
 
+		$image-height: 6rem;
+
 		> a {
 			margin-top: 5rem !important;
 			background: inherit;
@@ -124,10 +115,10 @@ div.container {
 				z-index: -1;
 			}
 			&::before {
-				top: -5rem;
+				top: 1rem - $image-height;
 				left: 0;
 				right: 0;
-				height: 6rem;
+				height: $image-height;
 				background-color: $shadow; // fallback for bgs with transparency
 				background-image: var(--bg-url);
 				background-size: cover;
@@ -137,6 +128,15 @@ div.container {
 				inset: 0;
 				background: inherit;
 				border-top: 0.1rem solid $shadow;
+			}
+		}
+
+		&.secondary > a {
+			&::before {
+				$blur: 0.03;
+				filter: blur($blur * $image-height);
+				// scale down to compensate for blurry edges
+				transform: scale(1 - $blur);
 			}
 		}
 	}
