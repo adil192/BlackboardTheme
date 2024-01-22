@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         UoM Blackboard: Highlight current modules
 // @namespace    http://tampermonkey.net/
-// @version      20231129.00.00
+// @version      20240122.00.00
 // @description  An optional accompanying script for https://github.com/adil192/BlackboardTheme, which highlights current modules on the Blackboard homepage by greying out old modules.
 // @author       adil192
 // @match        https://online.manchester.ac.uk/webapps/portal/*
@@ -19,20 +19,29 @@ let currentCoursesDiv;
 let formerCoursesDiv;
 
 /**
- * Returns a promise that resolves when `currentCoursesDiv` and `formerCoursesDiv` are found.
+ * Returns a promise that resolves after `ms` milliseconds.
+ * @param {number} ms
  * @returns {Promise<void>}
  */
-function findCoursesDivs() {
-    currentCoursesDiv = document.querySelector("#CurrentCourses");
-    formerCoursesDiv = document.querySelector("#FormerCourses");
-    if (!currentCoursesDiv || !formerCoursesDiv) {
-        return new Promise((resolve) => {
-            setTimeout(() => {
-                resolve(findCoursesDivs());
-            }, 500);
-        });
+function timeoutPromise(ms) {
+    return new Promise((resolve) => {
+        setTimeout(resolve, ms);
+    });
+}
+
+/**
+ * Returns a promise that resolves when `coursesDivs` are found.
+ * @returns {Promise<void>}
+ */
+async function findCoursesDivs() {
+    while (!currentCoursesDiv || !formerCoursesDiv) {
+        currentCoursesDiv = document.querySelector("#CurrentCourses");
+        formerCoursesDiv = document.querySelector("#FormerCourses");
+        if (!currentCoursesDiv || !formerCoursesDiv) {
+            await timeoutPromise(500);
+        }
     }
-    return Promise.resolve();
+    console.log('highlight_current_modules: found courses divs:', {currentCoursesDiv, formerCoursesDiv});
 }
 
 /**
@@ -40,7 +49,6 @@ function findCoursesDivs() {
  * @param {HTMLDivElement | null} coursesDiv
  */
 function greyOutOldCourses(coursesDiv) {
-    console.log("greyOutOldCourses", { coursesDiv });
     const courses = coursesDiv?.querySelectorAll("ul.listElement > li");
     if (!courses || !courses.length) {
         console.log("greyOutOldCourses: No courses found.");
@@ -75,17 +83,15 @@ function greyOutOldCourses(coursesDiv) {
     'use strict';
 
     console.log("UoM Blackboard: Highlight current modules");
-    window.addEventListener("load", () => {
-        findCoursesDivs().then(() => {
-            greyOutOldCourses(currentCoursesDiv);
-            greyOutOldCourses(formerCoursesDiv);
+    findCoursesDivs().then(() => {
+        greyOutOldCourses(currentCoursesDiv);
+        greyOutOldCourses(formerCoursesDiv);
 
-            currentCoursesDiv?.addEventListener("DOMSubtreeModified", () => {
-                greyOutOldCourses(currentCoursesDiv);
-            }, { passive: true });
-            formerCoursesDiv?.addEventListener("DOMSubtreeModified", () => {
-                greyOutOldCourses(formerCoursesDiv);
-            }, { passive: true });
-        });
-    }, { once: true, passive: true });
+        currentCoursesDiv?.addEventListener("DOMSubtreeModified", () => {
+            greyOutOldCourses(currentCoursesDiv);
+        }, { passive: true });
+        formerCoursesDiv?.addEventListener("DOMSubtreeModified", () => {
+            greyOutOldCourses(formerCoursesDiv);
+        }, { passive: true });
+    });
 })();
