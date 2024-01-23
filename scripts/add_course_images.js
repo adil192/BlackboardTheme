@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         UoM Blackboard: Add course images
 // @namespace    http://tampermonkey.net/
-// @version      20240119.21.00
+// @version      20240123.00.00
 // @description  An optional accompanying script for https://github.com/adil192/BlackboardTheme, which adds course images to the Blackboard homepage.
 // @author       adil192
 // @match        https://online.manchester.ac.uk/webapps/portal/*
@@ -103,6 +103,33 @@ async function findCoursesDivs() {
     }
     coursesDivs = [currentCoursesDiv, formerCoursesDiv];
     console.log('found courses divs:', {currentCoursesDiv, formerCoursesDiv});
+}
+
+/**
+ * Returns the fallback image URL for the given module name, or null if it doesn't exist.
+ * 
+ * If the module name matches multiple fallbacks, the longest match is used.
+ * e.g. a "MATH" module will use "MATH" instead of "MAT", if both exist.
+ * 
+ * @param {string} moduleName
+ * @returns {string | null}
+ */
+function findFallbackImageUrl(moduleName) {
+    /** The best fallback image url @type {string | null} */
+    let bestImage = null;
+    /** The length of the best fallback key @type {number} */
+    let bestLength = -1;
+
+    for (const fallbackKey in fallbackModuleImages) {
+        if (!moduleName.startsWith(fallbackKey)) continue;
+        // if the lengths are equal, use the latest fallback
+        if (fallbackKey.length < bestLength) continue;
+
+        bestImage = fallbackModuleImages[fallbackKey];
+        bestLength = fallbackKey.length;
+    }
+
+    return bestImage;
 }
 
 /**
@@ -248,8 +275,9 @@ function labelCourses() {
             course.dataset.moduleCode = moduleName;
 
             // Set `--bg-url` to the module image if it exists.
-            if (fallbackModuleImages[moduleName]) {
-                course.style.setProperty("--bg-url", `url("${fallbackModuleImages[moduleName]}")`);
+            let fallbackImageUrl = findFallbackImageUrl(moduleName);
+            if (fallbackImageUrl) {
+                course.style.setProperty("--bg-url", `url("${fallbackImageUrl}")`);
             }
             findModuleImage(moduleName).then((moduleImage) => {
                 if (!moduleImage) return;
