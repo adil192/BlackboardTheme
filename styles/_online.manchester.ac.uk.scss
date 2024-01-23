@@ -301,6 +301,39 @@ img[src="#{$orig-piazza-icon}"] {
 		&:empty {
 			display: none;
 		}
+
+		> .vtbegenerated {
+			overflow: visible;
+		}
+	}
+
+	.details > .vtbegenerated > div[style*="float: right;"] {
+		$floating-color: color.mix($surface-1, $primary, 90%);
+		background: $floating-color !important;
+		padding: 1rem !important;
+		margin-bottom: 1rem;
+		border-top-left-radius: 0.5rem;
+		border-bottom-left-radius: 0.5rem;
+		border: none !important;
+
+		// make it bleed into the side
+		position: relative;
+		padding-right: 0 !important;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: -1rem;
+			width: 1rem;
+			height: 100%;
+			background: inherit;
+		}
+
+		&[style*="width: 30%;"] {
+			width: 100% !important;
+			max-width: 25rem;
+			box-sizing: border-box;
+		}
 	}
 
 	.vtbegenerated table {

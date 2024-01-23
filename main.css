@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           UoM Blackboard theme
-@version        20240122.03.00
+@version        20240123.00.00
 @namespace      userstyles.world/user/adil192
 @description    Themes the blackboard UoM website to look more modern and use a consistent colour scheme.
 @author         adil192
@@ -355,6 +355,33 @@
   }
   .liItem .details:empty, .buildList > li .details:empty {
     display: none;
+  }
+  .liItem .details > .vtbegenerated, .buildList > li .details > .vtbegenerated {
+    overflow: visible;
+  }
+  .liItem .details > .vtbegenerated > div[style*="float: right;"], .buildList > li .details > .vtbegenerated > div[style*="float: right;"] {
+    background: #ede0f3 !important;
+    padding: 1rem !important;
+    margin-bottom: 1rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border: none !important;
+    position: relative;
+    padding-right: 0 !important;
+  }
+  .liItem .details > .vtbegenerated > div[style*="float: right;"]::after, .buildList > li .details > .vtbegenerated > div[style*="float: right;"]::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -1rem;
+    width: 1rem;
+    height: 100%;
+    background: inherit;
+  }
+  .liItem .details > .vtbegenerated > div[style*="float: right;"][style*="width: 30%;"], .buildList > li .details > .vtbegenerated > div[style*="float: right;"][style*="width: 30%;"] {
+    width: 100% !important;
+    max-width: 25rem;
+    box-sizing: border-box;
   }
   .liItem .vtbegenerated table, .buildList > li .vtbegenerated table {
     background: #ecdff2;

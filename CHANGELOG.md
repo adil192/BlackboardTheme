@@ -2,6 +2,10 @@
 
 Here I will outline the changes I've made over time...
 
+### 20240123
+
+- Restyled the asides in course pages (in my course, they're labelled "Learning Outcomes" on each week's section)
+
 ### 20240122
 
 - Differentiated 1st and 2nd semester courses more. Specifically, 1st semester courses have a desaturated color, and their images are slightly blurred.
