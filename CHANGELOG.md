@@ -8,6 +8,7 @@ Here I will outline the changes I've made over time...
 - Fixed the highlight_current_modules.js script not doing anything sometimes (the window load event was not being fired).
 - Fixed a subtle animation bug when hovering on 1st semester courses.
 - Fixed the appearance (height) of the `:focus` ring on module cards.
+- Subtitles in videos are now left-aligned instead of centered.
 
 ### 20240119
 
