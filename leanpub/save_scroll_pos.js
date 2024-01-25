@@ -142,10 +142,18 @@ function onScroll() {
 					const sectionNumber = child.querySelector('span.section-number')?.textContent?.trim() ?? '';
 					return sectionNumber === lastSection;
 				});
+				const tocItems = Array.from(tocElem.querySelectorAll('li a'));
+				const tocItem = tocItems.find(item => {
+					return item.querySelector('span.section-number')?.textContent?.trim() === lastSection;
+				});
 				if (lastSectionHeading) {
 					lastPAtTop = lastSectionHeading;
 					lastHAtTop = lastSectionHeading;
 					lastSectionHeading.scrollIntoView();
+				}
+				if (tocItem) {
+					tocItem.classList.add('highlight');
+					tocItem.scrollIntoView();
 				}
 			}
 			pageLoaded = true;
