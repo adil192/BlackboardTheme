@@ -65,6 +65,19 @@ async function findElements() {
 	}
 }
 
+/**
+ * When a link appends a hash to the URL, scroll to the element with that ID
+ * and remove the hash from the URL.
+ * @param {HashChangeEvent} e
+ */
+function onHashChange(e) {
+	const hash = e.newURL.substring(e.newURL.indexOf('#') + 1);
+	if (hash) document.getElementById(hash)?.scrollIntoView();
+
+	// remove the hash from the URL
+	history.replaceState({}, document.title, window.location.pathname + window.location.search);
+}
+
 function onScroll() {
 	if (!pageLoaded) return;
 	if (!scrollElem || !contentElem || !tocElem) return;
@@ -158,5 +171,7 @@ function onScroll() {
 			}
 			pageLoaded = true;
 		});
+
+		window.addEventListener('hashchange', onHashChange, { passive: true });
 	}, { passive: true });
 })();
