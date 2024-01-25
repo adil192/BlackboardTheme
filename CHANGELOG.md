@@ -2,6 +2,10 @@
 
 Here I will outline the changes I've made over time...
 
+### 20240125
+
+- Added a script to automatically click the login button on the Blackboard login page if your details are saved in your browser (see the [README][README] for instructions)
+
 ### 20240123
 
 - Restyled the asides in course pages (in my course, they're labelled "Learning Outcomes" on each week's section)

@@ -25,6 +25,7 @@ other UoM websites.
     - [Highlight current modules](https://greasyfork.org/en/scripts/478967-uom-blackboard-highlight-current-modules)
     - [Video keyboard shortcuts](https://greasyfork.org/en/scripts/479044-uom-blackboard-video-keyboard-shortcuts)
     - [Module list images](https://greasyfork.org/en/scripts/479199-uom-blackboard-add-course-images)
+    - [Auto login](https://greasyfork.org/en/scripts/485669-uom-blackboard-auto-login)
 
 ### Atkinson Hyperlegible
 
