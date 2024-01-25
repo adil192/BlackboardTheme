@@ -1,0 +1,210 @@
+:root {
+    --background: #fefbff;
+    --on-background: #1b1b1f;
+    --surface-variant: #e1e2ec;
+    --primary: #005ac1;
+    --on-primary: #ffffff;
+    
+    --body-fonts: 'Atkinson Hyperlegible', Inter,
+        system-ui, sans-serif,
+        'Font Awesome 5 Free',
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+body, html {
+    background: var(--background);
+    color: var(--on-background);
+}
+
+* {
+    font-family: var(--body-fonts) !important;
+    font-feature-settings: "liga" 1, "calt" 1;
+    font-smooth: always;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+.book-title,
+h1, h2, h3, h4, h5, h6 {
+    font-family: Urbanist, ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', var(--body-fonts) !important;
+}
+
+.Header {
+    background: #141b2c;
+    color: #dbe2f9;
+}
+
+.cookies-banner {
+    display: none !important;
+}
+
+
+#read-online > header,
+#read-online #leanpub-toc {
+    background: #e9edfb;
+    color: #141b2c;
+    --shadow: 1.5rem;
+    ---shadow: -1.5rem;
+    box-shadow: inset var(---shadow) 0 var(--shadow) var(---shadow) rgba(20, 27, 44, 0.125);
+    transition: none;
+}
+#read-online > header {
+    display: block;
+    border-top-right-radius: 0.5rem;
+    
+    hr {
+        display: none;
+    }
+    
+    .btn--solid {
+        display: block;
+        background: var(--primary);
+        color: var(--on-primary);
+        border-radius: 0.5rem;
+        margin-bottom: 4rem;
+        padding: 0.5rem;
+        height: auto;
+    }
+
+    .read-upsell {
+        height: 10rem;
+        
+        > a {
+            display: none;
+        }
+        
+        .upsell-text,
+        .upsell-text * {
+            margin-top: 0;
+        }
+        
+        .book-title {
+            font-size: 2rem;
+            max-height: initial;
+            line-height: 1.1;
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+#read-online #leanpub-toc {
+    border-bottom-right-radius: 0.5rem;
+    top: 18rem;
+    
+    .toc ul {
+        margin: 0;
+        
+        > li:first-child > span:first-child {
+            display: none;
+        }
+    }
+    
+    li {
+        .section-number {
+            color: inherit !important;
+            opacity: 0.5;
+        }
+        a {
+            border-top-left-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
+        }
+        a.highlight,
+        a:hover {
+            background: rgba(0, 90, 193, 0.85);
+            color: var(--on-primary);
+            transition: background 0.1s ease-out, color 0.1s ease-out, filter 0.1s ease-out;
+        }
+        a.highlight:hover {
+            background: rgba(0, 90, 193, 1);
+        }
+    }
+}
+
+#leanpub-main,
+#leanpub-doc-main {
+    overflow-x: hidden;
+    color: inherit;
+    
+    p {
+        text-indent: 5rem;
+        line-height: 1.5;
+        margin-bottom: 5rem;
+        color: inherit;
+    }
+    
+    aside p,
+    .centered p {
+        margin-bottom: 1.5rem;
+    }
+    
+    ::selection {
+        background-color: rgba(0, 90, 193, 0.15);
+        color: black;
+    }
+    
+    aside,
+    aside.blurb {
+        background-color: rgba(225, 226, 236, 0.2);
+        border-radius: 0.5rem;
+    }
+    
+    blockquote {
+        color: inherit;
+        opacity: 0.8;
+        border-radius: 0.5rem;
+        border-left: 0.3rem solid var(--surface-variant);
+        
+        p {
+            margin-bottom: 0;
+            padding-block: 1rem;
+        }
+        
+        + p {
+            margin-top: 1.5rem;
+        }
+    }
+    
+    img {
+        border-radius: 0.5rem;
+    }
+    figure {
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+
+
+/* https://fonts.googleapis.com/css?family=Urbanist&display=swap */
+@font-face { /* latin-ext */
+  font-family: 'Urbanist';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/urbanist/v15/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDyx4vH5mqe8Q.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face { /* latin */
+  font-family: 'Urbanist';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/urbanist/v15/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDyx4vEZmq.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* https://fonts.googleapis.com/css?family=Atkinson%20Hyperlegible&display=swap */
+@font-face { /* latin-ext */
+  font-family: 'Atkinson Hyperlegible';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/atkinsonhyperlegible/v11/9Bt23C1KxNDXMspQ1lPyU89-1h6ONRlW45G07JIoSwQ.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face { /* latin */
+  font-family: 'Atkinson Hyperlegible';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/atkinsonhyperlegible/v11/9Bt23C1KxNDXMspQ1lPyU89-1h6ONRlW45G04pIo.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
