@@ -1,0 +1,7 @@
+@import "globals";
+
+/* set better fonts */
+@include fonts('body *');
+* {
+    accent-color: $primary !important;
+}

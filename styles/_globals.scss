@@ -85,7 +85,7 @@ $font-fallbacks: "Inter", "Google Sans",
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     FontAwesome, VideoJS;
 
-@mixin fonts {
+@mixin fonts($selector: '*') {
     @include inter;
     @include urbanist;
 
@@ -94,7 +94,7 @@ $font-fallbacks: "Inter", "Google Sans",
         --fonts-heading: "Urbanist", "Product Sans", #{$font-fallbacks};
     }
 
-    * {
+    #{$selector} {
         @include fonts-body;
         // 'liga' enables font ligatures, 'calt' enables contextual alternates
         font-feature-settings: 'liga' 1, 'calt' 1;

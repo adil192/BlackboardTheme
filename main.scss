@@ -1,6 +1,11 @@
 @import "styles/version";
 
-@-moz-document domain("online.manchester.ac.uk") {
+@-moz-document url-prefix("https://online.manchester.ac.uk/ultra/") {
+	/* Blackboard Ultra (new Blackboard layout, since 27 Jan 2024) */
+	@import "styles/online.manchester.ac.uk_ultra";
+}
+
+@-moz-document url-prefix("https://online.manchester.ac.uk/webapps/") {
 	/* All blackboard pages */
 	@import "styles/online.manchester.ac.uk";
 
