@@ -224,6 +224,10 @@ function labelCourses() {
     /** @type {NodeListOf<HTMLLIElement>} */
     const courses = coursesDiv.querySelectorAll(".course-element-card");
     courses.forEach((course) => {
+        // don't set the module image if it already exists,
+        // stored in `var(--module-image)`
+        if (course.style.getPropertyValue("--module-image")) return;
+
         /** @type {HTMLElement | null} */
         const courseTitleA = course.querySelector(".course-title");
         /** @type {HTMLElement | null} */
@@ -234,10 +238,12 @@ function labelCourses() {
         const moduleName = courseTitleA.textContent?.trim();
         if (!moduleName) return;
 
-        // Set `--bg-url` to the module image if it exists.
+        // set to "none" so we don't run findModuleImage() again
+        course.style.setProperty("--module-image", "none");
+        // set the module code
         findModuleImage(moduleName).then((moduleImage) => {
             if (!moduleImage) return;
-            courseTitleDiv.style.backgroundImage = `url("${moduleImage}")`;
+            course.style.setProperty("--module-image", `url(${moduleImage})`);
         });
     });
 }

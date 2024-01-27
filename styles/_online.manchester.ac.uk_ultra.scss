@@ -54,6 +54,12 @@ nav.term-navigator {
             border-top-right-radius: 0.5rem;
             background-color: rgba(black, 0.1);
         }
+
+        &[style*="--module-image"]:not([style*="--module-image: none"]) {
+            .course-banner {
+                background-image: var(--module-image) !important;
+            }
+        }
         
         .course-title h4 {
             -webkit-line-clamp: 3 !important;

@@ -2,6 +2,12 @@
 
 Here I will outline the changes I've made over time...
 
+### 20240127
+
+- Initial stylings for the course page of the new Blackboard Ultra website.
+- Performance optimisations for the add_course_images script.
+- Versions prior to today break the new Blackboard Ultra website. It'll get stuck on the loading screen. Please update to the latest version of the script as soon as possible.
+
 ### 20240125
 
 - Added a script to automatically click the login button on the Blackboard login page if your details are saved in your browser (see the [README][README] for instructions)
