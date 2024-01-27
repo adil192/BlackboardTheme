@@ -28,9 +28,12 @@ const NORESULTS = "NORESULTS";
  */
 const knownModuleImages = {
     "ARDSE001" : "https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/ARDSE001/ARDSE001.jpg",
+
     "COMP30040": "https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/COMP30040/COMP30040.jpg",
     "COMP33511": "https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/COMP33511/COMP33511.jpg",
+    "COMP36212": "https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/COMP36212/COMP36212.jpg",
     "COMP38311": "https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/COMP38311/COMP38311.jpg",
+
     "MATH31051": "https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/MATH31051/MATH31051.png",
     "MATH32031": "https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/MATH32031/MATH32031.jpg",
     "MATH32091": "https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/MATH32091/MATH32091.png",
