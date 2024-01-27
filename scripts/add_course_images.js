@@ -133,7 +133,7 @@ async function findModuleImage(moduleName) {
 async function findAndCacheModuleImage(moduleName) {
     const apiKey = "25286000-bf7eb8ff8e6d2d1630cf59fae";
     const keywords = extractKeywords(moduleName);
-    const url = `https://pixabay.com/api/?key=${apiKey}&q=${encodeURIComponent(keywords)}&image_type=photo&per_page=3`;
+    const url = `https://pixabay.com/api/?key=${apiKey}&q=${encodeURIComponent(keywords)}&image_type=photo&safesearch=true&orientation=horizontal&per_page=3`;
     console.log(`Searching Pixabay for ${moduleName}: ${url}`);
     const response = await fetch(url);
     const json = await response.json();
