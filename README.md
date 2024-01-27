@@ -116,10 +116,3 @@ or you can do it yourself and submit a pull request:
         "ABCD10000" : "https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/ABCD10000/ABCD10000.jpg",
     };
     ```
-4. Optionally also add an image to the `fallbackModuleImages` object for the subject (e.g. `ABCD`):
-    ```js
-    const fallbackModuleImages = {
-        // ...
-        "ABCD" : "https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/ABCD/ABCD.jpg",
-    };
-    ```
