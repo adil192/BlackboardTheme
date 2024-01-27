@@ -104,6 +104,60 @@
   * {
     accent-color: #8142a6 !important;
   }
+  /* navbar */
+  #side-menu {
+    background: #1d1b1e !important;
+    color: #e8e0e5;
+    /* logo header */
+  }
+  #side-menu header {
+    background: #1d1b1e !important;
+    color: #e8e0e5;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  body, #site-wrap {
+    background: #fffbff !important;
+    color: #1d1b1e;
+  }
+  .base-courses-header-container,
+  nav.term-navigator {
+    background: transparent !important;
+    color: #1d1b1e;
+    border: none;
+  }
+  .course-org-list {
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)) !important;
+    gap: 1rem !important;
+  }
+  .course-org-list hr {
+    display: none;
+  }
+  .course-org-list bb-base-course-card {
+    margin: 0 !important;
+  }
+  .course-org-list .course-element-card {
+    border-radius: 0.5rem;
+    border: none;
+    background: #f9f2fb;
+    color: #1d1b1e;
+  }
+  .course-org-list .course-element-card .course-banner {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .course-org-list .course-element-card .course-title h4 {
+    -webkit-line-clamp: 3 !important;
+  }
+  .course-org-list .course-element-card .multi-column-course-id,
+  .course-org-list .course-element-card .course-status {
+    display: none !important;
+  }
+  .course-org-list.list-column-view .course-element-card {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }
 @-moz-document url-prefix("https://online.manchester.ac.uk/webapps/") {
   /* All blackboard pages */

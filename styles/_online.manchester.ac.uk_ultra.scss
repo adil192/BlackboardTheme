@@ -5,3 +5,70 @@
 * {
     accent-color: $primary !important;
 }
+
+/* navbar */
+#side-menu {
+    background: $header !important;
+    color: $on-header;
+
+    /* logo header */
+    header {
+        background: $header !important;
+        color: $on-header;
+        border: none !important;
+        box-shadow: none !important;
+    }
+}
+
+body, #site-wrap {
+    background: $background !important;
+    color: $on-background;
+}
+
+.base-courses-header-container,
+nav.term-navigator {
+    background: transparent !important;
+    color: $on-background;
+    border: none;
+}
+
+.course-org-list {
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)) !important;
+    gap: 1rem !important;
+
+    hr {
+        display: none;
+    }
+
+    bb-base-course-card {
+        margin: 0 !important;
+    }
+    .course-element-card {
+        border-radius: 0.5rem;
+        border: none;
+        background: $surface-1;
+        color: $on-surface;
+
+        .course-banner {
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+            background-color: rgba(black, 0.1);
+        }
+        
+        .course-title h4 {
+            -webkit-line-clamp: 3 !important;
+        }
+
+        .multi-column-course-id,
+        .course-status {
+            display: none !important;
+        }
+    }
+
+    &.list-column-view {
+        .course-element-card {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+}
