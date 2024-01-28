@@ -310,6 +310,11 @@
     stroke: #8142a6;
     --icon-fill-color: $primary !important;
   }
+  @media only screen and (min-width: 64em) {
+    .bb-offcanvas-panel.full {
+      width: calc(100% - 3rem) !important;
+    }
+  }
 }
 @-moz-document url-prefix("https://online.manchester.ac.uk/webapps/") {
   /* All blackboard pages */

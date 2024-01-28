@@ -254,3 +254,9 @@ nav.term-navigator {
         --icon-fill-color: $primary !important;
     }
 }
+
+@media only screen and (min-width: 64em) {
+    .bb-offcanvas-panel.full {
+        width: calc(100% - 3rem) !important;
+    }
+}
