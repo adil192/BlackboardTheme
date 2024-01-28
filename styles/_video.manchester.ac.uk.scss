@@ -13,16 +13,18 @@ $video-elem-color: color-mix(in oklab, $on-header, white 90%);
 	accent-color: $primary !important;
 }
 
-body {
-  margin: 0;
-}
-
 html, body,
+#main,
+.vl-video-embedded,
+#video,
 video,
 .vjs-poster {
   background-color: $header !important;
   color: $on-header;
   color-scheme: dark;
+  padding: 0;
+  margin: 0;
+  height: 100%;
 }
 
 .video-js .vjs-control-bar {

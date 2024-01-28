@@ -6,6 +6,7 @@ Here I will outline the changes I've made over time...
 
 - Styled and fixed the Blackboard Ultra header on mobile
 - Added an "open with new tab" button to Blackboard videos. Requested by a friend so she could have a video and her notes in split screen.
+- Fixed weirdness with the sizing of Blackboard videos (stops them sometimes scrolling off the screen)
 
 ### 20240127
 
