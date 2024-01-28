@@ -37,6 +37,7 @@ const knownModuleImages = {
 
     "MATH31051": "https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/MATH31051/MATH31051.png",
     "MATH32031": "https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/MATH32031/MATH32031.jpg",
+    "MATH32052": "https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/MATH32052/MATH32052.jpg",
     "MATH32091": "https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/MATH32091/MATH32091.png",
 };
 
