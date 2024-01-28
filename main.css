@@ -143,8 +143,8 @@
     min-height: 15rem;
   }
   .course-org-list .course-element-card .course-banner {
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
     background-color: rgba(0, 0, 0, 0.1);
   }
   .course-org-list .course-element-card[style*="--module-image"]:not([style*="--module-image: none"]) .course-banner {
@@ -152,7 +152,7 @@
   }
   .course-org-list .course-element-card .summary {
     background: inherit;
-    border-radius: 0.5rem;
+    border-radius: inherit;
     margin-top: -1rem !important;
   }
   .course-org-list .course-element-card .summary .course-title h4 {
@@ -167,12 +167,26 @@
     transform: none !important;
     transition-duration: 0.1s !important;
     transition-timing-function: ease-out !important;
-  }
-  .multi-column-view .course-org-list .course-element-card:hover {
-    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.3) !important;
+    position: relative;
+    box-shadow: none !important;
   }
   .multi-column-view .course-org-list .course-element-card .summary {
     grid-template-rows: auto !important;
+  }
+  .multi-column-view .course-org-list .course-element-card::before {
+    all: unset;
+    content: "";
+    display: block !important;
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.3) !important;
+    opacity: 0.25;
+    transition: opacity 0.1s ease-out;
+  }
+  .multi-column-view .course-org-list .course-element-card:hover::before {
+    opacity: 1;
   }
   .list-column-view .course-org-list .course-element-card {
     border-top-left-radius: 0;

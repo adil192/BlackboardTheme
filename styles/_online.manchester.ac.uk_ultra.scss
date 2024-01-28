@@ -2,6 +2,7 @@
 
 /* set better fonts */
 @include fonts('body *');
+
 * {
     accent-color: $primary !important;
 }
@@ -51,8 +52,8 @@ nav.term-navigator {
         min-height: 15rem;
 
         .course-banner {
-            border-top-left-radius: 0.5rem;
-            border-top-right-radius: 0.5rem;
+            border-top-left-radius: inherit;
+            border-top-right-radius: inherit;
             background-color: rgba(black, 0.1);
         }
 
@@ -61,17 +62,17 @@ nav.term-navigator {
                 background-image: var(--module-image) !important;
             }
         }
-        
+
         .summary {
             background: inherit;
-            border-radius: 0.5rem;
+            border-radius: inherit;
             margin-top: -1rem !important;
 
             .course-title h4 {
                 -webkit-line-clamp: 3 !important;
                 text-decoration: none !important;
             }
-    
+
             .multi-column-course-id,
             .course-status {
                 display: none !important;
@@ -85,16 +86,31 @@ nav.term-navigator {
         transform: none !important;
         transition-duration: 0.1s !important;
         transition-timing-function: ease-out !important;
-
-        &:hover {
-            box-shadow: 0 0.25rem 1rem 0 rgba(0,0,0,0.3) !important;
-        }
+        position: relative;
+        box-shadow: none !important;
 
         .summary {
             grid-template-rows: auto !important;
         }
+
+        &::before {
+            all: unset;
+            content: "";
+            display: block !important;
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            pointer-events: none;
+            box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.3) !important;
+            opacity: 0.25;
+            transition: opacity 0.1s ease-out;
+        }
+        &:hover::before {
+            opacity: 1;
+        }
     }
 }
+
 .list-column-view .course-org-list {
     .course-element-card {
         border-top-left-radius: 0;
