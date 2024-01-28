@@ -1,3 +1,4 @@
+@use "sass:color";
 @import "globals";
 
 /* set better fonts */
@@ -22,6 +23,19 @@ body, #site-wrap {
 
 nav.term-navigator {
     display: none !important;
+}
+
+a,
+button.anchor,
+.button-anchor,
+.select-wrapper button.button-anchor {
+    color: color.mix($primary, $on-surface, 50%);
+    text-decoration: underline;
+    transition: color 0.1s ease-out;
+
+    &:hover, &:focus {
+        color: $primary;
+    }
 }
 
 /* navbar */

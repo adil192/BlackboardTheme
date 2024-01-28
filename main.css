@@ -118,6 +118,23 @@
   nav.term-navigator {
     display: none !important;
   }
+  a,
+  button.anchor,
+  .button-anchor,
+  .select-wrapper button.button-anchor {
+    color: #4f2f62;
+    text-decoration: underline;
+    transition: color 0.1s ease-out;
+  }
+  a:hover, a:focus,
+  button.anchor:hover,
+  button.anchor:focus,
+  .button-anchor:hover,
+  .button-anchor:focus,
+  .select-wrapper button.button-anchor:hover,
+  .select-wrapper button.button-anchor:focus {
+    color: #8142a6;
+  }
   /* navbar */
   #side-menu {
     background: #1d1b1e !important;
