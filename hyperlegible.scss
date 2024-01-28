@@ -25,26 +25,6 @@
     @include atkinson;
 }
 
-@-moz-document url-prefix("https://online.manchester.ac.uk/webapps/portal") {
-	/* Blackboard homepage */
-    @include atkinson;
-}
-
-@-moz-document url-prefix("https://online.manchester.ac.uk/webapps/assessment") {
-	/* Assessment/quizzes */
-    @include atkinson;
-}
-
-@-moz-document url-prefix("https://online.manchester.ac.uk/webapps/calendar") {
-	/* Calendar */
-    @include atkinson;
-}
-
-@-moz-document url-prefix("https://online.manchester.ac.uk/webapps/rubric") {
-	/* Rubric viewer */
-    @include atkinson;
-}
-
 @-moz-document url-prefix("https://login.manchester.ac.uk/cas/login") {
 	/* Login page */
     @include atkinson;
