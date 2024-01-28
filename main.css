@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           UoM Blackboard theme
-@version        20240127.04.00
+@version        20240128.00.00
 @namespace      userstyles.world/user/adil192
 @description    Themes the blackboard UoM website to look more modern and use a consistent colour scheme.
 @author         adil192
@@ -351,6 +351,30 @@
   @media only screen and (width >= 64em) {
     .bb-offcanvas-panel.full {
       width: calc(100% - 3rem) !important;
+    }
+  }
+  @media screen and (width <= 63.9375em) {
+    .base-header {
+      height: 3rem;
+      align-items: center;
+    }
+    .color-selection-live-mode.themed-background-primary-medium-down,
+    .color-selection-live-mode .themed-background-primary-medium-down,
+    .color-selection-live-mode .themed-background-primary-medium-down bb-svg-icon,
+    .color-selection-live-mode.themed-background-primary-medium-down bb-svg-icon,
+    .color-selection-live-mode .themed-background-primary-medium-down button,
+    .color-selection-live-mode.themed-background-primary-medium-down button,
+    .color-selection-live-mode.themed-background-primary-medium-down h1 {
+      background-color: #1d1b1e !important;
+      color: #e8e0e5 !important;
+    }
+    .color-selection-live-mode .themed-background-primary-medium-down .select-value::after,
+    .color-selection-live-mode.themed-background-primary-medium-down .select-value::after {
+      border-color: #e8e0e5 transparent transparent transparent;
+    }
+    #side-menu header a {
+      max-width: 7rem;
+      margin-inline: auto;
     }
   }
 }

@@ -2,6 +2,10 @@
 
 Here I will outline the changes I've made over time...
 
+### 20240128
+
+- Styled and fixed the Blackboard Ultra header on mobile
+
 ### 20240127
 
 - Initial stylings for the course page of the new Blackboard Ultra website, including:
