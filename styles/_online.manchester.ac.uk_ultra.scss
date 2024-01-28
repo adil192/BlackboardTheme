@@ -205,14 +205,13 @@ button.anchor,
             inset: 0;
             border-radius: inherit;
             pointer-events: none;
-            box-shadow: 0 calc(var(--box-shadow) / 4)
-                var(--box-shadow) 0
-                $header !important;
-            opacity: 0.1;
+            box-shadow: 0 calc(var(--box-shadow) / 4) var(--box-shadow) 0 rgba($header, 0.2),
+                0 0 0 calc(var(--box-shadow) / 20) rgba($header, 0.1) !important;
+            opacity: 0.5;
             transition: opacity 0.1s ease-out;
         }
         &:hover::after {
-            opacity: 0.2;
+            opacity: 1;
         }
     }
 }
@@ -230,6 +229,7 @@ button.anchor,
             grid-template-rows: auto !important;
             grid-template-columns: 1fr auto !important;
             margin-top: -1rem !important;
+            border-top: calc(var(--box-shadow) / 20) solid rgba($header, 0.05) !important;
         }
     }
 }
