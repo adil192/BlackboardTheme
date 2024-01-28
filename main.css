@@ -104,6 +104,17 @@
   * {
     accent-color: #8142a6 !important;
   }
+  body, #site-wrap {
+    background: #fffbff !important;
+    color: #1d1b1e;
+  }
+  .base-header,
+  .base-courses-header-container,
+  nav.term-navigator {
+    background: transparent !important;
+    color: #1d1b1e;
+    border: none;
+  }
   /* navbar */
   #side-menu {
     background: #1d1b1e !important;
@@ -116,15 +127,16 @@
     border: none !important;
     box-shadow: none !important;
   }
-  body, #site-wrap {
-    background: #fffbff !important;
-    color: #1d1b1e;
+  #side-menu header a {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 174/74;
+    background: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/TAB_allwhite.svg") no-repeat center;
+    background-size: 90%;
   }
-  .base-courses-header-container,
-  nav.term-navigator {
-    background: transparent !important;
-    color: #1d1b1e;
-    border: none;
+  #side-menu header a > img {
+    display: none;
   }
   .course-org-list {
     grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)) !important;

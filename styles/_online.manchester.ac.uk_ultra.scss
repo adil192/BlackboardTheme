@@ -7,6 +7,19 @@
     accent-color: $primary !important;
 }
 
+body, #site-wrap {
+    background: $background !important;
+    color: $on-background;
+}
+
+.base-header,
+.base-courses-header-container,
+nav.term-navigator {
+    background: transparent !important;
+    color: $on-background;
+    border: none;
+}
+
 /* navbar */
 #side-menu {
     background: $header !important;
@@ -18,19 +31,20 @@
         color: $on-header;
         border: none !important;
         box-shadow: none !important;
+
+        a {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 174 / 74;
+            background: url('https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/TAB_allwhite.svg') no-repeat center;
+            background-size: 90%;
+
+            > img {
+                display: none;
+            }
+        }
     }
-}
-
-body, #site-wrap {
-    background: $background !important;
-    color: $on-background;
-}
-
-.base-courses-header-container,
-nav.term-navigator {
-    background: transparent !important;
-    color: $on-background;
-    border: none;
 }
 
 .course-org-list {
