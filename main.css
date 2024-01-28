@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           UoM Blackboard theme
-@version        20240128.00.00
+@version        20240128.01.00
 @namespace      userstyles.world/user/adil192
 @description    Themes the blackboard UoM website to look more modern and use a consistent colour scheme.
 @author         adil192
@@ -2025,6 +2025,12 @@
     text-align: start;
     text-wrap: pretty;
     font-family: var(--fonts-body) !important;
+  }
+  .vjs-new-tab-control {
+    background: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/up-right-from-square.svg") no-repeat center !important;
+    background-size: 1.3em !important;
+    cursor: pointer;
+    flex: none;
   }
   /* in fullscreen, use a better scaling algorithm */
   :fullscreen video,

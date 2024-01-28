@@ -5,6 +5,7 @@ Here I will outline the changes I've made over time...
 ### 20240128
 
 - Styled and fixed the Blackboard Ultra header on mobile
+- Added an "open with new tab" button to Blackboard videos. Requested by a friend so she could have a video and her notes in split screen.
 
 ### 20240127
 

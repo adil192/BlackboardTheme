@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         UoM Blackboard: Video keyboard shortcuts
 // @namespace    http://tampermonkey.net/
-// @version      20231129.00.00
+// @version      20240128.01.00
 // @description  An optional accompanying script for https://github.com/adil192/BlackboardTheme, which adds keyboard shortcuts for video playback on Blackboard.
 // @author       adil192
 // @match        https://video.manchester.ac.uk/embedded/*
@@ -30,10 +30,18 @@ let videoDiv;
 let captionsOptions = [];
 
 /**
+ * Whether `findElements()` has been run successfully.
+ * @type {boolean}
+ */
+let foundElements = false;
+
+/**
  * Finds the html elements.
  * @returns {boolean} Whether the elements were found.
  */
 function findElements() {
+    if (foundElements) return true;
+
     if (!videoElem) videoElem = document.querySelector("video");
     if (!videoDiv) videoDiv = document.querySelector("div#video");
 
@@ -48,7 +56,49 @@ function findElements() {
         }
     }
 
-    return !!videoElem && !!videoDiv && !!captionsOptions.length;
+    const newFoundElements = !!videoElem && !!videoDiv && !!captionsOptions.length;
+    if (newFoundElements !== foundElements) {
+        onFoundElements();
+    }
+    foundElements = newFoundElements;
+    return foundElements;
+}
+
+/**
+ * Called when `findElements()` finds the elements.
+ * Inserts a button into the control bar to open the video in a new tab.
+ * @returns {void}
+ */
+function onFoundElements() {
+    if (foundElements) {
+        console.error("onFoundElements: Elements already found. foundElements should still be false when this is called.");
+        return;
+    }
+
+    // since the other elements have been found, it's safe to assume that all the other elements exist
+
+    /** @type {HTMLDivElement | null} */
+    const captionsButton = document.querySelector(".vjs-captions-button");
+    if (!captionsButton) return;
+    const controlBar = captionsButton.parentElement;
+    if (!controlBar) return;
+
+    const newTabButton = document.createElement("button");
+    newTabButton.className = "vjs-new-tab-control vjs-control vjs-button";
+    newTabButton.type = "button";
+    newTabButton.title = "Open in new tab";
+    newTabButton.onclick = () => {
+        // open this iframe's url in a new tab
+        window.open(window.location.href, "_blank");
+    };
+
+    const newTabButtonSpan = document.createElement("span");
+    newTabButtonSpan.className = "vjs-control-text";
+    newTabButtonSpan.innerText = "Open in new tab";
+    newTabButton.appendChild(newTabButtonSpan);
+
+    // insert the button before the captions button
+    controlBar.insertBefore(newTabButton, captionsButton);
 }
 
 /**
@@ -111,5 +161,6 @@ function handleKeydown(e) {
     'use strict';
 
     console.log("UoM Blackboard: Video keyboard shortcuts");
+    findElements();
     document.addEventListener("keydown", handleKeydown, { passive: true });
 })();

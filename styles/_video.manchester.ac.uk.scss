@@ -160,6 +160,13 @@ video,
     @include fonts-body;
 }
 
+.vjs-new-tab-control {
+  background: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/up-right-from-square.svg") no-repeat center !important;
+  background-size: 1.3em !important;
+  cursor: pointer;
+  flex: none;
+}
+
 /* in fullscreen, use a better scaling algorithm */
 :fullscreen video,
 video:fullscreen {
