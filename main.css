@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           UoM Blackboard theme
-@version        20240127.01.00
+@version        20240127.02.00
 @namespace      userstyles.world/user/adil192
 @description    Themes the blackboard UoM website to look more modern and use a consistent colour scheme.
 @author         adil192
@@ -136,11 +136,16 @@
   .course-org-list .course-element-card {
     border-radius: 0.5rem;
     border: none;
-    background: #f9f2fb;
+    background-color: #f2e9f6;
     color: #1d1b1e;
     margin: 0 !important;
+    transition: background-color 0.1 ease-out;
     height: auto !important;
-    min-height: 15rem;
+    min-height: 0;
+  }
+  .course-org-list .course-element-card:hover {
+    background-color: #ecdff2;
+    color: black;
   }
   .course-org-list .course-element-card .course-banner {
     border-top-left-radius: inherit;
@@ -151,13 +156,19 @@
     background-image: var(--module-image) !important;
   }
   .course-org-list .course-element-card .summary {
-    background: inherit;
+    background-color: inherit;
     border-radius: inherit;
     margin-top: -1rem !important;
+    min-height: 7.5rem;
+    transition: background-color 0.1 ease-out;
+  }
+  .course-org-list .course-element-card .summary .course-title {
+    color: inherit;
   }
   .course-org-list .course-element-card .summary .course-title h4 {
     -webkit-line-clamp: 3 !important;
     text-decoration: none !important;
+    color: inherit;
   }
   .course-org-list .course-element-card .summary .multi-column-course-id,
   .course-org-list .course-element-card .summary .course-status {
@@ -181,12 +192,12 @@
     inset: 0;
     border-radius: inherit;
     pointer-events: none;
-    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.3) !important;
-    opacity: 0.25;
+    box-shadow: 0 0.25rem 1rem 0 #1d1b1e !important;
+    opacity: 0.1;
     transition: opacity 0.1s ease-out;
   }
   .multi-column-view .course-org-list .course-element-card:hover::before {
-    opacity: 1;
+    opacity: 0.2;
   }
   .list-column-view .course-org-list .course-element-card {
     border-top-left-radius: 0;
@@ -530,7 +541,7 @@
     box-shadow: none;
   }
   .liItem .details, .buildList > li .details {
-    background: #f9f2fb;
+    background: #f2e9f6;
     color: #1d1b1e;
     border-radius: 0.5rem;
     margin-left: 60px;
@@ -546,7 +557,7 @@
     overflow: visible;
   }
   .liItem .details > .vtbegenerated > div[style*="float: right;"], .buildList > li .details > .vtbegenerated > div[style*="float: right;"] {
-    background: #ede0f3 !important;
+    background: #e7d8ee !important;
     padding: 1rem !important;
     margin-bottom: 1rem;
     border-top-left-radius: 0.5rem;
@@ -587,7 +598,7 @@
     transition: background 0.1s ease-out;
   }
   .liItem .vtbegenerated table tr, .buildList > li .vtbegenerated table tr {
-    background: #f9f2fb;
+    background: #f2e9f6;
   }
   .liItem .vtbegenerated table tr:nth-child(odd) > td, .buildList > li .vtbegenerated table tr:nth-child(odd) > td {
     background: rgba(236, 223, 242, 0.15);
@@ -776,7 +787,7 @@
   .stream_item,
   .active_stream_item,
   .stream_dynamic_filters {
-    background: #f9f2fb !important;
+    background: #f2e9f6 !important;
     color: #1d1b1e !important;
     border: none;
     box-shadow: none;
@@ -789,7 +800,7 @@
   .stream_new_entry,
   #left_stream_alerts .stream_item,
   #left_stream_alerts .stream_item.stream_new_entry:hover {
-    background: #f9f2fb;
+    background: #f2e9f6;
     color: #1d1b1e;
     border: none;
     box-shadow: none;
@@ -799,7 +810,7 @@
   .stream_new_entry:hover,
   #left_stream_alerts .stream_item:hover,
   #left_stream_alerts .stream_item.stream_new_entry:hover:hover {
-    background: #f9f2fb;
+    background: #f2e9f6;
     color: #1d1b1e;
   }
 }
@@ -819,7 +830,7 @@
   .portlet h2 ~ div,
   .container h2 ~ div,
   div.container h2 ~ div {
-    background: #f9f2fb;
+    background: #f2e9f6;
     color: #1d1b1e;
     border-radius: 0.5rem;
   }
@@ -939,7 +950,7 @@
 @-moz-document url-prefix("https://online.manchester.ac.uk/webapps/assessment") {
   /* Assessment/quizzes */
   .infoListWrapper {
-    background: #f9f2fb;
+    background: #f2e9f6;
     color: #1d1b1e;
     border: none;
     padding: 1rem;
@@ -983,7 +994,7 @@
   }
   .takeQuestionDiv div[id*=stepcontent],
   #dataCollectionContainer div[id*=stepcontent] {
-    background-color: #f9f2fb !important;
+    background-color: #f2e9f6 !important;
     color: #1d1b1e;
     border: none;
     padding: 1rem;
@@ -1137,7 +1148,7 @@
     display: none;
   }
   .submitStepBottom #bottom_submitButtonRow {
-    background: #f9f2fb !important;
+    background: #f2e9f6 !important;
     color: #1d1b1e !important;
     padding: 1rem 2rem !important;
     border-radius: 0.5rem;
@@ -1147,7 +1158,7 @@
     background: #ecdff2 !important;
   }
   .nav .sub ul, .nav.gb_currView .sub > ul, .menumini ul, .quickAddPal, .keyboardAccess, span.currentTags, .liveArea, .liveArea-slim, .previewArea, .jumptopage, .panelTabs li.active a.edit, .panelTabs li.active a.edit:hover, .panelTabs li.active a.edit:focus, .flyout, .bcContent .flyout, ul.tree li a + img + a:focus, ul.tree li img + img + a:focus, div.treeContainer ul.tree li a.itemActive, #learningUnitToc ul.tree li a.itemActive, ul.tree li a.itemActive, #loginLang ul {
-    background: #f9f2fb;
+    background: #f2e9f6;
     color: #1d1b1e;
     border: none;
     border-radius: 0.5rem;
@@ -1259,7 +1270,7 @@
     padding: 1rem;
   }
   #login, #logout {
-    background: #f9f2fb;
+    background: #f2e9f6;
     color: #1d1b1e;
     border: none;
     box-shadow: none;
@@ -1375,7 +1386,7 @@
   }
   #msg {
     border: none !important;
-    background: #f9f2fb !important;
+    background: #f2e9f6 !important;
     color: #1d1b1e;
     width: 100%;
     box-sizing: border-box;
@@ -1391,7 +1402,7 @@
     width: auto !important;
     max-width: 500px;
     box-sizing: border-box;
-    background: #f9f2fb;
+    background: #f2e9f6;
     color: #1d1b1e;
     margin: auto auto 2rem;
     padding: 2rem 4rem;
@@ -1471,7 +1482,7 @@
   }
   select,
   .row-label, .device-bar {
-    background: #f9f2fb;
+    background: #f2e9f6;
     color: #1d1b1e;
   }
   select:focus {
@@ -1581,7 +1592,7 @@
   .o-panel,
   .o-panel-body {
     border: none !important;
-    background: #f9f2fb;
+    background: #f2e9f6;
     color: #1d1b1e;
     box-shadow: none;
     border-radius: 0.5rem;
@@ -1610,11 +1621,11 @@
     opacity: 0;
   }
   .c-em-heading {
-    background: #f9f2fb;
+    background: #f2e9f6;
     color: #1d1b1e;
   }
   .c-em-heading:hover, .c-em-heading:focus {
-    background: #f9f2fb;
+    background: #f2e9f6;
     color: #1d1b1e;
   }
   .highcharts-background {
@@ -1772,7 +1783,7 @@
     width: auto;
     padding-left: 1em;
     padding-right: 1em;
-    background: #f9f2fb;
+    background: #f2e9f6;
     color: #1d1b1e;
     border-radius: 0.5em;
     top: 1em;
@@ -2065,7 +2076,7 @@
     color: #e8e0e5 !important;
   }
   .thumbnail {
-    background: #f9f2fb;
+    background: #f2e9f6;
     color: #1d1b1e;
     border: none;
     border-radius: 0.5rem;
@@ -2132,11 +2143,11 @@
   }
   .nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
     border: none;
-    background: #f9f2fb;
+    background: #f2e9f6;
     color: #1d1b1e;
   }
   .tabarea {
-    background: #f9f2fb;
+    background: #f2e9f6;
     color: #1d1b1e;
     border: none;
     border-radius: 0.5rem;
@@ -2157,7 +2168,7 @@
   }
   .table-striped tbody > tr:nth-child(2n-1) > td,
   .table-striped tbody > tr:nth-child(2n-1) > th {
-    background: #f9f2fb;
+    background: #f2e9f6;
   }
   .table-striped tbody > tr:nth-child(2n) > td,
   .table-striped tbody > tr:nth-child(2n) > th {

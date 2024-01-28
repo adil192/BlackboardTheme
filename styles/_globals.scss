@@ -48,7 +48,7 @@ $surface-variant: #eadfea;
 $on-surface-variant: #4b444d;
 $surface-tint: $primary;
 $surface-0: $background;
-$surface-1: color.mix($surface-0, $surface-tint, 95%);
+$surface-1: color.mix($surface-0, $surface-tint, 90%);
 $surface-2: color.mix($surface-0, $surface-tint, 85%);
 $surface-3: color.mix($surface-0, $surface-tint, 75%);
 
