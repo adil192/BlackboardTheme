@@ -150,13 +150,26 @@
   .course-org-list .course-element-card[style*="--module-image"]:not([style*="--module-image: none"]) .course-banner {
     background-image: var(--module-image) !important;
   }
-  .course-org-list .course-element-card .course-title h4 {
+  .course-org-list .course-element-card .summary {
+    background: inherit;
+    border-radius: 0.5rem;
+    margin-top: -1rem !important;
+  }
+  .course-org-list .course-element-card .summary .course-title h4 {
     -webkit-line-clamp: 3 !important;
     text-decoration: none !important;
   }
-  .course-org-list .course-element-card .multi-column-course-id,
-  .course-org-list .course-element-card .course-status {
+  .course-org-list .course-element-card .summary .multi-column-course-id,
+  .course-org-list .course-element-card .summary .course-status {
     display: none !important;
+  }
+  .multi-column-view .course-org-list .course-element-card {
+    transform: none !important;
+    transition-duration: 0.1s !important;
+    transition-timing-function: ease-out !important;
+  }
+  .multi-column-view .course-org-list .course-element-card:hover {
+    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.3) !important;
   }
   .multi-column-view .course-org-list .course-element-card .summary {
     grid-template-rows: auto !important;
