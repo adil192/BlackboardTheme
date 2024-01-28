@@ -52,15 +52,11 @@ nav.term-navigator {
         height: auto !important;
         min-height: 0;
 
-        &:hover {
-            background-color: $surface-2;
-            color: black;
-        }
-
         .course-banner {
             border-top-left-radius: inherit;
             border-top-right-radius: inherit;
             background-color: rgba(black, 0.1);
+            transition: filter 0.1s ease-out;
         }
 
         &[style*="--module-image"]:not([style*="--module-image: none"]) {
@@ -69,11 +65,21 @@ nav.term-navigator {
             }
         }
 
+        &:hover {
+            background-color: $surface-2;
+            color: black;
+
+            .course-banner {
+                filter: grayscale(0.3) brightness(0.9) opacity(0.9);
+            }
+        }
+
         .summary {
             background-color: inherit;
             border-radius: inherit;
             margin-top: -1rem !important;
             min-height: 7.5rem;
+            z-index: 1;
             transition: background-color 0.1 ease-out;
 
             .course-title {

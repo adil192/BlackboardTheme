@@ -143,23 +143,28 @@
     height: auto !important;
     min-height: 0;
   }
-  .course-org-list .course-element-card:hover {
-    background-color: #ecdff2;
-    color: black;
-  }
   .course-org-list .course-element-card .course-banner {
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
     background-color: rgba(0, 0, 0, 0.1);
+    transition: filter 0.1s ease-out;
   }
   .course-org-list .course-element-card[style*="--module-image"]:not([style*="--module-image: none"]) .course-banner {
     background-image: var(--module-image) !important;
+  }
+  .course-org-list .course-element-card:hover {
+    background-color: #ecdff2;
+    color: black;
+  }
+  .course-org-list .course-element-card:hover .course-banner {
+    filter: grayscale(0.3) brightness(0.9) opacity(0.9);
   }
   .course-org-list .course-element-card .summary {
     background-color: inherit;
     border-radius: inherit;
     margin-top: -1rem !important;
     min-height: 7.5rem;
+    z-index: 1;
     transition: background-color 0.1 ease-out;
   }
   .course-org-list .course-element-card .summary .course-title {
