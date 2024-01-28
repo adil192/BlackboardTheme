@@ -42,6 +42,19 @@ const knownModuleImages = {
 };
 
 /**
+ * A module whose name matches one of the regular expressions in this map
+ * will use the corresponding image.
+ * 
+ * Modules defined in `knownModuleImages` will take priority.
+ * 
+ * @type {Map<RegExp, string>}
+ */
+const specialModuleImages = new Map([
+    [/team project/i, "https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/team/team.jpg"],
+]);
+
+
+/**
  * The IndexDB database with the cached module images.
  * @type {IDBDatabase | null}
  */
@@ -106,6 +119,11 @@ async function findModuleImage(moduleName) {
     for (const moduleCode in knownModuleImages) {
         if (!moduleName.startsWith(moduleCode)) continue;
         return knownModuleImages[moduleCode];
+    }
+
+    for (const [regex, image] of specialModuleImages) {
+        if (!regex.test(moduleName)) continue;
+        return image;
     }
 
     const transaction = moduleImagesDB.transaction("moduleImages", "readonly");
