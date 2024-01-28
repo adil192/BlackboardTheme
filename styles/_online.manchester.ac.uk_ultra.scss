@@ -232,6 +232,7 @@ button.anchor,
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         margin-bottom: 0.5rem !important;
+
         --box-shadow: 0.5rem;
 
         .summary {
@@ -277,11 +278,12 @@ button.anchor,
     #icon-small-star-press > path {
         fill: $primary;
         stroke: $primary;
+
         --icon-fill-color: $primary !important;
     }
 }
 
-@media only screen and (min-width: 64em) {
+@media only screen and (width >= 64em) {
     .bb-offcanvas-panel.full {
         width: calc(100% - 3rem) !important;
     }

@@ -335,7 +335,7 @@
     stroke: #8142a6;
     --icon-fill-color: $primary !important;
   }
-  @media only screen and (min-width: 64em) {
+  @media only screen and (width >= 64em) {
     .bb-offcanvas-panel.full {
       width: calc(100% - 3rem) !important;
     }
