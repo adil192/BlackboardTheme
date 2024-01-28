@@ -113,6 +113,7 @@
     color: #1d1b1e;
     border: none;
     align-items: end;
+    height: 10rem;
   }
   nav.term-navigator {
     display: none !important;
