@@ -50,6 +50,19 @@ nav.term-navigator {
     }
 }
 
+.base-courses .course-card-term-name {
+    margin-top: 1rem;
+    margin-bottom: 0;
+
+    &:not(:first-child) {
+        margin-top: 2rem;
+    }
+
+    h3 {
+        margin: 0;
+    }
+}
+
 .course-org-list {
     grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)) !important;
     gap: 1rem !important;
