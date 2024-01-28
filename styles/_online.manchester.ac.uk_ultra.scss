@@ -34,7 +34,7 @@ nav.term-navigator {
 }
 
 .course-org-list {
-    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)) !important;
+    grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)) !important;
     gap: 1rem !important;
 
     hr {
@@ -89,6 +89,21 @@ nav.term-navigator {
             .course-status {
                 display: none !important;
             }
+
+            .status-bar {
+                padding: 0 !important;
+            }
+            .controls {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 0.1rem;
+                > * {
+                    margin: 0 !important;
+                    flex: 1;
+                }
+            }
         }
     }
 }
@@ -103,6 +118,7 @@ nav.term-navigator {
 
         .summary {
             grid-template-rows: auto !important;
+            grid-template-columns: 1fr auto !important;
         }
 
         &::before {
