@@ -64,7 +64,6 @@ These screenshots are taken at 1.33x zoom:
 | Page | Before | After |
 | --- | --- | --- |
 | Blackboard | ![Before](screenshots/blackboard_before.png) | ![After](screenshots/blackboard_after.png) |
-| Module images | ![Before](screenshots/blackboard_after.png) | ![After](screenshots/blackboard_images.webp) |
 | Course page | ![Before](screenshots/course_before.png) | ![After](screenshots/course_after.png) |
 | Assessments | ![Before](screenshots/quiz_before.png) | ![After](screenshots/quiz_after.png) |
 | Attendance | (Offline) | ![After](screenshots/attendance_after.png) |
