@@ -122,12 +122,14 @@
     background: #1d1b1e !important;
     color: #e8e0e5;
     /* logo header */
+    /* footer with links: Privacy, Terms, Accessibility */
   }
   #side-menu header {
     background: #1d1b1e !important;
     color: #e8e0e5;
     border: none !important;
     box-shadow: none !important;
+    margin-bottom: 2rem;
   }
   #side-menu header a {
     display: block;
@@ -139,6 +141,17 @@
   }
   #side-menu header a > img {
     display: none;
+  }
+  #side-menu .side-menu-footer {
+    display: none;
+  }
+  .color-selection-live-mode .themed-background-primary,
+  .color-selection-live-mode .bb-close,
+  .color-selection-live-mode .bb-offcanvas-panel .bb-close,
+  .color-selection-live-mode .active .base-navigation-button-content,
+  .color-selection-live-mode .active .integration-navigation-button-content {
+    background-color: #8142a6 !important;
+    color: #fff !important;
   }
   .base-courses .course-card-term-name {
     margin-top: 1rem;

@@ -34,6 +34,7 @@ nav.term-navigator {
         color: $on-header;
         border: none !important;
         box-shadow: none !important;
+        margin-bottom: 2rem;
 
         a {
             display: block;
@@ -48,6 +49,20 @@ nav.term-navigator {
             }
         }
     }
+
+    /* footer with links: Privacy, Terms, Accessibility */
+    .side-menu-footer {
+        display: none;
+    }
+}
+
+.color-selection-live-mode .themed-background-primary,
+.color-selection-live-mode .bb-close,
+.color-selection-live-mode .bb-offcanvas-panel .bb-close,
+.color-selection-live-mode .active .base-navigation-button-content,
+.color-selection-live-mode .active .integration-navigation-button-content {
+    background-color: $primary !important;
+    color: $on-primary !important;
 }
 
 .base-courses .course-card-term-name {
