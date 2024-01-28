@@ -108,12 +108,14 @@
     background: #fffbff !important;
     color: #1d1b1e;
   }
-  .base-header,
-  .base-courses-header-container,
-  nav.term-navigator {
+  .base-header {
     background: transparent !important;
     color: #1d1b1e;
     border: none;
+    align-items: end;
+  }
+  nav.term-navigator {
+    display: none !important;
   }
   /* navbar */
   #side-menu {
