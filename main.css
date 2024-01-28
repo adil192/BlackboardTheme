@@ -1908,9 +1908,12 @@
   body {
     margin: 0;
   }
+  html, body,
   video,
   .vjs-poster {
-    background-color: #1d1b1e;
+    background-color: #1d1b1e !important;
+    color: #e8e0e5;
+    color-scheme: dark;
   }
   .video-js .vjs-control-bar {
     background: rgba(29, 27, 30, 0.7) !important;

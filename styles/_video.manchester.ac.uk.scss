@@ -17,9 +17,12 @@ body {
   margin: 0;
 }
 
+html, body,
 video,
 .vjs-poster {
-  background-color: $on-background;
+  background-color: $header !important;
+  color: $on-header;
+  color-scheme: dark;
 }
 
 .video-js .vjs-control-bar {
