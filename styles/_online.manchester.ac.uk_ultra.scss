@@ -91,8 +91,8 @@ nav.term-navigator {
         border: none;
         background-color: $surface-1;
         color: $on-surface;
-        margin: 0 !important;
-        transition: background-color 0.1 ease-out;
+        transition: background-color 0.1s ease-out;
+        box-shadow: none !important;
 
         height: auto !important;
         min-height: 0;
@@ -122,10 +122,9 @@ nav.term-navigator {
         .summary {
             background-color: inherit;
             border-radius: inherit;
-            margin-top: -1rem !important;
             min-height: 7.5rem;
             z-index: 1;
-            transition: background-color 0.1 ease-out;
+            transition: background-color 0.1s ease-out;
 
             .course-title {
                 color: inherit;
@@ -137,6 +136,7 @@ nav.term-navigator {
             }
 
             .multi-column-course-id,
+            .course-id,
             .course-status {
                 display: none !important;
             }
@@ -156,6 +156,25 @@ nav.term-navigator {
                 }
             }
         }
+
+        --box-shadow: 1rem;
+        &::after {
+            all: unset;
+            content: "";
+            display: block !important;
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            pointer-events: none;
+            box-shadow: 0 calc(var(--box-shadow) / 4)
+                var(--box-shadow) 0
+                $header !important;
+            opacity: 0.1;
+            transition: opacity 0.1s ease-out;
+        }
+        &:hover::after {
+            opacity: 0.2;
+        }
     }
 }
 
@@ -166,34 +185,65 @@ nav.term-navigator {
         transition-timing-function: ease-out !important;
         position: relative;
         box-shadow: none !important;
+        margin: 0 !important;
 
         .summary {
             grid-template-rows: auto !important;
             grid-template-columns: 1fr auto !important;
-        }
-
-        &::before {
-            all: unset;
-            content: "";
-            display: block !important;
-            position: absolute;
-            inset: 0;
-            border-radius: inherit;
-            pointer-events: none;
-            box-shadow: 0 0.25rem 1rem 0 $header !important;
-            opacity: 0.1;
-            transition: opacity 0.1s ease-out;
-        }
-        &:hover::before {
-            opacity: 0.2;
+            margin-top: -1rem !important;
         }
     }
 }
 
 .list-column-view .course-org-list {
+    .course-card-term-name {
+        margin-bottom: 0.5rem;
+    }
+    .course-color-classic::before {
+        background-color: $header !important;
+    }
     .course-element-card {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
+        margin-bottom: 0.5rem !important;
+        --box-shadow: 0.5rem;
+
+        .summary {
+            display: flex;
+            flex-flow: row-reverse nowrap;
+            gap: 1rem;
+            min-height: 0;
+
+            > .small-12:first-child {
+                display: none;
+            }
+        }
+
+        .course-title {
+            flex-grow: 1;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+
+        .course-type {
+            color: $on-surface;
+            opacity: 0.5;
+        }
+        .course-type:not(:empty) {
+            &::before { content: '('; }
+            &::after { content: ')'; }
+        }
+
+        .element-details .status-bar {
+            display: none;
+        }
+        .controls {
+            padding: 0;
+            margin: 0;
+            width: auto;
+            height: auto;
+        }
     }
 }
 

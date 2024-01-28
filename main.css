@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           UoM Blackboard theme
-@version        20240127.02.00
+@version        20240127.03.00
 @namespace      userstyles.world/user/adil192
 @description    Themes the blackboard UoM website to look more modern and use a consistent colour scheme.
 @author         adil192
@@ -175,10 +175,11 @@
     border: none;
     background-color: #f2e9f6;
     color: #1d1b1e;
-    margin: 0 !important;
-    transition: background-color 0.1 ease-out;
+    transition: background-color 0.1s ease-out;
+    box-shadow: none !important;
     height: auto !important;
     min-height: 0;
+    --box-shadow: 1rem;
   }
   .course-org-list .course-element-card .course-banner {
     border-top-left-radius: inherit;
@@ -199,10 +200,9 @@
   .course-org-list .course-element-card .summary {
     background-color: inherit;
     border-radius: inherit;
-    margin-top: -1rem !important;
     min-height: 7.5rem;
     z-index: 1;
-    transition: background-color 0.1 ease-out;
+    transition: background-color 0.1s ease-out;
   }
   .course-org-list .course-element-card .summary .course-title {
     color: inherit;
@@ -213,6 +213,7 @@
     color: inherit;
   }
   .course-org-list .course-element-card .summary .multi-column-course-id,
+  .course-org-list .course-element-card .summary .course-id,
   .course-org-list .course-element-card .summary .course-status {
     display: none !important;
   }
@@ -230,18 +231,7 @@
     margin: 0 !important;
     flex: 1;
   }
-  .multi-column-view .course-org-list .course-element-card {
-    transform: none !important;
-    transition-duration: 0.1s !important;
-    transition-timing-function: ease-out !important;
-    position: relative;
-    box-shadow: none !important;
-  }
-  .multi-column-view .course-org-list .course-element-card .summary {
-    grid-template-rows: auto !important;
-    grid-template-columns: 1fr auto !important;
-  }
-  .multi-column-view .course-org-list .course-element-card::before {
+  .course-org-list .course-element-card::after {
     all: unset;
     content: "";
     display: block !important;
@@ -249,16 +239,71 @@
     inset: 0;
     border-radius: inherit;
     pointer-events: none;
-    box-shadow: 0 0.25rem 1rem 0 #1d1b1e !important;
+    box-shadow: 0 calc(var(--box-shadow) / 4) var(--box-shadow) 0 #1d1b1e !important;
     opacity: 0.1;
     transition: opacity 0.1s ease-out;
   }
-  .multi-column-view .course-org-list .course-element-card:hover::before {
+  .course-org-list .course-element-card:hover::after {
     opacity: 0.2;
+  }
+  .multi-column-view .course-org-list .course-element-card {
+    transform: none !important;
+    transition-duration: 0.1s !important;
+    transition-timing-function: ease-out !important;
+    position: relative;
+    box-shadow: none !important;
+    margin: 0 !important;
+  }
+  .multi-column-view .course-org-list .course-element-card .summary {
+    grid-template-rows: auto !important;
+    grid-template-columns: 1fr auto !important;
+    margin-top: -1rem !important;
+  }
+  .list-column-view .course-org-list .course-card-term-name {
+    margin-bottom: 0.5rem;
+  }
+  .list-column-view .course-org-list .course-color-classic::before {
+    background-color: #1d1b1e !important;
   }
   .list-column-view .course-org-list .course-element-card {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    margin-bottom: 0.5rem !important;
+    --box-shadow: 0.5rem;
+  }
+  .list-column-view .course-org-list .course-element-card .summary {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    gap: 1rem;
+    min-height: 0;
+  }
+  .list-column-view .course-org-list .course-element-card .summary > .small-12:first-child {
+    display: none;
+  }
+  .list-column-view .course-org-list .course-element-card .course-title {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  .list-column-view .course-org-list .course-element-card .course-type {
+    color: #1d1b1e;
+    opacity: 0.5;
+  }
+  .list-column-view .course-org-list .course-element-card .course-type:not(:empty)::before {
+    content: "(";
+  }
+  .list-column-view .course-org-list .course-element-card .course-type:not(:empty)::after {
+    content: ")";
+  }
+  .list-column-view .course-org-list .course-element-card .element-details .status-bar {
+    display: none;
+  }
+  .list-column-view .course-org-list .course-element-card .controls {
+    padding: 0;
+    margin: 0;
+    width: auto;
+    height: auto;
   }
   #__SVG_SPRITE_NODE__ #icon-small-star-press > path {
     fill: #8142a6;

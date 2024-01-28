@@ -5,8 +5,9 @@ Here I will outline the changes I've made over time...
 ### 20240127
 
 - Initial stylings for the course page of the new Blackboard Ultra website, including:
-  - Reduced the size of each course card to fit more on the screen.
-  - Decluttered the text in each course code, removing the internal module code and the course status (open vs closed).
+  - Reduced the size of each course card (in the grid view) to fit more on the screen.
+  - Decluttered the list view, removing mostly everything apart from the module title.
+  - Decluttered the grid view, removing the internal module code and the course status (open vs closed).
   - Stopped cards moving up on hover.
 - Performance optimisations for the add_course_images script.
 - Versions prior to today break the new Blackboard Ultra website. It'll get stuck on the loading screen. Please update to the latest version of the script as soon as possible.
