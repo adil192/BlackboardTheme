@@ -30,7 +30,7 @@ const knownModuleImages = {
     "ARDSE001" : "https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/ARDSE001/ARDSE001.jpg",
 
     "COMP16321": "https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/COMP16321/COMP16321.jpg",
-    "COMP28112": "https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/COMP28112/COMP28112.jpg",
+    "COMP28112": "https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/COMP38311/COMP28112.jpg",
     "COMP30040": "https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/COMP30040/COMP30040.jpg",
     "COMP33312": "https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/COMP33312/COMP33312.jpg",
     "COMP33511": "https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/COMP33511/COMP33511.jpg",
