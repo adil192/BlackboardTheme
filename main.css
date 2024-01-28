@@ -235,6 +235,11 @@
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
+  #__SVG_SPRITE_NODE__ #icon-small-star-press > path {
+    fill: #8142a6;
+    stroke: #8142a6;
+    --icon-fill-color: $primary !important;
+  }
 }
 @-moz-document url-prefix("https://online.manchester.ac.uk/webapps/") {
   /* All blackboard pages */

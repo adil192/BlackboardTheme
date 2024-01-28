@@ -165,3 +165,11 @@ nav.term-navigator {
         border-bottom-left-radius: 0;
     }
 }
+
+#__SVG_SPRITE_NODE__ {
+    #icon-small-star-press > path {
+        fill: $primary;
+        stroke: $primary;
+        --icon-fill-color: $primary !important;
+    }
+}
