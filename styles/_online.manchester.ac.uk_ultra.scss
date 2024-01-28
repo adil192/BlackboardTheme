@@ -98,8 +98,7 @@ button.anchor,
     .square-toggle > *,
     input,
     .select-wrapper,
-    .makeStylespageDropdownButton-0-2-80
-    {
+    button[class*="makeStylespageDropdownButton"] {
         border-radius: 0.5rem !important;
     }
 }

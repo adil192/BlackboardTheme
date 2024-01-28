@@ -187,7 +187,7 @@
   .course-columns-header .square-toggle > *,
   .course-columns-header input,
   .course-columns-header .select-wrapper,
-  .course-columns-header .makeStylespageDropdownButton-0-2-80 {
+  .course-columns-header button[class*=makeStylespageDropdownButton] {
     border-radius: 0.5rem !important;
   }
   .base-courses .course-card-term-name {
