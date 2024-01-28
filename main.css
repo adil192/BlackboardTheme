@@ -139,15 +139,27 @@
   #side-menu {
     background: #1d1b1e !important;
     color: #e8e0e5;
+    padding-right: 0.5rem;
+    margin-right: -0.5rem;
     /* logo header */
     /* footer with links: Privacy, Terms, Accessibility */
   }
+  #side-menu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    background: #fffbff;
+  }
   #side-menu header {
-    background: #1d1b1e !important;
+    background: transparent !important;
     color: #e8e0e5;
     border: none !important;
     box-shadow: none !important;
-    margin-bottom: 2rem;
   }
   #side-menu header a {
     display: block;

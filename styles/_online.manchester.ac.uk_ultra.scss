@@ -42,14 +42,27 @@ button.anchor,
 #side-menu {
     background: $header !important;
     color: $on-header;
+    padding-right: 0.5rem;
+    margin-right: -0.5rem;
+    
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 0.5rem;
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+        background: $background;
+    }
 
     /* logo header */
     header {
-        background: $header !important;
+        background: transparent !important;
         color: $on-header;
         border: none !important;
         box-shadow: none !important;
-        margin-bottom: 2rem;
 
         a {
             display: block;
