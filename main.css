@@ -154,6 +154,13 @@
     background-color: #8142a6 !important;
     color: #fff !important;
   }
+  .course-columns-header .square-toggle,
+  .course-columns-header .square-toggle > *,
+  .course-columns-header input,
+  .course-columns-header .select-wrapper,
+  .course-columns-header .makeStylespageDropdownButton-0-2-80 {
+    border-radius: 0.5rem !important;
+  }
   .base-courses .course-card-term-name {
     margin-top: 1rem;
     margin-bottom: 0;

@@ -66,6 +66,17 @@ nav.term-navigator {
     color: $on-primary !important;
 }
 
+.course-columns-header {
+    .square-toggle,
+    .square-toggle > *,
+    input,
+    .select-wrapper,
+    .makeStylespageDropdownButton-0-2-80
+    {
+        border-radius: 0.5rem !important;
+    }
+}
+
 .base-courses .course-card-term-name {
     margin-top: 1rem;
     margin-bottom: 0;
