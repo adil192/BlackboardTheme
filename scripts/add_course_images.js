@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         UoM Blackboard: Add course images
 // @namespace    http://tampermonkey.net/
-// @version      20240127.00.00
+// @version      20240128.00.00
 // @description  An optional accompanying script for https://github.com/adil192/BlackboardTheme, which adds better course images to the Blackboard homepage.
 // @author       adil192
 // @match        https://online.manchester.ac.uk/ultra/*
@@ -226,15 +226,23 @@ function extractKeywords(moduleName) {
 
     // remove banned words
     const bannedWords = [
-        "Semester", "Full", "Year",
+        "semester", "full", "year",
         "and", "or", "the", "of", "in", "to", "for", "with", "on", "at", "from",
-        "First", "Second", "Third", "Fourth", "Fifth",
-        "I", "II", "III", "IV", "V",
+        "first", "second", "third", "fourth", "fifth",
+        "i", "ii", "iii", "iv", "v",
+        "-", "‐", "‒", "–", "—", "―", "−",
     ];
     words = words.filter((word) => !bannedWords.includes(word));
 
+    if (words.length > 2) {
+        const bannedWords = [
+            "introduction", "foundations", "principles", "understanding",
+        ];
+        words = words.filter((word) => !bannedWords.includes(word));
+    }
+
     // limit to the first 4 words
-    words = words.slice(0, 4);
+    words = words.slice(0, 2);
 
     return words.join(" ");
 }
