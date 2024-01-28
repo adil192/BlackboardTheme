@@ -40,14 +40,15 @@ nav.term-navigator {
         display: none;
     }
 
-    bb-base-course-card {
-        margin: 0 !important;
-    }
     .course-element-card {
         border-radius: 0.5rem;
         border: none;
         background: $surface-1;
         color: $on-surface;
+        margin: 0 !important;
+
+        height: auto !important;
+        min-height: 15rem;
 
         .course-banner {
             border-top-left-radius: 0.5rem;
@@ -63,6 +64,7 @@ nav.term-navigator {
         
         .course-title h4 {
             -webkit-line-clamp: 3 !important;
+            text-decoration: none !important;
         }
 
         .multi-column-course-id,
@@ -70,11 +72,18 @@ nav.term-navigator {
             display: none !important;
         }
     }
+}
 
-    &.list-column-view {
-        .course-element-card {
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
+.multi-column-view .course-org-list {
+    .course-element-card {
+        .summary {
+            grid-template-rows: auto !important;
         }
+    }
+}
+.list-column-view .course-org-list {
+    .course-element-card {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
     }
 }

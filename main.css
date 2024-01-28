@@ -133,14 +133,14 @@
   .course-org-list hr {
     display: none;
   }
-  .course-org-list bb-base-course-card {
-    margin: 0 !important;
-  }
   .course-org-list .course-element-card {
     border-radius: 0.5rem;
     border: none;
     background: #f9f2fb;
     color: #1d1b1e;
+    margin: 0 !important;
+    height: auto !important;
+    min-height: 15rem;
   }
   .course-org-list .course-element-card .course-banner {
     border-top-left-radius: 0.5rem;
@@ -152,12 +152,16 @@
   }
   .course-org-list .course-element-card .course-title h4 {
     -webkit-line-clamp: 3 !important;
+    text-decoration: none !important;
   }
   .course-org-list .course-element-card .multi-column-course-id,
   .course-org-list .course-element-card .course-status {
     display: none !important;
   }
-  .course-org-list.list-column-view .course-element-card {
+  .multi-column-view .course-org-list .course-element-card .summary {
+    grid-template-rows: auto !important;
+  }
+  .list-column-view .course-org-list .course-element-card {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
