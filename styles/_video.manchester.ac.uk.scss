@@ -5,7 +5,7 @@
 $progress-bar-height: 1.5em; // up from 0.3em
 $control-bar-border-radius: 0.5rem;
 $progress-bar-border-radius: calc($control-bar-border-radius / 2);
-$video-elem-background: rgba($header, 0.7);
+$video-elem-background: rgba($header, 0.8);
 $video-elem-color: color-mix(in oklab, $on-header, white 90%);
 
 @include fonts;
@@ -31,8 +31,8 @@ video,
   background: $video-elem-background !important;
   color: white !important;
   color: $video-elem-color !important;
-  border-radius: $control-bar-border-radius;
-  margin: 0 $control-bar-border-radius $control-bar-border-radius;
+  border-top-left-radius: $control-bar-border-radius;
+  border-top-right-radius: $control-bar-border-radius;
   width: auto;
 }
 
@@ -81,7 +81,7 @@ video,
   width: auto;
   padding-left: 2em;
   padding-right: 2em;
-  background: rgba($header, 0.9);
+  background: $video-elem-background;
   color: $on-header;
   border-radius: 0.5em;
 
@@ -128,6 +128,12 @@ video,
   }
 }
 
+.video-js .vjs-control::before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* animate menu opening */
 .vjs-menu-button-popup .vjs-menu {
   display: block !important;
@@ -165,6 +171,7 @@ video,
 .vjs-new-tab-control {
   background: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/up-right-from-square.svg") no-repeat center !important;
   background-size: 1.3em !important;
+  background-position-y: 40% !important;
   cursor: pointer;
   flex: none;
 }

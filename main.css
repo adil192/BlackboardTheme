@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           UoM Blackboard theme
-@version        20240129.00.00
+@version        20240129.01.00
 @namespace      userstyles.world/user/adil192
 @description    Themes the blackboard UoM website to look more modern and use a consistent colour scheme.
 @author         adil192
@@ -2013,11 +2013,11 @@
     height: 100%;
   }
   .video-js .vjs-control-bar {
-    background: rgba(29, 27, 30, 0.7) !important;
+    background: rgba(29, 27, 30, 0.8) !important;
     color: white !important;
     color: color-mix(in oklab, #e8e0e5, white 90%) !important;
-    border-radius: 0.5rem;
-    margin: 0 0.5rem 0.5rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
     width: auto;
   }
   .video-js .vjs-progress-holder {
@@ -2058,7 +2058,7 @@
     width: auto;
     padding-left: 2em;
     padding-right: 2em;
-    background: rgba(29, 27, 30, 0.9);
+    background: rgba(29, 27, 30, 0.8);
     color: #e8e0e5;
     border-radius: 0.5em;
     top: 1em;
@@ -2072,7 +2072,7 @@
     text-decoration: none;
   }
   .vjs-menu-button-popup .vjs-menu, .vjs-menu-button-popup .vjs-menu .vjs-menu-content {
-    background: rgba(29, 27, 30, 0.7) !important;
+    background: rgba(29, 27, 30, 0.8) !important;
     color: white !important;
     color: color-mix(in oklab, #e8e0e5, white 90%) !important;
     border-radius: 0.5rem 0.5rem 0 0;
@@ -2093,6 +2093,11 @@
   .vjs-menu-button-popup .vjs-menu .vjs-menu-item:hover, .vjs-menu-button-popup .vjs-menu .vjs-menu-item:focus {
     background: rgba(129, 66, 166, 0.2);
   }
+  .video-js .vjs-control::before {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   /* animate menu opening */
   .vjs-menu-button-popup .vjs-menu {
     display: block !important;
@@ -2111,7 +2116,7 @@
   }
   /* captions */
   .vjs-text-track-display > div > div > div {
-    background: rgba(29, 27, 30, 0.7) !important;
+    background: rgba(29, 27, 30, 0.8) !important;
     color: white !important;
     color: color-mix(in oklab, #e8e0e5, white 90%) !important;
     border-radius: 0.2em !important;
@@ -2126,6 +2131,7 @@
   .vjs-new-tab-control {
     background: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/up-right-from-square.svg") no-repeat center !important;
     background-size: 1.3em !important;
+    background-position-y: 40% !important;
     cursor: pointer;
     flex: none;
   }

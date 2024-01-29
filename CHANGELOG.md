@@ -7,6 +7,8 @@ Here I will outline the changes I've made over time...
 - Fixed a Blackboard Ultra bug on mobile where the breadcrumb bar would be floating near the top, rather than at the top.
 - Styled (and fixed) the mobile header on Blackboard Ultra.
 - Set the background color of the loading screen to be less jarring.
+- Set the video title bar to have a dark background.
+- Removed the margin around the video toolbar, and fixed the alignment of its icons.
 
 ### 20240128
 
