@@ -106,7 +106,7 @@ button.anchor,
 
     &:hover,
     &:focus {
-        background-color: mix($primary, $on-surface, 50%);
+        background-color: color.mix($primary, $on-surface, 50%);
         color: $on-primary;
     }
 
@@ -118,12 +118,12 @@ button.anchor,
 .base #side-menu .off-canvas-list .base-navigation-button.active .theme-border-left-active,
 .base .color-selection-preview-mode .off-canvas-list .base-navigation-button.active .theme-border-left-active {
     border-left: none !important;
-    background-color: mix($primary, $on-surface, 70%) !important;
+    background-color: color.mix($primary, $on-surface, 70%) !important;
     color: $on-primary !important;
 
     &:hover,
     &:focus {
-        background-color: mix($primary, $on-surface, 100%) !important;
+        background-color: color.mix($primary, $on-surface, 100%) !important;
         color: $on-primary !important;
     }
 }
