@@ -316,6 +316,17 @@
   .course-org-list .course-element-card:hover::after {
     opacity: 1;
   }
+  @media screen and (width <= 63.9375em) {
+    .course-org-list {
+      grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)) !important;
+    }
+    .course-org-list .course-element-card .course-banner {
+      height: 5rem !important;
+    }
+    .course-org-list .course-element-card .summary .course-title h4 {
+      -webkit-line-clamp: 5 !important;
+    }
+  }
   .multi-column-view .course-org-list .course-element-card {
     transform: none !important;
     transition-duration: 0.1s !important;

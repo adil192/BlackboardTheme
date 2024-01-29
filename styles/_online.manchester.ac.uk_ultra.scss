@@ -249,6 +249,21 @@ button.anchor,
             opacity: 1;
         }
     }
+
+    @media screen and (width <= 63.9375em) {
+        // allow for 2 columns on mobile
+        grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)) !important;
+        .course-element-card {
+            .course-banner {
+                // shrink image height
+                height: 5rem !important;
+            }
+            .summary .course-title h4 {
+                // allow for more lines since we have less space
+                -webkit-line-clamp: 5 !important;
+            }
+        }
+    }
 }
 
 .multi-column-view .course-org-list {
