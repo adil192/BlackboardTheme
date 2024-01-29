@@ -123,7 +123,6 @@
   .button-anchor,
   .select-wrapper button.button-anchor {
     color: #4f2f62;
-    text-decoration: underline;
     transition: color 0.1s ease-out;
   }
   a:hover, a:focus,
@@ -180,6 +179,39 @@
   .color-selection-live-mode .bb-offcanvas-panel .bb-close,
   .color-selection-live-mode .active .base-navigation-button-content,
   .color-selection-live-mode .active .integration-navigation-button-content {
+    background-color: #8142a6 !important;
+    color: #fff !important;
+  }
+  .base #side-menu .off-canvas-list .base-navigation-button:first-child,
+  .base .color-selection-preview-mode .off-canvas-list .base-navigation-button:first-child {
+    padding-top: 0 !important;
+  }
+  .base #side-menu .off-canvas-list .base-navigation-button .base-navigation-button-content,
+  .base #side-menu .off-canvas-list .base-navigation-button .integration-navigation-button-content-v2 {
+    text-decoration: none !important;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    transition: background-color 0.1s ease-out;
+  }
+  .base #side-menu .off-canvas-list .base-navigation-button .base-navigation-button-content:hover, .base #side-menu .off-canvas-list .base-navigation-button .base-navigation-button-content:focus,
+  .base #side-menu .off-canvas-list .base-navigation-button .integration-navigation-button-content-v2:hover,
+  .base #side-menu .off-canvas-list .base-navigation-button .integration-navigation-button-content-v2:focus {
+    background-color: #4f2f62;
+    color: #fff;
+  }
+  .base #side-menu .off-canvas-list .base-navigation-button .base-navigation-button-content:focus,
+  .base #side-menu .off-canvas-list .base-navigation-button .integration-navigation-button-content-v2:focus {
+    box-shadow: inset 0 0 0 0.1rem #8142a6 !important;
+  }
+  .base #side-menu .off-canvas-list .base-navigation-button.active .theme-border-left-active,
+  .base .color-selection-preview-mode .off-canvas-list .base-navigation-button.active .theme-border-left-active {
+    border-left: none !important;
+    background-color: #63367d !important;
+    color: #fff !important;
+  }
+  .base #side-menu .off-canvas-list .base-navigation-button.active .theme-border-left-active:hover, .base #side-menu .off-canvas-list .base-navigation-button.active .theme-border-left-active:focus,
+  .base .color-selection-preview-mode .off-canvas-list .base-navigation-button.active .theme-border-left-active:hover,
+  .base .color-selection-preview-mode .off-canvas-list .base-navigation-button.active .theme-border-left-active:focus {
     background-color: #8142a6 !important;
     color: #fff !important;
   }

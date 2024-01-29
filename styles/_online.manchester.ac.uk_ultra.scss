@@ -30,7 +30,6 @@ button.anchor,
 .button-anchor,
 .select-wrapper button.button-anchor {
     color: color.mix($primary, $on-surface, 50%);
-    text-decoration: underline;
     transition: color 0.1s ease-out;
 
     &:hover, &:focus {
@@ -91,6 +90,42 @@ button.anchor,
 .color-selection-live-mode .active .integration-navigation-button-content {
     background-color: $primary !important;
     color: $on-primary !important;
+}
+
+.base #side-menu .off-canvas-list .base-navigation-button:first-child,
+.base .color-selection-preview-mode .off-canvas-list .base-navigation-button:first-child {
+    padding-top: 0 !important;
+}
+
+.base #side-menu .off-canvas-list .base-navigation-button .base-navigation-button-content,
+.base #side-menu .off-canvas-list .base-navigation-button .integration-navigation-button-content-v2 {
+    text-decoration: none !important;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    transition: background-color 0.1s ease-out;
+
+    &:hover,
+    &:focus {
+        background-color: mix($primary, $on-surface, 50%);
+        color: $on-primary;
+    }
+
+    &:focus {
+        box-shadow: inset 0 0 0 0.1rem $primary !important;
+    }
+}
+
+.base #side-menu .off-canvas-list .base-navigation-button.active .theme-border-left-active,
+.base .color-selection-preview-mode .off-canvas-list .base-navigation-button.active .theme-border-left-active {
+    border-left: none !important;
+    background-color: mix($primary, $on-surface, 70%) !important;
+    color: $on-primary !important;
+
+    &:hover,
+    &:focus {
+        background-color: mix($primary, $on-surface, 100%) !important;
+        color: $on-primary !important;
+    }
 }
 
 .course-columns-header {
