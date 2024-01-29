@@ -331,6 +331,31 @@ button.anchor,
     }
 }
 
+.move-right .exit-off-canvas,
+.bb-offcanvas-panel-wrap {
+    box-shadow: none !important;
+}
+
+.bb-close,
+.bb-offcanvas-panel .bb-close {
+    -webkit-text-fill-color: unset !important;
+    -webkit-text-stroke-color: unset !important;
+    -webkit-text-stroke-width: unset !important;
+    background-color: $header !important;
+    color: $on-header !important;
+    padding-inline: 0;
+    border-radius: 0.5rem;
+
+    &:hover {
+        background-color: color.mix($primary, $header, 50%) !important;
+        color: $on-primary !important;
+    }
+
+    &::after {
+        display: none;
+    }
+}
+
 @media only screen and (width >= 64em) {
     .bb-offcanvas-panel.full {
         width: calc(100% - 3rem) !important;
@@ -359,5 +384,26 @@ button.anchor,
     #side-menu header a {
         max-width: 7rem;
         margin-inline: auto;
+    }
+}
+
+@media screen and (1em <= width <= 63.9375em) {
+    .panel-wrap .panel-title,
+    .panel-wrap .menu-toggle,
+    .panel-wrap > .panel-header,
+    .panel-wrap > .black-panel-header,
+    .panel-wrap .panel-header.simple-header,
+    .panel-header.simple-header .ms-Panel-commands,
+    .panel-header.simple-header .ms-Panel-header button,
+    .panel-header.simple-header .ms-Panel-header h1,
+    .attendance-app .header-medium,
+    .attendance-app .header-medium button,
+    .attendance-app .header-medium h1,
+    .attendance-app .header-medium a,
+    .brand-detail-header .ms-Panel-commands,
+    .brand-detail-header .ms-Panel-header button,
+    .brand-detail-header .ms-Panel-header h1 {
+        background-color: $header !important;
+        color: $on-header !important;
     }
 }
