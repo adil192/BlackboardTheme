@@ -1,5 +1,5 @@
 @use "sass:color";
-@import "fonts/inter";
+@import "fonts/hyperlegible";
 @import "fonts/urbanist";
 
 /// How these colours were obtained:
@@ -78,15 +78,14 @@ $shadow: rgba($primary, 0.10);
     );
 }
 
-$font-fallbacks: "Inter", "Google Sans",
-    -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue",
-    Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+$font-fallbacks: "Atkinson Hyperlegible", "Inter",
+    ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji",
     FontAwesome, VideoJS;
 
 @mixin fonts($selector: '*') {
-    @include inter;
+    @include hyperlegible;
     @include urbanist;
 
     :root {
