@@ -2056,10 +2056,10 @@
   }
   .video-js .vjs-title-bar-link {
     width: auto;
-    padding-left: 1em;
-    padding-right: 1em;
-    background: #f2e9f6;
-    color: #1d1b1e;
+    padding-left: 2em;
+    padding-right: 2em;
+    background: rgba(29, 27, 30, 0.9);
+    color: #e8e0e5;
     border-radius: 0.5em;
     top: 1em;
     right: 50%;
@@ -2068,7 +2068,7 @@
     font-size: min(2em, 4vw, 6vh);
   }
   .video-js .vjs-title-bar-link > a {
-    color: #1d1b1e !important;
+    color: inherit !important;
     text-decoration: none;
   }
   .vjs-menu-button-popup .vjs-menu, .vjs-menu-button-popup .vjs-menu .vjs-menu-content {

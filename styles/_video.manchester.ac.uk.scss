@@ -79,10 +79,10 @@ video,
 
 .video-js .vjs-title-bar-link { // title of the video
   width: auto;
-  padding-left: 1em;
-  padding-right: 1em;
-  background: $surface-1;
-  color: $on-surface;
+  padding-left: 2em;
+  padding-right: 2em;
+  background: rgba($header, 0.9);
+  color: $on-header;
   border-radius: 0.5em;
 
   top: 1em;
@@ -93,7 +93,7 @@ video,
   font-size: min(2em, 4vw, 6vh);
 
   > a {
-    color: $on-surface !important;
+    color: inherit !important;
     text-decoration: none;
   }
 }
