@@ -356,6 +356,12 @@ button.anchor,
     }
 }
 
+#initial-load-area {
+    background-color: $background;
+    color: $on-background;
+    opacity: 0.9;
+}
+
 @media only screen and (width >= 64em) {
     .bb-offcanvas-panel.full {
         width: calc(100% - 3rem) !important;

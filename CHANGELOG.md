@@ -2,6 +2,12 @@
 
 Here I will outline the changes I've made over time...
 
+### 20240129
+
+- Fixed a Blackboard Ultra bug on mobile where the breadcrumb bar would be floating near the top, rather than at the top.
+- Styled (and fixed) the mobile header on Blackboard Ultra.
+- Set the background color of the loading screen to be less jarring.
+
 ### 20240128
 
 - Styled and fixed the Blackboard Ultra header on mobile
