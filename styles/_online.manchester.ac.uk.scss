@@ -11,6 +11,10 @@
 	color: $primary;
 }
 
+#breadcrumbs {
+    top: 0 !important;
+}
+
 /* disable quick links popup because I don't use it, remove these lines if you do use this */
 #quick_links_wrap {
 	display: none !important;
