@@ -61,16 +61,41 @@ Features marked with *requires script* require you to install the optional scrip
 
 These screenshots are taken at 1.33x zoom:
 
-| Page | Before | After |
-| --- | --- | --- |
-| Blackboard | ![Before](screenshots/blackboard_before.png) | ![After](screenshots/blackboard_after.png) |
-| Course page | ![Before](screenshots/course_before.png) | ![After](screenshots/course_after.png) |
-| Assessments | ![Before](screenshots/quiz_before.png) | ![After](screenshots/quiz_after.png) |
-| Attendance | (Offline) | ![After](screenshots/attendance_after.png) |
-| Login | ![Before](screenshots/login_before.png) | ![After](screenshots/login_after.png) |
-| Duo 2FA | ![Before](screenshots/duo_before.png) | ![After](screenshots/duo_after.png) |
-| Video player | ![Before](screenshots/video_before.jpg) | ![After](screenshots/video_after.jpg) |
-| IT Account Manager | ![Before](screenshots/iam_before.png) | ![After](screenshots/iam_after.png) |
+<details open>
+<summary>Blackboard</summary>
+
+![Blackboard](screenshots/blackboard.png)
+</details>
+<details open>
+<summary>Course page</summary>
+
+![Course page](screenshots/course.png)
+</details>
+<details open>
+<summary>Assessments</summary>
+
+![Assessments](screenshots/quiz.png)
+</details>
+<details open>
+<summary>Login</summary>
+
+![Login](screenshots/login.png)
+</details>
+<details open>
+<summary>Duo 2FA</summary>
+
+![Duo 2FA](screenshots/duo.png)
+</details>
+<details open>
+<summary>Video player</summary>
+
+![Video player](screenshots/video.png)
+</details>
+<details open>
+<summary>IT Account Manager</summary>
+
+![IT Account Manager](screenshots/iam.png)
+</details>
 
 ## Development notes
 
