@@ -37,7 +37,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Checkout code
+      - name: Checkout dst branch
         uses: actions/checkout@v4
         with:
           ref: dst

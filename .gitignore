@@ -2,5 +2,5 @@ node_modules
 package-lock.json
 eslint-results.sarif
 *.css.map
-outputs
+output
 .dart_tool
