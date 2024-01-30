@@ -116,6 +116,7 @@ Future<void> generateManifest() async {
     styles.entries.map(
       (entry) => {
         'matches': [entry.value],
+        'all_frames': true,
         'css': ['styles/${entry.key}.css'],
       },
     ),
@@ -124,6 +125,7 @@ Future<void> generateManifest() async {
     scripts.entries.map(
       (entry) => {
         'matches': [entry.value],
+        'all_frames': true,
         'js': ['scripts/${entry.key}.js'],
       },
     ),
