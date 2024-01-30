@@ -28,3 +28,30 @@ jobs:
         with:
           name: output
           path: output
+
+  deploy:
+    name: Deploy to dst branch
+    # if github.ref == 'refs/heads/main' && github.event_name == 'push'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: dst
+
+      - name: Download build
+        uses: actions/download-artifact@v2
+        with:
+          name: output
+          path: output
+    
+      - name: Commit changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "github-action@users.noreply.github.com"
+          git add .
+          git commit -m "build ${{ github.sha }}"
+          git push
