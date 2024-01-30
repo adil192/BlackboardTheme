@@ -31,7 +31,7 @@ jobs:
 
   deploy:
     name: Deploy to dst branch
-    # if github.ref == 'refs/heads/main' && github.event_name == 'push'
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     needs: build
     runs-on: ubuntu-latest
     permissions:
