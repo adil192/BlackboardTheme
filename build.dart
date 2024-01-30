@@ -36,6 +36,7 @@ const styles = <String, String>{
   // Duo iframe
   "shib.manchester.ac.uk_duo": "*://api-4c039978.duosecurity.com/frame*",
 };
+
 /// Maps each script file to the domains it applies to
 /// (using * as a wildcard).
 /// Note that the file extension is omitted.
@@ -63,37 +64,29 @@ Future<void> copyAssets() async {
   }
 }
 
-/// Compiles the scss files in `src/styles` into scripts
-/// that inject the css into the page.
+/// Compiles the scss files in `src/styles` into
+/// css files in `output/styles`.
 Future<void> compileScss() async {
   print('Compiling scss...');
 
-  final styleInjectionTemplate =
-      await File('src/style_injection.js').readAsString();
-
   for (final scssFilename in styles.keys) {
     final inputFile = File('src/styles/$scssFilename.scss');
-    final outputFile = File('output/styles/$scssFilename.js');
+    final outputFile = File('output/styles/$scssFilename.css');
     print('Compiling ${inputFile.path}');
 
     assert(inputFile.existsSync());
 
     final compiled = sass.compileToResult(inputFile.path);
 
-    final styleInjectionJs = styleInjectionTemplate
-        .replaceAll(r'${scssFilename}', scssFilename)
-        .replaceAll(r'$css', jsonEncode(compiled.css));
-    assert(!styleInjectionJs.contains(r'$'));
-
     await outputFile.create(recursive: true);
-    await outputFile.writeAsString(styleInjectionJs);
+    await outputFile.writeAsString(compiled.css);
   }
 }
 
 /// Copies the scripts in `src/scripts` to `output/scripts`.
 Future<void> copyScripts() async {
   print('Copying scripts...');
-  
+
   for (final jsFilename in scripts.keys) {
     final inputFile = File('src/scripts/$jsFilename.js');
     final outputFile = File('output/scripts/$jsFilename.js');
@@ -123,7 +116,7 @@ Future<void> generateManifest() async {
     styles.entries.map(
       (entry) => {
         'matches': [entry.value],
-        'js': ['styles/${entry.key}.js'],
+        'css': ['styles/${entry.key}.css'],
       },
     ),
   );
