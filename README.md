@@ -132,6 +132,6 @@ or you can do it yourself and submit a pull request:
     ```js
     const knownModuleImages = {
         // ...
-        "ABCD10000" : "https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/subjects/ABCD10000/ABCD10000.jpg",
+        "ABCD10000" : "../assets/subjects/ABCD10000/ABCD10000.jpg",
     };
     ```

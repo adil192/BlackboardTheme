@@ -29,7 +29,7 @@ html {
 
 /* Replace welcome image */
 img[src="https://online.manchester.ac.uk/branding/_96_1/welcome-image03.png"] {
-	background: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/queens_arch.jpg") center center no-repeat;
+	background: url("../assets/queens_arch.jpg") center center no-repeat;
 	background-size: cover;
 	box-sizing: border-box;
 	padding-left: 100%;
@@ -118,7 +118,7 @@ p, strong, b,
 
 	background: transparent;
 	// SVG converted from https://www.staffnet.manchester.ac.uk/brand/visual-identity/logo/logo-downloads/
-	background-image: url("https://raw.githubusercontent.com/adil192/BlackboardTheme/main/assets/TAB_allwhite.svg");
+	background-image: url("../assets/TAB_allwhite.svg");
 	background-repeat: no-repeat;
 	background-size: contain;
 

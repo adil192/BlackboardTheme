@@ -1,16 +1,3 @@
-// ==UserScript==
-// @name         UoM Blackboard: Video keyboard shortcuts
-// @namespace    http://tampermonkey.net/
-// @version      20240128.01.00
-// @description  An optional accompanying script for https://github.com/adil192/BlackboardTheme, which adds keyboard shortcuts for video playback on Blackboard.
-// @author       adil192
-// @match        https://video.manchester.ac.uk/embedded/*
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=manchester.ac.uk
-// @grant        none
-// @license      Unlicense
-// @downloadURL  https://github.com/adil192/BlackboardTheme/raw/main/scripts/video_keyboard_shortcuts.js
-// ==/UserScript==
-
 // @ts-check
 
 /**
