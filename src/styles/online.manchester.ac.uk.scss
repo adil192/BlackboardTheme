@@ -58,11 +58,20 @@ img[src="https://online.manchester.ac.uk/branding/_96_1/welcome-image03.png"] {
 }
 
 
-
+html,
 body,
 .locationPane,
-.contentPane {
+.contentPane,
+.steptitle,
+div[id*="step"],
+div[id*="Step"],
+#dataCollectionContainer,
+.container {
 	background: $background;
+	color: $on-background;
+}
+.container {
+	border: none !important;
 }
 .locationPane {
 	min-height: calc(100lvh - 142px);

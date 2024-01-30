@@ -25,6 +25,8 @@ const styles = <String, String>{
       "*://online.manchester.ac.uk/webapps/rubric*",
   // Embedded videos
   "video.manchester.ac.uk": "*://video.manchester.ac.uk/*",
+  // Download wrapper
+  "online.manchester.ac.uk_webapps_downloadWrapper": "*://online.manchester.ac.uk/webapps/blackboard/content/downloadWrapper.jsp*",
 
   // IT account manager
   "iam.manchester.ac.uk": "*://iam.manchester.ac.uk/*",

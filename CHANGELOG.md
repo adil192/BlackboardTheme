@@ -2,6 +2,10 @@
 
 Here I will outline the changes I've made over time...
 
+### 20240130
+
+- Added stylings for the "Your download will start shortly. If it doesn't, download the file now." page
+
 ### 20240129
 
 - Switched the default body font to [Atkinson Hyperlegible](https://fonts.google.com/specimen/Atkinson+Hyperlegible/about).
