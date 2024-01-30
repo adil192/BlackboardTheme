@@ -25,7 +25,7 @@ jobs:
         run: npm install
 
       - name: Run ESLint
-        run: npx eslint scripts
+        run: npx eslint src/scripts/
           --format @microsoft/eslint-formatter-sarif
           --output-file eslint-results.sarif
         continue-on-error: true
