@@ -1,0 +1,10 @@
+name: uom_enhancements
+description: A collection of enhancements for the University of Manchester websites
+version: 1.0.0
+repository: https://github.com/adil192/BlackboardTheme
+
+environment:
+  sdk: ^3.0.0
+
+dependencies:
+  sass: ^1.70.0

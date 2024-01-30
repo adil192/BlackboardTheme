@@ -1,0 +1,15 @@
+{
+	"manifest_version": 2,
+	"name": "UoM Enhancements",
+	"version": "1.0.0",
+
+	"description": "A collection of enhancements for the University of Manchester websites",
+
+	"content_scripts": [
+		// Style injection scripts are added here at build time by build.dart
+		{
+			"matches": ["*://*.manchester.ac.uk/*"],
+			"js": ["todo.js"]
+		}
+	]
+}
