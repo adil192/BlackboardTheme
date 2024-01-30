@@ -18,6 +18,8 @@ jobs:
       - name: Setup Dart
         uses: dart-lang/setup-dart@v1
 
+      - run: dart pub get
+
       - name: Run build.dart script
         run: dart build.dart
 
