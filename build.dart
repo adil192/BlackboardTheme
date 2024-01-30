@@ -113,7 +113,7 @@ Future<void> generateManifest() async {
 
   // Add content scripts for each domain
   final contentScripts = manifest['content_scripts'] as List<dynamic>;
-  assert(contentScripts.isNotEmpty);
+  assert(contentScripts.isEmpty);
   contentScripts.addAll(
     styles.entries.map(
       (entry) => {
