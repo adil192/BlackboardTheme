@@ -120,6 +120,7 @@ Future<void> generateManifest() async {
       (entry) => {
         'matches': [entry.value],
         'css': ['styles/${entry.key}.css'],
+        'run_at': 'document_start',
         'all_frames': true,
       },
     ),
