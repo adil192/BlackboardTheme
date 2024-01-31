@@ -2,8 +2,13 @@
 	"manifest_version": 2,
 	"name": "UoM Enhancements",
 	"version": "1.0.0",
-
 	"description": "A collection of enhancements for the University of Manchester websites",
+
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "{300f03ef-d037-4626-9e39-0823ff5d7a9b}"
+		}
+	},
 
 	"content_scripts": [
 		// Style injection scripts are added here at build time by build.dart

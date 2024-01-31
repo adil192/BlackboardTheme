@@ -141,9 +141,27 @@ Future<void> generateManifest() async {
   await outputFile.writeAsString(manifestJson);
 }
 
+/// Zips the contents of `output` into `UoM_Enhancements.zip`.
+Future<void> zip() async {
+  print('Zipping...');
+
+  final zipFile = File('UoM_Enhancements.xpi');
+  if (zipFile.existsSync()) zipFile.delete();
+
+  final process = await Process.start(
+    'zip',
+    ['-r', '../${zipFile.path}', '.'],
+    workingDirectory: 'output',
+  );
+  await process.exitCode;
+
+  print(await process.stdout.transform(utf8.decoder).join());
+}
+
 Future<void> main() async {
   await copyAssets();
   await compileScss();
   await copyScripts();
   await generateManifest();
+  await zip();
 }

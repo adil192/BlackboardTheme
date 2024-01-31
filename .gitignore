@@ -4,3 +4,4 @@ eslint-results.sarif
 *.css.map
 output
 .dart_tool
+UoM_Enhancements.xpi
