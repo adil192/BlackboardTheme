@@ -78,40 +78,43 @@ button.anchor,
     color: $on-primary !important;
 }
 
-.base #side-menu .off-canvas-list .base-navigation-button:first-child,
-.base .color-selection-preview-mode .off-canvas-list .base-navigation-button:first-child {
-    padding-top: 0 !important;
-}
-
-.base #side-menu .off-canvas-list .base-navigation-button .base-navigation-button-content,
-.base #side-menu .off-canvas-list .base-navigation-button .integration-navigation-button-content-v2 {
-    text-decoration: none !important;
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
+nav ul#base_tools bb-base-navigation-button {
+    display: block;
+    background-color: $header;
+    color: $on-header;
     transition: background-color 0.1s ease-out;
 
-    &:hover,
-    &:focus {
-        background-color: color.mix($primary, $on-surface, 50%);
-        color: $on-primary;
+    * {
+        background: transparent !important;
+        text-decoration: inherit !important;
+    }
+    .base-navigation-button {
+        transition: background-color 0.1s ease-out;
+    }
+    .base-navigation-button:first-child {
+        // remove the padding from first item
+        padding-top: 0 !important;
     }
 
+    &:hover,
     &:focus {
-        box-shadow: inset 0 0 0 0.1rem $primary !important;
+        .base-navigation-button {
+            background-color: rgba($surface-tint, 0.3) !important;
+        }
+    }
+
+    // the active one
+    &:has(.base-navigation-button.active) {
+        background-color: $background;
+        color: $on-background;
+        * {
+            color: inherit !important;
+        }
     }
 }
 
-.base #side-menu .off-canvas-list .base-navigation-button.active .theme-border-left-active,
-.base .color-selection-preview-mode .off-canvas-list .base-navigation-button.active .theme-border-left-active {
-    border-left: none !important;
-    background-color: color.mix($primary, $on-surface, 70%) !important;
-    color: $on-primary !important;
-
-    &:hover,
-    &:focus {
-        background-color: color.mix($primary, $on-surface, 100%) !important;
-        color: $on-primary !important;
-    }
+.base #side-menu .off-canvas-list .base-navigation-button .base-navigation-button-content:focus, .base #side-menu .off-canvas-list .base-navigation-button .integration-navigation-button-content:focus, .base #side-menu .off-canvas-list .base-navigation-button .integration-navigation-button-content-v2:focus, .base .color-selection-preview-mode .off-canvas-list .base-navigation-button .base-navigation-button-content:focus, .base .color-selection-preview-mode .off-canvas-list .base-navigation-button .integration-navigation-button-content:focus, .base .color-selection-preview-mode .off-canvas-list .base-navigation-button .integration-navigation-button-content-v2:focus {
+    box-shadow: none !important;
 }
 
 .course-columns-header {
