@@ -26,7 +26,8 @@ const styles = <String, String>{
   // Embedded videos
   "video.manchester.ac.uk": "*://video.manchester.ac.uk/*",
   // Download wrapper
-  "online.manchester.ac.uk_webapps_downloadWrapper": "*://online.manchester.ac.uk/webapps/blackboard/content/downloadWrapper.jsp*",
+  "online.manchester.ac.uk_webapps_downloadWrapper":
+      "*://online.manchester.ac.uk/webapps/blackboard/content/downloadWrapper.jsp*",
 
   // IT account manager
   "iam.manchester.ac.uk": "*://iam.manchester.ac.uk/*",
@@ -118,8 +119,8 @@ Future<void> generateManifest() async {
     styles.entries.map(
       (entry) => {
         'matches': [entry.value],
-        'all_frames': true,
         'css': ['styles/${entry.key}.css'],
+        'all_frames': true,
       },
     ),
   );
@@ -127,8 +128,8 @@ Future<void> generateManifest() async {
     scripts.entries.map(
       (entry) => {
         'matches': [entry.value],
-        'all_frames': true,
         'js': ['scripts/${entry.key}.js'],
+        'all_frames': true,
       },
     ),
   );
