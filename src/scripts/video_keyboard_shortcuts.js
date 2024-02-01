@@ -24,31 +24,37 @@ let foundElements = false;
 
 /**
  * Finds the html elements.
- * @returns {boolean} Whether the elements were found.
+ * @returns {Promise} Resolves when the elements are found.
  */
-function findElements() {
+async function findElements() {
     if (foundElements) return true;
 
-    if (!videoElem) videoElem = document.querySelector("video");
-    if (!videoDiv) videoDiv = document.querySelector("div#video");
+    let attemptsRemaining = 10;
+    while (!foundElements && attemptsRemaining > 0) {
+        attemptsRemaining--;
 
-    if (!captionsOptions.length) {
-        let captionsButton = document.querySelector(".vjs-captions-button");
-        if (captionsButton) {
-            captionsOptions = Array.from(captionsButton.querySelectorAll("li.vjs-menu-item"))
-                // Filter out the "captions settings" option
-                .filter(e => !e.classList.contains("vjs-texttrack-settings"))
-                // Convert to an array of HTMLLIElement
-                .map(e => /** @type {HTMLLIElement} */ (e));
+        if (!videoElem) videoElem = document.querySelector("video");
+        if (!videoDiv) videoDiv = document.querySelector("div#video");
+    
+        if (!captionsOptions.length) {
+            let captionsButton = document.querySelector(".vjs-captions-button");
+            if (captionsButton) {
+                captionsOptions = Array.from(captionsButton.querySelectorAll("li.vjs-menu-item"))
+                    // Filter out the "captions settings" option
+                    .filter(e => !e.classList.contains("vjs-texttrack-settings"))
+                    // Convert to an array of HTMLLIElement
+                    .map(e => /** @type {HTMLLIElement} */ (e));
+            }
+            if (captionsOptions.length < 2 && attemptsRemaining > 0) {
+                console.log("findElements: captionsOptions.length < 2:", { captionsOptions });
+                captionsOptions = [];
+            }
         }
+
+        foundElements = !!videoElem && !!videoDiv && !!captionsOptions.length;
     }
 
-    const newFoundElements = !!videoElem && !!videoDiv && !!captionsOptions.length;
-    if (newFoundElements !== foundElements) {
-        onFoundElements();
-    }
-    foundElements = newFoundElements;
-    return foundElements;
+    onFoundElements();
 }
 
 /**
@@ -57,10 +63,11 @@ function findElements() {
  * @returns {void}
  */
 function onFoundElements() {
-    if (foundElements) {
-        console.error("onFoundElements: Elements already found. foundElements should still be false when this is called.");
+    if (!foundElements) {
+        console.error("onFoundElements: called before elements were found.");
         return;
     }
+    console.log("onFoundElements: found elements:", { videoElem, videoDiv, captionsOptions });
 
     // since the other elements have been found, it's safe to assume that all the other elements exist
 
@@ -94,7 +101,7 @@ function onFoundElements() {
 function handleKeydown(e) {
     console.log("handleKeydown", e.key, { e });
 
-    if (!findElements()) {
+    if (!foundElements) {
         console.log("handleKeydown: Some elements not found:", { videoElem, videoDiv, captionsOptions });
         return;
     }
