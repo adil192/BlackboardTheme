@@ -10,6 +10,7 @@ Here I will outline the changes I've made over time...
     - Styles kick in immediately, rather than after the page loads
 - Removed curved corners from the navbar on Blackboard Ultra
 - Makes the list view on Blackboard Ultra more compact
+- Added a button to the course page to open the course content in a new tab
 
 ### 20240130
 

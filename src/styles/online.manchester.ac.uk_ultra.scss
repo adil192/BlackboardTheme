@@ -72,6 +72,8 @@ button.anchor,
 .color-selection-live-mode .themed-background-primary,
 .color-selection-live-mode .bb-close,
 .color-selection-live-mode .bb-offcanvas-panel .bb-close,
+.color-selection-live-mode .bb-new-tab,
+.color-selection-live-mode .bb-offcanvas-panel .bb-new-tab,
 .color-selection-live-mode .active .base-navigation-button-content,
 .color-selection-live-mode .active .integration-navigation-button-content {
     background-color: $primary !important;
@@ -363,7 +365,9 @@ nav ul#base_tools bb-base-navigation-button {
 }
 
 .bb-close,
-.bb-offcanvas-panel .bb-close {
+.bb-offcanvas-panel .bb-close,
+.bb-new-tab,
+.bb-offcanvas-panel .bb-new-tab {
     -webkit-text-fill-color: unset !important;
     -webkit-text-stroke-color: unset !important;
     -webkit-text-stroke-width: unset !important;
@@ -371,6 +375,8 @@ nav ul#base_tools bb-base-navigation-button {
     color: $on-header !important;
     padding-inline: 0;
     border-radius: 0.5rem;
+    box-shadow: 0 0 0 0.05em color.mix($primary, $header, 50%);
+    transition: background-color 0.1s ease-out, color 0.1s ease-out;
 
     &:hover {
         background-color: color.mix($primary, $header, 50%) !important;
@@ -380,6 +386,10 @@ nav ul#base_tools bb-base-navigation-button {
     &::after {
         display: none;
     }
+}
+.bb-offcanvas-panel .bb-new-tab {
+    // don't show new tab button on mobile
+    display: none;
 }
 
 #initial-load-area {
@@ -391,6 +401,22 @@ nav ul#base_tools bb-base-navigation-button {
 @media only screen and (width >= 64em) {
     .bb-offcanvas-panel.full {
         width: calc(100% - 3rem) !important;
+    }
+    .bb-offcanvas-panel .bb-new-tab {
+        display: block;
+        position: absolute;
+        right: auto;
+        left: -1.5rem;
+        top: 5rem;
+        z-index: 910;
+        height: 2.5rem;
+        aspect-ratio: 1;
+        width: auto;
+        font-weight: 400;
+        font-size: 2.25rem;
+        padding: 0;
+        background: $header url("../assets/up-right-from-square.svg") no-repeat center !important;
+        background-size: 0.5em !important;
     }
     .iframe-wrapper {
         height: 100% !important;

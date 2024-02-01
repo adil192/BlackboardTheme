@@ -44,6 +44,8 @@ const styles = <String, String>{
 /// (using * as a wildcard).
 /// Note that the file extension is omitted.
 const scripts = {
+  // output/scripts/add_new_tab_button.js
+  'add_new_tab_button': '*://online.manchester.ac.uk/ultra/*',
   'add_course_images': '*://online.manchester.ac.uk/ultra/*',
   'auto_login': '*://login.manchester.ac.uk/cas/login*',
   'video_keyboard_shortcuts': '*://video.manchester.ac.uk/embedded/*',
