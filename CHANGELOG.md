@@ -16,6 +16,7 @@ Here I will outline the changes I've made over time...
 - Fixed the video title not having the title font
 - Fixed video keyboard shortcuts accidentally triggering the currently focused button
 - Fixed the captions keyboard shortcut (`c`) sometimes not working
+- Added images to the course list view
 
 ### 20240130
 

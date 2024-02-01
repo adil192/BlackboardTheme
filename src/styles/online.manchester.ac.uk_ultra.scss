@@ -288,11 +288,31 @@ nav ul#base_tools bb-base-navigation-button {
         margin-bottom: 0 !important;
         padding: 0.5rem 1rem;
 
+        $banner-width: 4rem;
+
+        padding-left: 1rem + $banner-width;
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: $banner-width;
+            background-color: rgba($header, 0.05) !important;
+            background: var(--module-image) no-repeat center;
+            background-size: cover;
+            margin: 0;
+        }
+
         .summary {
             display: flex;
             flex-flow: row-reverse nowrap;
             gap: 1rem;
             min-height: 0;
+            padding: 0;
 
             > .small-12:first-child {
                 display: none;
@@ -331,13 +351,19 @@ nav ul#base_tools bb-base-navigation-button {
         .course-element-card {
             border-top-left-radius: 0.5rem;
             border-top-right-radius: 0.5rem;
+            &, &::before {
+                border-top-left-radius: 0.5rem;
+            }
         }
 
+        // middle
         + .favorites-group .course-element-card,
         + .default-group .course-element-card {
-            // middle
             border-top-left-radius: 0;
             border-top-right-radius: 0;
+            &::before {
+                border-top-left-radius: 0;
+            }
         }
     }
     .favorites-group:not(:has(+ .favorites-group)),
@@ -346,6 +372,9 @@ nav ul#base_tools bb-base-navigation-button {
         .course-element-card {
             border-bottom-left-radius: 0.5rem;
             border-bottom-right-radius: 0.5rem;
+            &::before {
+                border-bottom-left-radius: 0.5rem;
+            }
         }
     }
 }
