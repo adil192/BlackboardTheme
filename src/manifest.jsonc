@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "UoM Enhancements",
 	// If you update the version here, consider updating CHANGELOG.md
-	"version": "20240201.3.0",
+	"version": "2024.02.01.3",
 	"description": "A collection of enhancements for the University of Manchester websites",
 
 	"browser_specific_settings": {
