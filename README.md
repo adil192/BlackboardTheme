@@ -54,12 +54,15 @@ Features marked with *requires script* require you to install the optional scrip
 
 ## Screenshots
 
-These screenshots are taken at 1.33x zoom:
-
 <details open>
-<summary>Blackboard</summary>
+<summary>Blackboard (Grid view)</summary>
 
-![Blackboard](screenshots/blackboard.png)
+![Blackboard](screenshots/blackboard-grid.png)
+</details>
+<details open>
+<summary>Blackboard (List view)</summary>
+
+![Blackboard](screenshots/blackboard-list.png)
 </details>
 <details open>
 <summary>Course page</summary>
