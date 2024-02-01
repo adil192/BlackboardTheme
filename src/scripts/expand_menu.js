@@ -34,7 +34,7 @@
      */
     let desiredExpandedState = true;
 
-    menuPuller.addEventListener('click', (e) => {
+    menuPuller.addEventListener('click', () => {
         if (!isLargeScreen()) return;
 
         // user manually clicked the menu puller,
@@ -42,7 +42,7 @@
         desiredExpandedState = isMenuExpanded();
     });
 
-    window.addEventListener('resize', (e) => {
+    window.addEventListener('resize', () => {
         if (!isLargeScreen()) return;
 
         // restore the menu to the desired state

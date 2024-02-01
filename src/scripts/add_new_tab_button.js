@@ -65,7 +65,7 @@
                 if (!courseId) return;
 
                 const url = `https://online.manchester.ac.uk/webapps/blackboard/content/listContent.jsp?course_id=${courseId}`;
-                const newTab = window.open(url, '_blank');
+                window.open(url, '_blank');
             };
         });
     }
