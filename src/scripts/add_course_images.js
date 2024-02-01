@@ -228,7 +228,7 @@ function extractKeywords(moduleName) {
         words = words.filter((word) => !bannedWords.includes(word));
     }
 
-    // limit to the first 4 words
+    // limit to the first 2 words
     words = words.slice(0, 2);
 
     return words.join(" ");
