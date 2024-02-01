@@ -18,5 +18,9 @@
 
 	"content_scripts": [
 		// Style injection scripts are added here at build time by build.dart
+	],
+
+	"permissions": [
+		"*://fonts.gstatic.com/*"
 	]
 }
