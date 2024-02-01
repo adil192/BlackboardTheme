@@ -219,24 +219,6 @@ nav ul#base_tools bb-base-navigation-button {
                 }
             }
         }
-
-        --box-shadow: 1rem;
-        &::after {
-            all: unset;
-            content: "";
-            display: block !important;
-            position: absolute;
-            inset: 0;
-            border-radius: inherit;
-            pointer-events: none;
-            box-shadow: 0 calc(var(--box-shadow) / 4) var(--box-shadow) 0 rgba($header, 0.2),
-                0 0 0 calc(var(--box-shadow) / 20) rgba($header, 0.1) !important;
-            opacity: 0.5;
-            transition: opacity 0.1s ease-out;
-        }
-        &:hover::after {
-            opacity: 1;
-        }
     }
 
     @media screen and (width <= 63.9375em) {
@@ -263,12 +245,30 @@ nav ul#base_tools bb-base-navigation-button {
         position: relative;
         box-shadow: none !important;
         margin: 0 !important;
+        --box-shadow: 1rem;
 
         .summary {
             grid-template-rows: auto !important;
             grid-template-columns: 1fr auto !important;
             margin-top: -1rem !important;
             border-top: calc(var(--box-shadow) / 20) solid rgba($header, 0.05) !important;
+        }
+
+        &::after {
+            all: unset;
+            content: "";
+            display: block !important;
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            pointer-events: none;
+            box-shadow: 0 calc(var(--box-shadow) / 4) var(--box-shadow) 0 rgba($header, 0.2),
+                0 0 0 calc(var(--box-shadow) / 20) rgba($header, 0.1) !important;
+            opacity: 0.5;
+            transition: opacity 0.1s ease-out;
+        }
+        &:hover::after {
+            opacity: 1;
         }
     }
 }
@@ -278,14 +278,13 @@ nav ul#base_tools bb-base-navigation-button {
         margin-bottom: 0.5rem;
     }
     .course-color-classic::before {
+        display: none;
         background-color: $header !important;
     }
     .course-element-card {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-        margin-bottom: 0.5rem !important;
-
-        --box-shadow: 0.5rem;
+        border-radius: 0;
+        margin-bottom: 0 !important;
+        padding: 0.5rem 1rem;
 
         .summary {
             display: flex;
@@ -322,6 +321,29 @@ nav ul#base_tools bb-base-navigation-button {
             margin: 0;
             width: auto;
             height: auto;
+        }
+    }
+    .favorites-group:has(+ .favorites-group),
+    .default-group:has(+ .default-group) {
+        // first
+        .course-element-card {
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+        }
+
+        + .favorites-group .course-element-card,
+        + .default-group .course-element-card {
+            // middle
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+    }
+    .favorites-group:not(:has(+ .favorites-group)),
+    .default-group:not(:has(+ .default-group)) {
+        // last
+        .course-element-card {
+            border-bottom-left-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
         }
     }
 }
