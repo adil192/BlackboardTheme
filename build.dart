@@ -160,16 +160,21 @@ Future<void> zip() async {
   print('Zipping...');
 
   final zipFile = File('UoM_Enhancements.xpi');
+  final tempFile = File('${zipFile.path}~');
+
   if (zipFile.existsSync()) zipFile.delete();
+  if (tempFile.existsSync()) tempFile.delete();
 
   final process = await Process.start(
     'zip',
-    [if (!verbose) '-q', '-r', '../${zipFile.path}', '.'],
+    [if (!verbose) '-q', '-r', '../${tempFile.path}', '.'],
     workingDirectory: 'output',
   );
   await process.exitCode;
 
   print(await process.stdout.transform(utf8.decoder).join());
+
+  await tempFile.rename(zipFile.path);
 }
 
 Future<void> main(List<String> args) async {
