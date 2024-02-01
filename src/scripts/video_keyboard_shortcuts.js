@@ -92,7 +92,7 @@ function onFoundElements() {
  * @param {KeyboardEvent} e 
  */
 function handleKeydown(e) {
-    console.log("handleKeydown", { e });
+    console.log("handleKeydown", e.key, { e });
 
     if (!findElements()) {
         console.log("handleKeydown: Some elements not found:", { videoElem, videoDiv, captionsOptions });
@@ -141,7 +141,13 @@ function handleKeydown(e) {
                 }
             }
             break;
+        default:
+            // unknown key, return early
+            return;
     }
+
+    e.preventDefault();
+    e.stopPropagation();
 }
 
 (function () {
@@ -149,5 +155,5 @@ function handleKeydown(e) {
 
     console.log("UoM Blackboard: Video keyboard shortcuts");
     findElements();
-    document.addEventListener("keydown", handleKeydown, { passive: true });
+    document.addEventListener("keydown", handleKeydown);
 })();
