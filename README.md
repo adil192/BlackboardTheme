@@ -15,7 +15,7 @@ other UoM websites.
 
 In the future, you'll be able to install this as an extension on Firefox and Chrome.
 
-Want to build the extension yourself? See the [Building](#building) section.
+Want to build the extension yourself? See the [Building](#building) section. 
 
 ### Install styling
 
@@ -30,6 +30,31 @@ Want to build the extension yourself? See the [Building](#building) section.
     - [Video keyboard shortcuts](https://greasyfork.org/en/scripts/479044-uom-blackboard-video-keyboard-shortcuts)
     - [Module list images](https://greasyfork.org/en/scripts/479199-uom-blackboard-add-course-images)
     - [Auto login](https://greasyfork.org/en/scripts/485669-uom-blackboard-auto-login)
+
+## Install via extension
+
+In the future, this project will be available on the Firefox and Chrome extension stores.
+This installation method is a 1-click install and will automatically update,
+but needs to be reviewed by the extension store maintainers first.
+
+For now, you can install it manually on:
+
+#### Firefox
+You need Firefox Developer or Nightly (not the regular Firefox) to install this extension because it isn't signed yet.
+
+Go to the latest build from the [Actions tab](https://github.com/adil192/BlackboardTheme/actions) and download the `output` artifact.
+You'll get an `output.zip` file. Don't unzip it.
+
+Go to [about:addons](about:addons) in Firefox and click on the gear icon in the top right corner.
+Select "Install Add-on From File..." and select the `output.zip` file you downloaded earlier.
+
+#### Chrome
+
+Go to the latest build from the [Actions tab](https://github.com/adil192/BlackboardTheme/actions) and download the `output` artifact.
+You'll get an `output.zip` file. Unzip it somewhere safe, like your Documents folder.
+
+Go to [chrome://extensions](chrome://extensions) in Chrome and enable "Developer mode" in the top right corner.
+Click on "Load unpacked" and select the unzipped `output` folder.
 
 ## Why use this theme?
 
