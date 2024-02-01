@@ -21,6 +21,7 @@
 	],
 
 	"permissions": [
-		"*://fonts.gstatic.com/*"
+		"*://fonts.gstatic.com/*",
+		"*://pixabay.com/api/*"
 	]
 }
