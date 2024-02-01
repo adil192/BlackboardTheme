@@ -102,7 +102,8 @@ $font-fallbacks: "Atkinson Hyperlegible", "Inter",
     .h1, .h2, .h3, .h4, .h5, .h6,
     .heading, .subheading,
     .title, .subtitle,
-    #pageTitleHeader, #pageTitleText {
+    #pageTitleHeader, #pageTitleText,
+    .vjs-title-bar-link {
         &, * {
             @include fonts-heading;
         }
