@@ -45,7 +45,6 @@ const styles = <String, String>{
 /// (using * as a wildcard).
 /// Note that the file extension is omitted.
 const scripts = {
-  // output/scripts/add_new_tab_button.js
   'add_new_tab_button': '*://online.manchester.ac.uk/ultra/*',
   'add_course_images': '*://online.manchester.ac.uk/ultra/*',
   'auto_login': '*://login.manchester.ac.uk/cas/login*',
@@ -82,20 +81,30 @@ Future<void> copyAssets() async {
 
 /// Compiles the scss files in `src/styles` into
 /// css files in `output/styles`.
+/// 
+/// A style injection script is also generated for each css file,
+/// because Chrome deprioritises css files injected by extensions.
 Future<void> compileScss() async {
   print('Compiling scss...');
 
   for (final scssFilename in styles.keys) {
-    final inputFile = File('src/styles/$scssFilename.scss');
-    final outputFile = File('output/styles/$scssFilename.css');
-    if (verbose) print('Compiling ${inputFile.path}');
+    final scssFile = File('src/styles/$scssFilename.scss');
+    final cssFile = File('output/styles/$scssFilename.css');
+    final jsFile = File('output/scripts/$scssFilename.js');
+    if (verbose) print('Compiling ${scssFile.path}');
 
-    assert(inputFile.existsSync());
+    assert(scssFile.existsSync());
 
-    final compiled = sass.compileToResult(inputFile.path);
+    final compiled = sass.compileToResult(scssFile.path);
 
-    await outputFile.create(recursive: true);
-    await outputFile.writeAsString(compiled.css);
+    await cssFile.create(recursive: true);
+    await cssFile.writeAsString(compiled.css);
+
+    final jsTemplate = await File('src/style_injection.js').readAsString();
+    final js = jsTemplate
+        .replaceAll('{{cssFilename}}', '$scssFilename.css');
+    await jsFile.create(recursive: true);
+    await jsFile.writeAsString(js);
   }
 }
 
@@ -133,6 +142,7 @@ Future<void> generateManifest() async {
       (entry) => {
         'matches': [entry.value],
         'css': ['styles/${entry.key}.css'],
+        'js': ['scripts/${entry.key}.js'],
         'run_at': 'document_start',
         'all_frames': true,
       },

@@ -22,6 +22,16 @@
 		// Style injection scripts are added here at build time by build.dart
 	],
 
+	"web_accessible_resources": [
+		{
+			"resources": [
+				"assets/*",
+				"styles/*"
+			],
+			"matches": [ "*://*/*" ]
+		}
+	],
+
 	"host_permissions": [
 		"*://fonts.gstatic.com/*",
 		"*://pixabay.com/api/*"
