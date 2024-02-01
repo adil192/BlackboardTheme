@@ -13,6 +13,10 @@ other UoM websites.
 
 ## Install
 
+In the future, you'll be able to install this as an extension on Firefox and Chrome.
+
+Want to build the extension yourself? See the [Building](#building) section.
+
 ### Install styling
 
 - Install Stylus [for Firefox](https://addons.mozilla.org/en-GB/firefox/addon/styl-us/) or [for Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) depending on your browser.
@@ -97,26 +101,15 @@ Features marked with *requires script* require you to install the optional scrip
 
 ## Development notes
 
-#### Folder structure
+#### Building
 
-```
-BlackboardTheme
-├── assets (images and other assets used in the css)
-│   └── subjects (for the "Module list images" script)
-├── screenshots (used in this README)
-├── scripts (for the optional scripts)
-│   ├── add_course_images.js
-│   ├── highlight_current_modules.js
-│   └── video_keyboard_shortcuts.js
-├── styles (each domain has its own scss file, except for...)
-│   ├── _globals.scss (defines colours, fonts, etc.)
-│   ├── _version.scss (the userstyle metadata, including the version number)
-├── CHANGELOG.md
-├── main.css (the compiled main.scss)
-├── main.scss (imports all the other scss files)
-├── package.json (defines dependencies for the lint workflow in `.github/workflows/lint.yml`)
-└── README.md
-```
+1. Install the latest version of Dart via https://dart.dev/get-dart. If you have Flutter installed, you already have Dart. 
+
+2. Install this project's dependencies (including the Dart Sass compiler) by running `pub get` in the project root.
+
+3. Build the project by running `dart build.dart` in the project root.
+
+4. The result is the `UoM_Enhancements.xpi` file. It can also be found unzipped in the `output` folder.
 
 #### Adding a new subject to the [Module list images](https://greasyfork.org/en/scripts/479199-uom-blackboard-add-course-images) script
 
