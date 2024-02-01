@@ -8,6 +8,7 @@ Here I will outline the changes I've made over time...
     - Much easier to install
     - No need to manually check for updates
     - Styles kick in immediately, rather than after the page loads
+    - Since scripts don't need to be installed one-by-one, I can add more features
 - Removed curved corners from the navbar on Blackboard Ultra
 - Makes the list view on Blackboard Ultra more compact
 - Added a button to the course iframe to open the course content in a new tab
@@ -17,6 +18,7 @@ Here I will outline the changes I've made over time...
 - Fixed video keyboard shortcuts accidentally triggering the currently focused button
 - Fixed the captions keyboard shortcut (`c`) sometimes not working
 - Added images to the course list view
+- Blackboard automatically hides the course content menu when the screen becomes small, but doesn't expand it again when the screen becomes large. Added a script that restores the menu when the screen becomes large again.
 
 ### 20240130
 
