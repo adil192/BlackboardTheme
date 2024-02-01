@@ -1,0 +1,13 @@
+{
+	"addons": {
+		"{300f03ef-d037-4626-9e39-0823ff5d7a9b}": {
+			"updates": [
+				{
+					"version": "2024.2.1.4",
+					"update_link": "https://github.com/adil192/BlackboardTheme/releases/download/2024.2.1.4/UoM_Enhancements.xpi",
+					"update_info_url": "https://github.com/adil192/BlackboardTheme/blob/main/CHANGELOG.md"
+				}
+			]
+		}
+	}
+}
