@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:args/args.dart';
 import 'package:sass/sass.dart' as sass;
 
 /// Maps each scss file to the domains it applies to
@@ -51,6 +52,15 @@ const scripts = {
   'video_keyboard_shortcuts': '*://video.manchester.ac.uk/embedded/*',
 };
 
+late final bool verbose;
+
+/// Parses the command line arguments.
+Future<void> parseArgs(List<String> args) async {
+  final parser = ArgParser()..addFlag('verbose', abbr: 'v');
+  final results = parser.parse(args);
+  verbose = results['verbose'] as bool;
+}
+
 /// Copies the assets in `src/assets` to `output/assets`.
 Future<void> copyAssets() async {
   print('Copying assets...');
@@ -63,7 +73,7 @@ Future<void> copyAssets() async {
     if (file is! File) continue;
     final outputFile =
         File(file.path.replaceAll('src/assets', 'output/assets'));
-    print('Copying ${file.path} to ${outputFile.path}');
+    if (verbose) print('Copying ${file.path} to ${outputFile.path}');
     await outputFile.create(recursive: true);
     await outputFile.writeAsBytes(await file.readAsBytes());
   }
@@ -77,7 +87,7 @@ Future<void> compileScss() async {
   for (final scssFilename in styles.keys) {
     final inputFile = File('src/styles/$scssFilename.scss');
     final outputFile = File('output/styles/$scssFilename.css');
-    print('Compiling ${inputFile.path}');
+    if (verbose) print('Compiling ${inputFile.path}');
 
     assert(inputFile.existsSync());
 
@@ -95,7 +105,7 @@ Future<void> copyScripts() async {
   for (final jsFilename in scripts.keys) {
     final inputFile = File('src/scripts/$jsFilename.js');
     final outputFile = File('output/scripts/$jsFilename.js');
-    print('Copying ${inputFile.path} to ${outputFile.path}');
+    if (verbose) print('Copying ${inputFile.path} to ${outputFile.path}');
     await outputFile.create(recursive: true);
     await outputFile.writeAsString(await inputFile.readAsString());
   }
@@ -154,7 +164,7 @@ Future<void> zip() async {
 
   final process = await Process.start(
     'zip',
-    ['-r', '../${zipFile.path}', '.'],
+    [if (!verbose) '-q', '-r', '../${zipFile.path}', '.'],
     workingDirectory: 'output',
   );
   await process.exitCode;
@@ -162,7 +172,8 @@ Future<void> zip() async {
   print(await process.stdout.transform(utf8.decoder).join());
 }
 
-Future<void> main() async {
+Future<void> main(List<String> args) async {
+  await parseArgs(args);
   await copyAssets();
   await compileScss();
   await copyScripts();

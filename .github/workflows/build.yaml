@@ -21,7 +21,7 @@ jobs:
       - run: dart pub get
 
       - name: Run build.dart script
-        run: dart build.dart
+        run: dart build.dart -v
 
       - name: Upload build
         uses: actions/upload-artifact@v2
