@@ -2,6 +2,15 @@
 
 Here I will outline the changes I've made over time...
 
+### 20240201
+
+- I'm working on converting this into an extension which solves some issues... But I need to wait for Mozilla to approve it before I can publish it.
+    - Much easier to install
+    - No need to manually check for updates
+    - Styles kick in immediately, rather than after the page loads
+- Removed curved corners from the navbar on Blackboard Ultra
+- Makes the list view on Blackboard Ultra more compact
+
 ### 20240130
 
 - Added stylings for the "Your download will start shortly. If it doesn't, download the file now." page
