@@ -11,6 +11,7 @@
         main = document.querySelector('#main-content');
     }
 
+    /** Adds a new tab button below the close button on the iframe */
     function addNewTabButton() {
         const btnContainer = document.querySelector('.bb-close-offset');
         const closeBtn = btnContainer?.querySelector('.bb-close');
@@ -35,6 +36,7 @@
         console.log('addNewTabButton added', newBtn);
     }
 
+    /** Opens the current iframe's src in a new tab */
     function openIframeInNewTab() {
         const iframe = document.querySelector('.classic-learn-iframe');
         console.log('Opening iframe in new tab', iframe);
@@ -47,7 +49,36 @@
         newTab?.focus();
     }
 
-    const observer = new MutationObserver(addNewTabButton);
-    observer.observe(main, { childList: true });
-    addNewTabButton();
+    /** Registers a middle click event listener on the course card */
+    function registerMiddleClick() {
+        /** @type {NodeListOf<HTMLDivElement>} */
+        const courseCard = document.querySelectorAll('.course-element-card');
+        courseCard.forEach(card => {
+            card.onauxclick = e => {
+                console.log('auxclick', e.button, e, card);
+                if (e.button !== 1) return;
+
+                e.preventDefault();
+                e.stopPropagation();
+                
+                const courseId = card.getAttribute('data-course-id');
+                if (!courseId) return;
+
+                const url = `https://online.manchester.ac.uk/webapps/blackboard/content/listContent.jsp?course_id=${courseId}`;
+                const newTab = window.open(url, '_blank');
+            };
+        });
+    }
+
+    function onPageUpdate() {
+        addNewTabButton();
+        registerMiddleClick();
+    }
+
+    const observer = new MutationObserver(onPageUpdate);
+    observer.observe(main, {
+        childList: true,
+        subtree: true,
+    });
+    onPageUpdate();
 })();

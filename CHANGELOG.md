@@ -10,7 +10,8 @@ Here I will outline the changes I've made over time...
     - Styles kick in immediately, rather than after the page loads
 - Removed curved corners from the navbar on Blackboard Ultra
 - Makes the list view on Blackboard Ultra more compact
-- Added a button to the course page to open the course content in a new tab
+- Added a button to the course iframe to open the course content in a new tab
+- Middle-click on a course card to open it in a new tab
 - Fixed the minimum height of the page when viewing a course so the navbar reaches the bottom of the screen
 - Fixed the video title not having the title font
 - Fixed video keyboard shortcuts accidentally triggering the currently focused button
