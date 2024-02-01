@@ -13,48 +13,33 @@ other UoM websites.
 
 ## Install
 
-In the future, you'll be able to install this as an extension on Firefox and Chrome.
+Note: If you previously installed this theme via the Stylus and Tampermonkey extensions, you should uninstall them first.
 
-Want to build the extension yourself? See the [Building](#building) section. 
+Want to build the extension yourself? See the [Building](#building) section.
 
-### Install styling
+### Install on Firefox
 
-- Install Stylus [for Firefox](https://addons.mozilla.org/en-GB/firefox/addon/styl-us/) or [for Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) depending on your browser.
-- Go to https://userstyles.world/style/4931/uom-blackboard-theme and click on the Install button.
+Go to the [Releases](https://github.com/adil192/BlackboardTheme/releases) page,
+scroll down to where it says "Assets" and click on the `UoM_Enhancements.xpi` file.
 
-### Install optional scripts
+You will see a prompt asking you to add the extension. Click Continue and then Add.
 
-- Install Tampermonkey [for Firefox](https://addons.mozilla.org/en-GB/firefox/addon/tampermonkey/) or [for Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
-- Go to each of these links and click on the Install button:
-    - [Highlight current modules](https://greasyfork.org/en/scripts/478967-uom-blackboard-highlight-current-modules)
-    - [Video keyboard shortcuts](https://greasyfork.org/en/scripts/479044-uom-blackboard-video-keyboard-shortcuts)
-    - [Module list images](https://greasyfork.org/en/scripts/479199-uom-blackboard-add-course-images)
-    - [Auto login](https://greasyfork.org/en/scripts/485669-uom-blackboard-auto-login)
+The extension will automatically update in the future.
 
-## Install via extension
+### Install on Chrome (and other Chromium-based browsers, like Edge and Brave)
 
-In the future, this project will be available on the Firefox and Chrome extension stores.
-This installation method is a 1-click install and will automatically update,
-but needs to be reviewed by the extension store maintainers first.
+I've submitted the extension to the Chrome Web Store, but it's still pending review.
+In the meantime, you can install it manually:
 
-For now, you can install it manually on:
+Go to the [Releases](https://github.com/adil192/BlackboardTheme/releases) page,
+scroll down to where it says "Assets" and download the `UoM_Enhancements.xpi` file.
 
-#### Firefox
-You need Firefox Developer or Nightly (not the regular Firefox) to install this extension because it isn't signed yet.
-
-Go to the latest build from the [Actions tab](https://github.com/adil192/BlackboardTheme/actions) and download the `output` artifact.
-You'll get an `output.zip` file. Don't unzip it.
-
-Go to [about:addons](about:addons) in Firefox and click on the gear icon in the top right corner.
-Select "Install Add-on From File..." and select the `output.zip` file you downloaded earlier.
-
-#### Chrome
-
-Go to the latest build from the [Actions tab](https://github.com/adil192/BlackboardTheme/actions) and download the `output` artifact.
-You'll get an `output.zip` file. Unzip it somewhere safe, like your Documents folder.
+An xpi file is just a zip file with a different extension. Unzip it somewhere safe, like your Documents folder.
 
 Go to [chrome://extensions](chrome://extensions) in Chrome and enable "Developer mode" in the top right corner.
 Click on "Load unpacked" and select the unzipped `output` folder.
+
+In the future, you'll need to manually update the extension by repeating the above steps.
 
 ## Why use this theme?
 
