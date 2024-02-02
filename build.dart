@@ -9,7 +9,10 @@ import 'package:sass/sass.dart' as sass;
 /// Note that the file extension is omitted.
 const styles = <String, List<String>>{
   // Blackboard Ultra
-  "online.manchester.ac.uk_ultra": ["*://online.manchester.ac.uk/ultra/*"],
+  "online.manchester.ac.uk_ultra": [
+    '*://online.manchester.ac.uk/ultra',
+    "*://online.manchester.ac.uk/ultra/*",
+  ],
   // All non-Ultra Blackboard pages
   "online.manchester.ac.uk": ["*://online.manchester.ac.uk/webapps/*"],
   // Blackboard assignments/grades/etc, split across many webapps

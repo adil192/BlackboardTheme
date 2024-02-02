@@ -15,20 +15,9 @@
         await new Promise(resolve => setTimeout(resolve, 10));
     }
 
-    if (navigator.userAgent.includes('Firefox')) {
-        // Firefox correctly prioritises extension css over page css,
-        // so we don't usually need this script.
-        // However, sometimes the css isn't loaded at all,
-        // so we need to inject it manually.
-        // Check if the `--fonts-body` variable is set.
-        // If it's not, then the css hasn't loaded.
-        const style = getComputedStyle(document.documentElement);
-        if (style.getPropertyValue('--fonts-body')) {
-            // The css has loaded, so we don't need to do anything.
-            return;
-        }
-        console.log("UoM Blackboard: Custom css missing, injecting manually");
-    }
+    // Firefox correctly prioritizes extension css over page css,
+    // so we don't need this script.
+    if (navigator.userAgent.includes('Firefox')) return;
 
     /**
      * The name of the css file to inject into the page,
