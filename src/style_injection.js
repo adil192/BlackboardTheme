@@ -11,13 +11,24 @@
 (async function() {
     'use strict';
 
-    /**
-     * Firefox correctly prioritises extension css over page css,
-     * so we don't need to do anything.
-     * @type {boolean}
-     */
-    const firefox = navigator.userAgent.includes('Firefox');
-    if (firefox) return;
+    while (!document.body || !document.head) {
+        await new Promise(resolve => setTimeout(resolve, 10));
+    }
+
+    if (navigator.userAgent.includes('Firefox')) {
+        // Firefox correctly prioritises extension css over page css,
+        // so we don't usually need this script.
+        // However, sometimes the css isn't loaded at all,
+        // so we need to inject it manually.
+        // Check if the `--fonts-body` variable is set.
+        // If it's not, then the css hasn't loaded.
+        const style = getComputedStyle(document.documentElement);
+        if (style.getPropertyValue('--fonts-body')) {
+            // The css has loaded, so we don't need to do anything.
+            return;
+        }
+        console.log("UoM Blackboard: Custom css missing, injecting manually");
+    }
 
     /**
      * The name of the css file to inject into the page,
@@ -37,32 +48,21 @@
     link.classList.add('uom-blackboard-extension');
 
     // first inject the css into <head>, so it's loaded as soon as possible
-    /** @type {HTMLHeadElement | null} */
-    let head = document.querySelector('head');
-    while (!head) {
-        await new Promise(resolve => setTimeout(resolve, 100));
-        head = document.querySelector('head');
+    if (document.head.firstChild) {
+        document.head.insertBefore(link, document.head.firstChild);
+    } else {
+        document.head.appendChild(link);
     }
-    head.appendChild(link.cloneNode());
-
     // then inject the css into <body>, so it can't be overridden
-    /** @type {HTMLBodyElement | null} */
-    let body = document.querySelector('body');
-    while (!body) {
-        await new Promise(resolve => setTimeout(resolve, 100));
-        body = document.querySelector('body');
-    }
-    body.appendChild(link);
+    document.body.appendChild(link);
 
     // watch for changes to the <body> element
     const observer = new MutationObserver(() => {
-        if (!body) return;
-
         // Iterate through body's children backwards.
         // We should find the link element along with
         // other .uom-blackboard-extension elements,
         // all of which should be at the bottom.
-        let child = body.lastChild;
+        let child = document.body.lastChild;
         while (child) {
             // If we find the link element, we don't need to do anything.
             if (child === link) return;
@@ -75,11 +75,11 @@
             }
 
             // We found something else, so we need to re-inject the css.
-            body.appendChild(link);
+            document.body.appendChild(link);
             return;
         }
     });
-    observer.observe(body, {
+    observer.observe(document.body, {
         childList: true,
         subtree: true,
     });
