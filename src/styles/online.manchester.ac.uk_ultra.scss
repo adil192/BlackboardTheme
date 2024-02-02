@@ -126,10 +126,12 @@ nav ul#base_tools bb-base-navigation-button {
     .square-toggle,
     .square-toggle > *,
     input,
-    .select-wrapper,
-    button[class*="makeStylespageDropdownButton"] {
+    .select-wrapper {
         border-radius: 0.5rem !important;
     }
+}
+button[class*="makeStylespageDropdownButton"] {
+    border-radius: 0.5rem !important;
 }
 
 .base-courses .course-card-term-name {
