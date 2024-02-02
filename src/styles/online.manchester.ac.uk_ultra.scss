@@ -79,6 +79,9 @@ button.anchor,
     background-color: $primary !important;
     color: $on-primary !important;
 }
+.color-selection-live-mode .active .theme-border-left-active {
+    border-color: $primary !important;
+}
 
 nav ul#base_tools bb-base-navigation-button {
     display: block;
