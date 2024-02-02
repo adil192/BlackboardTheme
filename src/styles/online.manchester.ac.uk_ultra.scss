@@ -145,6 +145,7 @@ nav ul#base_tools bb-base-navigation-button {
 .course-org-list {
     grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)) !important;
     gap: 1rem !important;
+    padding-bottom: 2rem;
 
     hr {
         display: none;
