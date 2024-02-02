@@ -7,49 +7,55 @@ import 'package:sass/sass.dart' as sass;
 /// Maps each scss file to the domains it applies to
 /// (using * as a wildcard).
 /// Note that the file extension is omitted.
-const styles = <String, String>{
+const styles = <String, List<String>>{
   // Blackboard Ultra
-  "online.manchester.ac.uk_ultra": "*://online.manchester.ac.uk/ultra/*",
+  "online.manchester.ac.uk_ultra": ["*://online.manchester.ac.uk/ultra/*"],
   // All non-Ultra Blackboard pages
-  "online.manchester.ac.uk": "*://online.manchester.ac.uk/webapps/*",
+  "online.manchester.ac.uk": ["*://online.manchester.ac.uk/webapps/*"],
   // Blackboard assignments/grades/etc, split across many webapps
-  "online.manchester.ac.uk_webapps_bb-social-learning":
-      "*://online.manchester.ac.uk/webapps/*",
+  "online.manchester.ac.uk_webapps_bb-social-learning": [
+    "*://online.manchester.ac.uk/webapps/*"
+  ],
   // Assessment/quizzes
-  "online.manchester.ac.uk_webapps_assessment":
-      "*://online.manchester.ac.uk/webapps/assessment*",
+  "online.manchester.ac.uk_webapps_assessment": [
+    "*://online.manchester.ac.uk/webapps/assessment*"
+  ],
   // Calendar
-  "online.manchester.ac.uk_webapps_calendar":
-      "*://online.manchester.ac.uk/webapps/calendar*",
+  "online.manchester.ac.uk_webapps_calendar": [
+    "*://online.manchester.ac.uk/webapps/calendar*"
+  ],
   // Rubric
-  "online.manchester.ac.uk_webapps_rubric":
-      "*://online.manchester.ac.uk/webapps/rubric*",
+  "online.manchester.ac.uk_webapps_rubric": [
+    "*://online.manchester.ac.uk/webapps/rubric*"
+  ],
   // Embedded videos
-  "video.manchester.ac.uk": "*://video.manchester.ac.uk/*",
+  "video.manchester.ac.uk": ["*://video.manchester.ac.uk/*"],
   // Download wrapper
-  "online.manchester.ac.uk_webapps_downloadWrapper":
-      "*://online.manchester.ac.uk/webapps/blackboard/content/downloadWrapper.jsp*",
+  "online.manchester.ac.uk_webapps_downloadWrapper": [
+    "*://online.manchester.ac.uk/webapps/blackboard/content/downloadWrapper.jsp*"
+  ],
 
   // IT account manager
-  "iam.manchester.ac.uk": "*://iam.manchester.ac.uk/*",
+  "iam.manchester.ac.uk": ["*://iam.manchester.ac.uk/*"],
   // Login page
-  "login.manchester.ac.uk": "*://login.manchester.ac.uk/cas/login*",
+  "login.manchester.ac.uk": ["*://login.manchester.ac.uk/cas/login*"],
   // Duo 2fa page (contains the Duo iframe)
-  "shib.manchester.ac.uk":
-      "*://shib.manchester.ac.uk/shibboleth-idp/profile/SAML2/POST/SSO*",
+  "shib.manchester.ac.uk": [
+    "*://shib.manchester.ac.uk/shibboleth-idp/profile/SAML2/POST/SSO*"
+  ],
   // Duo iframe
-  "shib.manchester.ac.uk_duo": "*://api-4c039978.duosecurity.com/frame*",
+  "shib.manchester.ac.uk_duo": ["*://api-4c039978.duosecurity.com/frame*"],
 };
 
 /// Maps each script file to the domains it applies to
 /// (using * as a wildcard).
 /// Note that the file extension is omitted.
-const scripts = {
-  'add_new_tab_button': '*://online.manchester.ac.uk/ultra/*',
-  'add_course_images': '*://online.manchester.ac.uk/ultra/*',
-  'auto_login': '*://login.manchester.ac.uk/cas/login*',
-  'expand_menu': '*://online.manchester.ac.uk/webapps/blackboard/content/*',
-  'video_keyboard_shortcuts': '*://video.manchester.ac.uk/embedded/*',
+const scripts = <String, List<String>>{
+  'add_new_tab_button': ['*://online.manchester.ac.uk/ultra/*'],
+  'add_course_images': ['*://online.manchester.ac.uk/ultra/*'],
+  'auto_login': ['*://login.manchester.ac.uk/cas/login*'],
+  'expand_menu': ['*://online.manchester.ac.uk/webapps/blackboard/content/*'],
+  'video_keyboard_shortcuts': ['*://video.manchester.ac.uk/embedded/*'],
 };
 
 late final bool verbose;
@@ -81,7 +87,7 @@ Future<void> copyAssets() async {
 
 /// Compiles the scss files in `src/styles` into
 /// css files in `output/styles`.
-/// 
+///
 /// A style injection script is also generated for each css file,
 /// because Chrome deprioritises css files injected by extensions.
 Future<void> compileScss() async {
@@ -101,8 +107,7 @@ Future<void> compileScss() async {
     await cssFile.writeAsString(compiled.css);
 
     final jsTemplate = await File('src/style_injection.js').readAsString();
-    final js = jsTemplate
-        .replaceAll('{{cssFilename}}', '$scssFilename.css');
+    final js = jsTemplate.replaceAll('{{cssFilename}}', '$scssFilename.css');
     await jsFile.create(recursive: true);
     await jsFile.writeAsString(js);
   }
@@ -140,7 +145,7 @@ Future<void> generateManifest() async {
   contentScripts.addAll(
     styles.entries.map(
       (entry) => {
-        'matches': [entry.value],
+        'matches': entry.value,
         'css': ['styles/${entry.key}.css'],
         'js': ['scripts/${entry.key}.js'],
         'run_at': 'document_start',
@@ -151,7 +156,7 @@ Future<void> generateManifest() async {
   contentScripts.addAll(
     scripts.entries.map(
       (entry) => {
-        'matches': [entry.value],
+        'matches': entry.value,
         'js': ['scripts/${entry.key}.js'],
         'all_frames': true,
       },
