@@ -121,6 +121,16 @@ Features marked with *requires script* require you to install the optional scrip
 
 4. The result is the `UoM_Enhancements.xpi` file. It can also be found unzipped in the `output` folder.
 
+#### Folder structure
+
+- `src/assets/` contains the images used in the theme, including the hardcoded module images.
+- `src/scripts/` contains scripts that add functionality, such as video keyboard shortcuts and new-tab buttons.
+- `src/styles/` contains the SCSS stylesheets for the theme.
+- `src/manifest.jsonc` is the base manifest file for the extension, updated by `build.dart`.
+- `src/style_injection.js` forces Chrome to prioritise the extension's styles over the website's styles.
+- `build.dart` is a Dart script that compiles the SCSS and produces the final xpi file.
+- `update_manifest.json` enables automatic updates for the extension on Firefox.
+
 #### Adding a new subject to the [Module list images](https://greasyfork.org/en/scripts/479199-uom-blackboard-add-course-images) script
 
 Unknown subjects are given an image from the [Pixabay API](https://pixabay.com/api/docs/).
