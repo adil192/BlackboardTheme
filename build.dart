@@ -54,8 +54,14 @@ const styles = <String, List<String>>{
 /// (using * as a wildcard).
 /// Note that the file extension is omitted.
 const scripts = <String, List<String>>{
-  'add_new_tab_button': ['*://online.manchester.ac.uk/ultra/*'],
-  'add_course_images': ['*://online.manchester.ac.uk/ultra/*'],
+  'add_new_tab_button': [
+    '*://online.manchester.ac.uk/ultra',
+    '*://online.manchester.ac.uk/ultra/*'
+  ],
+  'add_course_images': [
+    '*://online.manchester.ac.uk/ultra',
+    '*://online.manchester.ac.uk/ultra/*'
+  ],
   'auto_login': ['*://login.manchester.ac.uk/cas/login*'],
   'expand_menu': ['*://online.manchester.ac.uk/webapps/blackboard/content/*'],
   'video_keyboard_shortcuts': ['*://video.manchester.ac.uk/embedded/*'],
