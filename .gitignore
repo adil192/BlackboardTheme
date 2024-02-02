@@ -5,3 +5,4 @@ eslint-results.sarif
 output
 .dart_tool
 UoM_Enhancements.xpi
+*.env
