@@ -528,3 +528,27 @@ img {
 	// hide white background behind images
 	mix-blend-mode: multiply;
 }
+
+.tocWrapper {
+	background-color: $header;
+	color: $on-header;
+
+	a {
+		color: $on-header !important;
+	}
+
+	img {
+		mix-blend-mode: normal;
+	}
+
+	.tocHead {
+		color: $on-header;
+	}
+
+	ul.tree li a.itemActive,
+	.button-3-img {
+		background-color: rgba($surface-1, 0.1) !important;
+		box-shadow: none;
+		border: none !important;
+	}
+}
