@@ -2,6 +2,12 @@
 
 Here I will outline the changes I've made over time...
 
+### 20240203
+
+- Finished converting this into a browser extension. See the [README][README] for instructions on how to install it.
+- Styled the "Institution Page" (homepage) on Blackboard Ultra
+- Misc styling fixes
+
 ### 20240201
 
 - I'm working on converting this into an extension which solves some issues... But I need to wait for Mozilla to approve it before I can publish it.

@@ -122,6 +122,69 @@ nav ul#base_tools bb-base-navigation-button {
     box-shadow: none !important;
 }
 
+.content-component__container,
+.bb-editor-root .ql-container {
+    border: none;
+    background-color: $surface-1;
+    color: $on-surface;
+    border-radius: 0.5rem;
+
+    p, p *,
+    h4, h4 *,
+    h5, h5 * {
+        color: inherit !important;
+        font-size: inherit !important;
+    }
+    h4, h5 {
+        opacity: 0.8;
+    }
+    h4, h4 * {
+        font-size: 1.5rem !important;
+    }
+    h5, h5 * {
+        font-size: 1.25rem !important;
+    }
+    p br {
+        display: none;
+    }
+}
+
+.image-links-component__container-left {
+    border-radius: 0.5rem;
+
+    .module-overview-component { // image
+        border: none;
+    }
+    .link-list-component { // links
+        border: none;
+        background-color: $surface-1;
+        color: $on-surface;
+    }
+
+    @media only screen and (min-width: 40em) {
+        // image takes up half the width
+        .module-overview-component {
+            border-top-left-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
+        }
+        .link-list-component {
+            border-top-right-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+        }
+    }
+    @media only screen and (width < 40em) {
+        // image takes up full width
+        .module-overview-component {
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+        }
+        .link-list-component {
+            border-bottom-left-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+        }
+    }
+}
+
 .course-columns-header {
     .square-toggle,
     .square-toggle > *,
