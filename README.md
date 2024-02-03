@@ -19,18 +19,20 @@ Want to build the extension yourself? See the [Building](#building) section.
 
 ### Install on Firefox
 
-Go to the [Releases](https://github.com/adil192/BlackboardTheme/releases) page,
+1. Go to the [Releases](https://github.com/adil192/BlackboardTheme/releases) page,
 scroll down to where it says "Assets" and click on the `UoM_Enhancements.xpi` file.
 
-You will see a prompt asking you to add the extension. Click Continue and then Add.
-
-The extension will automatically update in the future.
+2. You will see a prompt asking you to add the extension. Click Continue and then Add.
 
 ### Install on Chrome (and other Chromium-based browsers, like Edge and Brave)
 
 Go to the
 [chrome web store page](https://chromewebstore.google.com/detail/uom-enhancements/igcbpelbigppckbhkmjfmjhgepoblfkn)
 and click "Add to Chrome".
+
+### Update
+
+Both the Firefox and Chrome extensions will automatically update in the future.
 
 ## Why use this theme?
 
