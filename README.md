@@ -28,18 +28,9 @@ The extension will automatically update in the future.
 
 ### Install on Chrome (and other Chromium-based browsers, like Edge and Brave)
 
-I've submitted the extension to the Chrome Web Store, but it's still pending review.
-In the meantime, you can install it manually:
-
-Go to the [Releases](https://github.com/adil192/BlackboardTheme/releases) page,
-scroll down to where it says "Assets" and download the `UoM_Enhancements.xpi` file.
-
-An xpi file is just a zip file with a different extension. Unzip it somewhere safe, like your Documents folder.
-
-Go to [chrome://extensions](chrome://extensions) in Chrome and enable "Developer mode" in the top right corner.
-Click on "Load unpacked" and select the unzipped `output` folder.
-
-In the future, you'll need to manually update the extension by repeating the above steps.
+Go to the
+[chrome web store page](https://chromewebstore.google.com/detail/uom-enhancements/igcbpelbigppckbhkmjfmjhgepoblfkn)
+and click "Add to Chrome".
 
 ## Why use this theme?
 
