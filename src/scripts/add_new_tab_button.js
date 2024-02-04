@@ -64,7 +64,7 @@
                 const courseId = card.getAttribute('data-course-id');
                 if (!courseId) return;
 
-                const url = `https://online.manchester.ac.uk/webapps/blackboard/content/listContent.jsp?course_id=${courseId}`;
+                const url = `https://online.manchester.ac.uk/webapps/blackboard/execute/courseMain?course_id=${courseId}`;
                 window.open(url, '_blank');
             };
         });
