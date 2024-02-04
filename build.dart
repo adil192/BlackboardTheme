@@ -109,6 +109,25 @@ Future<void> copyAssets() async {
   }
 }
 
+/// Copies the `src/styles` directory to `output/src/styles`.
+/// This is so that the scss files are available for debugging.
+Future<void> copySrcStyles() async {
+  print('Copying src/styles...');
+
+  final srcDir = Directory('src/styles');
+  final outputDir = Directory('output/src/styles');
+  outputDir.createSync(recursive: true);
+
+  for (final file in srcDir.listSync(recursive: true)) {
+    if (file is! File) continue;
+    final outputFile =
+        File(file.path.replaceAll('src/styles', 'output/src/styles'));
+    if (verbose) print('Copying ${file.path} to ${outputFile.path}');
+    await outputFile.create(recursive: true);
+    await outputFile.writeAsString(await file.readAsString());
+  }
+}
+
 /// Compiles the scss files in `src/styles` into
 /// css files in `output/styles`.
 ///
@@ -118,22 +137,39 @@ Future<void> compileScss() async {
   print('Compiling scss...');
 
   for (final scssFilename in styles.keys) {
-    final scssFile = File('src/styles/$scssFilename.scss');
-    final cssFile = File('output/styles/$scssFilename.css');
-    final jsFile = File('output/scripts/$scssFilename.js');
-    if (verbose) print('Compiling ${scssFile.path}');
+    final inputScssFile = File('src/styles/$scssFilename.scss');
+    final outputScssFile = File('output/styles/$scssFilename.scss');
+    final outputCssFile = File('output/styles/$scssFilename.css');
+    final outputCssMapFile = File('output/styles/$scssFilename.css.map');
+    final outputJsFile = File('output/styles/$scssFilename.js');
 
-    assert(scssFile.existsSync());
+    if (verbose) print('Compiling ${inputScssFile.path}');
 
-    final compiled = sass.compileToResult(scssFile.path);
+    assert(inputScssFile.existsSync());
+    final compiled = sass.compileToResult(inputScssFile.path, sourceMap: true);
 
-    await cssFile.create(recursive: true);
-    await cssFile.writeAsString(compiled.css);
+    await outputCssFile.create(recursive: true);
+    final sourceMappingLine = '\n/*# sourceMappingURL=$scssFilename.css.map */';
+    await outputCssFile.writeAsString(compiled.css + sourceMappingLine);
+
+    // add .css.map and .scss files for dev tools
+    final sourceMap = compiled.sourceMap!.toJson();
+    sourceMap["sources"] = (sourceMap["sources"] as List<String>)
+        .map((source) {
+          if (!source.startsWith('file://')) return source;
+          // crop to just src/styles/...
+          final index = source.indexOf('src/styles/');
+          assert(index != -1, 'source map source not in src/styles/');
+          // in the form of ../src/styles/...
+          return '../' + source.substring(index);
+        })
+        .toList();
+    await outputCssMapFile
+        .writeAsString(jsonEncode(sourceMap));
 
     final jsTemplate = await File('src/style_injection.js').readAsString();
     final js = jsTemplate.replaceAll('{{cssFilename}}', '$scssFilename.css');
-    await jsFile.create(recursive: true);
-    await jsFile.writeAsString(js);
+    await outputJsFile.writeAsString(js);
   }
 }
 
@@ -171,7 +207,7 @@ Future<void> generateManifest() async {
       (entry) => {
         'matches': entry.value,
         'css': ['styles/${entry.key}.css'],
-        'js': ['scripts/${entry.key}.js'],
+        'js': ['styles/${entry.key}.js'],
         'run_at': 'document_start',
         'all_frames': true,
       },
@@ -221,6 +257,7 @@ Future<void> main(List<String> args) async {
   await parseArgs(args);
   await clearOutput();
   await copyAssets();
+  await copySrcStyles();
   await compileScss();
   await copyScripts();
   await generateManifest();
