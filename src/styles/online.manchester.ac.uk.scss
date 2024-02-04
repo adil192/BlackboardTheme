@@ -361,7 +361,7 @@ img[src="#{$orig-piazza-icon}"] {
 		$border-radius: 0.5rem;
 		$border: 1px solid $border-color;
 
-		background: $surface-2;
+		background-color: $surface-2;
 		color: $on-surface;
 		width: auto !important;
 		height: auto !important;
@@ -376,28 +376,38 @@ img[src="#{$orig-piazza-icon}"] {
 		td {
 			padding: 0.5rem;
 			border: $border;
-			transition: background 0.1s ease-out;
+			transition: background-color 0.1s ease-out;
 		}
 
 		tr {
-			background: $surface-1;
+			background-color: $surface-1 !important;
 		}
 		tr:nth-child(odd) > td {
-			background: rgba($border-color, 0.15);
+			background-color: rgba($border-color, 0.15) !important;
 		}
 		tr:hover > td {
-			background: rgba($border-color, 0.5);
+			background-color: rgba($border-color, 0.5) !important;
 		}
 		&:has(thead > tr) thead,
 		&:not(:has(thead > tr)) tbody {
-			tr:first-child > td {
-				background: $surface-2;
-				font-weight: bold;
-				&:first-child {
-					border-top-left-radius: $border-radius;
-				}
-				&:last-child {
-					border-top-right-radius: $border-radius;
+			tr:first-child {
+				border-top-left-radius: $border-radius;
+				border-top-right-radius: $border-radius;
+				background: $surface-2 !important;
+				color: $on-surface !important;
+				> td {
+					background: transparent;
+					color: inherit !important;
+					font-weight: bold;
+					&:first-child {
+						border-top-left-radius: $border-radius;
+					}
+					&:last-child {
+						border-top-right-radius: $border-radius;
+					}
+					* {
+						color: inherit !important;
+					}
 				}
 			}
 		}
