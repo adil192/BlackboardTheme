@@ -2,6 +2,11 @@
 
 Here I will outline the changes I've made over time...
 
+### 20240204
+
+- Fixed conflicts with table styles when course pages have custom styles
+- Removed the "Error: Item isn't available for students" warning when middle clicking on a course card
+
 ### 20240203
 
 - Finished converting this into a browser extension. See the [README][README] for instructions on how to install it.
