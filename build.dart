@@ -76,6 +76,21 @@ Future<void> parseArgs(List<String> args) async {
   verbose = results['verbose'] as bool;
 }
 
+/// Creates the `output` directory if it doesn't exist,
+/// and deletes its contents if it does.
+Future<void> clearOutput() async {
+  final outputDir = Directory('output');
+  if (!outputDir.existsSync()) {
+    if (verbose) print('Creating ${outputDir.path} folder');
+    await outputDir.create();
+  } else {
+    if (verbose) print('Clearing ${outputDir.path} folder');
+    await for (final entity in outputDir.list()) {
+      await entity.delete(recursive: true);
+    }
+  }
+}
+
 /// Copies the assets in `src/assets` to `output/assets`.
 Future<void> copyAssets() async {
   print('Copying assets...');
@@ -204,6 +219,7 @@ Future<void> zip() async {
 
 Future<void> main(List<String> args) async {
   await parseArgs(args);
+  await clearOutput();
   await copyAssets();
   await compileScss();
   await copyScripts();
