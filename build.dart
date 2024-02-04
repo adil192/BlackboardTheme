@@ -154,18 +154,15 @@ Future<void> compileScss() async {
 
     // add .css.map and .scss files for dev tools
     final sourceMap = compiled.sourceMap!.toJson();
-    sourceMap["sources"] = (sourceMap["sources"] as List<String>)
-        .map((source) {
-          if (!source.startsWith('file://')) return source;
-          // crop to just src/styles/...
-          final index = source.indexOf('src/styles/');
-          assert(index != -1, 'source map source not in src/styles/');
-          // in the form of ../src/styles/...
-          return '../' + source.substring(index);
-        })
-        .toList();
-    await outputCssMapFile
-        .writeAsString(jsonEncode(sourceMap));
+    sourceMap["sources"] = (sourceMap["sources"] as List<String>).map((source) {
+      if (!source.startsWith('file://')) return source;
+      // crop to just src/styles/...
+      final index = source.indexOf('src/styles/');
+      assert(index != -1, 'source map source not in src/styles/');
+      // in the form of ../src/styles/...
+      return '../' + source.substring(index);
+    }).toList();
+    await outputCssMapFile.writeAsString(jsonEncode(sourceMap));
 
     final jsTemplate = await File('src/style_injection.js').readAsString();
     final js = jsTemplate.replaceAll('{{cssFilename}}', '$scssFilename.css');
