@@ -67,13 +67,20 @@ const scripts = <String, List<String>>{
   'video_keyboard_shortcuts': ['*://video.manchester.ac.uk/embedded/*'],
 };
 
+/// Whether to print extra information.
 late final bool verbose;
+/// Whether to watch the src directory for changes,
+/// and rebuild when changes are detected.
+late final bool shouldWatchSrc;
 
 /// Parses the command line arguments.
 Future<void> parseArgs(List<String> args) async {
-  final parser = ArgParser()..addFlag('verbose', abbr: 'v');
+  final parser = ArgParser()
+    ..addFlag('verbose', abbr: 'v')
+    ..addFlag('watch', abbr: 'w');
   final results = parser.parse(args);
   verbose = results['verbose'] as bool;
+  shouldWatchSrc = results['watch'] as bool;
 }
 
 /// Creates the `output` directory if it doesn't exist,
@@ -138,7 +145,6 @@ Future<void> compileScss() async {
 
   for (final scssFilename in styles.keys) {
     final inputScssFile = File('src/styles/$scssFilename.scss');
-    final outputScssFile = File('output/styles/$scssFilename.scss');
     final outputCssFile = File('output/styles/$scssFilename.css');
     final outputCssMapFile = File('output/styles/$scssFilename.css.map');
     final outputJsFile = File('output/styles/$scssFilename.js');
@@ -250,8 +256,7 @@ Future<void> zip() async {
   await tempFile.rename(zipFile.path);
 }
 
-Future<void> main(List<String> args) async {
-  await parseArgs(args);
+Future<void> build() async {
   await clearOutput();
   await copyAssets();
   await copySrcStyles();
@@ -259,4 +264,48 @@ Future<void> main(List<String> args) async {
   await copyScripts();
   await generateManifest();
   await zip();
+}
+
+Future<void> watchSrc() async {
+  print('Watching src directory for changes...');
+
+  bool needsRebuild = false;
+  bool isBuilding = false;
+
+  void watchedRebuild() async {
+    // Don't rebuild if we're already building
+    if (isBuilding) return;
+    if (!needsRebuild) return;
+
+    // Rebuild
+    needsRebuild = false;
+    isBuilding = true;
+    try {
+      await build();
+    } catch (e, stackTrace) {
+      print('Error while building:');
+      print(e);
+      print(stackTrace);
+    }
+    isBuilding = false;
+
+    // Check if we need to rebuild again
+    // (i.e. a file was changed while we were last building)
+    watchedRebuild();
+  }
+
+  await for (final entity in Directory('src').list(recursive: true)) {
+    if (entity is! Directory) continue;
+    entity.watch().listen((event) {
+      needsRebuild = true;
+      watchedRebuild();
+    });
+  }
+}
+
+Future<void> main(List<String> args) async {
+  await parseArgs(args);
+  await build();
+
+  if (shouldWatchSrc) await watchSrc();
 }
