@@ -4,6 +4,10 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:args/args.dart';
+
+final manifestFile = File('src/manifest.jsonc');
+
 class Version {
   final int year;
   final int month;
@@ -28,21 +32,47 @@ class Version {
   String toString() => '$year.$month.$day.$revision';
 }
 
-/// Parses the command line arguments.
-Future<Version> getNewVersion(List<String> args, Version oldVersion) async {
-  if (args.length > 1) {
-    throw ArgumentError('Expected at most 1 argument, got ${args.length}');
+abstract class Args {
+  static Version? newVersion;
+  static Version? oldVersion;
+  static bool updateManifest = true;
+
+  static String _toString() {
+    return 'Args: { newVersion: $newVersion, oldVersion: $oldVersion, updateManifest: $updateManifest }';
   }
-  if (args.length == 1) {
-    return Version.parse(args.first);
+}
+
+/// Parses the command line arguments,
+/// and populates [Args] with the results.
+Future<void> parseArgs(List<String> args) async {
+  final parser = ArgParser()
+    ..addOption('version', abbr: 'v', help: 'The new version number. If not provided, the version will be bumped automatically.')
+    ..addOption('old-version', abbr: 'o', help: 'The old version number. If not provided, the version will be read from src/manifest.jsonc.')
+    ..addFlag('update-manifest', abbr: 'u', help: 'Whether to add the old version to update_manifest.json.', defaultsTo: true, negatable: true);
+
+  final results = parser.parse(args);
+  if (results['version'] != null) {
+    Args.newVersion = Version.parse(results['version']);
+  }
+  if (results['old-version'] != null) {
+    Args.oldVersion = Version.parse(results['old-version']);
+  }
+  if (results['update-manifest'] != null) {
+    Args.updateManifest = results['update-manifest'] as bool;
   }
 
+  print(Args._toString());
+}
+
+Version bumpOldVersion(Version oldVersion) {
   final now = DateTime.now().toUtc();
+  // If oldVersion wasn't today, use today's date with revision 0.
   if (now.year > oldVersion.year ||
       now.month > oldVersion.month ||
       now.day > oldVersion.day) {
     return Version(now.year, now.month, now.day, 0);
   }
+  // If oldVersion was today, increment the revision.
   return Version(
     oldVersion.year,
     oldVersion.month,
@@ -56,6 +86,14 @@ Future<void> addOldVersionToUpdateManifest(Version oldVersion) async {
   final updateManifest = jsonDecode(await updateManifestFile.readAsString());
   final updatesList = updateManifest['addons']
       ['{300f03ef-d037-4626-9e39-0823ff5d7a9b}']['updates'] as List;
+
+  if (updatesList.any((update) => update['version'] == oldVersion.toString())) {
+    print('$oldVersion already exists in update_manifest.json');
+    return;
+  } else {
+    print('Adding $oldVersion to update_manifest.json');
+  }
+
   updatesList.add({
     'version': oldVersion.toString(),
     'update_link':
@@ -68,36 +106,46 @@ Future<void> addOldVersionToUpdateManifest(Version oldVersion) async {
   );
 }
 
-Future<void> main(List<String> args) async {
-  final manifestFile = File('src/manifest.jsonc');
-  final manifest = await manifestFile.readAsLines();
-
-  // Add an empty line to the end of the file if it doesn't exist.
-  if (manifest.last != '') manifest.add('');
-
-  Version? oldVersion;
-  for (final line in manifest) {
-    if (line.contains('"version":')) {
-      final oldVersionString =
-          line.split(':').last.replaceAll(',', '').replaceAll('"', '').trim();
-      print('Old version: $oldVersionString');
-      oldVersion = Version.parse(oldVersionString);
-      break;
-    }
-  }
-  if (oldVersion == null) {
-    throw StateError('Could not find version in manifest.jsonc');
-  }
-
-  final newVersion = await getNewVersion(args, oldVersion);
-  print('New version: $newVersion');
-
-  await addOldVersionToUpdateManifest(oldVersion);
-
+Future<void> updateManifestFile(List<String> manifest, Version oldVersion, Version newVersion) async {
   final newManifest = manifest
           .map((line) => line.contains('"version":')
               ? line.replaceFirst(oldVersion.toString(), newVersion.toString())
               : line)
           .join('\n');
   await manifestFile.writeAsString(newManifest);
+}
+
+Future<void> main(List<String> args) async {
+  await parseArgs(args);
+
+  final manifest = await manifestFile.readAsLines();
+
+  // Add an empty line to the end of the file if it doesn't exist.
+  if (manifest.last != '') manifest.add('');
+
+  if (Args.oldVersion == null) {
+    for (final line in manifest) {
+      if (line.contains('"version":')) {
+        final oldVersionString =
+            line.split(':').last.replaceAll(',', '').replaceAll('"', '').trim();
+        print('Old version: $oldVersionString');
+        Args.oldVersion = Version.parse(oldVersionString);
+        break;
+      }
+    }
+    if (Args.oldVersion == null) {
+      throw StateError('Could not find version in manifest.jsonc');
+    }
+  }
+
+  if (Args.newVersion == null) {
+    Args.newVersion = await bumpOldVersion(Args.oldVersion!);
+    print('New version: ${Args.newVersion}');
+  }
+
+  await addOldVersionToUpdateManifest(Args.oldVersion!);
+
+  if (Args.updateManifest) {
+    await updateManifestFile(manifest, Args.oldVersion!, Args.newVersion!);
+  }
 }

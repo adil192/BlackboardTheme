@@ -1,0 +1,72 @@
+name: Increment update manifest
+
+on:
+  schedule:
+    # Run at 21:58 every day
+    - cron: '58 21 * * *'
+  workflow_dispatch:
+
+jobs:
+  check-neccessity:
+    name: Check if we need to run
+    runs-on: ubuntu-latest
+    outputs:
+      run: ${{ steps.check-if-need-to-run.outputs.run }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Check if we need to run
+        id: check-if-need-to-run
+        # This workflow only needs to run if:
+          # - the last commit was made before today (not including today)
+          # - the update manifest isn't already updated
+        run: |
+          last_commit_date=$(git log -1 --format=%cd --date=short)
+          today=$(date +%F)
+          if [ "$last_commit_date" = "$today" ]; then
+            echo "No need to run, last commit was made today"
+            echo "run=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # The actual latest version of the extension
+          manifest_version=$(cat src/manifest.jsonc | grep '"version":' | cut -d '"' -f 4)
+          # The version in the update manifest
+          update_manifest_version=$(cat update_manifest.json | jq -r '.addons["{300f03ef-d037-4626-9e39-0823ff5d7a9b}"].updates[-1].version')
+          echo "Comparing $manifest_version and $update_manifest_version"
+          if [ "$manifest_version" = "$update_manifest_version" ]; then
+            echo "No need to run, update manifest is already updated"
+            echo "run=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          echo "Need to run"
+          echo "run=true" >> $GITHUB_OUTPUT
+  
+  increment-update-manifest:
+    name: Increment update manifest
+    runs-on: ubuntu-latest
+    needs: check-neccessity
+    if: ${{ needs.check-neccessity.outputs.run == 'true' }}
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Dart
+        uses: dart-lang/setup-dart@v1
+
+      - run: dart pub get
+
+      - name: Increment update manifest
+        run: dart bump_version.dart --no-update-manifest
+      
+      - name: Commit changes
+        run: |
+          git config user.email "github-action@users.noreply.github.com"
+          git config user.name "GitHub Action"
+          git add update_manifest.json
+          git commit -m "chore: Increment update manifest"
+          git push
