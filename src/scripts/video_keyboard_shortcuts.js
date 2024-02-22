@@ -52,9 +52,14 @@ async function findElements() {
         }
 
         foundElements = !!videoElem && !!videoDiv && !!captionsOptions.length;
+
+        if (!foundElements) {
+            console.log("findElements: Some elements not found:", { videoElem, videoDiv, captionsOptions });
+            await new Promise(r => setTimeout(r, 50));
+        }
     }
 
-    onFoundElements();
+    if (foundElements) onFoundElements();
 }
 
 /**
