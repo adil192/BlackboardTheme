@@ -2,6 +2,10 @@
 
 Here I will outline the changes I've made over time...
 
+### 20240222
+
+- Fixed the `c` keyboard shortcut not working in videos
+
 ### 20240204
 
 - Fixed conflicts with table styles when course pages have custom styles
