@@ -50,7 +50,7 @@ jobs:
         run: npm install
 
       - name: Run stylelint
-        run: npx stylelint **/*.scss
+        run: npx stylelint src/**/*.scss
           --custom-formatter=node_modules/stylelint-sarif-formatter
           -o stylelint-results.sarif
         continue-on-error: true

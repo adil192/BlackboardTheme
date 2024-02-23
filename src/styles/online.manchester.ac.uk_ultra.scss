@@ -161,7 +161,7 @@ nav ul#base_tools bb-base-navigation-button {
         color: $on-surface;
     }
 
-    @media only screen and (min-width: 40em) {
+    @media only screen and (width >= 40em) {
         // image takes up half the width
         .module-overview-component {
             border-top-left-radius: 0.5rem;
@@ -172,6 +172,7 @@ nav ul#base_tools bb-base-navigation-button {
             border-bottom-right-radius: 0.5rem;
         }
     }
+
     @media only screen and (width < 40em) {
         // image takes up full width
         .module-overview-component {

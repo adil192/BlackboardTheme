@@ -4,7 +4,8 @@
   "description": "UoM Blackboard Theme",
   "main": " ",
   "scripts": {
-    "lint": "npx eslint src/scripts/ && npx stylelint **/*.scss"
+    "lint": "npx eslint src/scripts/ && npx stylelint src/**/*.scss",
+    "build": "dart build.dart"
   },
   "repository": {
     "type": "git",
