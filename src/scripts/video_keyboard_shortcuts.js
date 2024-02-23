@@ -76,6 +76,17 @@ function onFoundElements() {
 
     // since the other elements have been found, it's safe to assume that all the other elements exist
 
+    addNewTabButton();
+    addCaptionsEventListeners();
+    restoreCaptions();
+}
+
+/**
+ * Adds a button in the control bar to open the video in a new tab. 
+ */
+function addNewTabButton() {
+    if (!foundElements) return;
+
     /** @type {HTMLDivElement | null} */
     const captionsButton = document.querySelector(".vjs-captions-button");
     if (!captionsButton) return;
@@ -98,6 +109,61 @@ function onFoundElements() {
 
     // insert the button before the captions button
     controlBar.insertBefore(newTabButton, captionsButton);
+}
+
+/**
+ * Adds the relevant event listeners to the captions buttons
+ * to call `onCaptionsChange` when the captions change.
+ * @returns {void}
+ */
+function addCaptionsEventListeners() {
+    if (!foundElements) return;
+
+    captionsOptions.forEach(option => {
+        option.addEventListener("click", onCaptionsChange);
+    });
+}
+
+/**
+ * Called when the captions change to remember whether captions are on or off.
+ */
+function onCaptionsChange() {
+    if (!foundElements) return;
+
+    let selectedOption = captionsOptions.find(e => e.classList.contains("vjs-selected"));
+    if (!selectedOption) {
+        console.error("onCaptionsChange: No selected captions option found:", { captionsOptions });
+        return;
+    }
+
+    let captionsOn = selectedOption.innerText.indexOf('captions off') === -1;
+    console.log("onCaptionsChange: captionsOn:", { captionsOn });
+
+    if (captionsOn) {
+        localStorage.setItem("captionsOn", "1");
+    } else {
+        localStorage.removeItem("captionsOn");
+    }
+}
+
+/**
+ * Restores the captions to the previous state.
+ * Called when the page loads after the elements are found.
+ */
+function restoreCaptions() {
+    if (!foundElements) return;
+
+    let captionsOn = !!localStorage.getItem("captionsOn");
+    console.log("restoreCaptions: restoring captionsOn:", { captionsOn });
+
+    if (captionsOn) {
+        let captionsOnBtn = captionsOptions.find(e => e.innerText.indexOf('captions off') === -1);
+        if (captionsOnBtn) {
+            captionsOnBtn.click();
+        } else {
+            console.error("restoreCaptions: No captions on button found:", { captionsOptions });
+        }
+    }
 }
 
 /**
@@ -148,9 +214,10 @@ function handleKeydown(e) {
                 if (unselectedOption) {
                     unselectedOption.click();
                 } else {
-                    console.log("handleKeydown: No unselected captions option found:", { captionsOptions });
+                    console.error("handleKeydown: No unselected captions option found:", { captionsOptions });
                     captionsOptions[0].click();
                 }
+                onCaptionsChange();
             }
             break;
         default:
