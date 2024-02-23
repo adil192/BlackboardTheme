@@ -5,6 +5,7 @@ Here I will outline the changes I've made over time...
 ### 20240223
 
 - Whether you have captions enabled is remembered between videos
+- Double click in a video to toggle fullscreen
 
 ### 20240222
 
