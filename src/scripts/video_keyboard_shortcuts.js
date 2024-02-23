@@ -79,6 +79,7 @@ function onFoundElements() {
     addNewTabButton();
     addCaptionsEventListeners();
     restoreCaptions();
+    addClickGestures();
 }
 
 /**
@@ -166,6 +167,26 @@ function restoreCaptions() {
     }
 }
 
+/** 
+ * Adds a double-click gesture to toggle fullscreen.
+ */
+function addClickGestures() {
+    if (!foundElements) return;
+    if (!videoElem) return;
+    
+    videoElem.addEventListener("dblclick", toggleFullscreen);
+}
+
+function toggleFullscreen() {
+    if (document.fullscreenElement) {
+        document.exitFullscreen();
+    } else if (videoDiv) {
+        videoDiv.requestFullscreen();
+    } else {
+        document.body.requestFullscreen();
+    }
+}
+
 /**
  * @param {KeyboardEvent} e 
  */
@@ -202,11 +223,7 @@ function handleKeydown(e) {
             }
             break;
         case "f":
-            if (document.fullscreenElement) {
-                document.exitFullscreen();
-            } else {
-                videoDiv.requestFullscreen();
-            }
+            toggleFullscreen();
             break;
         case "c":
             if (captionsOptions.length) {
