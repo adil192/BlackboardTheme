@@ -2,6 +2,10 @@
 
 Here I will outline the changes I've made over time...
 
+### 20240223
+
+- Whether you have captions enabled is remembered between videos
+
 ### 20240222
 
 - Fixed the `c` keyboard shortcut not working in videos
