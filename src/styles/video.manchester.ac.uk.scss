@@ -11,6 +11,7 @@ $video-elem-color: color-mix(in oklab, $on-header, white 90%);
 @include fonts;
 * {
 	accent-color: $primary !important;
+  font-family: VideoJs, var(--fonts-body) !important;
 }
 
 html, body,
@@ -34,13 +35,15 @@ video,
   border-top-left-radius: $control-bar-border-radius;
   border-top-right-radius: $control-bar-border-radius;
   width: auto;
-
-  * {
-    font-family: VideoJs, var(--fonts-body) !important;
-  }
 }
 
-.video-js .vjs-progress-holder {
+.vjs-volume-menu-button.vjs-menu-button-inline .vjs-menu-content {
+  // center volume bar vertically
+  display: flex;
+  align-items: center;
+}
+
+.video-js .vjs-slider-horizontal {
   // Make the hitbox for the progress bar bigger
   height: $progress-bar-height;
 
@@ -59,8 +62,10 @@ video,
     }
   }
 
-  .vjs-play-progress {
+  .vjs-play-progress,
+  .vjs-volume-level {
     background: $on-header;
+    height: 100%;
 
     &::before { // handle of the progress bar
       content: "";
