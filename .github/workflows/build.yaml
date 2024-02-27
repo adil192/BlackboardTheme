@@ -14,7 +14,7 @@ on:
 
 jobs:
   build-for-firefox:
-    name: Build
+    name: Build for Firefox
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -35,7 +35,7 @@ jobs:
           path: output
 
   build-for-chrome:
-    name: Build
+    name: Build for Chrome
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
