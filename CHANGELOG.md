@@ -2,6 +2,11 @@
 
 Here I will outline the changes I've made over time...
 
+### 20240227
+
+- Fixed video buttons having the wrong icons
+- Restyled the video volume slider
+
 ### 20240223
 
 - Whether you have captions enabled is remembered between videos
