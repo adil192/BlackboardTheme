@@ -6,6 +6,7 @@ Here I will outline the changes I've made over time...
 
 - Fixed video buttons having the wrong icons
 - Restyled the video volume slider
+- The Firefox extension has been reverted to manifest v2 as Firefox for Android does not fully support manifest v3 yet
 
 ### 20240223
 
