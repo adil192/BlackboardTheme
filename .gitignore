@@ -4,5 +4,6 @@ eslint-results.sarif
 *.css.map
 output
 .dart_tool
+pubspec.lock
 UoM_Enhancements.xpi
 *.env
