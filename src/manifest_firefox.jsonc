@@ -1,5 +1,5 @@
 {
-	"manifest_version": 3,
+	"manifest_version": 2,
 	"name": "UoM Enhancements",
 	// If you update the version here, consider updating CHANGELOG.md
 	"version": "2024.2.27.0",
@@ -22,17 +22,7 @@
 		// Style injection scripts are added here at build time by build.dart
 	],
 
-	"web_accessible_resources": [
-		{
-			"resources": [
-				"assets/*",
-				"styles/*"
-			],
-			"matches": [ "*://*/*" ]
-		}
-	],
-
-	"host_permissions": [
+	"permissions": [
 		"*://fonts.gstatic.com/*",
 		"*://pixabay.com/api/*"
 	]
