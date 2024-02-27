@@ -1,0 +1,39 @@
+{
+	"manifest_version": 3,
+	"name": "UoM Enhancements",
+	// If you update the version here, consider updating CHANGELOG.md
+	"version": "2024.2.27.0",
+	"description": "A collection of enhancements for the University of Manchester websites",
+
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "{300f03ef-d037-4626-9e39-0823ff5d7a9b}",
+			"strict_min_version": "121.0",
+			"update_url": "https://raw.githubusercontent.com/adil192/BlackboardTheme/main/update_manifest.json"
+		},
+		"gecko_android": {
+			"id": "{300f03ef-d037-4626-9e39-0823ff5d7a9b}",
+			"strict_min_version": "121.0",
+			"update_url": "https://raw.githubusercontent.com/adil192/BlackboardTheme/main/update_manifest.json"
+		}
+	},
+
+	"content_scripts": [
+		// Style injection scripts are added here at build time by build.dart
+	],
+
+	"web_accessible_resources": [
+		{
+			"resources": [
+				"assets/*",
+				"styles/*"
+			],
+			"matches": [ "*://*/*" ]
+		}
+	],
+
+	"host_permissions": [
+		"*://fonts.gstatic.com/*",
+		"*://pixabay.com/api/*"
+	]
+}

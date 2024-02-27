@@ -72,15 +72,31 @@ late final bool verbose;
 /// Whether to watch the src directory for changes,
 /// and rebuild when changes are detected.
 late final bool shouldWatchSrc;
+/// Whether to use Manifest V3.
+/// If false, Manifest V2 is used.
+late final bool useManifestV3;
 
 /// Parses the command line arguments.
 Future<void> parseArgs(List<String> args) async {
   final parser = ArgParser()
     ..addFlag('verbose', abbr: 'v')
-    ..addFlag('watch', abbr: 'w');
+    ..addFlag('watch', abbr: 'w')
+    ..addFlag('firefox', abbr: 'f')
+    ..addFlag('chrome', abbr: 'c');
   final results = parser.parse(args);
   verbose = results['verbose'] as bool;
   shouldWatchSrc = results['watch'] as bool;
+
+  if (results['firefox'] as bool) {
+    // Firefox for Android doesn't fully support Manifest V3
+    useManifestV3 = false;
+  } else if (results['chrome'] as bool) {
+    // Chrome Web Store requires Manifest V3
+    useManifestV3 = true;
+  } else {
+    print('--firefox or --chrome not specified, defaulting to --firefox');
+    useManifestV3 = false;
+  }
 }
 
 /// Creates the `output` directory if it doesn't exist,
@@ -193,7 +209,10 @@ Future<void> copyScripts() async {
 Future<void> generateManifest() async {
   print('Generating manifest...');
 
-  final inputLines = await File('src/manifest.jsonc').readAsLines();
+  final manifestTemplate = useManifestV3
+      ? File('src/manifest_chrome.jsonc')
+      : File('src/manifest_firefox.jsonc');
+  final inputLines = await manifestTemplate.readAsLines();
   final outputFile = File('output/manifest.json');
 
   /// Remove comments from jsonc file so it can be parsed as json.

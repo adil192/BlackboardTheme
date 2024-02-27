@@ -122,7 +122,8 @@ Features marked with *requires script* require you to install the optional scrip
 - `src/assets/` contains the images used in the theme, including the hardcoded module images.
 - `src/scripts/` contains scripts that add functionality, such as video keyboard shortcuts and new-tab buttons.
 - `src/styles/` contains the SCSS stylesheets for the theme.
-- `src/manifest.jsonc` is the base manifest file for the extension, updated by `build.dart`.
+- `src/manifest_firefox.jsonc` is the base manifest file for the Firefox extension, updated by `build.dart`.
+- `src/manifest_chrome.jsonc` is the base manifest file for the Chrome extension, updated by `build.dart`.
 - `src/style_injection.js` forces Chrome to prioritise the extension's styles over the website's styles.
 - `build.dart` is a Dart script that compiles the SCSS and produces the final xpi file.
 - `update_manifest.json` enables automatic updates for the extension on Firefox.

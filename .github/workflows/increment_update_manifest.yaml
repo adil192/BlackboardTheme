@@ -31,7 +31,7 @@ jobs:
           fi
 
           # The actual latest version of the extension
-          manifest_version=$(cat src/manifest.jsonc | grep '"version":' | cut -d '"' -f 4)
+          manifest_version=$(cat src/manifest_firefox.jsonc | grep '"version":' | cut -d '"' -f 4)
           # The version in the update manifest
           update_manifest_version=$(cat update_manifest.json | jq -r '.addons["{300f03ef-d037-4626-9e39-0823ff5d7a9b}"].updates[-1].version')
           echo "Comparing $manifest_version and $update_manifest_version"

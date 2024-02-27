@@ -1,4 +1,4 @@
-/// Bumps the version number in src/manifest.jsonc,
+/// Bumps the version number in each manifest_*.jsonc file
 /// and adds the previous version number to update_manifest.json.
 
 import 'dart:convert';
@@ -6,7 +6,8 @@ import 'dart:io';
 
 import 'package:args/args.dart';
 
-final manifestFile = File('src/manifest.jsonc');
+final firefoxManifestFile = File('src/manifest_firefox.jsonc');
+final chromeManifestFile = File('src/manifest_chrome.jsonc');
 
 class Version {
   final int year;
@@ -47,7 +48,7 @@ abstract class Args {
 Future<void> parseArgs(List<String> args) async {
   final parser = ArgParser()
     ..addOption('version', abbr: 'v', help: 'The new version number. If not provided, the version will be bumped automatically.')
-    ..addOption('old-version', abbr: 'o', help: 'The old version number. If not provided, the version will be read from src/manifest.jsonc.')
+    ..addOption('old-version', abbr: 'o', help: 'The old version number. If not provided, the version will be read from src/manifest_firefox.jsonc.')
     ..addFlag('update-manifest', abbr: 'u', help: 'Whether to add the old version to update_manifest.json.', defaultsTo: true, negatable: true);
 
   final results = parser.parse(args);
@@ -106,8 +107,8 @@ Future<void> addOldVersionToUpdateManifest(Version oldVersion) async {
   );
 }
 
-Future<void> updateManifestFile(List<String> manifest, Version oldVersion, Version newVersion) async {
-  final newManifest = manifest
+Future<void> updateManifestFile(File manifestFile, Version oldVersion, Version newVersion) async {
+  final newManifest = (await manifestFile.readAsLines())
           .map((line) => line.contains('"version":')
               ? line.replaceFirst(oldVersion.toString(), newVersion.toString())
               : line)
@@ -118,13 +119,8 @@ Future<void> updateManifestFile(List<String> manifest, Version oldVersion, Versi
 Future<void> main(List<String> args) async {
   await parseArgs(args);
 
-  final manifest = await manifestFile.readAsLines();
-
-  // Add an empty line to the end of the file if it doesn't exist.
-  if (manifest.last != '') manifest.add('');
-
   if (Args.oldVersion == null) {
-    for (final line in manifest) {
+    for (final line in await firefoxManifestFile.readAsLines()) {
       if (line.contains('"version":')) {
         final oldVersionString =
             line.split(':').last.replaceAll(',', '').replaceAll('"', '').trim();
@@ -134,7 +130,7 @@ Future<void> main(List<String> args) async {
       }
     }
     if (Args.oldVersion == null) {
-      throw StateError('Could not find version in manifest.jsonc');
+      throw StateError('Could not find version in ${firefoxManifestFile.path}');
     }
   }
 
@@ -146,6 +142,7 @@ Future<void> main(List<String> args) async {
   await addOldVersionToUpdateManifest(Args.oldVersion!);
 
   if (Args.updateManifest) {
-    await updateManifestFile(manifest, Args.oldVersion!, Args.newVersion!);
+    await updateManifestFile(firefoxManifestFile, Args.oldVersion!, Args.newVersion!);
+    await updateManifestFile(chromeManifestFile, Args.oldVersion!, Args.newVersion!);
   }
 }
