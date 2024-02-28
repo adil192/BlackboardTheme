@@ -31,6 +31,11 @@
 					"version": "2024.2.23.1",
 					"update_link": "https://github.com/adil192/BlackboardTheme/releases/download/2024.2.23.1/UoM_Enhancements.xpi",
 					"update_info_url": "https://github.com/adil192/BlackboardTheme/blob/main/CHANGELOG.md"
+				},
+				{
+					"version": "2024.2.27.1",
+					"update_link": "https://github.com/adil192/BlackboardTheme/releases/download/2024.2.27.1/UoM_Enhancements.xpi",
+					"update_info_url": "https://github.com/adil192/BlackboardTheme/blob/main/CHANGELOG.md"
 				}
 			]
 		}
