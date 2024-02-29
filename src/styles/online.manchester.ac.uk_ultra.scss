@@ -110,8 +110,8 @@ nav ul#base_tools bb-base-navigation-button {
 
     // the active one
     &:has(.base-navigation-button.active) {
-        background-color: $background;
-        color: $on-background;
+        background-color: rgba($primary, 0.4) !important;
+        color: $on-primary;
         * {
             color: inherit !important;
         }
