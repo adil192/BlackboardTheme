@@ -49,6 +49,8 @@ video,
 
   border-radius: $progress-bar-border-radius;
   background: rgba($on-header, 0.1);
+  color: $on-header;
+  border: 1px solid rgba($on-header, 0.1);
   overflow: hidden;
   cursor: ew-resize;
 
