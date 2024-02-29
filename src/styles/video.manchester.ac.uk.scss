@@ -28,6 +28,12 @@ video,
   height: 100%;
 }
 
+.vjs-caption-settings {
+  top: 5rem;
+  background: $video-elem-background;
+  border-radius: $control-bar-border-radius;
+}
+
 .video-js .vjs-control-bar {
   background: $video-elem-background !important;
   color: white !important;
