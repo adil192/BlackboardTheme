@@ -2,6 +2,14 @@
 
 Here I will outline the changes I've made over time...
 
+### 20240229
+
+- Set a max size for the captions so they don't take up the whole screen
+- Added a subtle border around the video progress bar so it's easier to see how far through the video you are
+- Styled the video captions settings dialog
+- Fixed the Duo authentication prompt being too large on mobile
+- Set the active navbar item on Blackboard Ultra to purple
+
 ### 20240227
 
 - Fixed video buttons having the wrong icons
