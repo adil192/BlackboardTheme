@@ -168,10 +168,12 @@ video,
     color: $video-elem-color !important;
     border-radius: 0.2em !important;
     font-size: 75% !important;
+    font-size: min(75%, 2rem) !important;
     display: inline-block !important;
     max-width: 20em !important;
     padding: 0 1em !important;
     text-align: start;
+    text-wrap: balance;
     text-wrap: pretty;
 
     @include fonts-body;
