@@ -201,6 +201,9 @@ nav ul#base_tools bb-base-navigation-button {
 button[class*="makeStylespageDropdownButton"] {
     border-radius: 0.5rem !important;
 }
+.base-courses .course-columns-header .course-filter-select {
+    display: none;
+}
 
 .base-courses .course-card-term-name {
     margin-top: 1rem;
