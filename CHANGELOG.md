@@ -2,6 +2,11 @@
 
 Here I will outline the changes I've made over time...
 
+### 20240303
+
+- Replaced the "i" logo on the Institution Page to fit in with the rest of the website better
+- Removed the filter dropdown on the courses page which seems useless as far as I can tell
+
 ### 20240229
 
 - Set a max size for the captions so they don't take up the whole screen
