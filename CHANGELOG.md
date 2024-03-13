@@ -2,6 +2,10 @@
 
 Here I will outline the changes I've made over time...
 
+### 20240313
+
+- Made subheadings in the course content sidebar smaller to differentiate them from the sidebar links
+
 ### 20240303
 
 - Replaced the "i" logo on the Institution Page to fit in with the rest of the website better
