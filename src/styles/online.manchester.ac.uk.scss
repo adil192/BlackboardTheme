@@ -143,6 +143,10 @@ p, strong, b,
 	background: $header !important;
 	color: $on-header !important;
 }
+#courseMenuPalette .subhead h3 {
+	font-size: 0.8rem;
+	opacity: 0.9;
+}
 .appTabs a {
 	color: $on-header !important;
 	padding: 0 1.2em;
