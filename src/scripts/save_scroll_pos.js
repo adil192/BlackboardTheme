@@ -1,16 +1,5 @@
-// ==UserScript==
-// @name         Where am I? (Leanpub scrolling improvements)
-// @namespace    http://tampermonkey.net/
-// @version      2024-01-24
-// @description  Saves your scroll position, and highlights the current chapter in the table of contents. Best used with the styles at https://userstyles.world/style/14072/my-personal-leanpub-styles.
-// @author       adil192
-// @match        https://leanpub.com/*/read
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=leanpub.com
-// @grant        GM_setValue
-// @grant        GM_getValue
-// @grant        GM.setValue
-// @grant        GM.getValue
-// ==/UserScript==
+// Saves your scroll position,
+// and highlights the current chapter in the table of contents.
 
 // @ts-check
 
@@ -35,15 +24,6 @@ let tocElem = null;
  * @type {boolean}
  */
 let pageLoaded = false;
-
-/**
- * @typedef {Object} _GM
- * @property {(key: string) => Promise<string | undefined>} getValue
- * @property {(key: string, value: string) => Promise<void>} setValue
- */
-/** @type {_GM} */
-// @ts-ignore
-const gm = GM;
 
 /**
  * Finds the html elements
@@ -122,7 +102,7 @@ function onScroll() {
 		// save current section
 		if (sectionNumber) {
 			console.log('Saving last section to', sectionNumber);
-			gm.setValue('lastSection', sectionNumber);
+			localStorage.setItem('lastSection', sectionNumber);
 		}
 	}
 }
@@ -147,7 +127,7 @@ function onScroll() {
 	window.addEventListener('load', (e) => {
 		findElements().then(async () => {
 			if (!scrollElem || !contentElem || !tocElem) return;
-			const lastSection = await gm.getValue('lastSection');
+			const lastSection = localStorage.getItem('lastSection');
 			console.log('Restoring last section to', lastSection);
 			if (lastSection) {
 				const headings = Array.from(contentElem.querySelectorAll('h1, h2, h3, h4, h5, h6'));

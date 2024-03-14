@@ -48,6 +48,9 @@ const styles = <String, List<String>>{
   ],
   // Duo iframe
   "shib.manchester.ac.uk_duo": ["*://api-4c039978.duosecurity.com/frame*"],
+
+  // Leanpub
+  "leanpub.com": ["*://leanpub.com/*"],
 };
 
 /// Maps each script file to the domains it applies to
@@ -64,14 +67,17 @@ const scripts = <String, List<String>>{
   ],
   'auto_login': ['*://login.manchester.ac.uk/cas/login*'],
   'expand_menu': ['*://online.manchester.ac.uk/webapps/blackboard/content/*'],
+  'save_scroll_pos': ['*://leanpub.com/*/read*'],
   'video_keyboard_shortcuts': ['*://video.manchester.ac.uk/embedded/*'],
 };
 
 /// Whether to print extra information.
 late final bool verbose;
+
 /// Whether to watch the src directory for changes,
 /// and rebuild when changes are detected.
 late final bool shouldWatchSrc;
+
 /// Whether to use Manifest V3.
 /// If false, Manifest V2 is used.
 late final bool useManifestV3;

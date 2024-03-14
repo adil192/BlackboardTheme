@@ -1,0 +1,153 @@
+@import "globals";
+
+@include fonts;
+* {
+	accent-color: $primary !important;
+}
+
+body, html {
+    background: $background;
+    color: $on-background;
+}
+
+.Header {
+    background: $header;
+    color: $on-header;
+}
+
+.cookies-banner {
+    display: none !important;
+}
+
+#read-online > header,
+#read-online #leanpub-toc {
+    background: $surface-1;
+    color: $on-surface;
+    $shadow: 1.5rem;
+    box-shadow: inset (-$shadow) 0 $shadow (-$shadow) rgba($header, 0.1);
+    transition: none;
+}
+#read-online > header {
+    display: block;
+    border-top-right-radius: 0.5rem;
+    
+    hr {
+        display: none;
+    }
+    
+    .btn--solid {
+        display: block;
+        background: $primary;
+        color: $on-primary;
+        border-radius: 0.5rem;
+        margin-bottom: 4rem;
+        padding: 0.5rem;
+        height: auto;
+    }
+
+    .read-upsell {
+        height: 10rem;
+        
+        > a {
+            display: none;
+        }
+        
+        .upsell-text,
+        .upsell-text * {
+            margin-top: 0;
+        }
+        
+        .book-title {
+            font-size: 2rem;
+            max-height: initial;
+            line-height: 1.1;
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+#read-online #leanpub-toc {
+    border-bottom-right-radius: 0.5rem;
+    top: 18rem;
+    
+    .toc ul {
+        margin: 0;
+        
+        > li:first-child > span:first-child {
+            display: none;
+        }
+    }
+    
+    li {
+        .section-number {
+            color: inherit !important;
+            opacity: 0.5;
+        }
+        a {
+            border-top-left-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
+        }
+        a.highlight,
+        a:hover {
+            background: rgba($primary, 0.85);
+            color: $on-primary;
+            transition: background 0.1s ease-out, color 0.1s ease-out, filter 0.1s ease-out;
+        }
+        a.highlight:hover {
+            background: rgba($primary, 1);
+        }
+    }
+}
+
+#leanpub-main,
+#leanpub-doc-main {
+    overflow-x: hidden;
+    color: inherit;
+    
+    p {
+        text-indent: 5rem;
+        line-height: 1.5;
+        margin-bottom: 5rem;
+        color: inherit;
+    }
+    
+    aside p,
+    .centered p {
+        margin-bottom: 1.5rem;
+    }
+    
+    ::selection {
+        background-color: rgba($primary, 0.1);
+        color: black;
+    }
+    
+    aside,
+    aside.blurb {
+        background-color: $surface-1;
+        border-radius: 0.5rem;
+    }
+    
+    blockquote {
+        color: inherit;
+        opacity: 0.8;
+        border-radius: 0.5rem;
+        border-left: 0.3rem solid $surface-1;
+        
+        p {
+            margin-bottom: 0;
+            padding-block: 1rem;
+        }
+        
+        + p {
+            margin-top: 1.5rem;
+        }
+    }
+    
+    img {
+        border-radius: 0.5rem;
+    }
+    figure {
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
