@@ -580,3 +580,17 @@ button[class*="makeStylespageDropdownButton"] {
         color: $on-header !important;
     }
 }
+
+.base-recent-activity .activity-stream .activity-group .stream-item {
+    .element-image {
+        background: $background;
+    }
+    $hover-color: flatten-color(rgba(white, 0.85), $background);
+    &::before {
+        // (opacity is set to 1 on hover)
+        background: $hover-color;
+    }
+    &:hover .element-image {
+        background: $hover-color;
+    }
+}
