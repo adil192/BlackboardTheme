@@ -2,6 +2,11 @@
 
 Here I will outline the changes I've made over time...
 
+### 20240314
+
+- The Leanpub [styles](https://userstyles.world/style/14072/my-personal-leanpub-styles) and scrolling improvements are now part of the browser extension. You can now remove the Stylus userstyle and Tampermonkey userscript if you have them installed.
+- Fixed the backgrounds of the icons on the Activity Stream page of Blackboard Ultra.
+
 ### 20240313
 
 - Made subheadings in the course content sidebar smaller to differentiate them from the sidebar links
