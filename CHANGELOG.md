@@ -2,6 +2,10 @@
 
 Here I will outline the changes I've made over time...
 
+### 20240422
+
+- Desaturated most colors for a more mature look
+
 ### 20240314
 
 - The Leanpub [styles](https://userstyles.world/style/14072/my-personal-leanpub-styles) and scrolling improvements are now part of the browser extension. You can now remove the Stylus userstyle and Tampermonkey userscript if you have them installed.
