@@ -2,37 +2,30 @@
 @import "fonts/hyperlegible";
 @import "fonts/urbanist";
 
-/// How these colours were obtained:
-///
-/// 1. Generate with https://m3.material.io/theme-builder#/custom
+/// Colors generated with https://m3.material.io/theme-builder#/custom
 /// with the following settings:
 /// - Primary: #8142a6
 /// - Secondary: #000000
 /// - Tertiary: #000000
-///
-/// 2. Find and replace all `--md-sys-color-` with `$`.
-///    Find and replace all `-light:` with `:`.
-///
-/// 3. Copy relevant parts into this file.
 
 $primary: #8142a6;
 $on-primary: #fff;
-$primary-container: #f5d9ff;
-$on-primary-container: #30004a;
+$primary-container: color.scale(#f5d9ff, $saturation: -50%);
+$on-primary-container: color.scale(#30004a, $saturation: -50%);
 $primary-1: $primary;
 $primary-2: color.mix($primary-1, $primary-container, 5%);
 $primary-3: color.mix($primary-1, $primary-container, 10%);
 $primary-4: color.mix($primary-1, $primary-container, 15%);
 
-$secondary: #984061;
+$secondary: color.scale(#984061, $saturation: -50%);
 $on-secondary: #fff;
-$secondary-container: #ffd9e2;
-$on-secondary-container: #3e001d;
+$secondary-container: color.scale(#ffd9e2, $saturation: -50%);
+$on-secondary-container: color.scale(#3e001d, $saturation: -50%);
 
-$tertiary: #984061;
+$tertiary: color.scale(#984061, $saturation: -50%);
 $on-tertiary: #fff;
-$tertiary-container: #ffd9e2;
-$on-tertiary-container: #3e001d;
+$tertiary-container: color.scale(#ffd9e2, $saturation: -50%);
+$on-tertiary-container: color.scale(#3e001d, $saturation: -50%);
 
 $background: #fffbff;
 $on-background: #1d1b1e;
@@ -44,20 +37,20 @@ $on-error-container: #410002;
 $error-on-background: color.mix($on-background, $error, 75%);
 
 $on-surface: #1d1b1e;
-$surface-variant: #eadfea;
-$on-surface-variant: #4b444d;
-$surface-tint: $primary;
+$surface-variant: color.scale(#eadfea, $saturation: -50%);
+$on-surface-variant: color.scale(#4b444d, $saturation: -50%);
+$surface-tint: color.scale($primary, $saturation: -80%);
 $surface-0: $background;
 $surface-1: color.mix($surface-0, $surface-tint, 90%);
 $surface-2: color.mix($surface-0, $surface-tint, 85%);
 $surface-3: color.mix($surface-0, $surface-tint, 75%);
 
-$outline: #7d747e;
-$outline-variant: #cec3ce;
+$outline: color.scale(#7d747e, $saturation: -50%);
+$outline-variant: color.scale(#cec3ce, $saturation: -50%);
 
-$inverse-on-surface: #f6eff3;
-$inverse-surface: #332f33;
-$inverse-primary: #e6b4ff;
+$inverse-on-surface: color.scale(#f6eff3, $saturation: -50%);
+$inverse-surface: color.scale(#332f33, $saturation: -50%);
+$inverse-primary: color.scale(#e6b4ff, $saturation: -50%);
 
 $header: #1d1b1e; // $surface-dark
 $on-header: #e8e0e5; // $on-surface-dark
