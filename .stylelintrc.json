@@ -10,6 +10,14 @@
 				]
 			}
 		],
+		"property-no-unknown": [
+			true,
+			{
+				"ignoreProperties": [
+					"font-smooth"
+				]
+			}
+		],
 		"color-function-notation": null,
 		"rule-empty-line-before": null,
 		"selector-class-pattern": null,

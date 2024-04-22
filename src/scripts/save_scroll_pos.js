@@ -115,7 +115,7 @@ function onScroll() {
 
 		scrollElem.addEventListener('scroll', onScroll, { passive: true });
 
-		window.addEventListener('resize', (e) => {
+		window.addEventListener('resize', () => {
 			// restore scroll to the lastScrolledContent
 			if (lastPAtTop) {
 				lastPAtTop.scrollIntoView();
@@ -124,7 +124,7 @@ function onScroll() {
 	});
 
 	// restore last section from local storage
-	window.addEventListener('load', (e) => {
+	window.addEventListener('load', () => {
 		findElements().then(async () => {
 			if (!scrollElem || !contentElem || !tocElem) return;
 			const lastSection = localStorage.getItem('lastSection');
