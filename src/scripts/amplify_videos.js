@@ -60,11 +60,13 @@
     }
 
     function onAmplifyButtonClick() {
-        console.log('Amplifying volume');
         if (!audioContextGain) return;
 
         let gain = Math.round(audioContextGain.gain.value);
-        gain = (gain < maxGain) ? (gain + 1) : 1;
+        if (gain <= 1) gain = 2;
+        else if (gain >= maxGain) gain = 1;
+        else gain += 2;
+        console.log('Amplifying volume to', gain);
 
         audioContextGain.gain.value = gain;
         updateButton();
@@ -77,7 +79,10 @@
         e.preventDefault();
 
         let gain = Math.round(audioContextGain.gain.value);
-        gain = (gain > 1) ? (gain - 1) : maxGain;
+        if (gain <= 1) gain = maxGain;
+        else if (gain == 2) gain = 1;
+        else gain -= 2;
+        console.log('Unamplifying volume to', gain);
 
         audioContextGain.gain.value = gain;
         updateButton();
