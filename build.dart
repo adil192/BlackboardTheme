@@ -260,8 +260,9 @@ Future<void> generateManifest() async {
   await outputFile.writeAsString(manifestJson);
 }
 
-/// Zips the contents of `output` into `UoM_Enhancements.zip`.
-Future<void> zip() async {
+/// Zips the contents of `output` into `UoM_Enhancements.zip`,
+/// and returns the size of the zip file in bytes.
+Future<int> zip() async {
   print('Zipping...');
 
   final zipFile = File('UoM_Enhancements.xpi');
@@ -277,23 +278,43 @@ Future<void> zip() async {
   );
   await process.exitCode;
 
-  print(await process.stdout.transform(utf8.decoder).join());
+  final stdout = await process.stdout.transform(utf8.decoder).join();
+  if (stdout.isNotEmpty) print(stdout);
+  final stderr = await process.stderr.transform(utf8.decoder).join();
+  if (stderr.isNotEmpty) print(stderr);
 
   await tempFile.rename(zipFile.path);
+
+  return await zipFile.length();
 }
 
 Future<void> build() async {
+  final stopwatch = Stopwatch()..start();
   await clearOutput();
   await copyAssets();
   await copySrcStyles();
   await compileScss();
   await copyScripts();
   await generateManifest();
-  await zip();
+  final size = await zip();
+  stopwatch.stop();
+
+  final prettySize = _prettySize(size.toDouble());
+  print('Built a $prettySize xpi in ${stopwatch.elapsedMilliseconds / 1000}s');
+}
+
+String _prettySize(double size) {
+  final units = ['B', 'KB', 'MB', 'GB', 'TB'];
+  var unitIndex = 0;
+  while (size >= 1024 && unitIndex < units.length - 1) {
+    size /= 1024;
+    unitIndex++;
+  }
+  return '${size.toStringAsFixed(2)} ${units[unitIndex]}';
 }
 
 Future<void> watchSrc() async {
-  print('Watching src directory for changes...');
+  print('\nWatching src directory for changes...');
 
   bool needsRebuild = false;
   bool isBuilding = false;
