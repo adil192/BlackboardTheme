@@ -2,6 +2,10 @@
 
 Here I will outline the changes I've made over time...
 
+### 20240502
+
+- Added a volume amplifier to the video player
+
 ### 20240422
 
 - Desaturated most colors for a more mature look

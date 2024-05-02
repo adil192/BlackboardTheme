@@ -56,6 +56,7 @@ Both the Firefox and Chrome extensions will automatically update in the future.
       - C key to toggle captions
     - Whether you have captions enabled is remembered between videos
     - Double click to toggle fullscreen
+   - **Built-in volume amplifier** *(requires script)*
 - Styling and colouring inspired by [Google's Material Design](https://m3.material.io/)
 - Uses better, **more readable fonts** everywhere
 
