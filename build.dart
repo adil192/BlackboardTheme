@@ -65,6 +65,7 @@ const scripts = <String, List<String>>{
     '*://online.manchester.ac.uk/ultra',
     '*://online.manchester.ac.uk/ultra/*'
   ],
+  'amplify_videos': ['*://video.manchester.ac.uk/embedded/*'],
   'auto_login': ['*://login.manchester.ac.uk/cas/login*'],
   'expand_menu': ['*://online.manchester.ac.uk/webapps/blackboard/content/*'],
   'save_scroll_pos': ['*://leanpub.com/*/read*'],

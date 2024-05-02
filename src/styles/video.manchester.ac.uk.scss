@@ -195,6 +195,36 @@ video,
   flex: none;
 }
 
+.vjs-amplify-control[aria-valuetext] {
+  background: url("../assets/ear-listen-solid.svg") no-repeat center !important;
+  background-size: 1.3em !important;
+  background-position-y: 40% !important;
+  cursor: pointer;
+  flex: none;
+
+  &::before {
+    all: unset;
+    content: attr(aria-valuetext);
+    display: block;
+    font-size: 1.25em;
+    position: absolute;
+    bottom: 15%;
+    left: 60%;
+  }
+  &[aria-valuetext="1"] {
+    opacity: 0.5;
+    &::before {
+      content: "";
+    }
+  }
+
+  @for $i from 2 through 10 {
+    &[aria-valuetext="#{$i}"] {
+      opacity: calc(0.8 + 0.2 * $i / 10);
+    }
+  }
+}
+
 /* in fullscreen, use a better scaling algorithm */
 :fullscreen video,
 video:fullscreen {
