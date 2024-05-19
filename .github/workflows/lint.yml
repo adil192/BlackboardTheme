@@ -51,7 +51,7 @@ jobs:
 
       - name: Run stylelint
         run: npx stylelint src/**/*.scss
-          --custom-formatter=node_modules/stylelint-sarif-formatter
+          --custom-formatter=node_modules/stylelint-sarif-formatter/index.js
           -o stylelint-results.sarif
         continue-on-error: true
 
