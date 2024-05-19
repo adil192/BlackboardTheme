@@ -61,12 +61,12 @@ $shadow: rgba($primary, 0.10);
 
 @function flatten-color($color, $background) {
     @return rgba(
-        red($color) * alpha($color)
-            + red($background) * (1 - alpha($color)),
-        green($color) * alpha($color)
-            + green($background) * (1 - alpha($color)),
-        blue($color) * alpha($color)
-            + blue($background) * (1 - alpha($color)),
+        color.red($color) * alpha($color)
+            + color.red($background) * (1 - alpha($color)),
+        color.green($color) * alpha($color)
+            + color.green($background) * (1 - alpha($color)),
+        color.blue($color) * alpha($color)
+            + color.blue($background) * (1 - alpha($color)),
         1
     );
 }
