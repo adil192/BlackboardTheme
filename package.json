@@ -2,6 +2,7 @@
   "name": "blackboard_theme",
   "version": "0.0.0",
   "description": "UoM Blackboard Theme",
+  "type": "module",
   "main": " ",
   "scripts": {
     "lint": "npx eslint src/scripts/ && npx stylelint src/**/*.scss",
@@ -26,10 +27,10 @@
   "homepage": "https://github.com/adil192/BlackboardTheme#readme",
   "devDependencies": {
     "@microsoft/eslint-formatter-sarif": "^3.0.0",
-    "eslint": "^8.53.0",
-    "stylelint": "^15.11.0",
-    "stylelint-config-standard": "^34.0.0",
-    "stylelint-config-standard-scss": "^11.1.0",
+    "eslint": "^9.0.0",
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-config-standard-scss": "^13.0.0",
     "stylelint-sarif-formatter": "^1.0.7"
   }
 }
