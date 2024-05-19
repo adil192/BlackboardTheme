@@ -1,5 +1,5 @@
 @use "sass:color";
-@import "fonts/hyperlegible";
+@import "fonts/inter";
 @import "fonts/urbanist";
 
 /// Colors generated with https://m3.material.io/theme-builder#/custom
@@ -72,11 +72,11 @@ $shadow: rgba($primary, 0.10);
 }
 
 @mixin fonts($selector: '*') {
-    @include hyperlegible;
+    @include inter;
     @include urbanist;
 
     :root {
-        --fonts-body: "Atkinson Hyperlegible", "Inter",
+        --fonts-body: "Inter", "Atkinson Hyperlegible",
             ui-sans-serif, system-ui, sans-serif,
             "Apple Color Emoji", "Segoe UI Emoji",
             "Segoe UI Symbol", "Noto Color Emoji",
