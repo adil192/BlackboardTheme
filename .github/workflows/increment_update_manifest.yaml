@@ -61,7 +61,7 @@ jobs:
       - run: dart pub get
 
       - name: Increment update manifest
-        run: dart bump_version.dart --no-update-manifest
+        run: ./bump_version.dart --no-update-manifest
       
       - name: Commit changes
         run: |

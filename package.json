@@ -5,7 +5,7 @@
   "main": " ",
   "scripts": {
     "lint": "npx eslint src/scripts/ && npx stylelint src/**/*.scss",
-    "build": "dart build.dart"
+    "build": "./build.dart"
   },
   "repository": {
     "type": "git",

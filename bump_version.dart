@@ -1,3 +1,5 @@
+#!/usr/bin/env dart
+
 /// Bumps the version number in each manifest_*.jsonc file
 /// and adds the previous version number to update_manifest.json.
 
@@ -47,9 +49,19 @@ abstract class Args {
 /// and populates [Args] with the results.
 Future<void> parseArgs(List<String> args) async {
   final parser = ArgParser()
-    ..addOption('version', abbr: 'v', help: 'The new version number. If not provided, the version will be bumped automatically.')
-    ..addOption('old-version', abbr: 'o', help: 'The old version number. If not provided, the version will be read from src/manifest_firefox.jsonc.')
-    ..addFlag('update-manifest', abbr: 'u', help: 'Whether to add the old version to update_manifest.json.', defaultsTo: true, negatable: true);
+    ..addOption('version',
+        abbr: 'v',
+        help:
+            'The new version number. If not provided, the version will be bumped automatically.')
+    ..addOption('old-version',
+        abbr: 'o',
+        help:
+            'The old version number. If not provided, the version will be read from src/manifest_firefox.jsonc.')
+    ..addFlag('update-manifest',
+        abbr: 'u',
+        help: 'Whether to add the old version to update_manifest.json.',
+        defaultsTo: true,
+        negatable: true);
 
   final results = parser.parse(args);
   if (results['version'] != null) {
@@ -107,12 +119,13 @@ Future<void> addOldVersionToUpdateManifest(Version oldVersion) async {
   );
 }
 
-Future<void> updateManifestFile(File manifestFile, Version oldVersion, Version newVersion) async {
+Future<void> updateManifestFile(
+    File manifestFile, Version oldVersion, Version newVersion) async {
   final newManifest = (await manifestFile.readAsLines())
-          .map((line) => line.contains('"version":')
-              ? line.replaceFirst(oldVersion.toString(), newVersion.toString())
-              : line)
-          .join('\n');
+      .map((line) => line.contains('"version":')
+          ? line.replaceFirst(oldVersion.toString(), newVersion.toString())
+          : line)
+      .join('\n');
   await manifestFile.writeAsString(newManifest);
 }
 
@@ -142,7 +155,9 @@ Future<void> main(List<String> args) async {
   await addOldVersionToUpdateManifest(Args.oldVersion!);
 
   if (Args.updateManifest) {
-    await updateManifestFile(firefoxManifestFile, Args.oldVersion!, Args.newVersion!);
-    await updateManifestFile(chromeManifestFile, Args.oldVersion!, Args.newVersion!);
+    await updateManifestFile(
+        firefoxManifestFile, Args.oldVersion!, Args.newVersion!);
+    await updateManifestFile(
+        chromeManifestFile, Args.oldVersion!, Args.newVersion!);
   }
 }

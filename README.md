@@ -113,8 +113,8 @@ Features marked with *requires script* require you to install the optional scrip
 
 2. Install this project's dependencies (including the Dart Sass compiler) by running `pub get` in the project root.
 
-3. Build the project by running `dart build.dart` in the project root.
-   You can run `dart build.dart --watch` to automatically rebuild the project when you make changes.
+3. Build the project by running `./build.dart` in the project root.
+   You can run `./build.dart --watch` to automatically rebuild the project when you make changes.
 
 4. The result is the `UoM_Enhancements.xpi` file. It can also be found unzipped in the `output` folder.
 

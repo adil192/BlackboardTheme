@@ -26,7 +26,7 @@ jobs:
       - run: dart pub get
 
       - name: Run build.dart script
-        run: dart build.dart -v --firefox
+        run: ./build.dart -v --firefox
 
       - name: Upload build
         uses: actions/upload-artifact@v4
@@ -47,7 +47,7 @@ jobs:
       - run: dart pub get
 
       - name: Run build.dart script
-        run: dart build.dart -v --chrome
+        run: ./build.dart -v --chrome
 
       - name: Upload build
         uses: actions/upload-artifact@v4
