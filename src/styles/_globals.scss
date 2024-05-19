@@ -85,11 +85,13 @@ $shadow: rgba($primary, 0.10);
     }
 
     #{$selector} {
-        @include fonts-body;
-        // 'liga' enables font ligatures, 'calt' enables contextual alternates
-        font-feature-settings: 'liga' 1, 'calt' 1;
-        font-smooth: always;
-        -webkit-font-smoothing: subpixel-antialiased;
+        &, &::before, &::after {
+            @include fonts-body;
+            // 'liga' enables font ligatures, 'calt' enables contextual alternates
+            font-feature-settings: 'liga' 1, 'calt' 1;
+            font-smooth: always;
+            -webkit-font-smoothing: subpixel-antialiased;
+        }
     }
     h1, h2, h3, h4, h5, h6,
     .h1, .h2, .h3, .h4, .h5, .h6,

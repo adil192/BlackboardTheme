@@ -9,7 +9,7 @@ $video-elem-background: rgba($header, 0.8);
 $video-elem-color: color-mix(in oklab, $on-header, white 90%);
 
 @include fonts;
-* {
+*, *::before, *::after {
 	accent-color: $primary !important;
   font-family: VideoJs, var(--fonts-body) !important;
 }
