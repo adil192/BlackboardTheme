@@ -57,13 +57,14 @@ video,
   background: rgba($on-header, 0.1);
   color: $on-header;
   border: 1px solid rgba($on-header, 0.1);
-  overflow: hidden;
   cursor: ew-resize;
+
+  * {
+    border-radius: inherit;
+  }
 
   .vjs-load-progress {
     background: rgba($on-header, 0.2);
-    border-bottom-right-radius: $progress-bar-border-radius;
-    border-top-right-radius: $progress-bar-border-radius;
     transition: width 1s ease-in;
     * {
       opacity: 0;
@@ -76,15 +77,7 @@ video,
     height: 100%;
 
     &::before { // handle of the progress bar
-      content: "";
-      display: block;
-      width: $progress-bar-height;
-      height: $progress-bar-height;
-      background: $on-header;
-      border-radius: $progress-bar-border-radius;
-      top: 0;
-      right: -$progress-bar-border-radius;
-      font-size: inherit;
+      content: none;
     }
   }
 }
