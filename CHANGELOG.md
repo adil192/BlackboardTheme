@@ -2,6 +2,12 @@
 
 Here I will outline the changes I've made over time...
 
+### 2024.5.19.0
+
+- Fixed the current time not showing when hovering a video's progress bar
+- Restyled the current time on videos
+- Switched to using the Inter font by default instead of Atkinson Hyperlegible: I think this is a better default for most people
+
 ### 20240502
 
 - Added a volume amplifier to the video player
