@@ -81,6 +81,11 @@ video,
     }
   }
 
+  .video-js .vjs-time-control {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
   .vjs-mouse-display::after,
   .vjs-play-progress::after {
     font-size: 1rem !important;
