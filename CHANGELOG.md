@@ -2,6 +2,10 @@
 
 Here I will outline the changes I've made over time...
 
+### 2024.5.24.0
+
+- Increased the text size of the time indicator on videos
+
 ### 2024.5.19.0
 
 - Fixed the current time not showing when hovering a video's progress bar

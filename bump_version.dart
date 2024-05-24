@@ -160,4 +160,7 @@ Future<void> main(List<String> args) async {
     await updateManifestFile(
         chromeManifestFile, Args.oldVersion!, Args.newVersion!);
   }
+
+  print('');
+  print('Make sure to update ./CHANGELOG.md');
 }
