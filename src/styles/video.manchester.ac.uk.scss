@@ -179,20 +179,26 @@ video,
 
 /* captions */
 .vjs-text-track-display > div > div > div {
-    background: $video-elem-background !important;
-    color: white !important;
-    color: $video-elem-color !important;
-    border-radius: 0.2em !important;
-    font-size: 75% !important;
-    font-size: min(75%, 2rem) !important;
-    display: inline-block !important;
-    max-width: 20em !important;
-    padding: 0 1em !important;
-    text-align: start;
-    text-wrap: balance;
-    text-wrap: pretty;
+  background: $video-elem-background !important;
+  color: white !important;
+  color: $video-elem-color !important;
+  border-radius: 0.2em !important;
+  font-size: 75% !important;
+  font-size: min(75%, 2rem) !important;
+  display: inline-block !important;
+  max-width: 20em !important;
+  padding: 0 1em !important;
+  text-align: start;
+  text-wrap: balance;
+  text-wrap: pretty;
 
-    @include fonts-body;
+  @include fonts-body;
+
+  pointer-events: auto;
+  transition: opacity 0.2s ease-in-out;
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .vjs-new-tab-control {
