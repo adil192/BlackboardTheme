@@ -11,6 +11,12 @@ other UoM websites.
 
 [![CodeFactor](https://www.codefactor.io/repository/github/adil192/blackboardtheme/badge)](https://www.codefactor.io/repository/github/adil192/blackboardtheme)
 
+## 2024 Update
+
+I've now graduated and will lose access to most of the university websites soon. Therefore, there will be no further development of this project, but the existing feature set should continue to work long after now.
+
+TLDR: Please use, but there will be no new features coming.
+
 ## Install
 
 Note: If you previously installed this theme via the Stylus and Tampermonkey extensions, you should uninstall them first.
